@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenu : Menu
+public class SettingsMenu : Menu
 {
-    public static MainMenu instance = null;
+    public static SettingsMenu instance = null;
 
     private void Start()
     {
@@ -17,14 +17,8 @@ public class MainMenu : Menu
         instance = this;
     }
 
-    public void OnSettingsButton()
+    public void OnBackButton()
     {
-        TurnOff(false);
-        SettingsMenu.instance.TurnOn(this);
-    }
-
-    public void OnQuitButton()
-    {
-        Application.Quit();
+        TurnOff(true);
     }
 }
