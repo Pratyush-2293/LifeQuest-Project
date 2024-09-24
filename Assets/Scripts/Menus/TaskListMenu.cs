@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TaskListMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject createTaskMenu = null;
+
+    public void OnCreateNewTaskButton()
     {
-        
+        createTaskMenu.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnCreateTaskCancelButton()
     {
-        
+        createTaskMenu.gameObject.SetActive(false);
     }
 }
