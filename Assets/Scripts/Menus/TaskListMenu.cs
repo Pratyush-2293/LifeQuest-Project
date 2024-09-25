@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TaskListMenu : MonoBehaviour
+public class TaskListMenu : Menu
 {
+    public static TaskListMenu instance = null;
+
     public GameObject createTaskMenu = null;
     public TaskItem taskItemPrefab = null;
     public TaskItem taskItem;
@@ -13,6 +15,17 @@ public class TaskListMenu : MonoBehaviour
     // Task Creation Menu
     public InputField titleInput = null;
     public InputField descriptionInput = null;
+
+    private void Start()
+    {
+        if (instance)
+        {
+            Debug.LogError("Trying to create more than one TaskListMenu!");
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+    }
 
     public void OnCreateNewTaskButton()
     {
@@ -39,5 +52,10 @@ public class TaskListMenu : MonoBehaviour
     public void OnCreateTaskCancelButton()
     {
         createTaskMenu.gameObject.SetActive(false);
+    }
+
+    public void OnBackButton()
+    {
+        TurnOff(true);
     }
 }

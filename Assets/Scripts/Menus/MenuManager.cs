@@ -30,6 +30,7 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("SettingsMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("TaskListMenu", LoadSceneMode.Additive);
     }
 
     public void SwitchToTaskListMenus()

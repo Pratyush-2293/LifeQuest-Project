@@ -17,6 +17,12 @@ public class MainMenu : Menu
         instance = this;
     }
 
+    public void OnTaskListButton()
+    {
+        TurnOff(false);
+        TaskListMenu.instance.TurnOn(this);
+    }
+
     public void OnSettingsButton()
     {
         TurnOff(false);
