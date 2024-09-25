@@ -241,7 +241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6021224045950137872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1958926552098945569}
+        m_TargetAssemblyTypeName: TaskItem, Assembly-CSharp
+        m_MethodName: OnCompleteButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2276881775497687567
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +422,7 @@ GameObject:
   - component: {fileID: 2658676065840129905}
   - component: {fileID: 3159752954436860972}
   - component: {fileID: 2540058067684450860}
+  - component: {fileID: 1958926552098945569}
   m_Layer: 5
   m_Name: TaskItem
   m_TagString: Untagged
@@ -432,8 +445,8 @@ RectTransform:
   - {fileID: 2796959760852838881}
   - {fileID: 8692451617237761431}
   - {fileID: 8683419560633788774}
-  - {fileID: 872094746095340562}
   - {fileID: 250164482135806674}
+  - {fileID: 872094746095340562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -479,6 +492,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1958926552098945569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559653143459611044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1c05b116bd8f9448df642ca34ce343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskTitle: 
+  taskDescription: 
+  titleText: {fileID: 4035808412647045267}
+  descriptionText: {fileID: 4917396050120802802}
 --- !u!1 &5425566477132378668
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,8 +621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25.000002, y: -50}
-  m_SizeDelta: {x: -49.999996, y: 100}
+  m_AnchoredPosition: {x: -75, y: -50}
+  m_SizeDelta: {x: -250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4024314012452845024
 CanvasRenderer:
@@ -757,7 +786,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5305278735815204930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1958926552098945569}
+        m_TargetAssemblyTypeName: TaskItem, Assembly-CSharp
+        m_MethodName: OnAbandonButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7934479196788998255
 GameObject:
   m_ObjectHideFlags: 0
