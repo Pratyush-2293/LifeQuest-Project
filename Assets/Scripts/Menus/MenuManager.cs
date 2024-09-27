@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
 
     internal Menu activeMenu = null;
 
-    void Start()
+    private void Awake()
     {
         if (instance)
         {

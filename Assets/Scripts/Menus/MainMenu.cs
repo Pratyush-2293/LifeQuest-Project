@@ -6,7 +6,7 @@ public class MainMenu : Menu
 {
     public static MainMenu instance = null;
 
-    private void Start()
+    private void Awake()
     {
         if (instance)
         {
@@ -21,6 +21,7 @@ public class MainMenu : Menu
     {
         TurnOff(false);
         TaskListMenu.instance.TurnOn(this);
+        TaskListMenu.instance.LoadPlayerTasks();
     }
 
     public void OnSettingsButton()

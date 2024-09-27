@@ -6,7 +6,7 @@ public class SettingsMenu : Menu
 {
     public static SettingsMenu instance = null;
 
-    private void Start()
+    private void Awake()
     {
         if (instance)
         {
