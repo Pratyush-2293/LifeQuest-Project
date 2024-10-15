@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/TaskListMenu.unity
     guid: 6b3bc2bd654033c4fbd338ed66cdcc9f
+  - enabled: 1
+    path: Assets/Scenes/OpenWorldSceneTest.unity
+    guid: c4c4cd9cf7615114b84103de86cfba1f
+  - enabled: 1
+    path: Assets/Scenes/CombatScene.unity
+    guid: 6ab517a68910f984ba5600b9a60c5caa
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7df75182111f466468092012c194b27d,
       type: 2}
