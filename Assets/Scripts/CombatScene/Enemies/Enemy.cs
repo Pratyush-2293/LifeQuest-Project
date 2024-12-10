@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public Slider healthBar;
+    public GameObject selectMarker;
 
     public int health = 100;
+
+    public int position = 0;
 
     private void Start()
     {

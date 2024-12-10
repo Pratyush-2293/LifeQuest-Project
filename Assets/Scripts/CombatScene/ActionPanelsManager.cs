@@ -16,6 +16,8 @@ public class ActionPanelsManager : MonoBehaviour
     public Button skill1Button;
     public Button skill2Button;
     public Button skill3Button;
+    public Button selectUpButton;
+    public Button selectDownButton;
 
     private void Awake()
     {
@@ -32,5 +34,16 @@ public class ActionPanelsManager : MonoBehaviour
     public void OnHeroAttackButton()
     {
         HeroCombat.instance.Attack();
+    }
+
+    // Selection input: 1 for Up, 2 for down.
+    public void OnSelectUpButton()
+    {
+        CombatSceneScript.instance.UpdateSelectedTarget(1);
+    }
+
+    public void OnSelectDownButton()
+    {
+        CombatSceneScript.instance.UpdateSelectedTarget(2);
     }
 }

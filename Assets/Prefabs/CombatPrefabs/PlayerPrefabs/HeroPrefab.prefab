@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6748680926472255838}
   - component: {fileID: 7320731357521741165}
   - component: {fileID: 1827837916477586038}
+  - component: {fileID: -2778155635473569722}
   m_Layer: 0
   m_Name: HeroPrefab
   m_TagString: Untagged
@@ -117,5 +118,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 060ca4d410823e4468e793d7eda5f313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  turnThreshold: 500
+  turnSpeed: 10
+  isTurn: 0
+--- !u!114 &-2778155635473569722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016818098229819183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328530c2e8f71a741a90f5a9554b7223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

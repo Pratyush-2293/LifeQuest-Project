@@ -14,6 +14,8 @@ public class HeroCombat : MonoBehaviour
     public int turnSpeed = 10;
     public bool isTurn = false;
 
+    public bool initialTargetSelected = false;
+
     private void Awake()
     {
         if (instance)
@@ -47,6 +49,12 @@ public class HeroCombat : MonoBehaviour
             if (actionsPanel)
             {
                 actionsPanel.SetActive(true);
+            }
+
+            if (initialTargetSelected == false)
+            {
+                CombatSceneScript.instance.SelectInitialTarget();
+                initialTargetSelected = true;
             }
         }
         else
