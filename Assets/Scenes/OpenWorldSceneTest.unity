@@ -595,6 +595,7 @@ MonoBehaviour:
   playerPartyMembers:
   - {fileID: 3016818098229819183, guid: 5bbc45326b262c247a62368af2e93fe7, type: 3}
   - {fileID: 4488274134389769593, guid: eb0e93fb6bfcfeb45a38bbadabd4c544, type: 3}
+  - {fileID: 6103250186108870908, guid: ea76bec48aeded443ae6779b8a2828d8, type: 3}
   enemyWave1:
   - {fileID: 6417599492754057482, guid: 6df4e76afeb8eb4478ffa181af29022d, type: 3}
   - {fileID: 6417599492754057482, guid: 6df4e76afeb8eb4478ffa181af29022d, type: 3}
