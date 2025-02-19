@@ -9,33 +9,65 @@ using UnityEditorInternal;
 
 public class VN_Manager : MonoBehaviour
 {
+    [Header("Character Prefabs")]
     public List<GameObject> characters = new List<GameObject>();
+    [Header("Background Sprites")]
+    public List<Sprite> backgrounds = new List<Sprite>();
+    [Header("SFX Audioclips")]
+    public AudioClip buttonClickSound = null;
+    public List<AudioClip> soundEffects = new List<AudioClip>();
+    [Header("Background Musics")]
+    public AudioClip initialBackgroundMusic = null;
+    public List<AudioClip> backgroundMusic = new List<AudioClip>();
+    [Header("Text Display Speed")]
+    public float textSpeed = 0.01f;
+    [Header("Typing Sound Settings")]
+    public AudioClip[] textSounds = new AudioClip[2];
+    public float soundPitchMin = 0.9f;
+    public float soundPitchMax = 1.1f;
+    public int soundInterval = 1;
+
+    [Header("Plug in these components:")]
     public Image background = null;
     public GameObject backgroundTransition = null;
     public GameObject nextButton = null;
-    public List<Sprite> backgrounds = new List<Sprite>();
-    public List<AudioClip> soundEffects = new List<AudioClip>();
-    public List<AudioClip> backgroundMusic = new List<AudioClip>();
-    public AudioSource backgroundMusicSource = null;
+    public AudioSource BGM_Source = null;
     public AudioSource SFX_Source = null;
-    public TMP_Text leftName = null;
-    public TMP_Text rightName = null;
-    public TMP_Text dialogueBox = null;
+    public AudioSource textSoundSource = null;
+    public GameObject nameTab = null;
+    public TMP_Text nameTabText;
+    public TMP_Text dialogueBoxText = null;
+
+    [Header("Create Dialogues:")]
     public List<DialogueEntry> dialogues = new List<DialogueEntry>();
 
+    // Internal Variables
+    private Animator nameTabAnimator;
     private float nextDialogue = 0;
+    private int activeCharacter = -1;
 
     public void Start()
     {
+        // Triggering the next button to set up scene with first dialogue
+        OnNextButton();
+        characters[activeCharacter].gameObject.GetComponent<Animator>().SetTrigger("SlideInstant");  // using a faster version of animation to spawn character sooner
 
+        // Playing the initial background music
+        BGM_Source.clip = initialBackgroundMusic;
+        BGM_Source.Play();
+
+        nameTabAnimator = nameTab.gameObject.GetComponent<Animator>();
     }
 
     public void OnNextButton() // Loads the scene with the next dialogue's data.
     {
+        // Play button clicked SFX
+        SFX_Source.clip = buttonClickSound;
+        SFX_Source.Play();
 
         // Fetching the appropriate dialogue data for next step
         DialogueEntry currentDialogue = null;
-        for (int i = 0; i <= dialogues.Count; i++)
+        for (int i = 0; i < dialogues.Count; i++)
         {
             if(dialogues[i].dialogueID == nextDialogue)
             {
@@ -64,7 +96,80 @@ public class VN_Manager : MonoBehaviour
             }
         }
 
+        // Checking if the next dialogue is made by a different character.
 
+        // First initialising the active character
+        if (activeCharacter == -1)
+        {
+            activeCharacter = currentDialogue.character;
+        }
+        else // If already initialised, checking to see if active character needs to be changed.
+        {
+            if(currentDialogue.character != activeCharacter) // character needs to be changed
+            {
+                characters[activeCharacter].gameObject.GetComponent<Animator>().SetTrigger("SlideOut");  // Removing the old active character
+
+                characters[currentDialogue.character].gameObject.SetActive(true);  //spawning in the new character after short delay
+                activeCharacter = currentDialogue.character;  // Refreshing the current active character
+            }
+        }
+
+        // Moving the name tab if needed
+        if(currentDialogue.tabRight == true)
+        {
+            nameTabAnimator.SetTrigger("MoveRight");
+        }
+        if(currentDialogue.tabLeft == true)
+        {
+            nameTabAnimator.SetTrigger("MoveLeft");
+        }
+
+        // Inserting the character name in the name tab after a short delay
+        StartCoroutine(InsertCharacterName(currentDialogue.characterName));
+
+        // Inserting character dialogue
+        StartCoroutine(AnimateText(currentDialogue.dialogueText));
+
+        // Playing dialogue SFX if it exists
+        if(currentDialogue.SFX != -1)
+        {
+            SFX_Source.clip = soundEffects[currentDialogue.SFX];
+            SFX_Source.Play();
+        }
+
+
+        // Moving to next dialogue
+        nextDialogue = currentDialogue.nextDialogue;
+    }
+
+    public IEnumerator AnimateText(string characterDialogue)
+    {
+        for(int i=0; i < characterDialogue.Length + 1; i++)
+        {
+            dialogueBoxText.text = characterDialogue.Substring(0, i);
+
+            // Play typing sound
+            if (i > 0 && (i % soundInterval == 0))
+            {
+                if (textSoundSource != null && textSounds != null && textSounds.Length > 0)
+                {
+                    int soundIndex = UnityEngine.Random.Range(0, textSounds.Length);
+                    textSoundSource.clip = textSounds[soundIndex];
+                    textSoundSource.pitch = UnityEngine.Random.Range(soundPitchMin, soundPitchMax);
+                    textSoundSource.Play();
+
+                    yield return null; //enable or disable this incase tweaking text sound frequency, could probably save some performance
+                }
+            }
+
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+
+    public IEnumerator InsertCharacterName(string characterName)
+    {
+        yield return new WaitForSeconds(0.25f);
+        nameTabText.text = characterName;
     }
 
     public IEnumerator SwapBackground(int nextBackground)
@@ -74,6 +179,11 @@ public class VN_Manager : MonoBehaviour
         yield return new WaitForSeconds(1.1f);
         background.sprite = backgrounds[nextBackground];
         yield return new WaitForSeconds(0.4f);
+        NextButtonActivator();
+    }
+
+    public void NextButtonActivator()
+    {
         nextButton.gameObject.SetActive(true);
     }
 
@@ -97,6 +207,8 @@ public class DialogueEntry
     public int background = -1;
     public int SFX = -1;
     public int BGM = -1;
+    public bool tabRight = false;
+    public bool tabLeft = false;
     public bool lastDialogue = false;
     [TextArea(1, 5)]
     public String loadCombat = null;

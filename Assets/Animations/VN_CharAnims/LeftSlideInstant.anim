@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NarratorSlideOut
+  m_Name: LeftSlideInstant
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -23,25 +23,25 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -100
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.75
-        value: -838.86523
-        inSlope: -3643.3638
-        outSlope: -3643.3638
+        value: -1200
+        inSlope: 41.904846
+        outSlope: 41.904846
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.13529412
-        outWeight: 0.13865556
+        inWeight: 0.12530714
+        outWeight: 0.1588651
+      - serializedVersion: 3
+        time: 0.35
+        value: -342.43753
+        inSlope: 1063.807
+        outSlope: 1063.807
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.1707865
+        outWeight: 0.113566756
       - serializedVersion: 3
         time: 1
-        value: -1200
+        value: -100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -101,25 +101,25 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -100
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.75
-        value: -838.86523
-        inSlope: -3643.3638
-        outSlope: -3643.3638
+        value: -1200
+        inSlope: 41.904846
+        outSlope: 41.904846
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.13529412
-        outWeight: 0.13865556
+        inWeight: 0.12530714
+        outWeight: 0.1588651
+      - serializedVersion: 3
+        time: 0.35
+        value: -342.43753
+        inSlope: 1063.807
+        outSlope: 1063.807
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.1707865
+        outWeight: 0.113566756
       - serializedVersion: 3
         time: 1
-        value: -1200
+        value: -100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -137,11 +137,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 1
-    functionName: DeActivate
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
