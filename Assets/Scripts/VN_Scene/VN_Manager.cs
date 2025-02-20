@@ -124,8 +124,15 @@ public class VN_Manager : MonoBehaviour
             nameTabAnimator.SetTrigger("MoveLeft");
         }
 
-        // Inserting the character name in the name tab after a short delay
-        StartCoroutine(InsertCharacterName(currentDialogue.characterName));
+        // Inserting the character name in the name tab
+        if(currentDialogue.tabLeft == true || currentDialogue.tabRight == true)
+        {
+            StartCoroutine(InsertCharacterName(currentDialogue.characterName));   // with delay when name tab moves
+        }
+        else
+        {
+            nameTabText.text = currentDialogue.characterName;  // instantly when static
+        }
 
         // Inserting character dialogue
         StartCoroutine(AnimateText(currentDialogue.dialogueText));
@@ -137,9 +144,38 @@ public class VN_Manager : MonoBehaviour
             SFX_Source.Play();
         }
 
+        // Changing BGM if needed
+        if(currentDialogue.BGM != -1)
+        {
+            StartCoroutine(BGMFadeTransition(currentDialogue.BGM));
+        }
 
         // Moving to next dialogue
         nextDialogue = currentDialogue.nextDialogue;
+    }
+
+    public IEnumerator BGMFadeTransition(int BGM_Index)
+    {
+        // Storing the initial volume level of BGM
+        float setVolume = BGM_Source.volume;
+
+        // Reducing volume of current track
+        while(BGM_Source.volume > 0)
+        {
+            BGM_Source.volume -= 0.05f;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        // Changing tracks
+        BGM_Source.clip = backgroundMusic[BGM_Index];
+        BGM_Source.Play();
+
+        // Restoring volume of new track
+        while(BGM_Source.volume < setVolume)
+        {
+            BGM_Source.volume += 0.05f;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     public IEnumerator AnimateText(string characterDialogue)

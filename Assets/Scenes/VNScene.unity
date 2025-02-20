@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -600}
-  m_SizeDelta: {x: 1080, y: 720}
+  m_AnchoredPosition: {x: 0, y: -655.17}
+  m_SizeDelta: {x: 1080, y: 790.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23086192
 MonoBehaviour:
@@ -234,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 1080, y: 600}
+  m_AnchoredPosition: {x: 0, y: -77.49997}
+  m_SizeDelta: {x: 1080, y: 635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88608332
 MonoBehaviour:
@@ -309,17 +309,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 167242085}
-  - {fileID: 981770012}
+  - {fileID: 1418513536}
   - {fileID: 830392842}
-  backgrounds:
-  - {fileID: 21300000, guid: cfa87b3304efa5d4aafbd7e3c400dbcc, type: 3}
+  - {fileID: 1667159646}
+  backgrounds: []
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
-  soundEffects:
-  - {fileID: 8300000, guid: 318a30ba7596f9341be5a14e26518411, type: 3}
+  soundEffects: []
   initialBackgroundMusic: {fileID: 8300000, guid: 5bd5c0179f2742b429c473906d2c6c1c,
     type: 3}
   backgroundMusic:
-  - {fileID: 8300000, guid: 04b3c35e85d45ce458f073a565669b86, type: 3}
+  - {fileID: 8300000, guid: cd1a1494b1c6a6b4eba549dc8cf943f4, type: 3}
+  - {fileID: 8300000, guid: 81f5b96870bbfeb47b52f232101bb5c5, type: 3}
   textSpeed: 0.02
   textSounds:
   - {fileID: 8300000, guid: 269b831dcdc545c43b6a52b2aec09c75, type: 3}
@@ -340,7 +340,7 @@ MonoBehaviour:
   - dialogueID: 0
     nextDialogue: 1
     characterName: Narrator
-    dialogueText: Hello I am the narrator!
+    dialogueText: The dirt path wound through the dense forest,
     character: 0
     background: -1
     SFX: -1
@@ -351,32 +351,20 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 1
     nextDialogue: 2
-    characterName: Garran
-    dialogueText: Hello everyone I am Garran
-    character: 2
+    characterName: Narrator
+    dialogueText: dappled sunlight casting long shadows across the road.
+    character: 0
     background: -1
-    SFX: 0
+    SFX: -1
     BGM: -1
-    tabRight: 1
+    tabRight: 0
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 2
     nextDialogue: 3
     characterName: Narrator
-    dialogueText: Hello nice to see you i am back
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 1
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 3
-    nextDialogue: 4
-    characterName: Narrator
-    dialogueText: Sussy amogus baka
+    dialogueText: A caravan of merchants and their guards moved steadily toward Liora.
     character: 0
     background: -1
     SFX: -1
@@ -387,14 +375,426 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 4
     nextDialogue: 5
-    characterName: Garran
-    dialogueText: Oh wow nice new background
-    character: 2
-    background: 0
+    characterName: Narrator
+    dialogueText: Their voices light as they chatted idly, keeping a watchful eye
+      on the peaceful woods.
+    character: 0
+    background: -1
     SFX: -1
-    BGM: 0
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 3
+    nextDialogue: 4
+    characterName: Narrator
+    dialogueText: Alden rode alongside two guildmates, Garran and Rurik.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 4
+    nextDialogue: 5
+    characterName: Narrator
+    dialogueText: Garran stretches his arms, letting out a yawn.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 5
+    nextDialogue: 6
+    characterName: Garran
+    dialogueText: Gods, how much longer till we reach Liora?
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
     tabRight: 1
     tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 6
+    nextDialogue: 7
+    characterName: Garran
+    dialogueText: "Feels like we\u2019ve been walking forever."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 7
+    nextDialogue: 8
+    characterName: Rurik
+    dialogueText: "You\u2019ve been complaining since we left the last outpost."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 8
+    nextDialogue: 9
+    characterName: Rurik
+    dialogueText: "Maybe if you spent less time at the tavern and more time on patrol,
+      you\u2019d have better stamina."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 9
+    nextDialogue: 10
+    characterName: Garran
+    dialogueText: Says the guy who nearly fell asleep on his horse last job.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 10
+    nextDialogue: 11
+    characterName: Alden
+    dialogueText: To be fair, that job was even duller than this one.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 11
+    nextDialogue: 12
+    characterName: Alden
+    dialogueText: "At least here we have fresh air and\u2014"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 12
+    nextDialogue: 13
+    characterName: Rurik
+    dialogueText: "\u2026"
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 13
+    nextDialogue: 14
+    characterName: Rurik
+    dialogueText: <Rurik looks around, suddenly alert>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 14
+    nextDialogue: 15
+    characterName: Rurik
+    dialogueText: ... Hold up.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 15
+    nextDialogue: 16
+    characterName: Alden
+    dialogueText: <Alden slows his horse, glancing at Rurik>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 16
+    nextDialogue: 17
+    characterName: Alden
+    dialogueText: What is it?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: 0
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 17
+    nextDialogue: 18
+    characterName: Garran
+    dialogueText: <Garran narrows his eyes, staring into the treeline>
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 18
+    nextDialogue: 19
+    characterName: Garran
+    dialogueText: "Something\u2019s moving in the woods."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 19
+    nextDialogue: 20
+    characterName: Rurik
+    dialogueText: I...
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 20
+    nextDialogue: 21
+    characterName: Rurik
+    dialogueText: I think I saw something shining between the trees...
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 21
+    nextDialogue: 22
+    characterName: Rurik
+    dialogueText: ... shining like steel.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 22
+    nextDialogue: 23
+    characterName: Alden
+    dialogueText: <Alden moves his hand to the hilt of his sword>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 23
+    nextDialogue: 24
+    characterName: Alden
+    dialogueText: "Could be nothing\u2026"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 24
+    nextDialogue: 25
+    characterName: Alden
+    dialogueText: ... or it could be trouble.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 25
+    nextDialogue: 26
+    characterName: Narrator
+    dialogueText: The air grows tense.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 26
+    nextDialogue: 27
+    characterName: Narrator
+    dialogueText: "The rustling grows louder\u2014"
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 27
+    nextDialogue: 28
+    characterName: Narrator
+    dialogueText: then, suddenly, figures emerge from the foliage, weapons drawn.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: 1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 28
+    nextDialogue: 29
+    characterName: Garran
+    dialogueText: Bandits !
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 29
+    nextDialogue: 30
+    characterName: Rurik
+    dialogueText: <Rurik draws his sword>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 30
+    nextDialogue: 31
+    characterName: Rurik
+    dialogueText: They were waiting for us !
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 31
+    nextDialogue: 32
+    characterName: Alden
+    dialogueText: <Alden quickly scans his surroundings and spots some movement at
+      the back of the caravan>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 32
+    nextDialogue: 33
+    characterName: Alden
+    dialogueText: "Damn it\u2014there\u2019s more behind us! "
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 33
+    nextDialogue: 34
+    characterName: Garran
+    dialogueText: "They\u2019re trying to box us in."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 34
+    nextDialogue: 35
+    characterName: Alden
+    dialogueText: "I\u2019ll handle the ones at the back. Keep the front clear!"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 35
+    nextDialogue: 36
+    characterName: Rurik
+    dialogueText: Got it. Stay sharp!
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 36
+    nextDialogue: 37
+    characterName: Narrator
+    dialogueText: "Alden dashes toward the back of the caravan as the bandits close
+      in\u2014he draws out his sword, ready for battle."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
     lastDialogue: 0
     loadCombat: 
 --- !u!4 &141600461
@@ -714,7 +1114,7 @@ GameObject:
   - component: {fileID: 167242090}
   - component: {fileID: 167242089}
   m_Layer: 5
-  m_Name: NarratorPlaceholder
+  m_Name: Narrator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -727,16 +1127,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167242085}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 678982527}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1200, y: 255}
+  m_AnchoredPosition: {x: -1200, y: 120}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167242087
@@ -759,7 +1159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e88c075892811145a0ecb66ff8ead04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -956,8 +1356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315, y: 300}
-  m_SizeDelta: {x: 450, y: 120}
+  m_AnchoredPosition: {x: -315, y: 317.5}
+  m_SizeDelta: {x: 450, y: 155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244383394
 MonoBehaviour:
@@ -1018,6 +1418,260 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &303963682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303963683}
+  - component: {fileID: 303963686}
+  - component: {fileID: 303963685}
+  - component: {fileID: 303963684}
+  m_Layer: 5
+  m_Name: Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &303963683
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 684439331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -450, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &303963684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 303963685}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &303963685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.75411415, b: 0.4292453, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &303963686
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_CullTransparentMesh: 1
+--- !u!1 &656357254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656357255}
+  - component: {fileID: 656357257}
+  - component: {fileID: 656357256}
+  m_Layer: 5
+  m_Name: LevelDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &656357255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656357254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 684439331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 700, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &656357256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656357254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 1. Caravan Escort
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &656357257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656357254}
+  m_CullTransparentMesh: 1
 --- !u!1 &678982523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,11 +1767,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1956419587}
+  - {fileID: 2142213069}
+  - {fileID: 684439331}
   - {fileID: 2056154120}
-  - {fileID: 981770013}
-  - {fileID: 167242086}
   - {fileID: 830392843}
+  - {fileID: 1667159647}
+  - {fileID: 1418513537}
   - {fileID: 23086191}
+  - {fileID: 167242086}
   - {fileID: 2121551454}
   - {fileID: 1991554709}
   - {fileID: 175031386}
@@ -1128,6 +1785,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &684439330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684439331}
+  - component: {fileID: 684439333}
+  - component: {fileID: 684439332}
+  m_Layer: 5
+  m_Name: MenuBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &684439331
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684439330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 656357255}
+  - {fileID: 303963683}
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 922.5}
+  m_SizeDelta: {x: 1080, y: 165}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &684439332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684439330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &684439333
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684439330}
+  m_CullTransparentMesh: 1
 --- !u!1 &706901189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,7 +2100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1200, y: 255}
+  m_AnchoredPosition: {x: 1200, y: 230}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830392844
@@ -1532,7 +2266,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
---- !u!1 &981770012
+--- !u!1 &1418513536
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1540,23 +2274,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 981770013}
-  - component: {fileID: 981770015}
-  - component: {fileID: 981770014}
+  - component: {fileID: 1418513537}
+  - component: {fileID: 1418513541}
+  - component: {fileID: 1418513540}
+  - component: {fileID: 1418513539}
+  - component: {fileID: 1418513538}
   m_Layer: 5
   m_Name: Alden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &981770013
+  m_IsActive: 0
+--- !u!224 &1418513537
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981770012}
+  m_GameObject: {fileID: 1418513536}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1566,30 +2302,63 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315, y: 85}
-  m_SizeDelta: {x: 650, y: 650}
+  m_AnchoredPosition: {x: -1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &981770014
+--- !u!114 &1418513538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981770012}
+  m_GameObject: {fileID: 1418513536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1418513539
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85c3f9bd125cb7d4ebefdb3af6c9dfe8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1418513540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b22d5b69ac90ff45857745a0bbc14c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fde402133d01c0449885dd3028675c5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1599,13 +2368,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &981770015
+--- !u!222 &1418513541
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981770012}
+  m_GameObject: {fileID: 1418513536}
   m_CullTransparentMesh: 1
 --- !u!1 &1516781601
 GameObject:
@@ -1741,6 +2510,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516781601}
   m_CullTransparentMesh: 1
+--- !u!1 &1667159646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667159647}
+  - component: {fileID: 1667159651}
+  - component: {fileID: 1667159650}
+  - component: {fileID: 1667159649}
+  - component: {fileID: 1667159648}
+  m_Layer: 5
+  m_Name: Rurik
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1667159647
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667159646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1667159648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667159646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1667159649
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667159646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1667159650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667159646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 273c036542e6e3d4e8c339ef4a8f916d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1667159651
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667159646}
+  m_CullTransparentMesh: 1
 --- !u!1 &1901202296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +2678,7 @@ GameObject:
   - component: {fileID: 1956419589}
   - component: {fileID: 1956419588}
   m_Layer: 5
-  m_Name: MenuBar
+  m_Name: BlackSpacerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1819,10 +2698,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 678982527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 1080, y: 120}
+  m_AnchoredPosition: {x: 0, y: 1072.4994}
+  m_SizeDelta: {x: 1080, y: -2145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956419588
 MonoBehaviour:
@@ -1837,7 +2716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1897,8 +2776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: -599.72}
-  m_SizeDelta: {x: 1080, y: 719.43}
+  m_AnchoredPosition: {x: 0, y: -657.59}
+  m_SizeDelta: {x: 1080, y: 795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991554710
 MonoBehaviour:
@@ -2028,8 +2907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 299.43}
-  m_SizeDelta: {x: 1080, y: 1080}
+  m_AnchoredPosition: {x: 0, y: 290}
+  m_SizeDelta: {x: 1100, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056154121
 MonoBehaviour:
@@ -2051,7 +2930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c418e692b87548440ac870d7c82ddb31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4570bc771393084468873baf11d07022, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2166,6 +3045,81 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2142213068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2142213069}
+  - component: {fileID: 2142213071}
+  - component: {fileID: 2142213070}
+  m_Layer: 5
+  m_Name: BlackSpacerBottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2142213069
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142213068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1109.1001}
+  m_SizeDelta: {x: 1080, y: -2219.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2142213070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142213068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2142213071
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142213068}
+  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
