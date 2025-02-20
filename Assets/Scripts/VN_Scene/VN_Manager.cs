@@ -61,6 +61,11 @@ public class VN_Manager : MonoBehaviour
 
     public void OnNextButton() // Loads the scene with the next dialogue's data.
     {
+        StartCoroutine(UpdateSceneData());
+    }
+
+    public IEnumerator UpdateSceneData()
+    {
         // Play button clicked SFX
         SFX_Source.clip = buttonClickSound;
         SFX_Source.Play();
@@ -69,7 +74,7 @@ public class VN_Manager : MonoBehaviour
         DialogueEntry currentDialogue = null;
         for (int i = 0; i < dialogues.Count; i++)
         {
-            if(dialogues[i].dialogueID == nextDialogue)
+            if (dialogues[i].dialogueID == nextDialogue)
             {
                 currentDialogue = dialogues[i];
                 break;
@@ -77,16 +82,17 @@ public class VN_Manager : MonoBehaviour
         }
 
         // Checking if BG transition is needed; -1 = Not Needed.
-        if(currentDialogue!=null && currentDialogue.background != -1)
+        if (currentDialogue != null && currentDialogue.background != -1)
         {
             StartCoroutine(SwapBackground(currentDialogue.background));
             nextButton.gameObject.SetActive(false);                                 // to prevent user from skipping dialogue mid transition
+            yield return new WaitForSeconds(1.5f);
         }
 
         // Making the active character slide into frame
-        if(currentDialogue!=null && currentDialogue.character != -1)
+        if (currentDialogue != null && currentDialogue.character != -1)
         {
-            if(currentDialogue.background != -1)
+            if (currentDialogue.background != -1)
             {
                 StartCoroutine(SlideAfterTransition(currentDialogue));
             }
@@ -105,7 +111,7 @@ public class VN_Manager : MonoBehaviour
         }
         else // If already initialised, checking to see if active character needs to be changed.
         {
-            if(currentDialogue.character != activeCharacter) // character needs to be changed
+            if (currentDialogue.character != activeCharacter) // character needs to be changed
             {
                 characters[activeCharacter].gameObject.GetComponent<Animator>().SetTrigger("SlideOut");  // Removing the old active character
 
@@ -115,17 +121,17 @@ public class VN_Manager : MonoBehaviour
         }
 
         // Moving the name tab if needed
-        if(currentDialogue.tabRight == true)
+        if (currentDialogue.tabRight == true)
         {
             nameTabAnimator.SetTrigger("MoveRight");
         }
-        if(currentDialogue.tabLeft == true)
+        if (currentDialogue.tabLeft == true)
         {
             nameTabAnimator.SetTrigger("MoveLeft");
         }
 
         // Inserting the character name in the name tab
-        if(currentDialogue.tabLeft == true || currentDialogue.tabRight == true)
+        if (currentDialogue.tabLeft == true || currentDialogue.tabRight == true)
         {
             StartCoroutine(InsertCharacterName(currentDialogue.characterName));   // with delay when name tab moves
         }
@@ -138,14 +144,14 @@ public class VN_Manager : MonoBehaviour
         StartCoroutine(AnimateText(currentDialogue.dialogueText));
 
         // Playing dialogue SFX if it exists
-        if(currentDialogue.SFX != -1)
+        if (currentDialogue.SFX != -1)
         {
             SFX_Source.clip = soundEffects[currentDialogue.SFX];
             SFX_Source.Play();
         }
 
         // Changing BGM if needed
-        if(currentDialogue.BGM != -1)
+        if (currentDialogue.BGM != -1)
         {
             StartCoroutine(BGMFadeTransition(currentDialogue.BGM));
         }

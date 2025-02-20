@@ -346,21 +346,9 @@ MonoBehaviour:
   dialogueBoxText: {fileID: 706901191}
   dialogues:
   - dialogueID: 0
-    nextDialogue: 1
-    characterName: Narrator
-    dialogueText: The bandits collapse, defeated in mere moments.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 1
     nextDialogue: 2
     characterName: Narrator
-    dialogueText: Alden barely has time to react before the knight turns to him.
+    dialogueText: The bandits collapse, defeated in mere moments.
     character: 0
     background: -1
     SFX: -1
@@ -394,27 +382,15 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 4
-    nextDialogue: 5
-    characterName: Narrator
-    dialogueText: 'Alden pants, his body trembling from pain. '
-    character: 0
+    nextDialogue: 6
+    characterName: Alden
+    dialogueText: <Alden pants, his body trembling from pain>
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
     tabLeft: 1
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 5
-    nextDialogue: 6
-    characterName: Narrator
-    dialogueText: He lowers his sword slightly but remains on guard.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 6
@@ -478,28 +454,16 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 11
-    nextDialogue: 12
+    nextDialogue: 14
     characterName: Narrator
     dialogueText: Without waiting for a response, the knight rushes toward the front
-      of the caravan,
+      of the caravan, his sword already raised as he vanishes into the trees.
     character: 0
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
     tabLeft: 1
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 12
-    nextDialogue: 14
-    characterName: Narrator
-    dialogueText: his sword already raised as he vanishes into the trees.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 14
@@ -600,21 +564,9 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 22
-    nextDialogue: 23
-    characterName: Alden
-    dialogueText: must...
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 23
     nextDialogue: 24
     characterName: Alden
-    dialogueText: go in...
+    dialogueText: ...I must go in.
     character: 1
     background: -1
     SFX: -1
@@ -625,9 +577,9 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 24
     nextDialogue: 25
-    characterName: Narrator
-    dialogueText: Alden musters all his strength.
-    character: 0
+    characterName: Alden
+    dialogueText: <Alden musters all his strength>
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -637,10 +589,10 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 25
     nextDialogue: 26
-    characterName: Narrator
-    dialogueText: He holds on to the caravan door and pulls himself up.
-    character: 0
-    background: 0
+    characterName: Alden
+    dialogueText: <he holds on to the caravan door and pulls himself up>
+    character: 1
+    background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
@@ -653,7 +605,7 @@ MonoBehaviour:
     dialogueText: Inside, a bandit stands with his back turned to Alden, gripping
       a young woman by the arm.
     character: 0
-    background: -1
+    background: 0
     SFX: -1
     BGM: -1
     tabRight: 0
@@ -661,23 +613,10 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 27
-    nextDialogue: 28
+    nextDialogue: 29
     characterName: Narrator
     dialogueText: His dagger glints in the dim light as he presses it close to her
       throat.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 28
-    nextDialogue: 29
-    characterName: Narrator
-    dialogueText: The girl trembles, her wide eyes filled with fear, barely able
-      to suppress a sob.
     character: 0
     background: -1
     SFX: -1
@@ -699,7 +638,7 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 30
-    nextDialogue: 31
+    nextDialogue: 39
     characterName: Bandit
     dialogueText: Ain't no one coming to save you now.
     character: 5
@@ -712,9 +651,9 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 31
     nextDialogue: 32
-    characterName: Narrator
-    dialogueText: Alden freezes, his breath shallow.
-    character: 0
+    characterName: Alden
+    dialogueText: <Alden freezes, holding his breath>
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -795,7 +734,7 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 38
-    nextDialogue: 39
+    nextDialogue: 38
     characterName: Alden
     dialogueText: <steady...>
     character: 1
@@ -807,15 +746,14 @@ MonoBehaviour:
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 39
-    nextDialogue: 39
-    characterName: Narrator
-    dialogueText: "The girl\u2019s gaze flickers toward him, her lips parting slightly,
-      but she doesn\u2019t make a sound."
-    character: 0
+    nextDialogue: 31
+    characterName: ???
+    dialogueText: <the girl's gaze flickers towards Alden>
+    character: 10
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 0
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
