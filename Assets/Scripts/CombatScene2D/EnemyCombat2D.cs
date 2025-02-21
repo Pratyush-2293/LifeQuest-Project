@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class EnemyCombat2D : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int turnCounter = 10;
+    public int turnSpeed = 1;
+    public bool isPlayerCharacter = false;
 }

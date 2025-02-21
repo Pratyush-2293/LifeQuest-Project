@@ -7,38 +7,123 @@ using UnityEditor;
 public class CombatManager : MonoBehaviour
 {
     [Header("Player Characters")]
-    public GameObject playerCharacter1 = null;
-    public GameObject playerCharacter2 = null;
-    public GameObject playerCharacter3 = null;
-    public GameObject playerCharacter4 = null;
+    public GameObject[] playerCharacters = new GameObject[4];
 
     [Header("Enemy Characters")]
-    public GameObject enemyCharacter1 = null;
-    public GameObject enemyCharacter2 = null;
-    public GameObject enemyCharacter3 = null;
-    public GameObject enemyCharacter4 = null;
+    public GameObject[] enemyCharacters = new GameObject[4];
+
+    [Header("Alden's Action Panel")]
+    public Animator aldenActionPanelAnimator = null;
+    public Slider aldenHPSlider = null;
+    public Slider aldenMPSlider = null;
+    public Slider aldenTimeSlider = null;
 
     // Storing script files for all characters on field
-    private PlayerCombat2D playerCombatController1;
-    private PlayerCombat2D playerCombatController2;
-    private PlayerCombat2D playerCombatController3;
-    private PlayerCombat2D playerCombatController4;
+    private PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
+    private EnemyCombat2D[] enemyCombatControllers = new EnemyCombat2D[4];
 
-    private EnemyCombat2D enemyCombatController1;
-    private EnemyCombat2D enemyCombatController2;
-    private EnemyCombat2D enemyCombatController3;
-    private EnemyCombat2D enemyCombatController4;
+    private bool timeStart = true;
 
     private void Start()
     {
-        playerCombatController1 = playerCharacter1.gameObject.GetComponent<PlayerCombat2D>();
-        playerCombatController2 = playerCharacter2.gameObject.GetComponent<PlayerCombat2D>();
-        playerCombatController3 = playerCharacter3.gameObject.GetComponent<PlayerCombat2D>();
-        playerCombatController4 = playerCharacter4.gameObject.GetComponent<PlayerCombat2D>();
+        // Initialising player & enemy controller scripts
+        for(int i=0; i < 4; i++)
+        {
+            if(playerCharacters[i].gameObject != null)
+            {
+                playerCombatControllers[i] = playerCharacters[i].gameObject.GetComponent<PlayerCombat2D>();
+            }
 
-        enemyCombatController1 = enemyCharacter1.gameObject.GetComponent<EnemyCombat2D>();
-        enemyCombatController2 = enemyCharacter2.gameObject.GetComponent<EnemyCombat2D>();
-        enemyCombatController3 = enemyCharacter3.gameObject.GetComponent<EnemyCombat2D>();
-        enemyCombatController4 = enemyCharacter4.gameObject.GetComponent<EnemyCombat2D>();
+            if (enemyCharacters[i].gameObject != null)
+            {
+                enemyCombatControllers[i] = enemyCharacters[i].gameObject.GetComponent<EnemyCombat2D>();
+            }
+        }
+
+        // Start a function that ticks turn count for all characters
+        StartCoroutine(TickTime());
+    }
+
+    public IEnumerator TickTime()
+    {
+        while(timeStart == true)
+        {
+            // Check if a character has reached turn cap
+            for (int i = 0; i < 4; i++)
+            {
+                if (playerCombatControllers[i] != null)
+                {
+                    if(playerCombatControllers[i].turnCounter >= 100)
+                    {
+                        // Turn starts for ith character
+                        // stop time
+                        timeStart = false;
+
+                        // show action panel
+                        if(playerCombatControllers[i].characterName == "Alden")
+                        {
+                            aldenActionPanelAnimator.SetTrigger("SlideUp");
+                        }
+                    }
+
+                }
+
+                if (enemyCombatControllers[i] != null)
+                {
+                    enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
+                }
+            }
+
+            // Tick time for all characters on field
+            for (int i = 0; i < 4; i++)
+            {
+                if (playerCombatControllers[i] != null)
+                {
+                    playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
+                }
+
+                if (enemyCombatControllers[i] != null)
+                {
+                    enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
+                }
+
+            }
+
+            // Update time slider position for all characters
+            UpdateTimeSliders();
+
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    private void UpdateTimeSliders()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            if(playerCombatControllers[i] != null)
+            {
+                if(playerCombatControllers[i].characterName == "Alden")
+                {
+                    aldenTimeSlider.value = playerCombatControllers[i].turnCounter;
+                }
+                if(playerCombatControllers[i].characterName == "Valric")
+                {
+                    // update valric's slider
+                }
+                if(playerCombatControllers[i].characterName == "Osmir")
+                {
+                    // update Osmir's slider
+                }
+                if(playerCombatControllers[i].characterName == "Assassin Girl")
+                {
+                    // update assassin girl's slider
+                }
+            }
+
+            if(enemyCombatControllers[i] != null)
+            {
+                // update enemy sliders
+            }
+        }
     }
 }
