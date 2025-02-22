@@ -8,4 +8,6 @@ public class PlayerCombat2D : MonoBehaviour
     public int turnSpeed = 2;
     public bool isPlayerCharacter = true;
     public string characterName = "Alden";
+    public int health = 100;
+    public int mana = 100;
 }

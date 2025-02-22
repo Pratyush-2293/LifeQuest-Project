@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using TMPro;
 
 public class CombatManager : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class CombatManager : MonoBehaviour
     [Header("Enemy Characters")]
     public GameObject[] enemyCharacters = new GameObject[4];
 
-    [Header("Alden's Action Panel")]
-    public Animator aldenActionPanelAnimator = null;
-    public Slider aldenHPSlider = null;
-    public Slider aldenMPSlider = null;
+    [Header("Action Panel")]
+    public Animator actionPanelAnimator = null;
+    public TMP_Text nameLabel = null;
+    public Slider HPSlider = null;
+    public Slider MPSlider = null;
+
+    [Header("Time Sliders")]
     public Slider aldenTimeSlider = null;
 
     // Storing script files for all characters on field
@@ -23,6 +27,16 @@ public class CombatManager : MonoBehaviour
     private EnemyCombat2D[] enemyCombatControllers = new EnemyCombat2D[4];
 
     private bool timeStart = true;
+
+    private bool isAldenTurn = false;
+    private bool isValricTurn = false;
+    private bool isOsmirTurn = false;
+    private bool isAssassinTurn = false;
+
+    private int aldenIndex = -1;
+    private int valricIndex = -1;
+    private int osmirIndex = -1;
+    private int assassinIndex = -1;
 
     private void Start()
     {
@@ -37,6 +51,30 @@ public class CombatManager : MonoBehaviour
             if (enemyCharacters[i].gameObject != null)
             {
                 enemyCombatControllers[i] = enemyCharacters[i].gameObject.GetComponent<EnemyCombat2D>();
+            }
+        }
+
+        // Assigning Index values for Player Characters (to save time later by skipping a linear search every time we reference)
+        for(int i = 0; i < 4; i++)
+        {
+            if(playerCombatControllers[i] != null)
+            {
+                if (playerCombatControllers[i].characterName == "Alden")
+                {
+                    aldenIndex = i;
+                }
+                if (playerCombatControllers[i].characterName == "Valric")
+                {
+                    valricIndex = i;
+                }
+                if (playerCombatControllers[i].characterName == "Osmir")
+                {
+                    osmirIndex = i;
+                }
+                if (playerCombatControllers[i].characterName == "Assassin")
+                {
+                    assassinIndex = i;
+                }
             }
         }
 
@@ -59,11 +97,26 @@ public class CombatManager : MonoBehaviour
                         // stop time
                         timeStart = false;
 
-                        // show action panel
+                        // setting the active character
                         if(playerCombatControllers[i].characterName == "Alden")
                         {
-                            aldenActionPanelAnimator.SetTrigger("SlideUp");
+                            isAldenTurn = true;
                         }
+                        else if(playerCombatControllers[i].characterName == "Valric")
+                        {
+                            isValricTurn = true;
+                        }
+                        else if(playerCombatControllers[i].characterName == "Osmir")
+                        {
+                            isOsmirTurn = true;
+                        }
+                        else if(playerCombatControllers[i].characterName == "Assassin")
+                        {
+                            isAssassinTurn = true;
+                        }
+
+                        // show action panel & update for active character
+                        ShowUpdatedActionPanel();
                     }
 
                 }
@@ -96,28 +149,32 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    private void ShowUpdatedActionPanel()
+    {
+        // Updating action panel with active character's stats
+        if(isAldenTurn == true)
+        {
+            // updating HP and MP bars
+            HPSlider.value = playerCombatControllers[aldenIndex].health;
+            MPSlider.value = playerCombatControllers[aldenIndex].mana;
+
+            // updating name label
+            nameLabel.text = playerCombatControllers[aldenIndex].characterName;
+        }
+
+        actionPanelAnimator.SetTrigger("SlideUp");
+    }
+
     private void UpdateTimeSliders()
     {
         for(int i = 0; i < 4; i++)
         {
             if(playerCombatControllers[i] != null)
             {
-                if(playerCombatControllers[i].characterName == "Alden")
-                {
-                    aldenTimeSlider.value = playerCombatControllers[i].turnCounter;
-                }
-                if(playerCombatControllers[i].characterName == "Valric")
-                {
-                    // update valric's slider
-                }
-                if(playerCombatControllers[i].characterName == "Osmir")
-                {
-                    // update Osmir's slider
-                }
-                if(playerCombatControllers[i].characterName == "Assassin Girl")
-                {
-                    // update assassin girl's slider
-                }
+                aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
+                // similar for valric
+                // similar for osmir
+                // similar for assassin girl
             }
 
             if(enemyCombatControllers[i] != null)
@@ -125,5 +182,54 @@ public class CombatManager : MonoBehaviour
                 // update enemy sliders
             }
         }
+    }
+
+    // Handling Action Panel Commands
+
+    public void OnAttackButton()
+    {
+        // When attack button is pressed during Alden's turn
+        if (isAldenTurn)
+        {
+
+        }
+
+        // When attack button is pressed during Valric's turn
+        if (isValricTurn)
+        {
+
+        }
+
+        // When attack button is pressed during Osmir's turn
+        if (isOsmirTurn)
+        {
+
+        }
+
+        // When attack button is pressed during Assassin's Turn
+        if (isAssassinTurn)
+        {
+
+        }
+    }
+
+    public void OnSkillButton()
+    {
+
+    }
+
+    public void OnDefendButton()
+    {
+
+    }
+
+    public void OnLeftButton()
+    {
+
+    }
+
+    public void OnRightButton()
+    {
+
     }
 }
