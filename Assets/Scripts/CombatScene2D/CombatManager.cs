@@ -193,7 +193,8 @@ public class CombatManager : MonoBehaviour
         // When attack button is pressed during Alden's turn
         if (isAldenTurn)
         {
-
+            // Play attack animation according to selected target
+            playerCombatControllers[aldenIndex].PlayAttackAnimation(currentSelectedTarget);
         }
 
         // When attack button is pressed during Valric's turn

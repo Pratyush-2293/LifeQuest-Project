@@ -13,6 +13,7 @@ public class EnemyCombat2D : MonoBehaviour
     public Slider healthSlider = null;
     public GameObject selectMarker = null;
     public bool isDefeated = false;
+    public Animator enemyAnimator = null;
 
     private void Start()
     {
@@ -21,5 +22,10 @@ public class EnemyCombat2D : MonoBehaviour
     public void UpdateSelfState()
     {
         healthSlider.value = health;
+    }
+
+    public void PlayDamageAnimation()
+    {
+        enemyAnimator.SetTrigger("TakeDamage");
     }
 }
