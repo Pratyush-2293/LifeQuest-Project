@@ -38,6 +38,8 @@ public class CombatManager : MonoBehaviour
     private int osmirIndex = -1;
     private int assassinIndex = -1;
 
+    private int currentSelectedTarget = 0;
+
     private void Start()
     {
         // Initialising player & enemy controller scripts
@@ -117,13 +119,10 @@ public class CombatManager : MonoBehaviour
 
                         // show action panel & update for active character
                         ShowUpdatedActionPanel();
+
+                        break;
                     }
 
-                }
-
-                if (enemyCombatControllers[i] != null)
-                {
-                    enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
                 }
             }
 
@@ -161,6 +160,9 @@ public class CombatManager : MonoBehaviour
             // updating name label
             nameLabel.text = playerCombatControllers[aldenIndex].characterName;
         }
+
+        // Setting initial selected target
+        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(true);
 
         actionPanelAnimator.SetTrigger("SlideUp");
     }
@@ -225,11 +227,255 @@ public class CombatManager : MonoBehaviour
 
     public void OnLeftButton()
     {
-
+        if(currentSelectedTarget == 0) // Selecting next target when current target is 0
+        {
+            if(enemyCombatControllers[3] != null)
+            {
+                if(enemyCombatControllers[3].isDefeated == false)
+                {
+                    enemyCombatControllers[3].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 3;
+                }
+                else if(enemyCombatControllers[2].isDefeated == false)
+                {
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 2;
+                }
+                else if(enemyCombatControllers[1].isDefeated == false)
+                {
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 1;
+                }
+            }
+            else if(enemyCombatControllers[2] != null)
+            {
+                if(enemyCombatControllers[2].isDefeated == false)
+                {
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 2;
+                }
+                else if(enemyCombatControllers[1].isDefeated == false)
+                {
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 1;
+                }
+            }
+            else if(enemyCombatControllers[1] != null)
+            {
+                if(enemyCombatControllers[1].isDefeated == false)
+                {
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 1;
+                }
+            }
+        }
+        else if(currentSelectedTarget == 1) // Selecting next target when current target is 1
+        {
+            if (enemyCombatControllers[0].isDefeated == false)
+            {
+                enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 0;
+            }
+            else if (enemyCombatControllers[3] != null)
+            {
+                if (enemyCombatControllers[3].isDefeated == false)
+                {
+                    enemyCombatControllers[3].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 3;
+                }
+                else if (enemyCombatControllers[2].isDefeated == false)
+                {
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 2;
+                }
+            }
+            else if (enemyCombatControllers[2] != null)
+            {
+                if (enemyCombatControllers[2].isDefeated == false)
+                {
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 2;
+                }
+            }
+        }
+        else if(currentSelectedTarget == 2) // Selecting next target when current target is 2
+        {
+            if(enemyCombatControllers[1].isDefeated == false)
+            {
+                enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 1;
+            }
+            else if(enemyCombatControllers[0].isDefeated == false)
+            {
+                enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 0;
+            }
+            else if(enemyCombatControllers[3] != null)
+            {
+                if(enemyCombatControllers[3].isDefeated == false)
+                {
+                    enemyCombatControllers[3].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 3;
+                }
+            }
+        }
+        else if(currentSelectedTarget == 3) // Selecting next target when current target is 3
+        {
+            if(enemyCombatControllers[2].isDefeated == false)
+            {
+                enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[3].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 2;
+            }
+            else if(enemyCombatControllers[1].isDefeated == false)
+            {
+                enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[3].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 1;
+            }
+            else if(enemyCombatControllers[0].isDefeated == false)
+            {
+                enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[3].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 0;
+            }
+        }
     }
 
     public void OnRightButton()
     {
-
+        if (currentSelectedTarget == 0) // Selecting next target when current target is 0
+        {
+            if (enemyCombatControllers[1] != null)
+            {
+                if (enemyCombatControllers[1].isDefeated == false)
+                {
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 1;
+                }
+                else if(enemyCombatControllers[2] != null)
+                {
+                    if(enemyCombatControllers[2].isDefeated == false)
+                    {
+                        enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                        enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                        currentSelectedTarget = 2;
+                    }
+                    else if(enemyCombatControllers[3] != null)
+                    {
+                        if(enemyCombatControllers[3].isDefeated == false)
+                        {
+                            enemyCombatControllers[3].selectMarker.gameObject.SetActive(true);
+                            enemyCombatControllers[0].selectMarker.gameObject.SetActive(false);
+                            currentSelectedTarget = 3;
+                        }
+                    }
+                }
+            }
+        }
+        else if(currentSelectedTarget == 1) // Selecting next target when current target is 1
+        {
+            if (enemyCombatControllers[2] != null)
+            {
+                if (enemyCombatControllers[2].isDefeated == false)
+                {
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 2;
+                }
+                else if (enemyCombatControllers[3] != null)
+                {
+                    if (enemyCombatControllers[3].isDefeated == false)
+                    {
+                        enemyCombatControllers[3].selectMarker.gameObject.SetActive(true);
+                        enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                        currentSelectedTarget = 3;
+                    }
+                    else if (enemyCombatControllers[0].isDefeated == false)
+                    {
+                        enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                        enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                        currentSelectedTarget = 0;
+                    }
+                }
+                else if (enemyCombatControllers[0].isDefeated == false)
+                {
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 0;
+                }
+            }
+        }
+        else if(currentSelectedTarget == 2) // Selecting next target when current target is 2
+        {
+            if (enemyCombatControllers[3] != null)
+            {
+                if (enemyCombatControllers[3].isDefeated == false)
+                {
+                    enemyCombatControllers[3].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 3;
+                }
+                else if (enemyCombatControllers[0].isDefeated == false)
+                {
+                    enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 0;
+                }
+                else if (enemyCombatControllers[1].isDefeated == false)
+                {
+                    enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                    enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                    currentSelectedTarget = 1;
+                }
+            }
+            else if (enemyCombatControllers[0].isDefeated == false)
+            {
+                enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 0;
+            }
+            else if (enemyCombatControllers[1].isDefeated == false)
+            {
+                enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[2].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 1;
+            }
+        }
+        else if(currentSelectedTarget == 3) // Selecting next target when current target is 3
+        {
+            if (enemyCombatControllers[0].isDefeated == false)
+            {
+                enemyCombatControllers[0].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[3].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 0;
+            }
+            else if (enemyCombatControllers[1].isDefeated == false)
+            {
+                enemyCombatControllers[1].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[3].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 1;
+            }
+            else if (enemyCombatControllers[2].isDefeated == false)
+            {
+                enemyCombatControllers[2].selectMarker.gameObject.SetActive(true);
+                enemyCombatControllers[3].selectMarker.gameObject.SetActive(false);
+                currentSelectedTarget = 2;
+            }
+        }
     }
 }
