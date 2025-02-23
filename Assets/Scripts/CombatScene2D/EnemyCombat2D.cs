@@ -31,6 +31,14 @@ public class EnemyCombat2D : MonoBehaviour
         healthSlider.value = health;
     }
 
+    public void Action_Attack()
+    {
+        // check available player character
+        // choose a random character from available characters , unless taunted
+        // deal damage to randomly selected character
+        // if taunted, deal damage to valric
+    }
+
     public void Action_TakeDamage(int incomingDamage, bool isCritical)
     {
         // play damage animation
@@ -52,5 +60,8 @@ public class EnemyCombat2D : MonoBehaviour
         }
 
         // reduce enemy health
+        health -= incomingDamage;
+
+        UpdateSelfState();
     }
 }

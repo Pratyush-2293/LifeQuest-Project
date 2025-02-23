@@ -22,7 +22,11 @@ public class CombatManager : MonoBehaviour
     public Slider MPSlider = null;
 
     [Header("Time Sliders")]
+    // player character sliders
     public Slider aldenTimeSlider = null;
+
+    // enemy sliders
+    public List<Slider> enemySliders = new List<Slider>();
 
     // Storing script files for all characters on field
     private PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
@@ -134,7 +138,22 @@ public class CombatManager : MonoBehaviour
 
                         break;
                     }
+                }
 
+                // Check if an enemy has reached turn cap
+                if (enemyCombatControllers[i] != null)
+                {
+                    if (enemyCombatControllers[i].turnCounter >= 100)
+                    {
+                        // Turn starts for ith enemy
+                        // stop time
+                        timeStart = false;
+
+                        Debug.Log("Enemy Turn Started");
+                        // Make the enemy attack a player character
+
+                        break;
+                    }
                 }
             }
 
@@ -158,6 +177,12 @@ public class CombatManager : MonoBehaviour
 
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    public void ResumeTime()
+    {
+        timeStart = true;
+        StartCoroutine(TickTime());
     }
 
     private void ShowUpdatedActionPanel()
@@ -205,6 +230,7 @@ public class CombatManager : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
+            // update player sliders
             if(playerCombatControllers[i] != null)
             {
                 aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
@@ -213,9 +239,10 @@ public class CombatManager : MonoBehaviour
                 // similar for assassin girl
             }
 
-            if(enemyCombatControllers[i] != null)
+            // update enemy sliders
+            if (enemyCombatControllers[i] != null)
             {
-                // update enemy sliders
+                enemySliders[i].value = enemyCombatControllers[i].turnCounter;
             }
         }
     }
@@ -249,12 +276,13 @@ public class CombatManager : MonoBehaviour
 
         }
 
-        //actionPanelAnimator.SetTrigger("SlideDown");
+
+        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
+        actionPanelAnimator.SetTrigger("SlideDown");
     }
 
     public void HandleDealtDamage(int dealtDamage, bool isCritical)
     {
-        Debug.Log(isCritical);
         enemyCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage, isCritical);
     }
 

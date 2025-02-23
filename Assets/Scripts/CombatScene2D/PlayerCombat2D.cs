@@ -18,7 +18,13 @@ public class PlayerCombat2D : MonoBehaviour
         if(actionName == "Attack")
         {
             Action_Attack(targetPosition);
+            AddTimeCost(aldenCombatController.attackTimeCost);
         }
+    }
+
+    private void AddTimeCost(int timeCost)
+    {
+        turnCounter = 100 - timeCost;
     }
 
     public int GetHealthValue()

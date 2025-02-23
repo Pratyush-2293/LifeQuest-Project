@@ -23,6 +23,13 @@ public class AldenCombat2D : MonoBehaviour
     public int skill3Scaling = 1;
     public int defendScaling = 1;
 
+    // Actions info
+    public int attackTimeCost = 30;
+    public int defendTimeCost = 30;
+    public int skill1TimeCost = 30;
+    public int skill2TimeCost = 30;
+    public int skill3TimeCost = 30;
+
     // Alden Components
     public Animator aldenAnimator = null;
 
@@ -48,7 +55,6 @@ public class AldenCombat2D : MonoBehaviour
         // Checking to see if this attack will be a critical hit
         Random.InitState(System.DateTime.Now.Millisecond);
         randomNumber = Random.Range(1, 101);
-        Debug.Log(randomNumber);
         if (randomNumber <= critRate)
         {
             isCritical = true;
@@ -58,7 +64,7 @@ public class AldenCombat2D : MonoBehaviour
         // Play the attack animation
         if (targetPosition == 0)
         {
-            aldenAnimator.SetTrigger("Attack_1-1");
+            aldenAnimator.SetTrigger("Attack_1-1");  // Deal the damage by calling DealDamage() using animation event
         }
         else if (targetPosition == 1)
         {
@@ -72,12 +78,19 @@ public class AldenCombat2D : MonoBehaviour
         {
             aldenAnimator.SetTrigger("Attack_1-4");
         }
+
+        // Add time cost to turnCount
+
     }
 
     public void DealDamage()
     {
         // Tell combat manager to deal damage to active enemy
-        Debug.Log(isCritical);
         CombatManager.instance.HandleDealtDamage(damageToDo, isCritical);
+    }
+
+    public void RequestResumeTime()
+    {
+        CombatManager.instance.ResumeTime();
     }
 }
