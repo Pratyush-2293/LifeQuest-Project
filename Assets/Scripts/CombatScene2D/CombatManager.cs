@@ -7,6 +7,8 @@ using TMPro;
 
 public class CombatManager : MonoBehaviour
 {
+    public static CombatManager instance = null;
+
     [Header("Player Characters")]
     public GameObject[] playerCharacters = new GameObject[4];
 
@@ -39,6 +41,16 @@ public class CombatManager : MonoBehaviour
     private int assassinIndex = -1;
 
     private int currentSelectedTarget = 0;
+
+    private void Awake()
+    {
+        if (instance)
+        {
+            Debug.LogError("Trying to create more than one CombatManager instance!");
+            Destroy(gameObject);
+        }
+        instance = this;
+    }
 
     private void Start()
     {
@@ -154,17 +166,39 @@ public class CombatManager : MonoBehaviour
         if(isAldenTurn == true)
         {
             // updating HP and MP bars
-            HPSlider.value = playerCombatControllers[aldenIndex].health;
-            MPSlider.value = playerCombatControllers[aldenIndex].mana;
+            HPSlider.value = playerCombatControllers[aldenIndex].GetHealthValue();
+            MPSlider.value = playerCombatControllers[aldenIndex].GetManaValue();
 
             // updating name label
             nameLabel.text = playerCombatControllers[aldenIndex].characterName;
         }
 
         // Setting initial selected target
-        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(true);
+        int activeEnemies = CheckActiveEnemies();
+        for(int i = 0; i < activeEnemies; i++)
+        {
+            if(enemyCombatControllers[i].isDefeated == false)
+            {
+                enemyCombatControllers[i].selectMarker.gameObject.SetActive(true);
+                currentSelectedTarget = i;
+                break;
+            }
+        }
 
         actionPanelAnimator.SetTrigger("SlideUp");
+    }
+
+    private int CheckActiveEnemies()
+    {
+        int activeEnemies = 0;
+        for(int i = 0; i < 4; i++)
+        {
+            if(enemyCombatControllers[i] != null)
+            {
+                activeEnemies++;
+            }
+        }
+        return activeEnemies;
     }
 
     private void UpdateTimeSliders()
@@ -194,7 +228,7 @@ public class CombatManager : MonoBehaviour
         if (isAldenTurn)
         {
             // Play attack animation according to selected target
-            playerCombatControllers[aldenIndex].PlayAttackAnimation(currentSelectedTarget);
+            playerCombatControllers[aldenIndex].DoAction("Attack" ,currentSelectedTarget);
         }
 
         // When attack button is pressed during Valric's turn
@@ -214,14 +248,42 @@ public class CombatManager : MonoBehaviour
         {
 
         }
+
+        //actionPanelAnimator.SetTrigger("SlideDown");
+    }
+
+    public void HandleDealtDamage(int dealtDamage, bool isCritical)
+    {
+        Debug.Log(isCritical);
+        enemyCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage, isCritical);
     }
 
     public void OnSkillButton()
+    {
+        actionPanelAnimator.SetTrigger("SkillShow");
+    }
+
+    public void OnBackButton()
+    {
+        actionPanelAnimator.SetTrigger("SkillHide");
+    }
+
+    public void OnSkill1Button()
+    {
+
+    }
+
+    public void OnSkill2Button()
     {
 
     }
 
     public void OnDefendButton()
+    {
+
+    }
+
+    public void OnSkill3Button()
     {
 
     }

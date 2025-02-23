@@ -8,27 +8,82 @@ public class PlayerCombat2D : MonoBehaviour
     public int turnSpeed = 2;
     public bool isPlayerCharacter = true;
     public string characterName = "Alden";
-    public int health = 100;
-    public int mana = 100;
-    public Animator playerAnimator = null;
+    public AldenCombat2D aldenCombatController = null;
+    public ValricCombat2D valricCombatController = null;
+    public OsmirCombat2D osmirCombatController = null;
+    public AssassinCombat2D assassinCombatController = null;
 
-    public void PlayAttackAnimation(int targetPosition)
+    public void DoAction(string actionName, int targetPosition)
     {
-        if(targetPosition == 0)
+        if(actionName == "Attack")
         {
-            playerAnimator.SetTrigger("Attack_1-1");
+            Action_Attack(targetPosition);
         }
-        else if(targetPosition == 1)
+    }
+
+    public int GetHealthValue()
+    {
+        if (characterName == "Alden")
         {
-            playerAnimator.SetTrigger("Attack_1-2");
+            return aldenCombatController.health;
         }
-        else if(targetPosition == 2)
+        else if(characterName == "Valric")
         {
-            playerAnimator.SetTrigger("Attack_1-3");
+            // do the same as above
         }
-        else if(targetPosition == 3)
+        else if(characterName == "Osmir")
         {
-            playerAnimator.SetTrigger("Attack_1-4");
+            // do the same as above
+        }
+        else if(characterName == "Assassin")
+        {
+            // do the same as above
+        }
+
+
+        return -1;
+    }
+
+    public int GetManaValue()
+    {
+        if (characterName == "Alden")
+        {
+            return aldenCombatController.mana;
+        }
+        else if (characterName == "Valric")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // do the same as above
+        }
+
+
+        return -1;
+    }
+
+    public void Action_Attack(int targetPosition)
+    {
+        if(characterName == "Alden")
+        {
+            aldenCombatController.AldenAttack(targetPosition);
+        }
+        else if(characterName == "Valric")
+        {
+            // same as above
+        }
+        else if(characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if(characterName == "Assassin")
+        {
+            // same as above
         }
     }
 }
