@@ -522,7 +522,7 @@ MonoBehaviour:
   - dialogueID: 15
     nextDialogue: 16
     characterName: Rurik
-    dialogueText: ... Hold up.
+    dialogueText: ...Hold up.
     character: 3
     background: -1
     SFX: -1
@@ -606,7 +606,7 @@ MonoBehaviour:
   - dialogueID: 22
     nextDialogue: 23
     characterName: Rurik
-    dialogueText: ... shining like steel.
+    dialogueText: ...shining like steel.
     character: 3
     background: -1
     SFX: -1
@@ -642,7 +642,7 @@ MonoBehaviour:
   - dialogueID: 25
     nextDialogue: 26
     characterName: Alden
-    dialogueText: ... or it could be trouble.
+    dialogueText: ...or it could be trouble.
     character: 1
     background: -1
     SFX: -1
@@ -690,7 +690,7 @@ MonoBehaviour:
   - dialogueID: 29
     nextDialogue: 30
     characterName: Garran
-    dialogueText: Bandits !
+    dialogueText: Bandits!
     character: 2
     background: -1
     SFX: -1
@@ -714,7 +714,7 @@ MonoBehaviour:
   - dialogueID: 31
     nextDialogue: 32
     characterName: Rurik
-    dialogueText: They were waiting for us !
+    dialogueText: They were waiting for us!
     character: 3
     background: -1
     SFX: -1

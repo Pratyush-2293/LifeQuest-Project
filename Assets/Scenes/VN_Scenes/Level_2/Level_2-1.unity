@@ -312,12 +312,21 @@ MonoBehaviour:
   - {fileID: 1418513536}
   - {fileID: 2133645545}
   - {fileID: 489151913}
-  backgrounds: []
+  - {fileID: 489151913}
+  - {fileID: 854520416}
+  - {fileID: 1833977977}
+  - {fileID: 1544240431}
+  backgrounds:
+  - {fileID: 21300000, guid: d76299879d46dd4479d261244e3026f0, type: 3}
+  - {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f, type: 3}
+  - {fileID: 21300000, guid: 956c485ebe64cc14b83c2f5fcb7c1833, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
   soundEffects: []
   initialBackgroundMusic: {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2,
     type: 3}
-  backgroundMusic: []
+  backgroundMusic:
+  - {fileID: 8300000, guid: eb6f45f1328f0074c9c0962b173695cc, type: 3}
+  - {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2, type: 3}
   textSpeed: 0.02
   textSounds:
   - {fileID: 8300000, guid: 269b831dcdc545c43b6a52b2aec09c75, type: 3}
@@ -338,7 +347,7 @@ MonoBehaviour:
   - dialogueID: 0
     nextDialogue: 1
     characterName: Narrator
-    dialogueText: hello i m narrator
+    dialogueText: Alden's vision slowly fades in.
     character: 0
     background: -1
     SFX: -1
@@ -349,8 +358,120 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 1
     nextDialogue: 2
+    characterName: Narrator
+    dialogueText: Sunlight streams through tall windows, casting a warm glow on polished
+      marble.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 2
+    nextDialogue: 3
+    characterName: Narrator
+    dialogueText: The air carries a hint of herbs and fresh linens, while a distant
+      hearth crackles beneath hushed voices.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 3
+    nextDialogue: 4
+    characterName: Alden
+    dialogueText: <Alden groans>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 4
+    nextDialogue: 5
+    characterName: Alden
+    dialogueText: ...
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 5
+    nextDialogue: 6
+    characterName: Alden
+    dialogueText: Where...?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 6
+    nextDialogue: 7
+    characterName: Narrator
+    dialogueText: "A dull ache weighs on Alden's body as he stirs, the rustle of
+      sheets and a scraping chair telling him he\u2019s in bed\u2014and not alone."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 7
+    nextDialogue: 8
+    characterName: ???
+    dialogueText: "You\u2019re awake. Took you long enough."
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 8
+    nextDialogue: 9
+    characterName: Alden
+    dialogueText: "\u2026Who\u2014?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 9
+    nextDialogue: 10
+    characterName: Alden
+    dialogueText: <Alden turns his head to see a young man in polished armor leaning
+      against the wall>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 10
+    nextDialogue: 11
     characterName: Valric
-    dialogueText: hello im valric
+    dialogueText: Sir Valric. Royal Knight of Liora.
     character: 2
     background: -1
     SFX: -1
@@ -359,12 +480,1456 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 2
-    nextDialogue: 3
+  - dialogueID: 11
+    nextDialogue: 12
+    characterName: Narrator
+    dialogueText: "Valric pushes off the wall, stepping closer to Alden\u2019s bed.
+      His confident smirk doesn\u2019t quite mask the sharpness in his gaze, as if
+      he\u2019s measuring Alden, assessing him."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 12
+    nextDialogue: 13
+    characterName: Alden
+    dialogueText: <Alden winces, trying to sit up>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 13
+    nextDialogue: 14
+    characterName: Alden
+    dialogueText: The caravan... The bandits...
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 14
+    nextDialogue: 15
     characterName: Valric
-    dialogueText: nice to mee  you
+    dialogueText: <Valric pulls over a chair, sitting down casually>
     character: 2
     background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 15
+    nextDialogue: 16
+    characterName: Valric
+    dialogueText: Dealt with. The survivors fled. We took care of the wounded and
+      escorted the caravan here.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 16
+    nextDialogue: 17
+    characterName: Valric
+    dialogueText: You put up a decent fight, for a guild mercenary.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 17
+    nextDialogue: 18
+    characterName: Alden
+    dialogueText: "I wasn\u2019t just going to stand by and do nothing."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 18
+    nextDialogue: 19
+    characterName: Valric
+    dialogueText: "No, you weren\u2019t. And that\u2019s why you\u2019re here instead
+      of rotting in a ditch."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 19
+    nextDialogue: 20
+    characterName: Narrator
+    dialogueText: Before Alden can respond, the door creaks open.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 20
+    nextDialogue: 21
+    characterName: Narrator
+    dialogueText: A soft pair of footsteps approaches, and a familiar voice cuts
+      through the tension.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 21
+    nextDialogue: 22
+    characterName: ???
+    dialogueText: "You\u2019re awake! I\u2019m so glad."
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 22
+    nextDialogue: 23
+    characterName: Narrator
+    dialogueText: Alden looks toward the source and sees the young girl he rescued.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 23
+    nextDialogue: 24
+    characterName: Narrator
+    dialogueText: "Now in an elegant yet simple dress, she\u2019s no longer the frightened
+      traveler he saw in the caravan\u2014there\u2019s a composed, almost regal air
+      to her."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 24
+    nextDialogue: 25
+    characterName: Narrator
+    dialogueText: But her eyes, filled with genuine relief, soften that image.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 25
+    nextDialogue: 26
+    characterName: Alden
+    dialogueText: "\u2026You\u2026"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 26
+    nextDialogue: 27
+    characterName: ???
+    dialogueText: Sir Valric, would you allow us a moment?
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 27
+    nextDialogue: 28
+    characterName: Valric
+    dialogueText: <Valric hesitates, glancing between her and Alden before sighing
+      and standing up>
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 28
+    nextDialogue: 29
+    characterName: Valric
+    dialogueText: As you wish, Your Highness.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 29
+    nextDialogue: 30
+    characterName: Alden
+    dialogueText: <Alden freezes>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 30
+    nextDialogue: 31
+    characterName: Alden
+    dialogueText: ...What...?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 31
+    nextDialogue: 32
+    characterName: Narrator
+    dialogueText: "Valric smirks at Alden\u2019s reaction before stepping out of
+      the room. "
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 32
+    nextDialogue: 33
+    characterName: Narrator
+    dialogueText: The girl sighs softly before turning her gaze back to Alden, a
+      mixture of gratitude and something unreadable in her eyes.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 33
+    nextDialogue: 34
+    characterName: Princess
+    dialogueText: I suppose introductions are in order.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 34
+    nextDialogue: 35
+    characterName: Princess
+    dialogueText: <The Princess takes a seat beside his bed>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 35
+    nextDialogue: 36
+    characterName: Princess Evelyne
+    dialogueText: My name is Princess Evelyne of Liora.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 36
+    nextDialogue: 37
+    characterName: Princess Evelyne
+    dialogueText: And you, Alden, saved my life.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 37
+    nextDialogue: 38
+    characterName: Narrator
+    dialogueText: The weight of the Princess' words settles in.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 38
+    nextDialogue: 39
+    characterName: Narrator
+    dialogueText: "Alden swallows, mind racing. The girl he risked everything for\u2026was
+      royalty?"
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 39
+    nextDialogue: 40
+    characterName: Narrator
+    dialogueText: "He exhales sharply, barely able to process what he\u2019s just
+      learned. And yet, something about this feels\u2026off."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 40
+    nextDialogue: 41
+    characterName: Narrator
+    dialogueText: Why was a princess traveling in secret? And why was she targeted
+      so specifically?
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 41
+    nextDialogue: 42
+    characterName: Alden
+    dialogueText: ...
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 42
+    nextDialogue: 43
+    characterName: Alden
+    dialogueText: What were you doing out there?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 43
+    nextDialogue: 44
+    characterName: Princess Evelyne
+    dialogueText: "That\u2026is a long story."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 44
+    nextDialogue: 45
+    characterName: Alden
+    dialogueText: "So\u2026a princess. That explains why you had a royal knight tailing
+      the caravan."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 45
+    nextDialogue: 46
+    characterName: Alden
+    dialogueText: "But it doesn\u2019t explain why you were out there in the first
+      place."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 46
+    nextDialogue: 47
+    characterName: Princess Evelyne
+    dialogueText: You ask a lot of questions for someone who just woke up.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 47
+    nextDialogue: 48
+    characterName: Alden
+    dialogueText: Nearly dying tends to do that to a man.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 48
+    nextDialogue: 49
+    characterName: Princess Evelyne
+    dialogueText: <The Princess chuckles, and shakes her head>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 49
+    nextDialogue: 50
+    characterName: Princess Evelyne
+    dialogueText: "There are things I cannot speak of freely. If you truly want answers,
+      you\u2019ll need to hear them from my mother."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 50
+    nextDialogue: 51
+    characterName: Narrator
+    dialogueText: "Alden frowns. The princess\u2019s words feel deliberate, as if
+      she\u2019s holding something back."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 51
+    nextDialogue: 52
+    characterName: Narrator
+    dialogueText: Alden sits upright on the infirmary bed, his wounds treated but
+      still sore. He flexes his fingers, testing his movement, while across from
+      him, Princess Evelyne watches with composed ease.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 52
+    nextDialogue: 53
+    characterName: Alden
+    dialogueText: "Well, nevermind that, at least I\u2019m in better shape than I
+      expected."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 53
+    nextDialogue: 54
+    characterName: Princess Evelyne
+    dialogueText: I should hope so. It would be disappointing if my savior were bedridden
+      after just one battle.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 54
+    nextDialogue: 55
+    characterName: Alden
+    dialogueText: I was fortunate, Your Highness.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 55
+    nextDialogue: 56
+    characterName: Princess Evelyne
+    dialogueText: <Evelyne tilts her head slightly, amusement flickering in her eyes>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 56
+    nextDialogue: 57
+    characterName: Princess Evelyne
+    dialogueText: That is a very diplomatic way of saying you nearly collapsed.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 57
+    nextDialogue: 58
+    characterName: Alden
+    dialogueText: "The situation was\u2026demanding."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 58
+    nextDialogue: 59
+    characterName: Princess Evelyne
+    dialogueText: So humble. And yet, I distinctly remember you defeating men twice
+      your size.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 59
+    nextDialogue: 60
+    characterName: Alden
+    dialogueText: I did what was necessary.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 60
+    nextDialogue: 61
+    characterName: Princess Evelyne
+    dialogueText: Still. For someone who claims to be a mere mercenary, you handled
+      yourself well.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 61
+    nextDialogue: 62
+    characterName: Narrator
+    dialogueText: "Alden doesn\u2019t respond immediately."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 62
+    nextDialogue: 63
+    characterName: Narrator
+    dialogueText: Compliments from nobility were rarely given lightly, but he isn't
+      sure how to take it. Instead, he inclines his head slightly.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 63
+    nextDialogue: 64
+    characterName: Alden
+    dialogueText: I am glad I was of service, Your Highness.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 64
+    nextDialogue: 65
+    characterName: Princess Evelyne
+    dialogueText: <Evelyne sighs, shaking her head slightly as she rises from her
+      seat>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 65
+    nextDialogue: 66
+    characterName: Princess Evelyne
+    dialogueText: "That formality suits you, but I do wonder\u2014does it ever tire
+      you?"
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 66
+    nextDialogue: 67
+    characterName: Alden
+    dialogueText: It is only proper when speaking to royalty.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 67
+    nextDialogue: 68
+    characterName: Princess Evelyne
+    dialogueText: <Evelyne hums in amusement as she turns toward the door>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 68
+    nextDialogue: 69
+    characterName: Princess Evelyne
+    dialogueText: Perhaps. But propriety can make for such dull conversation.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 69
+    nextDialogue: 70
+    characterName: Princess Evelyne
+    dialogueText: "Come along, Ser Alden. It wouldn\u2019t do to keep my mother waiting."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 70
+    nextDialogue: 71
+    characterName: Narrator
+    dialogueText: The vast chamber is adorned with banners bearing the crest of Liora.
+    character: 0
+    background: 0
+    SFX: -1
+    BGM: 0
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 71
+    nextDialogue: 72
+    characterName: Narrator
+    dialogueText: Queen Elowen sits upon her ornate throne, her sharp gaze steady
+      as Princess Evelyne stands beside her and Sir Valric watches from a distance.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 72
+    nextDialogue: 73
+    characterName: Narrator
+    dialogueText: Alden steps forward with measured care, stopping to bow.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 73
+    nextDialogue: 74
+    characterName: Queen Elowen
+    dialogueText: "You are Alden Redbrook, the mercenary responsible for my daughter\u2019s
+      safety?"
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 74
+    nextDialogue: 75
+    characterName: Alden
+    dialogueText: I am, Your Majesty.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 75
+    nextDialogue: 76
+    characterName: Queen Elowen
+    dialogueText: For your actions, the crown extends its gratitude. You will be
+      compensated accordingly for your service.
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 76
+    nextDialogue: 77
+    characterName: Alden
+    dialogueText: I am honored, Your Majesty.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 77
+    nextDialogue: 78
+    characterName: Alden
+    dialogueText: However, I seek something beyond compensation.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 78
+    nextDialogue: 79
+    characterName: Queen Elowen
+    dialogueText: And what is it that you seek?
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 79
+    nextDialogue: 80
+    characterName: Alden
+    dialogueText: A place to serve.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 80
+    nextDialogue: 81
+    characterName: Alden
+    dialogueText: I have spent years as a mercenary, but I wish to devote my skills
+      to something greater.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 81
+    nextDialogue: 82
+    characterName: Queen Elowen
+    dialogueText: <Queen Elowen studies him carefully>
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 82
+    nextDialogue: 83
+    characterName: Queen Elowen
+    dialogueText: Service to the crown is not a decision to be made lightly.
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 83
+    nextDialogue: 84
+    characterName: Alden
+    dialogueText: I understand, Your Majesty.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 84
+    nextDialogue: 85
+    characterName: Alden
+    dialogueText: But I have seen firsthand what dangers threaten this kingdom. If
+      I can be of use, I wish to be.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 85
+    nextDialogue: 86
+    characterName: Narrator
+    dialogueText: There is a pause.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 86
+    nextDialogue: 87
+    characterName: Narrator
+    dialogueText: "The queen\u2019s fingers lightly tap the armrest of her throne,
+      her expression remaining composed."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 87
+    nextDialogue: 88
+    characterName: Narrator
+    dialogueText: Sir Valric, standing nearby, watches Alden with faint amusement
+      before speaking.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 88
+    nextDialogue: 89
+    characterName: Valric
+    dialogueText: A bold request. But not without merit.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 89
+    nextDialogue: 90
+    characterName: Narrator
+    dialogueText: The queen exhales softly, then turns to Evelyne, who remains silent
+      but observant.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 90
+    nextDialogue: 91
+    characterName: Narrator
+    dialogueText: After a moment, she looks back at Alden.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 91
+    nextDialogue: 92
+    characterName: Queen Elowen
+    dialogueText: If you truly wish to serve, then you must prove that you are capable
+      of carrying the weight of such duty.
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 92
+    nextDialogue: 93
+    characterName: Queen Elowen
+    dialogueText: <She shifts her gaze toward Valric>
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 93
+    nextDialogue: 94
+    characterName: Queen Elowen
+    dialogueText: Sir Valric, you have seen his skill firsthand. Would you see him
+      tested?
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 94
+    nextDialogue: 95
+    characterName: Valric
+    dialogueText: Gladly, Your Majesty. I do enjoy a challenge.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 95
+    nextDialogue: 96
+    characterName: Alden
+    dialogueText: <Alden remains composed, though he feels the weight of the decision
+      settling in>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 96
+    nextDialogue: 97
+    characterName: Queen Elowen
+    dialogueText: "<The queen\u2019s gaze returns to Alden>"
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 97
+    nextDialogue: 98
+    characterName: Queen Elowen
+    dialogueText: If you pass, you will take the oath. If you fail, you will be compensated
+      and dismissed.
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 98
+    nextDialogue: 99
+    characterName: Queen Elowen
+    dialogueText: Do you accept these terms?
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 99
+    nextDialogue: 100
+    characterName: Alden
+    dialogueText: I do.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 100
+    nextDialogue: 101
+    characterName: Queen Elowen
+    dialogueText: Then we shall see where your path leads, Alden.
+    character: 7
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 101
+    nextDialogue: 102
+    characterName: Narrator
+    dialogueText: "Valric chuckles, clapping a hand on Alden\u2019s shoulder as the
+      queen inclines her head slightly."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 102
+    nextDialogue: 103
+    characterName: Narrator
+    dialogueText: The chamber remains silent as Alden steps forward into the next
+      stage of his journey.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 103
+    nextDialogue: 104
+    characterName: Narrator
+    dialogueText: Alden walks beside Sir Valric as they exit the royal chambers.
+      The weight of the conversation lingers in the air, but Alden remains focused.
+    character: 0
+    background: 0
+    SFX: -1
+    BGM: 1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 104
+    nextDialogue: 105
+    characterName: Narrator
+    dialogueText: "The hallways of the palace seem colder now, the grandeur of the
+      castle juxtaposed against the weight of the decision he\u2019s just made."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 105
+    nextDialogue: 106
+    characterName: Valric
+    dialogueText: "You\u2019ve made a bold choice, Alden. A dangerous one, too."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 106
+    nextDialogue: 107
+    characterName: Valric
+    dialogueText: But it seems you have the resolve to back it up.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 107
+    nextDialogue: 108
+    characterName: Alden
+    dialogueText: "I\u2019ve never wanted to be just another mercenary, Sir Valric."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 108
+    nextDialogue: 109
+    characterName: Alden
+    dialogueText: I want to do something that matters. Something more than coin.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 109
+    nextDialogue: 110
+    characterName: Valric
+    dialogueText: "Good. That\u2019s the spirit."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 110
+    nextDialogue: 111
+    characterName: Valric
+    dialogueText: "But remember, the road ahead won\u2019t be easy. There\u2019s
+      much more to this life than a few battles."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 111
+    nextDialogue: 112
+    characterName: Valric
+    dialogueText: "You\u2019ll have to prove yourself\u2014again and again."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 112
+    nextDialogue: 113
+    characterName: Alden
+    dialogueText: <Alden nods, understanding the gravity of the situation>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 113
+    nextDialogue: 114
+    characterName: Alden
+    dialogueText: "I\u2019m ready. I\u2019ll do whatever it takes."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 114
+    nextDialogue: 115
+    characterName: Valric
+    dialogueText: <Valric gestures towards a hallway leading to the infirmary>
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 115
+    nextDialogue: 116
+    characterName: Valric
+    dialogueText: "Before we start any of that, you need to rest. You\u2019re still
+      injured, and I\u2019d rather you didn\u2019t push yourself too soon."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 116
+    nextDialogue: 117
+    characterName: Valric
+    dialogueText: The trials will wait.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 117
+    nextDialogue: 118
+    characterName: Narrator
+    dialogueText: They walk toward the royal infirmary, the smell of antiseptic and
+      healing herbs filling the air as they step inside.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 118
+    nextDialogue: 119
+    characterName: Valric
+    dialogueText: "You\u2019re welcome to stay here and rest for as long as you need.
+      The healers here are among the best."
+    character: 2
+    background: 1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 119
+    nextDialogue: 120
+    characterName: Valric
+    dialogueText: "But I have to say\u2014"
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 120
+    nextDialogue: 121
+    characterName: Alden
+    dialogueText: <Alden interrupts with a smile>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 121
+    nextDialogue: 122
+    characterName: Alden
+    dialogueText: But I should go home. My family will be worried about me.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 122
+    nextDialogue: 123
+    characterName: Valric
+    dialogueText: "Exactly. Your family deserves to know that you\u2019re alright."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 123
+    nextDialogue: 124
+    characterName: Valric
+    dialogueText: A mercenary might not be a knight, but your loyalty to your family
+      comes before anything else.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 124
+    nextDialogue: 125
+    characterName: Valric
+    dialogueText: "Get some rest, Alden. When you're ready, I\u2019ll find you. And
+      then we begin."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 125
+    nextDialogue: 126
+    characterName: Alden
+    dialogueText: "Thank you, Sir Valric. I\u2019ll head home now. I appreciate everything\u2026truly."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 126
+    nextDialogue: 127
+    characterName: Narrator
+    dialogueText: Alden bows slightly, then turns and exits the infirmary, feeling
+      the weight of both the journey ahead and the comfort of being able to return
+      home.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 127
+    nextDialogue: 128
+    characterName: Narrator
+    dialogueText: "The sky outside is still bright, but there\u2019s a chill in the
+      air, an early evening breeze that carries the scent of the farmlands and distant
+      hills."
+    character: 0
+    background: 2
     SFX: -1
     BGM: -1
     tabRight: 0
@@ -1204,7 +2769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f5017b3396ce2f54394d1ff660598a13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1455,7 +3020,10 @@ RectTransform:
   - {fileID: 684439331}
   - {fileID: 2056154120}
   - {fileID: 2133645546}
+  - {fileID: 854520417}
   - {fileID: 489151914}
+  - {fileID: 1544240432}
+  - {fileID: 1833977978}
   - {fileID: 1418513537}
   - {fileID: 23086191}
   - {fileID: 167242086}
@@ -1748,6 +3316,116 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &854520416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854520417}
+  - component: {fileID: 854520421}
+  - component: {fileID: 854520420}
+  - component: {fileID: 854520419}
+  - component: {fileID: 854520418}
+  m_Layer: 5
+  m_Name: ValricSilhoutte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &854520417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854520416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &854520418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854520416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &854520419
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854520416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &854520420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854520416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4e7d0e3dc1f45424fa091016a08c2dfc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &854520421
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854520416}
+  m_CullTransparentMesh: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,6 +3762,226 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516781601}
   m_CullTransparentMesh: 1
+--- !u!1 &1544240431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544240432}
+  - component: {fileID: 1544240436}
+  - component: {fileID: 1544240435}
+  - component: {fileID: 1544240434}
+  - component: {fileID: 1544240433}
+  m_Layer: 5
+  m_Name: QueenElowen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1544240432
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544240431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1544240433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544240431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1544240434
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544240431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1544240435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544240431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e91540f768d37c242b8357d5aec728ee, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1544240436
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544240431}
+  m_CullTransparentMesh: 1
+--- !u!1 &1833977977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833977978}
+  - component: {fileID: 1833977982}
+  - component: {fileID: 1833977981}
+  - component: {fileID: 1833977980}
+  - component: {fileID: 1833977979}
+  m_Layer: 5
+  m_Name: EvelyneSilhoutte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1833977978
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833977977}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1833977979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833977977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1833977980
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833977977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1833977981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833977977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1833977982
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833977977}
+  m_CullTransparentMesh: 1
 --- !u!1 &1901202296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +4292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 42a37f2492f61f6438e36859f26b36d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
