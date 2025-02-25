@@ -612,7 +612,7 @@ MonoBehaviour:
   - dialogueID: 22
     nextDialogue: 23
     characterName: Narrator
-    dialogueText: The knight stands besides alden, guarding him.
+    dialogueText: The knight stands besides Alden, guarding him.
     character: 0
     background: -1
     SFX: -1
@@ -624,7 +624,7 @@ MonoBehaviour:
   - dialogueID: 23
     nextDialogue: 24
     characterName: Knight
-    dialogueText: Can you still fight ?
+    dialogueText: Can you still fight?
     character: 8
     background: -1
     SFX: -1
