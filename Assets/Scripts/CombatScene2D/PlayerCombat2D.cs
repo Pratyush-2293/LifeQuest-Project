@@ -102,7 +102,7 @@ public class PlayerCombat2D : MonoBehaviour
     {
         if(characterName == "Alden")
         {
-            aldenCombatController.AldenAttack(targetPosition);
+            aldenCombatController.AldenAttack(targetPosition, characterPosition);
         }
         else if(characterName == "Valric")
         {

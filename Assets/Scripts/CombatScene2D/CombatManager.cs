@@ -149,8 +149,8 @@ public class CombatManager : MonoBehaviour
                         // stop time
                         timeStart = false;
 
-                        Debug.Log("Enemy Turn Started");
                         // Make the enemy attack a player character
+                        enemyCombatControllers[i].Action_Attack();
 
                         break;
                     }
@@ -248,8 +248,19 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    // Handling Action Panel Commands
 
+    // Overloaded HandleDealtDamage function
+    public void HandleDealtDamage(int dealtDamage, bool isCritical)  // this one is used by player char to deal damage to enemy
+    {
+        enemyCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage, isCritical);
+    }
+
+    public void HandleDealtDamage(int dealtDamage, int selectedTarget) // this one is used by enemy char to deal damage to player
+    {
+        playerCombatControllers[selectedTarget].Action_TakeDamage(dealtDamage);
+    }
+
+    // Handling Action Panel Commands
     public void OnAttackButton()
     {
         // When attack button is pressed during Alden's turn
@@ -280,19 +291,6 @@ public class CombatManager : MonoBehaviour
 
         enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
         actionPanelAnimator.SetTrigger("SlideDown");
-    }
-
-    public void HandleDealtDamage(int dealtDamage, bool isCritical, bool toEnemy)
-    {
-        if (toEnemy == true)
-        {
-            enemyCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage, isCritical);
-        }
-        else
-        {
-            playerCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage);
-        }
-        
     }
 
     public void OnSkillButton()

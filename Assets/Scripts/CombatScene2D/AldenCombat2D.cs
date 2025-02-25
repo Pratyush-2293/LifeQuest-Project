@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AldenCombat2D : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class AldenCombat2D : MonoBehaviour
 
     // Alden Components
     public Animator aldenAnimator = null;
+    public Animator normalDamageAnimator = null;
+    public TMP_Text normalDamageText = null;
 
     // Private Variables
     private int damageToDo = 1;
@@ -44,7 +47,7 @@ public class AldenCombat2D : MonoBehaviour
         
     }
 
-    public void AldenAttack(int targetPosition)
+    public void AldenAttack(int targetPosition, int selfPosition)
     {
         isCritical = false;
 
@@ -63,41 +66,61 @@ public class AldenCombat2D : MonoBehaviour
         }
 
         // Play the attack animation
-        if (targetPosition == 0)
+        if(selfPosition == 1)
         {
-            aldenAnimator.SetTrigger("Attack_1-1");  // Deal the damage by calling DealDamage() using animation event
+            if (targetPosition == 0)
+            {
+                aldenAnimator.SetTrigger("Attack_1-1");  // Deal the damage by calling DealDamage() using animation event
+            }
+            else if (targetPosition == 1)
+            {
+                aldenAnimator.SetTrigger("Attack_1-2");
+            }
+            else if (targetPosition == 2)
+            {
+                aldenAnimator.SetTrigger("Attack_1-3");
+            }
+            else if (targetPosition == 3)
+            {
+                aldenAnimator.SetTrigger("Attack_1-4");
+            }
         }
-        else if (targetPosition == 1)
+        else if(selfPosition == 2)
         {
-            aldenAnimator.SetTrigger("Attack_1-2");
+            // same as above
         }
-        else if (targetPosition == 2)
+        else if (selfPosition == 3)
         {
-            aldenAnimator.SetTrigger("Attack_1-3");
+            // same as above
         }
-        else if (targetPosition == 3)
+        else if (selfPosition == 4)
         {
-            aldenAnimator.SetTrigger("Attack_1-4");
+            // same as above
         }
-
-        // Add time cost to turnCount
 
     }
 
     public void AldenTakeDamage(int incomingDamage)
     {
         // play damage animation
+        aldenAnimator.SetTrigger("AldenHurt");
 
         // calculate def reductions
+        incomingDamage -= defense;
         // calculate blessings reductions, if any
 
         // play damage number animation
+        normalDamageText.text = incomingDamage.ToString();
+        normalDamageAnimator.SetTrigger("DamagePopup");
+
+        // reduce player health
+        health -= incomingDamage;
     }
 
     public void DealDamage()
     {
         // Tell combat manager to deal damage to active enemy
-        CombatManager.instance.HandleDealtDamage(damageToDo, isCritical, true);
+        CombatManager.instance.HandleDealtDamage(damageToDo, isCritical);
     }
 
     public void RequestResumeTime()
