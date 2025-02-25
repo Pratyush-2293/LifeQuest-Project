@@ -8,10 +8,12 @@ public class PlayerCombat2D : MonoBehaviour
     public int turnSpeed = 2;
     public bool isPlayerCharacter = true;
     public string characterName = "Alden";
+    public int characterPosition = 1;
     public AldenCombat2D aldenCombatController = null;
     public ValricCombat2D valricCombatController = null;
     public OsmirCombat2D osmirCombatController = null;
     public AssassinCombat2D assassinCombatController = null;
+    public bool isDefeated = false;
 
     public void DoAction(string actionName, int targetPosition)
     {
@@ -42,6 +44,29 @@ public class PlayerCombat2D : MonoBehaviour
             // do the same as above
         }
         else if(characterName == "Assassin")
+        {
+            // do the same as above
+        }
+
+
+        return -1;
+    }
+
+    public int GetMaxHealthValue()
+    {
+        if (characterName == "Alden")
+        {
+            return aldenCombatController.maxHealth;
+        }
+        else if (characterName == "Valric")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Assassin")
         {
             // do the same as above
         }
@@ -88,6 +113,26 @@ public class PlayerCombat2D : MonoBehaviour
             // same as above
         }
         else if(characterName == "Assassin")
+        {
+            // same as above
+        }
+    }
+
+    public void Action_TakeDamage(int incomingDamage)
+    {
+        if (characterName == "Alden")
+        {
+            aldenCombatController.AldenTakeDamage(incomingDamage);
+        }
+        else if (characterName == "Valric")
+        {
+            // same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if (characterName == "Assassin")
         {
             // same as above
         }

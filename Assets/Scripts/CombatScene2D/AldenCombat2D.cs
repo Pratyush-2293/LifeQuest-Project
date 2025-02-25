@@ -9,9 +9,10 @@ public class AldenCombat2D : MonoBehaviour
     public int vitality = 5;
     public int defense = 5;
     public int strength = 5;
-    private int critRate = 10; // x100 to get % value
+    private int critRate = 70; // x100 to get % value
 
     // Common stats - need to be calculated on awake
+    public int maxHealth = 100;
     public int health = 100;
     public int mana = 100;
 
@@ -83,10 +84,20 @@ public class AldenCombat2D : MonoBehaviour
 
     }
 
+    public void AldenTakeDamage(int incomingDamage)
+    {
+        // play damage animation
+
+        // calculate def reductions
+        // calculate blessings reductions, if any
+
+        // play damage number animation
+    }
+
     public void DealDamage()
     {
         // Tell combat manager to deal damage to active enemy
-        CombatManager.instance.HandleDealtDamage(damageToDo, isCritical);
+        CombatManager.instance.HandleDealtDamage(damageToDo, isCritical, true);
     }
 
     public void RequestResumeTime()

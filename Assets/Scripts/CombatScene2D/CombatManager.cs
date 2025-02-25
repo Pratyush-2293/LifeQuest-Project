@@ -29,8 +29,8 @@ public class CombatManager : MonoBehaviour
     public List<Slider> enemySliders = new List<Slider>();
 
     // Storing script files for all characters on field
-    private PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
-    private EnemyCombat2D[] enemyCombatControllers = new EnemyCombat2D[4];
+    public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
+    public EnemyCombat2D[] enemyCombatControllers = new EnemyCombat2D[4];
 
     private bool timeStart = true;
 
@@ -39,10 +39,10 @@ public class CombatManager : MonoBehaviour
     private bool isOsmirTurn = false;
     private bool isAssassinTurn = false;
 
-    private int aldenIndex = -1;
-    private int valricIndex = -1;
-    private int osmirIndex = -1;
-    private int assassinIndex = -1;
+    public int aldenIndex = -1;
+    public int valricIndex = -1;
+    public int osmirIndex = -1;
+    public int assassinIndex = -1;
 
     private int currentSelectedTarget = 0;
 
@@ -191,6 +191,7 @@ public class CombatManager : MonoBehaviour
         if(isAldenTurn == true)
         {
             // updating HP and MP bars
+            HPSlider.maxValue = playerCombatControllers[aldenIndex].GetMaxHealthValue();
             HPSlider.value = playerCombatControllers[aldenIndex].GetHealthValue();
             MPSlider.value = playerCombatControllers[aldenIndex].GetManaValue();
 
@@ -281,9 +282,17 @@ public class CombatManager : MonoBehaviour
         actionPanelAnimator.SetTrigger("SlideDown");
     }
 
-    public void HandleDealtDamage(int dealtDamage, bool isCritical)
+    public void HandleDealtDamage(int dealtDamage, bool isCritical, bool toEnemy)
     {
-        enemyCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage, isCritical);
+        if (toEnemy == true)
+        {
+            enemyCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage, isCritical);
+        }
+        else
+        {
+            playerCombatControllers[currentSelectedTarget].Action_TakeDamage(dealtDamage);
+        }
+        
     }
 
     public void OnSkillButton()

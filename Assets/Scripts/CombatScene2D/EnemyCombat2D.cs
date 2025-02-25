@@ -14,6 +14,7 @@ public class EnemyCombat2D : MonoBehaviour
     public Slider healthSlider = null;
     public GameObject selectMarker = null;
     public bool isDefeated = false;
+    public bool isTaunted = false;
     public Animator enemyAnimator = null;
 
     // Damage Popup Components
@@ -34,9 +35,39 @@ public class EnemyCombat2D : MonoBehaviour
     public void Action_Attack()
     {
         // check available player character
+        int availableCharacters = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            if(CombatManager.instance.playerCombatControllers[i] != null)
+            {
+                if(CombatManager.instance.playerCombatControllers[i].isDefeated == false)
+                {
+                    availableCharacters++;
+                }
+            }
+        }
+
         // choose a random character from available characters , unless taunted
-        // deal damage to randomly selected character
-        // if taunted, deal damage to valric
+        int selectedTarget = 0;
+        if(availableCharacters == 1)  // if only one char on field, i.e Alden only
+        {
+            selectedTarget = CombatManager.instance.aldenIndex;
+        }
+        else  // When more than 1 char on field
+        {
+            if (isTaunted == false)  // if not taunted, choose a random target
+            {
+                Random.InitState(System.DateTime.Now.Millisecond);
+                selectedTarget = Random.Range(1, availableCharacters + 1);
+            }
+            else  // if taunted, choose valric as target
+            {
+                selectedTarget = CombatManager.instance.valricIndex;
+            }
+        }
+        
+        // Play attack animations & deal damage to target character
+
     }
 
     public void Action_TakeDamage(int incomingDamage, bool isCritical)
