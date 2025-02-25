@@ -4922,7 +4922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnCounter: 50
-  turnSpeed: 6
+  turnSpeed: 4
   isPlayerCharacter: 1
   characterName: Alden
   characterPosition: 1
@@ -7068,8 +7068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ea3e3680fd1b241bfa9570cae6b787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnCounter: 20
-  turnSpeed: 4
+  turnCounter: 10
+  turnSpeed: 2
   characterPosition: 2
   isPlayerCharacter: 0
   health: 100
@@ -7877,7 +7877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnCounter: 0
-  turnSpeed: 4
+  turnSpeed: 2
   characterPosition: 4
   isPlayerCharacter: 0
   health: 100
@@ -9417,8 +9417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ea3e3680fd1b241bfa9570cae6b787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnCounter: 10
-  turnSpeed: 4
+  turnCounter: 20
+  turnSpeed: 2
   characterPosition: 3
   isPlayerCharacter: 0
   health: 100
@@ -11509,7 +11509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnCounter: 30
-  turnSpeed: 4
+  turnSpeed: 2
   characterPosition: 1
   isPlayerCharacter: 0
   health: 100
