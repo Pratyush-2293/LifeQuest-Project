@@ -24,6 +24,7 @@ public class CombatManager : MonoBehaviour
     [Header("End Scene Panels")]
     public GameObject touchBlockerPanel = null;
     public Animator victoryPanelAnimator = null;
+    public Animator defeatPanelAnimator = null;
 
     [Header("Time Sliders")]
     // player character sliders
