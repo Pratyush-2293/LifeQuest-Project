@@ -188,7 +188,14 @@ public class CombatManager : MonoBehaviour
 
                     if (enemyCombatControllers[i] != null)
                     {
-                        enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
+                        if(enemyCombatControllers[i].isDefeated == false)
+                        {
+                            enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
+                        }
+                        else
+                        {
+                            enemyCombatControllers[i].turnCounter = 0;
+                        }
                     }
 
                 }
@@ -276,6 +283,10 @@ public class CombatManager : MonoBehaviour
                 if(enemyCombatControllers[i].isDefeated == false)
                 {
                     enemySliders[i].value = enemyCombatControllers[i].turnCounter;
+                }
+                else
+                {
+                    enemySliders[i].gameObject.SetActive(false);
                 }
             }
         }
