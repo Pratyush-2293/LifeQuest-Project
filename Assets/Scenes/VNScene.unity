@@ -373,8 +373,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 4
-    nextDialogue: 5
+  - dialogueID: 3
+    nextDialogue: 4
     characterName: Narrator
     dialogueText: Their voices light as they chatted idly, keeping a watchful eye
       on the peaceful woods.
@@ -386,8 +386,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 3
-    nextDialogue: 4
+  - dialogueID: 4
+    nextDialogue: 5
     characterName: Narrator
     dialogueText: Alden rode alongside two guildmates, Garran and Rurik.
     character: 0
@@ -398,8 +398,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 4
-    nextDialogue: 5
+  - dialogueID: 5
+    nextDialogue: 6
     characterName: Narrator
     dialogueText: Garran stretches his arms, letting out a yawn.
     character: 0
@@ -410,8 +410,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 5
-    nextDialogue: 6
+  - dialogueID: 6
+    nextDialogue: 7
     characterName: Garran
     dialogueText: Gods, how much longer till we reach Liora?
     character: 2
@@ -422,8 +422,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 6
-    nextDialogue: 7
+  - dialogueID: 7
+    nextDialogue: 8
     characterName: Garran
     dialogueText: "Feels like we\u2019ve been walking forever."
     character: 2
@@ -434,8 +434,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 7
-    nextDialogue: 8
+  - dialogueID: 8
+    nextDialogue: 9
     characterName: Rurik
     dialogueText: "You\u2019ve been complaining since we left the last outpost."
     character: 3
@@ -446,8 +446,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 8
-    nextDialogue: 9
+  - dialogueID: 9
+    nextDialogue: 10
     characterName: Rurik
     dialogueText: "Maybe if you spent less time at the tavern and more time on patrol,
       you\u2019d have better stamina."
@@ -459,8 +459,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 9
-    nextDialogue: 10
+  - dialogueID: 10
+    nextDialogue: 11
     characterName: Garran
     dialogueText: Says the guy who nearly fell asleep on his horse last job.
     character: 2
@@ -471,8 +471,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 10
-    nextDialogue: 11
+  - dialogueID: 11
+    nextDialogue: 12
     characterName: Alden
     dialogueText: To be fair, that job was even duller than this one.
     character: 1
@@ -483,8 +483,8 @@ MonoBehaviour:
     tabLeft: 1
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 11
-    nextDialogue: 12
+  - dialogueID: 12
+    nextDialogue: 13
     characterName: Alden
     dialogueText: "At least here we have fresh air and\u2014"
     character: 1
@@ -495,8 +495,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 12
-    nextDialogue: 13
+  - dialogueID: 13
+    nextDialogue: 14
     characterName: Rurik
     dialogueText: "\u2026"
     character: 3
@@ -507,8 +507,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 13
-    nextDialogue: 14
+  - dialogueID: 14
+    nextDialogue: 15
     characterName: Rurik
     dialogueText: <Rurik looks around, suddenly alert>
     character: 3
@@ -519,8 +519,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 14
-    nextDialogue: 15
+  - dialogueID: 15
+    nextDialogue: 16
     characterName: Rurik
     dialogueText: ... Hold up.
     character: 3
@@ -531,8 +531,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 15
-    nextDialogue: 16
+  - dialogueID: 16
+    nextDialogue: 17
     characterName: Alden
     dialogueText: <Alden slows his horse, glancing at Rurik>
     character: 1
@@ -543,8 +543,8 @@ MonoBehaviour:
     tabLeft: 1
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 16
-    nextDialogue: 17
+  - dialogueID: 17
+    nextDialogue: 18
     characterName: Alden
     dialogueText: What is it?
     character: 1
@@ -555,8 +555,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 17
-    nextDialogue: 18
+  - dialogueID: 18
+    nextDialogue: 19
     characterName: Garran
     dialogueText: <Garran narrows his eyes, staring into the treeline>
     character: 2
@@ -567,8 +567,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 18
-    nextDialogue: 19
+  - dialogueID: 19
+    nextDialogue: 20
     characterName: Garran
     dialogueText: "Something\u2019s moving in the woods."
     character: 2
@@ -579,22 +579,10 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 19
-    nextDialogue: 20
-    characterName: Rurik
-    dialogueText: I...
-    character: 3
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
   - dialogueID: 20
     nextDialogue: 21
     characterName: Rurik
-    dialogueText: I think I saw something shining between the trees...
+    dialogueText: I...
     character: 3
     background: -1
     SFX: -1
@@ -606,7 +594,7 @@ MonoBehaviour:
   - dialogueID: 21
     nextDialogue: 22
     characterName: Rurik
-    dialogueText: ... shining like steel.
+    dialogueText: I think I saw something shining between the trees...
     character: 3
     background: -1
     SFX: -1
@@ -617,14 +605,14 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 22
     nextDialogue: 23
-    characterName: Alden
-    dialogueText: <Alden moves his hand to the hilt of his sword>
-    character: 1
+    characterName: Rurik
+    dialogueText: ... shining like steel.
+    character: 3
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
-    tabLeft: 1
+    tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 23
@@ -665,6 +653,18 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 26
     nextDialogue: 27
+    characterName: Alden
+    dialogueText: <Alden moves his hand to the hilt of his sword>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 27
+    nextDialogue: 28
     characterName: Narrator
     dialogueText: "The rustling grows louder\u2014"
     character: 0
@@ -675,8 +675,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 27
-    nextDialogue: 28
+  - dialogueID: 28
+    nextDialogue: 29
     characterName: Narrator
     dialogueText: then, suddenly, figures emerge from the foliage, weapons drawn.
     character: 0
@@ -687,8 +687,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 28
-    nextDialogue: 29
+  - dialogueID: 29
+    nextDialogue: 30
     characterName: Garran
     dialogueText: Bandits !
     character: 2
@@ -699,8 +699,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 29
-    nextDialogue: 30
+  - dialogueID: 30
+    nextDialogue: 31
     characterName: Rurik
     dialogueText: <Rurik draws his sword>
     character: 3
@@ -711,8 +711,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 30
-    nextDialogue: 31
+  - dialogueID: 31
+    nextDialogue: 32
     characterName: Rurik
     dialogueText: They were waiting for us !
     character: 3
@@ -723,8 +723,32 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 31
-    nextDialogue: 32
+  - dialogueID: 32
+    nextDialogue: 33
+    characterName: Rurik
+    dialogueText: Got it. Stay sharp!
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 33
+    nextDialogue: 34
+    characterName: Alden
+    dialogueText: "Damn it\u2014there\u2019s more behind us! "
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 34
+    nextDialogue: 35
     characterName: Alden
     dialogueText: <Alden quickly scans his surroundings and spots some movement at
       the back of the caravan>
@@ -736,20 +760,8 @@ MonoBehaviour:
     tabLeft: 1
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 32
-    nextDialogue: 33
-    characterName: Alden
-    dialogueText: "Damn it\u2014there\u2019s more behind us! "
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 33
-    nextDialogue: 34
+  - dialogueID: 35
+    nextDialogue: 36
     characterName: Garran
     dialogueText: "They\u2019re trying to box us in."
     character: 2
@@ -760,8 +772,8 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 34
-    nextDialogue: 35
+  - dialogueID: 36
+    nextDialogue: 37
     characterName: Alden
     dialogueText: "I\u2019ll handle the ones at the back. Keep the front clear!"
     character: 1
@@ -772,20 +784,8 @@ MonoBehaviour:
     tabLeft: 1
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 35
-    nextDialogue: 36
-    characterName: Rurik
-    dialogueText: Got it. Stay sharp!
-    character: 3
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 1
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 36
-    nextDialogue: 37
+  - dialogueID: 37
+    nextDialogue: 38
     characterName: Narrator
     dialogueText: "Alden dashes toward the back of the caravan as the bandits close
       in\u2014he draws out his sword, ready for battle."

@@ -234,6 +234,16 @@ public class VN_Manager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         characters[currentDialogue.character].gameObject.SetActive(true);
     }
+
+    [ContextMenu("Auto Index")]
+    public void AutoIndexDialogues()
+    {
+        for(int i = 0; i < dialogues.Count; i++)
+        {
+            dialogues[i].dialogueID = i;
+            dialogues[i].nextDialogue = i + 1;
+        }
+    }
 }
 
 [Serializable] 

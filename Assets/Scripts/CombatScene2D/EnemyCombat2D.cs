@@ -13,6 +13,7 @@ public class EnemyCombat2D : MonoBehaviour
     public int health = 100;
     public int maxHealth = 100;
     public Slider healthSlider = null;
+    public GameObject defendingIcon = null;
     public GameObject selectMarker = null;
     public bool isDefeated = false;
     public bool isTaunted = false;
@@ -21,6 +22,9 @@ public class EnemyCombat2D : MonoBehaviour
     // Skills Data
     public int attackDamage = 10;
     public int attackTimeCost = 70;
+    public int defendTimeCost = 50;
+    public float defendStartHealthPercent = 0.3f;
+    public int defendChancePercent = 60;
 
     // Damage Popup Components
     public Animator normalDamageAnimator = null;
@@ -31,17 +35,64 @@ public class EnemyCombat2D : MonoBehaviour
     // Private Variables
     private int damageToDo = 0;
     private int selectedTarget = 0;
+    private int defendStartHealth = 0;
+    private bool isDefending = false;
 
     private void Start()
     {
         healthSlider.maxValue = maxHealth;
+        defendStartHealth = (int)(maxHealth * defendStartHealthPercent);
     }
     public void UpdateSelfState()
     {
         healthSlider.value = health;
+
+        // Death Condition
+        if(health <= 0)
+        {
+
+        }
     }
 
-    public void Action_Attack()
+    public void Action_PlayTurn()
+    {
+        // choose between defend and attack based on self health
+        if (health <= defendStartHealth)
+        {
+            if(isDefending == false)
+            {
+                Random.InitState(System.DateTime.Now.Millisecond);
+                int randomNumber = Random.Range(1, 101);
+                if (randomNumber < defendChancePercent)
+                {
+                    // Play defending action
+                    Action_Defend();
+                }
+                else
+                {
+                    Action_Attack();
+                }
+            }
+            else
+            {
+                Action_Attack();  // attack
+            }
+        }
+        else
+        {
+            Action_Attack();
+        }
+    }
+
+    private void Action_Defend()
+    {
+        enemyAnimator.SetTrigger("Defend");
+        isDefending = true;
+        defendingIcon.gameObject.SetActive(true);
+        AddTimeCost(defendTimeCost);
+    }
+
+    private void Action_Attack()
     {
         // CALCULATE DAMAGE TO DO
         // Can implement attack patterns here later, right now we only have 1 basic attack.
@@ -179,6 +230,14 @@ public class EnemyCombat2D : MonoBehaviour
     {
         // play damage animation
         enemyAnimator.SetTrigger("TakeDamage");
+
+        // Reduce damage by 50% if defending
+        if(isDefending == true)
+        {
+            incomingDamage = (int)(incomingDamage * 0.5f);
+            isDefending = false;
+            defendingIcon.gameObject.SetActive(false);
+        }
 
         // Calculate reductions from blessings if any
 

@@ -45,6 +45,7 @@ public class CombatManager : MonoBehaviour
     public int assassinIndex = -1;
 
     private int currentSelectedTarget = 0;
+    private int enemiesAlive = 0;
 
     private void Awake()
     {
@@ -93,6 +94,15 @@ public class CombatManager : MonoBehaviour
                 {
                     assassinIndex = i;
                 }
+            }
+        }
+
+        // Counting alive enemies
+        for(int i = 0; i < 4; i++)
+        {
+            if(enemyCombatControllers[i] != null)
+            {
+                enemiesAlive++;
             }
         }
 
@@ -150,7 +160,7 @@ public class CombatManager : MonoBehaviour
                         timeStart = false;
 
                         // Make the enemy attack a player character
-                        enemyCombatControllers[i].Action_Attack();
+                        enemyCombatControllers[i].Action_PlayTurn();
 
                         break;
                     }
@@ -174,6 +184,13 @@ public class CombatManager : MonoBehaviour
 
             // Update time slider position for all characters
             UpdateTimeSliders();
+
+            // Check if all enemies are dead
+            if (enemiesAlive <= 0)
+            {
+                Debug.Log("Victory");
+                timeStart = false;
+            }
 
             yield return new WaitForSeconds(0.1f);
         }
@@ -243,7 +260,10 @@ public class CombatManager : MonoBehaviour
             // update enemy sliders
             if (enemyCombatControllers[i] != null)
             {
-                enemySliders[i].value = enemyCombatControllers[i].turnCounter;
+                if(enemyCombatControllers[i].isDefeated == false)
+                {
+                    enemySliders[i].value = enemyCombatControllers[i].turnCounter;
+                }
             }
         }
     }
