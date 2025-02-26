@@ -21,6 +21,10 @@ public class CombatManager : MonoBehaviour
     public Slider HPSlider = null;
     public Slider MPSlider = null;
 
+    [Header("End Scene Panels")]
+    public GameObject touchBlockerPanel = null;
+    public Animator victoryPanelAnimator = null;
+
     [Header("Time Sliders")]
     // player character sliders
     public Slider aldenTimeSlider = null;
@@ -114,6 +118,14 @@ public class CombatManager : MonoBehaviour
     {
         while(timeStart == true)
         {
+            // Check if all enemies are dead, VICTORY
+            if (enemiesAlive <= 0)
+            {
+                Debug.Log("Victory");
+                timeStart = false;
+                StartCoroutine(DisplayVictoryPanel());
+            }
+
             // Check if a character has reached turn cap
             for (int i = 0; i < 4; i++)
             {
@@ -205,13 +217,6 @@ public class CombatManager : MonoBehaviour
             // Update time slider position for all characters
             UpdateTimeSliders();
 
-            // Check if all enemies are dead
-            if (enemiesAlive <= 0)
-            {
-                Debug.Log("Victory");
-                timeStart = false;
-            }
-
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -220,6 +225,13 @@ public class CombatManager : MonoBehaviour
     {
         timeStart = true;
         StartCoroutine(TickTime());
+    }
+
+    public IEnumerator DisplayVictoryPanel()
+    {
+        touchBlockerPanel.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        victoryPanelAnimator.SetTrigger("Enter");
     }
 
     private void ShowUpdatedActionPanel()
@@ -290,6 +302,16 @@ public class CombatManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    // Use to inform combatmanager about dead characters
+    public void ReportDeath(bool isEnemy)
+    {
+        if (isEnemy == true)
+        {
+            enemiesAlive--;
+        }
+        // follow this up with player characters as well
     }
 
 

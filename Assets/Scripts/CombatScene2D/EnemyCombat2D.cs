@@ -56,6 +56,7 @@ public class EnemyCombat2D : MonoBehaviour
         {
             isDefeated = true;
             enemyAnimator.SetTrigger("Death");
+            CombatManager.instance.ReportDeath(true);
         }
     }
 
