@@ -117,70 +117,83 @@ public class CombatManager : MonoBehaviour
             // Check if a character has reached turn cap
             for (int i = 0; i < 4; i++)
             {
-                if (playerCombatControllers[i] != null)
+                if(timeStart == true)
                 {
-                    if(playerCombatControllers[i].turnCounter >= 100)
+                    if (playerCombatControllers[i] != null)
                     {
-                        // Turn starts for ith character
-                        // stop time
-                        timeStart = false;
+                        if (playerCombatControllers[i].turnCounter >= 100)
+                        {
+                            // Turn starts for ith character
+                            // stop time
+                            timeStart = false;
 
-                        // setting the active character
-                        if(playerCombatControllers[i].characterName == "Alden")
-                        {
-                            isAldenTurn = true;
-                        }
-                        else if(playerCombatControllers[i].characterName == "Valric")
-                        {
-                            isValricTurn = true;
-                        }
-                        else if(playerCombatControllers[i].characterName == "Osmir")
-                        {
-                            isOsmirTurn = true;
-                        }
-                        else if(playerCombatControllers[i].characterName == "Assassin")
-                        {
-                            isAssassinTurn = true;
-                        }
+                            // setting the active character
+                            if (playerCombatControllers[i].characterName == "Alden")
+                            {
+                                isAldenTurn = true;
+                            }
+                            else if (playerCombatControllers[i].characterName == "Valric")
+                            {
+                                isValricTurn = true;
+                            }
+                            else if (playerCombatControllers[i].characterName == "Osmir")
+                            {
+                                isOsmirTurn = true;
+                            }
+                            else if (playerCombatControllers[i].characterName == "Assassin")
+                            {
+                                isAssassinTurn = true;
+                            }
 
-                        // show action panel & update for active character
-                        ShowUpdatedActionPanel();
+                            // show action panel & update for active character
+                            ShowUpdatedActionPanel();
 
-                        break;
+                            break;
+                        }
                     }
                 }
-
-                // Check if an enemy has reached turn cap
-                if (enemyCombatControllers[i] != null)
+                
+                if(timeStart == true)
                 {
-                    if (enemyCombatControllers[i].turnCounter >= 100)
+                    // Check if an enemy has reached turn cap
+                    if (enemyCombatControllers[i] != null)
                     {
-                        // Turn starts for ith enemy
-                        // stop time
-                        timeStart = false;
+                        if(enemyCombatControllers[i].isDefeated == false)
+                        {
+                            if (enemyCombatControllers[i].turnCounter >= 100)
+                            {
+                                // Turn starts for ith enemy
+                                // stop time
+                                timeStart = false;
 
-                        // Make the enemy attack a player character
-                        enemyCombatControllers[i].Action_PlayTurn();
+                                // Make the enemy attack a player character
+                                enemyCombatControllers[i].Action_PlayTurn();
 
-                        break;
+                                break;
+                            }
+                        }
                     }
                 }
             }
 
             // Tick time for all characters on field
-            for (int i = 0; i < 4; i++)
+            if(timeStart == true)
             {
-                if (playerCombatControllers[i] != null)
+                for (int i = 0; i < 4; i++)
                 {
-                    playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
-                }
+                    if (playerCombatControllers[i] != null)
+                    {
+                        playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
+                    }
 
-                if (enemyCombatControllers[i] != null)
-                {
-                    enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
-                }
+                    if (enemyCombatControllers[i] != null)
+                    {
+                        enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
+                    }
 
+                }
             }
+            
 
             // Update time slider position for all characters
             UpdateTimeSliders();

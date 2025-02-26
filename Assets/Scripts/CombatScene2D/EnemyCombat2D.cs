@@ -45,12 +45,17 @@ public class EnemyCombat2D : MonoBehaviour
     }
     public void UpdateSelfState()
     {
+        if(health < 0)
+        {
+            health = 0;
+        }
         healthSlider.value = health;
 
         // Death Condition
         if(health <= 0)
         {
-
+            isDefeated = true;
+            enemyAnimator.SetTrigger("Death");
         }
     }
 
