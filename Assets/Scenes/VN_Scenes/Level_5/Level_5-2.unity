@@ -312,7 +312,7 @@ MonoBehaviour:
   - {fileID: 1418513536}
   - {fileID: 830392842}
   backgrounds:
-  - {fileID: 21300000, guid: ab495c56799c5044e8cffca581433ea8, type: 3}
+  - {fileID: 21300000, guid: af6bf997023cb6c4fbfd6a93c4ec74c9, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
   soundEffects: []
   initialBackgroundMusic: {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2,
