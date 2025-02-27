@@ -51,6 +51,7 @@ public class CombatManager : MonoBehaviour
 
     private int currentSelectedTarget = 0;
     private int enemiesAlive = 0;
+    private int playersAlive = 0;
 
     private void Awake()
     {
@@ -102,12 +103,17 @@ public class CombatManager : MonoBehaviour
             }
         }
 
-        // Counting alive enemies
+        // Counting alive enemies and players
         for(int i = 0; i < 4; i++)
         {
             if(enemyCombatControllers[i] != null)
             {
                 enemiesAlive++;
+            }
+
+            if(playerCombatControllers[i] != null)
+            {
+                playersAlive++;
             }
         }
 
@@ -119,6 +125,14 @@ public class CombatManager : MonoBehaviour
     {
         while(timeStart == true)
         {
+            // Check is all players are dead, DEFEAT
+            if(playersAlive <= 0)
+            {
+                Debug.Log("Defeat");
+                timeStart = false;
+                StartCoroutine(DisplayDefeatPanel());
+            }
+
             // Check if all enemies are dead, VICTORY
             if (enemiesAlive <= 0)
             {
@@ -134,35 +148,39 @@ public class CombatManager : MonoBehaviour
                 {
                     if (playerCombatControllers[i] != null)
                     {
-                        if (playerCombatControllers[i].turnCounter >= 100)
+                        if(playerCombatControllers[i].isDefeated == false)
                         {
-                            // Turn starts for ith character
-                            // stop time
-                            timeStart = false;
+                            if (playerCombatControllers[i].turnCounter >= 100)
+                            {
+                                // Turn starts for ith character
+                                // stop time
+                                timeStart = false;
 
-                            // setting the active character
-                            if (playerCombatControllers[i].characterName == "Alden")
-                            {
-                                isAldenTurn = true;
-                            }
-                            else if (playerCombatControllers[i].characterName == "Valric")
-                            {
-                                isValricTurn = true;
-                            }
-                            else if (playerCombatControllers[i].characterName == "Osmir")
-                            {
-                                isOsmirTurn = true;
-                            }
-                            else if (playerCombatControllers[i].characterName == "Assassin")
-                            {
-                                isAssassinTurn = true;
-                            }
+                                // setting the active character
+                                if (playerCombatControllers[i].characterName == "Alden")
+                                {
+                                    isAldenTurn = true;
+                                }
+                                else if (playerCombatControllers[i].characterName == "Valric")
+                                {
+                                    isValricTurn = true;
+                                }
+                                else if (playerCombatControllers[i].characterName == "Osmir")
+                                {
+                                    isOsmirTurn = true;
+                                }
+                                else if (playerCombatControllers[i].characterName == "Assassin")
+                                {
+                                    isAssassinTurn = true;
+                                }
 
-                            // show action panel & update for active character
-                            ShowUpdatedActionPanel();
+                                // show action panel & update for active character
+                                ShowUpdatedActionPanel();
 
-                            break;
+                                break;
+                            }
                         }
+                        
                     }
                 }
                 
@@ -196,7 +214,14 @@ public class CombatManager : MonoBehaviour
                 {
                     if (playerCombatControllers[i] != null)
                     {
-                        playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
+                        if(playerCombatControllers[i].isDefeated == false)
+                        {
+                            playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
+                        }
+                        else
+                        {
+                            playerCombatControllers[i].turnCounter = 0;
+                        }
                     }
 
                     if (enemyCombatControllers[i] != null)
@@ -231,8 +256,17 @@ public class CombatManager : MonoBehaviour
     public IEnumerator DisplayVictoryPanel()
     {
         touchBlockerPanel.gameObject.SetActive(true);
+        AudioManager.instance.PlayVictoryMusic();
         yield return new WaitForSeconds(0.8f);
         victoryPanelAnimator.SetTrigger("Enter");
+    }
+
+    public IEnumerator DisplayDefeatPanel()
+    {
+        touchBlockerPanel.gameObject.SetActive(true);
+        AudioManager.instance.PlayDefeatMusic();
+        yield return new WaitForSeconds(0.8f);
+        defeatPanelAnimator.SetTrigger("Enter");
     }
 
     private void ShowUpdatedActionPanel()
@@ -284,10 +318,14 @@ public class CombatManager : MonoBehaviour
             // update player sliders
             if(playerCombatControllers[i] != null)
             {
-                aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
-                // similar for valric
-                // similar for osmir
-                // similar for assassin girl
+                if(playerCombatControllers[i].isDefeated == false)
+                {
+                    aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
+                    // similar for valric
+                    // similar for osmir
+                    // similar for assassin girl
+                }
+                // player slider turn off on defeat managed in the ReportDeath() function.
             }
 
             // update enemy sliders
@@ -306,15 +344,35 @@ public class CombatManager : MonoBehaviour
     }
 
     // Use to inform combatmanager about dead characters
-    public void ReportDeath(bool isEnemy)
+    public void ReportDeath()
     {
-        if (isEnemy == true)
-        {
-            enemiesAlive--;
-        }
-        // follow this up with player characters as well
+        enemiesAlive--;
     }
 
+    public void ReportDeath(string charName)
+    {
+        // handle player char death
+        if(charName == "Alden")
+        {
+            playerCombatControllers[aldenIndex].isDefeated = true;
+            aldenTimeSlider.gameObject.SetActive(false);
+        }
+        else if (charName == "Valric")
+        {
+            playerCombatControllers[valricIndex].isDefeated = true;
+            // update this for valric too
+        }
+        else if (charName == "Osmir")
+        {
+            playerCombatControllers[osmirIndex].isDefeated = true;
+        }
+        else if (charName == "Assassin")
+        {
+            playerCombatControllers[assassinIndex].isDefeated = true;
+        }
+
+        playersAlive--;
+    }
 
     // Overloaded HandleDealtDamage function
     public void HandleDealtDamage(int dealtDamage, bool isCritical)  // this one is used by player char to deal damage to enemy

@@ -31,17 +31,21 @@ public class EnemyCombat2D : MonoBehaviour
     public Animator criticalDamageAnimator = null;
     public TMP_Text normalDamageText = null;
     public TMP_Text criticalDamageText = null;
+    public GameObject hitFXObject = null;
 
     // Private Variables
     private int damageToDo = 0;
     private int selectedTarget = 0;
     private int defendStartHealth = 0;
     private bool isDefending = false;
+    private Animator hitFXAnimator = null;
 
     private void Start()
     {
         healthSlider.maxValue = maxHealth;
         defendStartHealth = (int)(maxHealth * defendStartHealthPercent);
+
+        hitFXAnimator = hitFXObject.gameObject.GetComponent<Animator>();
     }
     public void UpdateSelfState()
     {
@@ -56,7 +60,7 @@ public class EnemyCombat2D : MonoBehaviour
         {
             isDefeated = true;
             enemyAnimator.SetTrigger("Death");
-            CombatManager.instance.ReportDeath(true);
+            CombatManager.instance.ReportDeath();
         }
     }
 
@@ -225,6 +229,8 @@ public class EnemyCombat2D : MonoBehaviour
     {
         // Tell combat manager to deal damage to active enemy
         CombatManager.instance.HandleDealtDamage(damageToDo, selectedTarget);
+
+        CameraShake.instance.StartShake(0);
     }
 
     public void RequestResumeTime()
@@ -236,6 +242,11 @@ public class EnemyCombat2D : MonoBehaviour
     {
         // play damage animation
         enemyAnimator.SetTrigger("TakeDamage");
+
+        // play hit FX
+        int randomRotation = Random.Range(0, 45);
+        hitFXObject.transform.Rotate(0f, 0f, randomRotation);
+        hitFXAnimator.SetTrigger("HitEffect");
 
         // Reduce damage by 50% if defending
         if(isDefending == true)
@@ -266,4 +277,8 @@ public class EnemyCombat2D : MonoBehaviour
         UpdateSelfState();
     }
 
+    private void PlaySoundEffect(string sfxName)
+    {
+        AudioManager.instance.PlaySound(sfxName);
+    }
 }

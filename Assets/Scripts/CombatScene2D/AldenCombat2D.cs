@@ -36,15 +36,17 @@ public class AldenCombat2D : MonoBehaviour
     public Animator aldenAnimator = null;
     public Animator normalDamageAnimator = null;
     public TMP_Text normalDamageText = null;
+    public GameObject hitFXObject = null;
 
     // Private Variables
     private int damageToDo = 1;
     private bool isCritical = false;
     private double randomNumber = 0;
+    private Animator hitFXAnimator = null;
 
     private void Start()
     {
-        
+        hitFXAnimator = hitFXObject.gameObject.GetComponent<Animator>();
     }
 
     public void AldenAttack(int targetPosition, int selfPosition)
@@ -97,13 +99,17 @@ public class AldenCombat2D : MonoBehaviour
         {
             // same as above
         }
-
     }
 
     public void AldenTakeDamage(int incomingDamage)
     {
         // play damage animation
         aldenAnimator.SetTrigger("AldenHurt");
+
+        // play hit FX
+        int randomRotation = Random.Range(0, 45);
+        hitFXObject.transform.Rotate(0f, 0f, randomRotation);
+        hitFXAnimator.SetTrigger("HitEffect");
 
         // calculate def reductions
         incomingDamage -= defense;
@@ -115,16 +121,49 @@ public class AldenCombat2D : MonoBehaviour
 
         // reduce player health
         health -= incomingDamage;
+
+        CheckDeathCondition();
+    }
+
+    private void CheckDeathCondition()
+    {
+        if (health < 0)
+        {
+            health = 0;
+        }
+
+        // Death Condition
+        if (health <= 0)
+        {
+            //isDefeated = true;
+            aldenAnimator.SetTrigger("AldenDeath");
+            CombatManager.instance.ReportDeath("Alden");
+        }
     }
 
     public void DealDamage()
     {
         // Tell combat manager to deal damage to active enemy
         CombatManager.instance.HandleDealtDamage(damageToDo, isCritical);
+
+        if (isCritical)
+        {
+            CameraShake.instance.StartShake(1);
+            HitStop.instance.StartHitStop(0);
+        }
+        else
+        {
+            CameraShake.instance.StartShake(0);
+        }
     }
 
     public void RequestResumeTime()
     {
         CombatManager.instance.ResumeTime();
+    }
+
+    private void PlaySoundEffect(string sfxName)
+    {
+        AudioManager.instance.PlaySound(sfxName);
     }
 }
