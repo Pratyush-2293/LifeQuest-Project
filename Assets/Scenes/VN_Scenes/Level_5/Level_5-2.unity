@@ -311,15 +311,15 @@ MonoBehaviour:
   - {fileID: 167242085}
   - {fileID: 1418513536}
   - {fileID: 830392842}
-  - {fileID: 1667159646}
-  backgrounds: []
+  backgrounds:
+  - {fileID: 21300000, guid: ab495c56799c5044e8cffca581433ea8, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
   soundEffects: []
-  initialBackgroundMusic: {fileID: 8300000, guid: 5bd5c0179f2742b429c473906d2c6c1c,
+  initialBackgroundMusic: {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2,
     type: 3}
   backgroundMusic:
+  - {fileID: 8300000, guid: b8d6f28fd453f0d4fb8f9300db6aee02, type: 3}
   - {fileID: 8300000, guid: cd1a1494b1c6a6b4eba549dc8cf943f4, type: 3}
-  - {fileID: 8300000, guid: 81f5b96870bbfeb47b52f232101bb5c5, type: 3}
   textSpeed: 0.02
   textSounds:
   - {fileID: 8300000, guid: 269b831dcdc545c43b6a52b2aec09c75, type: 3}
@@ -340,7 +340,8 @@ MonoBehaviour:
   - dialogueID: 0
     nextDialogue: 1
     characterName: Narrator
-    dialogueText: The dirt path wound through the dense forest,
+    dialogueText: With the last goblin falling lifeless to the dirt, Alden exhales
+      and lowers his sword.
     character: 0
     background: -1
     SFX: -1
@@ -352,7 +353,8 @@ MonoBehaviour:
   - dialogueID: 1
     nextDialogue: 2
     characterName: Narrator
-    dialogueText: dappled sunlight casting long shadows across the road.
+    dialogueText: He glances around, making sure there are no more lurking in the
+      shadows before heading back to the village.
     character: 0
     background: -1
     SFX: -1
@@ -364,7 +366,8 @@ MonoBehaviour:
   - dialogueID: 2
     nextDialogue: 3
     characterName: Narrator
-    dialogueText: A caravan of merchants and their guards moved steadily toward Liora.
+    dialogueText: The elder listens intently as Alden recounts the encounter. He
+      nods, relieved, and thanks him for his efforts.
     character: 0
     background: -1
     SFX: -1
@@ -376,8 +379,8 @@ MonoBehaviour:
   - dialogueID: 3
     nextDialogue: 4
     characterName: Narrator
-    dialogueText: Their voices light as they chatted idly, keeping a watchful eye
-      on the peaceful woods.
+    dialogueText: Alden, still unsettled by the way the goblins fought, bids the
+      elder farewell and mounts his horse, beginning the ride back to Liora.
     character: 0
     background: -1
     SFX: -1
@@ -389,11 +392,12 @@ MonoBehaviour:
   - dialogueID: 4
     nextDialogue: 5
     characterName: Narrator
-    dialogueText: Alden rode alongside two guildmates, Garran and Rurik.
+    dialogueText: The barracks are quiet when Alden returns, save for the sounds
+      of clinking utensils and hushed conversation coming from the dining hall.
     character: 0
-    background: -1
+    background: 0
     SFX: -1
-    BGM: -1
+    BGM: 0
     tabRight: 0
     tabLeft: 0
     lastDialogue: 0
@@ -401,7 +405,8 @@ MonoBehaviour:
   - dialogueID: 5
     nextDialogue: 6
     characterName: Narrator
-    dialogueText: Garran stretches his arms, letting out a yawn.
+    dialogueText: He steps inside, spotting Valric at a table, finishing his supper.
+      The knight notices him and smirks.
     character: 0
     background: -1
     SFX: -1
@@ -412,8 +417,8 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 6
     nextDialogue: 7
-    characterName: Garran
-    dialogueText: Gods, how much longer till we reach Liora?
+    characterName: Valric
+    dialogueText: Back in one piece, I see. Go on, grab a seat before you fall over.
     character: 2
     background: -1
     SFX: -1
@@ -424,21 +429,22 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 7
     nextDialogue: 8
-    characterName: Garran
-    dialogueText: "Feels like we\u2019ve been walking forever."
-    character: 2
+    characterName: Alden
+    dialogueText: <Alden sits down with a plate, exhaustion creeping in now that
+      the adrenaline has worn off>
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
-    tabLeft: 0
+    tabLeft: 1
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 8
     nextDialogue: 9
-    characterName: Rurik
-    dialogueText: "You\u2019ve been complaining since we left the last outpost."
-    character: 3
+    characterName: Alden
+    dialogueText: "I ran into the goblins later than expected\u2014well after dark."
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -448,21 +454,21 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 9
     nextDialogue: 10
-    characterName: Rurik
-    dialogueText: "Maybe if you spent less time at the tavern and more time on patrol,
-      you\u2019d have better stamina."
-    character: 3
+    characterName: Valric
+    dialogueText: <Valric, halfway through a bite, pauses and gives him a curious
+      look>
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 0
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 10
     nextDialogue: 11
-    characterName: Garran
-    dialogueText: Says the guy who nearly fell asleep on his horse last job.
+    characterName: Valric
+    dialogueText: After dark?
     character: 2
     background: -1
     SFX: -1
@@ -474,7 +480,7 @@ MonoBehaviour:
   - dialogueID: 11
     nextDialogue: 12
     characterName: Alden
-    dialogueText: To be fair, that job was even duller than this one.
+    dialogueText: "Yeah. Almost an hour after sunset, I think. Isn\u2019t that unusual?"
     character: 1
     background: -1
     SFX: -1
@@ -485,21 +491,10 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 12
     nextDialogue: 13
-    characterName: Alden
-    dialogueText: "At least here we have fresh air and\u2014"
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 13
-    nextDialogue: 14
-    characterName: Rurik
-    dialogueText: "\u2026"
-    character: 3
+    characterName: Valric
+    dialogueText: <Valric sets his fork down, his expression shifting to something
+      more thoughtful>
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
@@ -507,11 +502,24 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
+  - dialogueID: 13
+    nextDialogue: 14
+    characterName: Valric
+    dialogueText: "Very. Goblins don\u2019t see well in the dark. They\u2019re more
+      comfortable attacking at dusk or dawn, when they can still rely on their sight."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
   - dialogueID: 14
     nextDialogue: 15
-    characterName: Rurik
-    dialogueText: <Rurik looks around, suddenly alert>
-    character: 3
+    characterName: Valric
+    dialogueText: This is...odd.
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
@@ -521,20 +529,8 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 15
     nextDialogue: 16
-    characterName: Rurik
-    dialogueText: ... Hold up.
-    character: 3
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 16
-    nextDialogue: 17
     characterName: Alden
-    dialogueText: <Alden slows his horse, glancing at Rurik>
+    dialogueText: I was thinking the same.
     character: 1
     background: -1
     SFX: -1
@@ -543,22 +539,23 @@ MonoBehaviour:
     tabLeft: 1
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 17
-    nextDialogue: 18
+  - dialogueID: 16
+    nextDialogue: 17
     characterName: Alden
-    dialogueText: What is it?
+    dialogueText: "Shouldn\u2019t it make them weaker, though? If their eyesight\u2019s
+      bad at night, shouldn\u2019t they be easier to deal with?"
     character: 1
     background: -1
     SFX: -1
-    BGM: 0
+    BGM: -1
     tabRight: 0
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 18
-    nextDialogue: 19
-    characterName: Garran
-    dialogueText: <Garran narrows his eyes, staring into the treeline>
+  - dialogueID: 17
+    nextDialogue: 18
+    characterName: Valric
+    dialogueText: That would make sense...but?
     character: 2
     background: -1
     SFX: -1
@@ -567,11 +564,24 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
+  - dialogueID: 18
+    nextDialogue: 19
+    characterName: Alden
+    dialogueText: "But I didn\u2019t notice much of a difference."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
   - dialogueID: 19
     nextDialogue: 20
-    characterName: Garran
-    dialogueText: "Something\u2019s moving in the woods."
-    character: 2
+    characterName: Alden
+    dialogueText: "If anything, they felt fiercer. They weren\u2019t scrambling around
+      blindly\u2014they worked together, fought like a proper group."
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -581,21 +591,21 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 20
     nextDialogue: 21
-    characterName: Rurik
-    dialogueText: I...
-    character: 3
+    characterName: Valric
+    dialogueText: <Valric leans back in his chair, arms crossed>
+    character: 2
     background: -1
     SFX: -1
-    BGM: -1
-    tabRight: 0
+    BGM: 1
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 21
     nextDialogue: 22
-    characterName: Rurik
-    dialogueText: I think I saw something shining between the trees...
-    character: 3
+    characterName: Valric
+    dialogueText: Hmph. That is strange.
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
@@ -605,21 +615,21 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 22
     nextDialogue: 23
-    characterName: Rurik
-    dialogueText: ... shining like steel.
-    character: 3
+    characterName: Narrator
+    dialogueText: A brief silence passes between them.
+    character: 0
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
-    tabLeft: 0
+    tabLeft: 1
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 23
     nextDialogue: 24
-    characterName: Alden
-    dialogueText: "Could be nothing\u2026"
-    character: 1
+    characterName: Narrator
+    dialogueText: Neither can make sense of it, but the feeling lingers.
+    character: 0
     background: -1
     SFX: -1
     BGM: -1
@@ -630,7 +640,7 @@ MonoBehaviour:
   - dialogueID: 24
     nextDialogue: 25
     characterName: Alden
-    dialogueText: ... or it could be trouble.
+    dialogueText: Something feels...off.
     character: 1
     background: -1
     SFX: -1
@@ -641,21 +651,23 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 25
     nextDialogue: 26
-    characterName: Narrator
-    dialogueText: The air grows tense.
-    character: 0
+    characterName: Valric
+    dialogueText: "Perhaps. But we don\u2019t know for sure yet."
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 0
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 26
     nextDialogue: 27
-    characterName: Alden
-    dialogueText: <Alden moves his hand to the hilt of his sword>
-    character: 1
+    characterName: Narrator
+    dialogueText: With that, Alden finishes his meal in silence, the weight of the
+      night settling in. Valric says nothing more on the matter, simply watching
+      as Alden stands to leave.
+    character: 0
     background: -1
     SFX: -1
     BGM: -1
@@ -665,136 +677,40 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 27
     nextDialogue: 28
-    characterName: Narrator
-    dialogueText: "The rustling grows louder\u2014"
-    character: 0
+    characterName: Valric
+    dialogueText: "Get some sleep. You\u2019ll need it."
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 0
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 28
     nextDialogue: 29
     characterName: Narrator
-    dialogueText: then, suddenly, figures emerge from the foliage, weapons drawn.
+    dialogueText: Alden nods, retreating to his quarters.
     character: 0
     background: -1
     SFX: -1
-    BGM: 1
+    BGM: -1
     tabRight: 0
-    tabLeft: 0
+    tabLeft: 1
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 29
     nextDialogue: 30
-    characterName: Garran
-    dialogueText: Bandits !
-    character: 2
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 1
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 30
-    nextDialogue: 31
-    characterName: Rurik
-    dialogueText: <Rurik draws his sword>
-    character: 3
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 31
-    nextDialogue: 32
-    characterName: Rurik
-    dialogueText: They were waiting for us !
-    character: 3
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 32
-    nextDialogue: 33
-    characterName: Rurik
-    dialogueText: Got it. Stay sharp!
-    character: 3
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 1
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 33
-    nextDialogue: 34
-    characterName: Alden
-    dialogueText: "Damn it\u2014there\u2019s more behind us! "
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 34
-    nextDialogue: 35
-    characterName: Alden
-    dialogueText: <Alden quickly scans his surroundings and spots some movement at
-      the back of the caravan>
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 1
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 35
-    nextDialogue: 36
-    characterName: Garran
-    dialogueText: "They\u2019re trying to box us in."
-    character: 2
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 1
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 36
-    nextDialogue: 37
-    characterName: Alden
-    dialogueText: "I\u2019ll handle the ones at the back. Keep the front clear!"
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 1
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 37
-    nextDialogue: 38
     characterName: Narrator
-    dialogueText: "Alden dashes toward the back of the caravan as the bandits close
-      in\u2014he draws out his sword, ready for battle."
+    dialogueText: "As he lays in bed, his mind drifts back to the battle\u2014the
+      way the goblins moved, the way they struck without hesitation. It gnaws at
+      him, but exhaustion finally takes over, pulling him into a deep sleep."
     character: 0
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
-    tabLeft: 1
+    tabLeft: 0
     lastDialogue: 0
     loadCombat: 
 --- !u!4 &141600461
@@ -1595,7 +1511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. Caravan Escort
+  m_text: 5. The Village of Branstead
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1771,7 +1687,6 @@ RectTransform:
   - {fileID: 684439331}
   - {fileID: 2056154120}
   - {fileID: 830392843}
-  - {fileID: 1667159647}
   - {fileID: 1418513537}
   - {fileID: 23086191}
   - {fileID: 167242086}
@@ -2078,7 +1993,7 @@ GameObject:
   - component: {fileID: 830392846}
   - component: {fileID: 830392847}
   m_Layer: 5
-  m_Name: Garran
+  m_Name: Valric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2123,7 +2038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e7d0e3dc1f45424fa091016a08c2dfc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2510,116 +2425,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516781601}
   m_CullTransparentMesh: 1
---- !u!1 &1667159646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1667159647}
-  - component: {fileID: 1667159651}
-  - component: {fileID: 1667159650}
-  - component: {fileID: 1667159649}
-  - component: {fileID: 1667159648}
-  m_Layer: 5
-  m_Name: Rurik
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1667159647
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667159646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 678982527}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1200, y: 230}
-  m_SizeDelta: {x: 1000, y: 1000}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1667159648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667159646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &1667159649
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667159646}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1667159650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667159646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 273c036542e6e3d4e8c339ef4a8f916d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1667159651
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667159646}
-  m_CullTransparentMesh: 1
 --- !u!1 &1901202296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,7 +2735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4570bc771393084468873baf11d07022, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8defe1be36d1edc4ba1f9122bf9c79b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
