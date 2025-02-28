@@ -440,7 +440,34 @@ public class CombatManager : MonoBehaviour
 
     public void OnDefendButton()
     {
+        // When defend button is pressed during Alden's turn
+        if (isAldenTurn)
+        {
+            // Play defend animation
+            playerCombatControllers[aldenIndex].DoAction("Defend", currentSelectedTarget);
+        }
 
+        // When attack button is pressed during Valric's turn
+        if (isValricTurn)
+        {
+
+        }
+
+        // When attack button is pressed during Osmir's turn
+        if (isOsmirTurn)
+        {
+
+        }
+
+        // When attack button is pressed during Assassin's Turn
+        if (isAssassinTurn)
+        {
+
+        }
+
+
+        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
+        actionPanelAnimator.SetTrigger("SlideDown");
     }
 
     public void OnSkill3Button()

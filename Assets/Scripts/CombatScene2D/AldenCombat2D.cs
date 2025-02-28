@@ -37,12 +37,14 @@ public class AldenCombat2D : MonoBehaviour
     public Animator normalDamageAnimator = null;
     public TMP_Text normalDamageText = null;
     public GameObject hitFXObject = null;
+    public Animator shieldAuraAnimator = null;
 
     // Private Variables
     private int damageToDo = 1;
     private bool isCritical = false;
     private double randomNumber = 0;
     private Animator hitFXAnimator = null;
+    private bool isDefending = false;
 
     private void Start()
     {
@@ -99,6 +101,16 @@ public class AldenCombat2D : MonoBehaviour
         {
             // same as above
         }
+
+        // time cost will be added in playercombat
+    }
+
+    public void AldenDefend()
+    {
+        aldenAnimator.SetTrigger("AldenDefend");
+        isDefending = true;
+        shieldAuraAnimator.SetTrigger("ShieldAuraActive");
+        // time cost will be added in playercombat
     }
 
     public void AldenTakeDamage(int incomingDamage)
@@ -113,7 +125,16 @@ public class AldenCombat2D : MonoBehaviour
 
         // calculate def reductions
         incomingDamage -= defense;
+
         // calculate blessings reductions, if any
+
+        // Reduce damage if defending
+        if (isDefending == true)
+        {
+            incomingDamage = (int)(incomingDamage * 0.5f);
+            isDefending = false;
+            shieldAuraAnimator.SetTrigger("ShieldAuraIdle");
+        }
 
         // play damage number animation
         normalDamageText.text = incomingDamage.ToString();

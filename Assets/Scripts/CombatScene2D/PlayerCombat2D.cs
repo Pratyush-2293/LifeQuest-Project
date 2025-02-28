@@ -20,7 +20,10 @@ public class PlayerCombat2D : MonoBehaviour
         if(actionName == "Attack")
         {
             Action_Attack(targetPosition);
-            AddTimeCost(aldenCombatController.attackTimeCost);
+        }
+        else if(actionName == "Defend")
+        {
+            Action_Defend();
         }
     }
 
@@ -103,6 +106,7 @@ public class PlayerCombat2D : MonoBehaviour
         if(characterName == "Alden")
         {
             aldenCombatController.AldenAttack(targetPosition, characterPosition);
+            AddTimeCost(aldenCombatController.attackTimeCost);
         }
         else if(characterName == "Valric")
         {
@@ -113,6 +117,27 @@ public class PlayerCombat2D : MonoBehaviour
             // same as above
         }
         else if(characterName == "Assassin")
+        {
+            // same as above
+        }
+    }
+
+    public void Action_Defend()
+    {
+        if (characterName == "Alden")
+        {
+            aldenCombatController.AldenDefend();
+            AddTimeCost(aldenCombatController.defendTimeCost);
+        }
+        else if (characterName == "Valric")
+        {
+            // same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if (characterName == "Assassin")
         {
             // same as above
         }
