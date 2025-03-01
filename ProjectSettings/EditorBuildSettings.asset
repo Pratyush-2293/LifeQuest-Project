@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CombatScene.unity
     guid: 6ab517a68910f984ba5600b9a60c5caa
+  - enabled: 1
+    path: Assets/Scenes/GameHubMenu.unity
+    guid: 5e0dca5e1de431347b4ea7021b0c31d1
+  - enabled: 1
+    path: Assets/Scenes/HeroesMenu.unity
+    guid: 1603764a1cd8cd149a63fe56ad8b1701
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7df75182111f466468092012c194b27d,
       type: 2}

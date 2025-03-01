@@ -15,6 +15,8 @@ public class SaveManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SavePlayerTasksData()
@@ -40,6 +42,37 @@ public class SaveManager : MonoBehaviour
             // Data Deserialise
             PlayerTasksData data = JsonUtility.FromJson<PlayerTasksData>(readData);
             TaskListMenu.instance.playerTasksData = data;
+            Debug.Log("Player Tasks Data loaded successfully.");
+        }
+        else
+        {
+            Debug.Log("No Existing PlayerTasksData Save File Was Found.");
+        }
+    }
+
+    public void SaveGameData()
+    {
+        // Data Input
+        GameData gameDataSaveObject = GameData.instance;
+
+        // Data Write
+        string writeData = JsonUtility.ToJson(gameDataSaveObject);
+        string filePath = Application.persistentDataPath + "/GameData.json";
+        System.IO.File.WriteAllText(filePath, writeData);
+        Debug.Log("Game Data successfully stored at: " + filePath);
+    }
+
+    public void LoadGameData()
+    {
+        // Data Read
+        string filePath = Application.persistentDataPath + "/GameData.json";
+        if (System.IO.File.Exists(filePath))
+        {
+            string readData = System.IO.File.ReadAllText(filePath);
+
+            // Data Deserialise
+            GameData data = JsonUtility.FromJson<GameData>(readData);
+            GameData.instance = data;
             Debug.Log("Player Tasks Data loaded successfully.");
         }
         else

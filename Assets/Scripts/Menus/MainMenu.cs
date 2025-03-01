@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : Menu
 {
@@ -15,6 +16,11 @@ public class MainMenu : Menu
             return;
         }
         instance = this;
+    }
+
+    public void OnStartGameButton()
+    {
+        SceneManager.LoadScene("GameHubMenu");
     }
 
     public void OnTaskListButton()
