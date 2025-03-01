@@ -60,4 +60,9 @@ public class HeroesMenuManager : MonoBehaviour
         charMaxMPDisplay.text = GameData.instance.aldenMP.ToString();
         charCritRateDisplay.text = GameData.instance.aldenCRIT.ToString();
     }
+
+    public void OnBackButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameHubMenu");
+    }
 }
