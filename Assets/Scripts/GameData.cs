@@ -7,14 +7,19 @@ public class GameData : MonoBehaviour
 {
     public static GameData instance = null;
 
-    [Header("Core Game Data")]
+    [Header("Currencies")]
     public int expPoints = 0;
     public int goldCoins = 0;
     public int levelKeys = 1;
     public int dungeonKeys = 0;
+
+    [Header("Level Completion Data")]
     public int maxCompletedLevel = 1;
     public int maxUnlockedLevel = 1;
     public int maxAvailableLevel = 2;
+
+    [Header("Inventory")]
+    public List<Item> inventory = new List<Item>();
 
     [Header("Alden's Data")]
     public int aldenLevel = 1;
@@ -63,6 +68,7 @@ public class GameData : MonoBehaviour
             maxCompletedLevel = maxCompletedLevel,
             maxUnlockedLevel = maxUnlockedLevel,
             maxAvailableLevel = maxAvailableLevel,
+            inventory = inventory,
 
             aldenLevel = aldenLevel,
             aldenEXP = aldenEXP,
@@ -86,6 +92,7 @@ public class GameData : MonoBehaviour
         maxCompletedLevel = data.maxCompletedLevel;
         maxUnlockedLevel = data.maxUnlockedLevel;
         maxAvailableLevel = data.maxAvailableLevel;
+        inventory = data.inventory;
 
         aldenLevel = data.aldenLevel;
         aldenEXP = data.aldenEXP;
@@ -110,6 +117,7 @@ public class GameDataSave
     public int maxCompletedLevel;
     public int maxUnlockedLevel;
     public int maxAvailableLevel;
+    public List<Item> inventory;
 
     // Alden's Data
     public int aldenLevel;

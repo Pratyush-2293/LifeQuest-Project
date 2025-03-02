@@ -30,6 +30,9 @@ public class OptionsMenuManager : MonoBehaviour
     private bool bgmIsMuted = false;
     private bool sfxIsMuted = false;
 
+    private float bgmMutedSave;
+    private float sfxMutedSave;
+
     private void Awake()
     {
         if (instance)
@@ -44,6 +47,13 @@ public class OptionsMenuManager : MonoBehaviour
     {
         bgmVolume = PlayerPrefs.GetFloat("bgmVolume_Combat", 1.0f);
         sfxVolume = PlayerPrefs.GetFloat("sfxVolume_Combat", 1.0f);
+
+        bgmMutedSave = PlayerPrefs.GetFloat("bgmMutedSave_Combat", 1f);
+        sfxMutedSave = PlayerPrefs.GetFloat("sfxMutedSave_Combat", 1f);
+
+        // Load mute states
+        bgmIsMuted = PlayerPrefs.GetInt("bgmIsMuted_Combat", 0) == 1;
+        sfxIsMuted = PlayerPrefs.GetInt("sfxIsMuted_Combat", 0) == 1;
     }
 
     public void OnOptionsButton()
@@ -88,14 +98,20 @@ public class OptionsMenuManager : MonoBehaviour
         if(bgmIsMuted == false)
         {
             AudioManager.instance.ChangeVolumeLevels(0, sfxVolume);
+            bgmVolumeSlider.value = 0;
+            bgmMutedSave = bgmVolume;
+            PlayerPrefs.SetFloat("bgmMutedSave_Combat", bgmMutedSave);
             bgmIsMuted = true;
         }
         else
         {
-            AudioManager.instance.ChangeVolumeLevels(bgmVolume, sfxVolume);
+            AudioManager.instance.ChangeVolumeLevels(bgmMutedSave, sfxVolume);
+            bgmVolumeSlider.value = bgmMutedSave;
             bgmIsMuted = false;
         }
-        
+
+        PlayerPrefs.SetInt("bgmIsMuted_Combat", bgmIsMuted ? 1 : 0);  // Save the mute state
+        PlayerPrefs.Save();
     }
 
     public void OnSFXMuteButton()
@@ -103,13 +119,20 @@ public class OptionsMenuManager : MonoBehaviour
         if (sfxIsMuted == false)
         {
             AudioManager.instance.ChangeVolumeLevels(bgmVolume, 0);
+            sfxVolumeSlider.value = 0;
+            sfxMutedSave = sfxVolume;
+            PlayerPrefs.SetFloat("sfxMutedSave_Combat", sfxMutedSave);
             sfxIsMuted = true;
         }
         else
         {
-            AudioManager.instance.ChangeVolumeLevels(bgmVolume, sfxVolume);
+            AudioManager.instance.ChangeVolumeLevels(bgmVolume, sfxMutedSave);
+            sfxVolumeSlider.value = sfxMutedSave;
             sfxIsMuted = false;
         }
+
+        PlayerPrefs.SetInt("sfxIsMuted_Combat", sfxIsMuted ? 1 : 0);  // Save the mute state
+        PlayerPrefs.Save();
     }
 
     public void OnApplyButton()

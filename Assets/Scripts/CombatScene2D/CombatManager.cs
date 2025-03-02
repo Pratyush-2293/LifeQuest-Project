@@ -21,6 +21,14 @@ public class CombatManager : MonoBehaviour
     public Slider HPSlider = null;
     public Slider MPSlider = null;
 
+    [Header("Selected Enemy Panel")]
+    public Animator enemyInfoPanelAnimator = null;
+    public Image enemyProfileImageDisplay = null;
+    public TMP_Text enemyNameDisplay = null;
+    public TMP_Text enemyActionsDisplay = null;
+    public Slider enemyHealthDisplay = null;
+    public TMP_Text enemyHealthValueDisplay = null;
+
     [Header("End Scene Panels")]
     public GameObject touchBlockerPanel = null;
     public Animator victoryPanelAnimator = null;
@@ -32,6 +40,9 @@ public class CombatManager : MonoBehaviour
 
     // enemy sliders
     public List<Slider> enemySliders = new List<Slider>();
+
+    // enemy slider markers
+    public List<Sprite> enemySliderMarkers = new List<Sprite>();
 
     // Storing script files for all characters on field
     public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
@@ -116,6 +127,9 @@ public class CombatManager : MonoBehaviour
                 playersAlive++;
             }
         }
+
+        // Updating enemy markers on the time sliders
+        UpdateEnemySliderMarkers();
 
         // Start a function that ticks turn count for all characters
         StartCoroutine(TickTime());
@@ -295,7 +309,36 @@ public class CombatManager : MonoBehaviour
             }
         }
 
+        // Updating & Showing the Selected Enemy Info Panel
+        UpdateInfoPanel();
+        enemyInfoPanelAnimator.SetTrigger("SlideIn");
+
         actionPanelAnimator.SetTrigger("SlideUp");
+    }
+
+    private void UpdateInfoPanel()
+    {
+        if(enemyCombatControllers[currentSelectedTarget] != null)
+        {
+            // Update the profile image
+            if(enemyCombatControllers[currentSelectedTarget].enemyProfileSprite != null)
+            {
+                enemyProfileImageDisplay.sprite = enemyCombatControllers[currentSelectedTarget].enemyProfileSprite;
+            }
+            
+            // Update the enemy name
+            enemyNameDisplay.text = enemyCombatControllers[currentSelectedTarget].enemyName;
+
+            // Update the enemy actions
+            enemyActionsDisplay.text = enemyCombatControllers[currentSelectedTarget].enemyActions;
+
+            // Update the enemy health slider
+            enemyHealthDisplay.maxValue = enemyCombatControllers[currentSelectedTarget].maxHealth;
+            enemyHealthDisplay.value = enemyCombatControllers[currentSelectedTarget].health;
+
+            // Update the health text
+            enemyHealthValueDisplay.text = enemyCombatControllers[currentSelectedTarget].health.ToString() + " / " + enemyCombatControllers[currentSelectedTarget].maxHealth.ToString();
+        }
     }
 
     private int CheckActiveEnemies()
@@ -374,6 +417,21 @@ public class CombatManager : MonoBehaviour
         playersAlive--;
     }
 
+    // Updating enemy markers on the sliders
+    private void UpdateEnemySliderMarkers()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            if(enemyCombatControllers[i] != null)
+            {
+                if(enemyCombatControllers[i].enemyMarkerSprite != null)
+                {
+                    enemySliderMarkers[i] = enemyCombatControllers[i].enemyMarkerSprite;
+                }
+            }
+        }
+    }
+
     // Overloaded HandleDealtDamage function
     public void HandleDealtDamage(int dealtDamage, bool isCritical)  // this one is used by player char to deal damage to enemy
     {
@@ -414,8 +472,7 @@ public class CombatManager : MonoBehaviour
         }
 
 
-        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
-        actionPanelAnimator.SetTrigger("SlideDown");
+        AfterButtonPressHandler();
     }
 
     public void OnSkillButton()
@@ -466,13 +523,19 @@ public class CombatManager : MonoBehaviour
         }
 
 
-        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
-        actionPanelAnimator.SetTrigger("SlideDown");
+        AfterButtonPressHandler();
     }
 
     public void OnSkill3Button()
     {
 
+    }
+
+    private void AfterButtonPressHandler()
+    {
+        enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
+        actionPanelAnimator.SetTrigger("SlideDown");
+        enemyInfoPanelAnimator.SetTrigger("SlideOut");
     }
 
     public void OnLeftButton()
@@ -603,6 +666,8 @@ public class CombatManager : MonoBehaviour
                 currentSelectedTarget = 0;
             }
         }
+
+        UpdateInfoPanel();
     }
 
     public void OnRightButton()
@@ -727,5 +792,7 @@ public class CombatManager : MonoBehaviour
                 currentSelectedTarget = 2;
             }
         }
+
+        UpdateInfoPanel();
     }
 }

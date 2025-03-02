@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ActionPanelSlideDown
+  m_Name: InfoPanelSlideOut
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -23,7 +23,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -715
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -32,17 +32,17 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -2200
-        inSlope: -7906.0947
-        outSlope: -7906.0947
+        value: -1500
+        inSlope: -11718.921
+        outSlope: -11718.921
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.057739556
+        inWeight: 0.055214882
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
+    attribute: m_AnchoredPosition.x
     path: 
     classID: 224
     script: {fileID: 0}
@@ -57,7 +57,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 538195251
+      attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
       customType: 28
@@ -92,7 +92,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -715
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -101,17 +101,17 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -2200
-        inSlope: -7906.0947
-        outSlope: -7906.0947
+        value: -1500
+        inSlope: -11718.921
+        outSlope: -11718.921
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.057739556
+        inWeight: 0.055214882
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
+    attribute: m_AnchoredPosition.x
     path: 
     classID: 224
     script: {fileID: 0}
