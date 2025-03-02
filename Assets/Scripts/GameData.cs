@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class GameData : MonoBehaviour
 {
     public static GameData instance = null;
@@ -28,10 +29,11 @@ public class GameData : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Debug.LogError("Trying to create more than one GameData!");
             Destroy(gameObject);
+            return;
         }
         instance = this;
 
@@ -42,4 +44,82 @@ public class GameData : MonoBehaviour
     {
         SaveManager.instance.LoadGameData();
     }
+
+    [ContextMenu("Save Test Data")]
+    private void SaveDataForTesting()
+    {
+        SaveManager.instance.SaveGameData();
+    }
+
+    // Converts GameData to GameDataSave for serialization
+    public GameDataSave ToSaveData()
+    {
+        return new GameDataSave
+        {
+            expPoints = expPoints,
+            goldCoins = goldCoins,
+            levelKeys = levelKeys,
+            dungeonKeys = dungeonKeys,
+            maxCompletedLevel = maxCompletedLevel,
+            maxUnlockedLevel = maxUnlockedLevel,
+            maxAvailableLevel = maxAvailableLevel,
+
+            aldenLevel = aldenLevel,
+            aldenEXP = aldenEXP,
+            aldenEXPForNextLevel = aldenEXPForNextLevel,
+            aldenSTR = aldenSTR,
+            aldenDEF = aldenDEF,
+            aldenVIT = aldenVIT,
+            aldenHP = aldenHP,
+            aldenMP = aldenMP,
+            aldenCRIT = aldenCRIT
+        };
+    }
+
+    // Loads data from GameDataSave into GameData
+    public void LoadFromSaveData(GameDataSave data)
+    {
+        expPoints = data.expPoints;
+        goldCoins = data.goldCoins;
+        levelKeys = data.levelKeys;
+        dungeonKeys = data.dungeonKeys;
+        maxCompletedLevel = data.maxCompletedLevel;
+        maxUnlockedLevel = data.maxUnlockedLevel;
+        maxAvailableLevel = data.maxAvailableLevel;
+
+        aldenLevel = data.aldenLevel;
+        aldenEXP = data.aldenEXP;
+        aldenEXPForNextLevel = data.aldenEXPForNextLevel;
+        aldenSTR = data.aldenSTR;
+        aldenDEF = data.aldenDEF;
+        aldenVIT = data.aldenVIT;
+        aldenHP = data.aldenHP;
+        aldenMP = data.aldenMP;
+        aldenCRIT = data.aldenCRIT;
+    }
 }
+
+[System.Serializable]
+public class GameDataSave
+{
+    // Core Game Data
+    public int expPoints;
+    public int goldCoins;
+    public int levelKeys;
+    public int dungeonKeys;
+    public int maxCompletedLevel;
+    public int maxUnlockedLevel;
+    public int maxAvailableLevel;
+
+    // Alden's Data
+    public int aldenLevel;
+    public int aldenEXP;
+    public int aldenEXPForNextLevel;
+    public int aldenSTR;
+    public int aldenDEF;
+    public int aldenVIT;
+    public int aldenHP;
+    public int aldenMP;
+    public int aldenCRIT;
+}
+

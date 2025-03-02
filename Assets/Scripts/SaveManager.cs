@@ -52,10 +52,8 @@ public class SaveManager : MonoBehaviour
 
     public void SaveGameData()
     {
-        // Data Input
-        GameData gameDataSaveObject = GameData.instance;
+        GameDataSave gameDataSaveObject = GameData.instance.ToSaveData();
 
-        // Data Write
         string writeData = JsonUtility.ToJson(gameDataSaveObject);
         string filePath = Application.persistentDataPath + "/GameData.json";
         System.IO.File.WriteAllText(filePath, writeData);
@@ -64,15 +62,16 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGameData()
     {
-        // Data Read
         string filePath = Application.persistentDataPath + "/GameData.json";
         if (System.IO.File.Exists(filePath))
         {
             string readData = System.IO.File.ReadAllText(filePath);
 
-            // Data Deserialise
-            GameData data = JsonUtility.FromJson<GameData>(readData);
-            GameData.instance = data;
+            GameDataSave loadedData = JsonUtility.FromJson<GameDataSave>(readData);
+
+            // Apply loaded data to the GameData instance
+            GameData.instance.LoadFromSaveData(loadedData);
+
             Debug.Log("GameData loaded successfully.");
         }
         else
