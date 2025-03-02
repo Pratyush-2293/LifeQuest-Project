@@ -9,9 +9,11 @@ public class GameData : MonoBehaviour
     [Header("Core Game Data")]
     public int expPoints = 0;
     public int goldCoins = 0;
-    public int storyKeys = 0;
+    public int levelKeys = 1;
     public int dungeonKeys = 0;
+    public int maxCompletedLevel = 1;
     public int maxUnlockedLevel = 1;
+    public int maxAvailableLevel = 2;
 
     [Header("Alden's Data")]
     public int aldenLevel = 1;
@@ -34,5 +36,10 @@ public class GameData : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        SaveManager.instance.LoadGameData();
     }
 }

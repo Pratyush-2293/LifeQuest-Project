@@ -7,7 +7,7 @@ public class GameHubMenuManager : MonoBehaviour
 {
     public void OnLevelSelectButton()
     {
-        // open level select scene
+        SceneManager.LoadScene("LevelSelectMenu");
     }
 
     public void OnHeroesButton()

@@ -73,11 +73,11 @@ public class SaveManager : MonoBehaviour
             // Data Deserialise
             GameData data = JsonUtility.FromJson<GameData>(readData);
             GameData.instance = data;
-            Debug.Log("Player Tasks Data loaded successfully.");
+            Debug.Log("GameData loaded successfully.");
         }
         else
         {
-            Debug.Log("No Existing PlayerTasksData Save File Was Found.");
+            Debug.Log("No Existing GameData Save File Was Found.");
         }
     }
 }

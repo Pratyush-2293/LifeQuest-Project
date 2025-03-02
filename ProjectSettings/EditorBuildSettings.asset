@@ -29,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HeroesMenu.unity
     guid: 1603764a1cd8cd149a63fe56ad8b1701
+  - enabled: 1
+    path: Assets/Scenes/LevelSelectMenu.unity
+    guid: 58eca9d4f70bb1947821d24b3fa3a99b
+  - enabled: 1
+    path: Assets/Scenes/VN_Scenes/Level_1/Level_1-1.unity
+    guid: 01934415d1ccbed40a20d1a51ac44d8c
+  - enabled: 1
+    path: Assets/Scenes/VN_Scenes/Level_2/Level_2-1.unity
+    guid: e9ea91b861074f143a3a01c71561f3dc
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7df75182111f466468092012c194b27d,
       type: 2}

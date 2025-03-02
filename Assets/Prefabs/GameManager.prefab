@@ -85,9 +85,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expPoints: 400
   goldCoins: 0
-  storyKeys: 0
+  levelKeys: 1
   dungeonKeys: 0
+  maxCompletedLevel: 1
   maxUnlockedLevel: 1
+  maxAvailableLevel: 2
   aldenLevel: 1
   aldenEXP: 30
   aldenEXPForNextLevel: 100
