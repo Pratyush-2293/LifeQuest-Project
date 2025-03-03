@@ -320,6 +320,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d76299879d46dd4479d261244e3026f0, type: 3}
   - {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f, type: 3}
   - {fileID: 21300000, guid: 956c485ebe64cc14b83c2f5fcb7c1833, type: 3}
+  - {fileID: 21300000, guid: d52a1f52d804d444daec30e300f95e02, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
   soundEffects: []
   initialBackgroundMusic: {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2,
@@ -1630,7 +1631,7 @@ MonoBehaviour:
     dialogueText: Alden walks beside Sir Valric as they exit the royal chambers.
       The weight of the conversation lingers in the air, but Alden remains focused.
     character: 0
-    background: 0
+    background: 3
     SFX: -1
     BGM: 1
     tabRight: 0
@@ -1930,6 +1931,19 @@ MonoBehaviour:
       hills."
     character: 0
     background: 2
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 128
+    nextDialogue: 129
+    characterName: Narrator
+    dialogueText: As Alden steps forward, the familiar road unfurls before him, steady
+      and certain, guiding him home.
+    character: 0
+    background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
@@ -2844,7 +2858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. Caravan Escort
+  m_text: 2. At the Infirmary
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
