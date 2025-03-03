@@ -265,4 +265,4 @@ public class DialogueEntry
     [TextArea(1, 5)]
     public String loadCombat = null;
 }
- 
+   
