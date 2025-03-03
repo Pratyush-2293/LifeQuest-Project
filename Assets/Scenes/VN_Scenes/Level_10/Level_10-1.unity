@@ -729,7 +729,7 @@ MonoBehaviour:
   - dialogueID: 21
     nextDialogue: 22
     characterName: Alden
-    dialogueText: "\"I gotta admit...this place is nice. Different from what I\u2019m
+    dialogueText: "I gotta admit...this place is nice. Different from what I\u2019m
       used to, but nice."
     character: 1
     background: -1
