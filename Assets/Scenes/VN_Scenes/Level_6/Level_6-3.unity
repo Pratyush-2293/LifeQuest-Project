@@ -313,7 +313,6 @@ MonoBehaviour:
   - {fileID: 830392842}
   - {fileID: 1667159646}
   backgrounds:
-  - {fileID: 21300000, guid: c0b7c76b7e78025449d5d422c2475184, type: 3}
   - {fileID: 21300000, guid: 81e8ba1cef3763345a835e27e0b9ddc3, type: 3}
   - {fileID: 21300000, guid: 8defe1be36d1edc4ba1f9122bf9c79b5, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
@@ -323,8 +322,6 @@ MonoBehaviour:
   backgroundMusic:
   - {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2, type: 3}
   - {fileID: 8300000, guid: eb6f45f1328f0074c9c0962b173695cc, type: 3}
-  - {fileID: 8300000, guid: cd1a1494b1c6a6b4eba549dc8cf943f4, type: 3}
-  - {fileID: 8300000, guid: 81f5b96870bbfeb47b52f232101bb5c5, type: 3}
   textSpeed: 0.02
   textSounds:
   - {fileID: 8300000, guid: 269b831dcdc545c43b6a52b2aec09c75, type: 3}
@@ -345,8 +342,7 @@ MonoBehaviour:
   - dialogueID: 0
     nextDialogue: 1
     characterName: Narrator
-    dialogueText: The bodies of fallen goblins litter the ground, but their numbers
-      barely seem to dwindle.
+    dialogueText: 'Alden stands over the last fallen goblin, his breath ragged. '
     character: 0
     background: -1
     SFX: -1
@@ -358,8 +354,8 @@ MonoBehaviour:
   - dialogueID: 1
     nextDialogue: 2
     characterName: Narrator
-    dialogueText: For every one cut down, another two emerge from the shadows of
-      the trees, their snarls growing louder, their attacks more relentless.
+    dialogueText: "Just then, one of the goblins\u2014badly injured\u2014stumbles
+      to its feet and starts retreating into the forest."
     character: 0
     background: -1
     SFX: -1
@@ -370,22 +366,22 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 2
     nextDialogue: 3
-    characterName: Valric
-    dialogueText: "They\u2019re not stopping. There\u2019s got to be more in the
-      woods."
-    character: 2
+    characterName: Alden
+    dialogueText: "Oh no, you don\u2019t."
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 1
+    tabRight: 0
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 3
     nextDialogue: 4
-    characterName: Valric
-    dialogueText: "I\u2019ll stay here and coordinate my men."
-    character: 2
+    characterName: Narrator
+    dialogueText: He gives chase, following the goblin deep into the woods. Eventually,
+      the goblin vanishes into a cave.
+    character: 0
     background: -1
     SFX: -1
     BGM: -1
@@ -395,10 +391,9 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 4
     nextDialogue: 5
-    characterName: Valric
-    dialogueText: Alden, I need you to circle around and scout the goblin forces
-      in the forest. Get an estimate on their numbers!
-    character: 2
+    characterName: Alden
+    dialogueText: "A dead end\u2026? Where the hell did it go?"
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -408,20 +403,21 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 5
     nextDialogue: 6
-    characterName: Alden
-    dialogueText: Understood!
-    character: 1
+    characterName: Narrator
+    dialogueText: 'He scans the shallow cave but finds no sign of the goblin. '
+    character: 0
     background: -1
     SFX: -1
     BGM: -1
     tabRight: 0
-    tabLeft: 1
+    tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 6
     nextDialogue: 7
     characterName: Narrator
-    dialogueText: Alden immediately turns his horse and rides toward the treeline.
+    dialogueText: "Something feels off, but he knows he doesn\u2019t have time to
+      investigate now. He turns back, marking trees along the way for reference."
     character: 0
     background: -1
     SFX: -1
@@ -433,47 +429,46 @@ MonoBehaviour:
   - dialogueID: 7
     nextDialogue: 8
     characterName: Narrator
-    dialogueText: "Alden rides carefully through the forest, keeping his senses sharp.
-      Soon, he spots movement\u2014several goblins crouched in the brush, watching
-      the village from the shadows."
+    dialogueText: By the time Alden returns to the village, the battle is nearly
+      over. Most of the goblins have been slain, and the remaining ones are retreating
+      into the night.
     character: 0
     background: 0
     SFX: -1
-    BGM: -1
+    BGM: 0
     tabRight: 0
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 8
     nextDialogue: 9
-    characterName: Alden
-    dialogueText: "So there\u2019s more of them waiting to strike\u2026"
-    character: 1
+    characterName: Valric
+    dialogueText: There you are! Where the hell did you disappear to?
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 0
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 9
     nextDialogue: 10
-    characterName: Narrator
-    dialogueText: Just as he turns to leave, a rustling sound startles him.
-    character: 0
+    characterName: Alden
+    dialogueText: <Alden catches his breath>
+    character: 1
     background: -1
     SFX: -1
-    BGM: 3
+    BGM: -1
     tabRight: 0
-    tabLeft: 0
+    tabLeft: 1
     lastDialogue: 0
     loadCombat: 
   - dialogueID: 10
     nextDialogue: 11
-    characterName: Narrator
-    dialogueText: "A goblin suddenly leaps from the underbrush and slashes at his
-      horse\u2019s flank. The animal lets out a cry, rearing up violently."
-    character: 0
+    characterName: Alden
+    dialogueText: I got ambushed.
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -483,9 +478,10 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 11
     nextDialogue: 12
-    characterName: Narrator
-    dialogueText: Alden loses his grip and is thrown to the ground.
-    character: 0
+    characterName: Alden
+    dialogueText: A group of goblins attacked me in the forest. I had to deal with
+      them first.
+    character: 1
     background: -1
     SFX: -1
     BGM: -1
@@ -495,9 +491,84 @@ MonoBehaviour:
     loadCombat: 
   - dialogueID: 12
     nextDialogue: 13
+    characterName: Valric
+    dialogueText: You alright?
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 13
+    nextDialogue: 14
+    characterName: Alden
+    dialogueText: Yeah. But there was something strange.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 14
+    nextDialogue: 15
+    characterName: Alden
+    dialogueText: "One of the goblins led me deep into the forest and vanished into
+      a cave\u2026but the cave was a dead end."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 15
+    nextDialogue: 16
+    characterName: Valric
+    dialogueText: "Strange indeed\u2026"
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 16
+    nextDialogue: 17
+    characterName: Valric
+    dialogueText: "But we\u2019ll think about that later. For now, the goblins have
+      retreated after suffering heavy losses."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 17
+    nextDialogue: 18
     characterName: Narrator
-    dialogueText: His horse, spooked, bolts into the night. Alden quickly scrambles
-      to his feet, finding himself surrounded by a group of goblins.
+    dialogueText: Alden nods, and they mount their horses, heading back toward Liora.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 18
+    nextDialogue: 19
+    characterName: Narrator
+    dialogueText: "The village, though battered, still stands\u2014its people weary
+      but alive. Fires smolder in the distance, casting flickering shadows over the
+      remnants of the battle."
     character: 0
     background: -1
     SFX: -1
@@ -506,11 +577,36 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 13
-    nextDialogue: 14
-    characterName: Alden
-    dialogueText: <Alden breathes heavily and raises his sword>
-    character: 1
+  - dialogueID: 19
+    nextDialogue: 20
+    characterName: Narrator
+    dialogueText: Along the way, they stop to speak with the evacuated villagers.
+      The group of evacuees looks anxiously toward them as they arrive.
+    character: 0
+    background: 1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 20
+    nextDialogue: 21
+    characterName: Elder
+    dialogueText: Is it over?
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 21
+    nextDialogue: 22
+    characterName: Valric
+    dialogueText: For now.
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
@@ -518,11 +614,39 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 14
-    nextDialogue: 15
-    characterName: Alden
-    dialogueText: "Tch\u2026Guess I\u2019ll have to take care of you first."
-    character: 1
+  - dialogueID: 22
+    nextDialogue: 23
+    characterName: Valric
+    dialogueText: "We\u2019ve stationed some troops in Branstead for your safety.
+      The kingdom will send aid tomorrow to help with the damage."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 23
+    nextDialogue: 24
+    characterName: Narrator
+    dialogueText: The villagers murmur in relief, some offering quiet thanks. Alden
+      watches as they begin to move back toward their homes, exhaustion written all
+      over their faces.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 24
+    nextDialogue: 25
+    characterName: Narrator
+    dialogueText: With that, Alden and Valric turn back toward Liora, their minds
+      weighed down by the events of the night.
+    character: 0
     background: -1
     SFX: -1
     BGM: -1
@@ -2663,7 +2787,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 81e8ba1cef3763345a835e27e0b9ddc3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0b7c76b7e78025449d5d422c2475184, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

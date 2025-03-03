@@ -730,8 +730,9 @@ MonoBehaviour:
     nextDialogue: 32
     characterName: Narrator
     dialogueText: "The village is in chaos. Goblins swarm the streets, clashing with
-      guards and Liora\u2019s soldiers. Fires flicker in the distance. Valric surveys
-      the battlefield."
+      guards and Liora\u2019s soldiers. Fires flicker in the distance. Valric and
+      Alden ride in, taking in the scene as the clash of steel and guttural war cries
+      fill the air."
     character: 0
     background: 1
     SFX: -1
@@ -740,10 +741,10 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 32
-    nextDialogue: 33
+  - dialogueID: 31
+    nextDialogue: 32
     characterName: Valric
-    dialogueText: <Valric shouts over the battle>
+    dialogueText: "Damn it\u2026they hit harder than expected."
     character: 2
     background: -1
     SFX: -1
@@ -752,35 +753,10 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 33
-    nextDialogue: 34
-    characterName: Valric
-    dialogueText: "I\u2019ll stay here and coordinate my men."
-    character: 2
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 34
-    nextDialogue: 35
-    characterName: Valric
-    dialogueText: Alden, I need you to circle around and scout the goblin forces
-      in the forest. Get an estimate on their numbers!
-    character: 2
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 35
-    nextDialogue: 36
+  - dialogueID: 31
+    nextDialogue: 32
     characterName: Alden
-    dialogueText: Understood!
+    dialogueText: <Alden draws his sword>
     character: 1
     background: -1
     SFX: -1
@@ -789,36 +765,10 @@ MonoBehaviour:
     tabLeft: 1
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 36
-    nextDialogue: 37
-    characterName: Narrator
-    dialogueText: Alden immediately turns his horse and rides toward the treeline.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 37
-    nextDialogue: 38
-    characterName: Narrator
-    dialogueText: "Alden rides carefully through the forest, keeping his senses sharp.
-      Soon, he spots movement\u2014several goblins crouched in the brush, watching
-      the village from the shadows."
-    character: 0
-    background: 0
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 38
-    nextDialogue: 39
+  - dialogueID: 31
+    nextDialogue: 32
     characterName: Alden
-    dialogueText: "So there\u2019s more of them waiting to strike\u2026"
+    dialogueText: We need to push them back before they do more damage.
     character: 1
     background: -1
     SFX: -1
@@ -827,10 +777,12 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 39
-    nextDialogue: 40
+  - dialogueID: 31
+    nextDialogue: 32
     characterName: Narrator
-    dialogueText: Just as he turns to leave, a rustling sound startles him.
+    dialogueText: A group of goblins spots them and snarls, brandishing their crude
+      weapons. Without hesitation, Valric kicks his horse forward, blade flashing
+      in the firelight.
     character: 0
     background: -1
     SFX: -1
@@ -839,65 +791,15 @@ MonoBehaviour:
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
-  - dialogueID: 40
-    nextDialogue: 41
-    characterName: Narrator
-    dialogueText: "A goblin suddenly leaps from the underbrush and slashes at his
-      horse\u2019s flank. The animal lets out a cry, rearing up violently."
-    character: 0
+  - dialogueID: 31
+    nextDialogue: 32
+    characterName: Valric
+    dialogueText: "Then let\u2019s get to work!"
+    character: 2
     background: -1
     SFX: -1
     BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 41
-    nextDialogue: 42
-    characterName: Narrator
-    dialogueText: Alden loses his grip and is thrown to the ground.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 42
-    nextDialogue: 43
-    characterName: Narrator
-    dialogueText: His horse, spooked, bolts into the night. Alden quickly scrambles
-      to his feet, finding himself surrounded by a group of goblins.
-    character: 0
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 43
-    nextDialogue: 44
-    characterName: Alden
-    dialogueText: <Alden breathes heavily and raises his sword>
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
-    tabLeft: 0
-    lastDialogue: 0
-    loadCombat: 
-  - dialogueID: 44
-    nextDialogue: 45
-    characterName: Alden
-    dialogueText: "Tch\u2026Guess I\u2019ll have to take care of you first."
-    character: 1
-    background: -1
-    SFX: -1
-    BGM: -1
-    tabRight: 0
+    tabRight: 1
     tabLeft: 0
     lastDialogue: 0
     loadCombat: 
