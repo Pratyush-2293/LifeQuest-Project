@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5349445801056832634}
   - component: {fileID: 5497565698517121347}
   - component: {fileID: 7104516352283506780}
-  - component: {fileID: 6870124501023148382}
+  - component: {fileID: 875617037483225887}
+  - component: {fileID: 4589789383070790292}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8b78c8c9b335247af783c6afd0216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6870124501023148382
+--- !u!114 &875617037483225887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,3 +71,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c18599faad288408c1c272cb414677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4589789383070790292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459602673105616954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9007760db5a6e748b5a592ae96d3729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expPoints: 400
+  goldCoins: 0
+  levelKeys: 1
+  dungeonKeys: 0
+  maxCompletedLevel: 1
+  maxUnlockedLevel: 1
+  maxAvailableLevel: 2
+  aldenLevel: 1
+  aldenEXP: 30
+  aldenEXPForNextLevel: 100
+  aldenSTR: 10
+  aldenDEF: 5
+  aldenVIT: 5
+  aldenHP: 100
+  aldenMP: 100
+  aldenCRIT: 10

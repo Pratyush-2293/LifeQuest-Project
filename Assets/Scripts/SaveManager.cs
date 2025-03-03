@@ -15,6 +15,8 @@ public class SaveManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SavePlayerTasksData()
@@ -45,6 +47,36 @@ public class SaveManager : MonoBehaviour
         else
         {
             Debug.Log("No Existing PlayerTasksData Save File Was Found.");
+        }
+    }
+
+    public void SaveGameData()
+    {
+        GameDataSave gameDataSaveObject = GameData.instance.ToSaveData();
+
+        string writeData = JsonUtility.ToJson(gameDataSaveObject);
+        string filePath = Application.persistentDataPath + "/GameData.json";
+        System.IO.File.WriteAllText(filePath, writeData);
+        Debug.Log("Game Data successfully stored at: " + filePath);
+    }
+
+    public void LoadGameData()
+    {
+        string filePath = Application.persistentDataPath + "/GameData.json";
+        if (System.IO.File.Exists(filePath))
+        {
+            string readData = System.IO.File.ReadAllText(filePath);
+
+            GameDataSave loadedData = JsonUtility.FromJson<GameDataSave>(readData);
+
+            // Apply loaded data to the GameData instance
+            GameData.instance.LoadFromSaveData(loadedData);
+
+            Debug.Log("GameData loaded successfully.");
+        }
+        else
+        {
+            Debug.Log("No Existing GameData Save File Was Found.");
         }
     }
 }

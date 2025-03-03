@@ -6,51 +6,88 @@ using TMPro;
 
 public class EnemyCombat2D : MonoBehaviour
 {
-    public int turnCounter = 10;
-    public int turnSpeed = 1;
-    public int characterPosition = 1;
-    public bool isPlayerCharacter = false;
-    public int health = 100;
-    public int maxHealth = 100;
-    public Slider healthSlider = null;
-    public GameObject defendingIcon = null;
-    public GameObject selectMarker = null;
-    public bool isDefeated = false;
-    public bool isTaunted = false;
-    public Animator enemyAnimator = null;
+    [Header("Enemy Info")]
+    [Space(5)]
+    public string enemyName = null;
+    public Sprite enemyMarkerSprite = null;
+    public Sprite enemyProfileSprite = null;
+    public string enemyActions = null;
 
-    // Skills Data
+    [Header("Enemy Skills Config")]
+    [Space(5)]
     public int attackDamage = 10;
     public int attackTimeCost = 70;
+    [Space(10)]
     public int defendTimeCost = 50;
     public float defendStartHealthPercent = 0.3f;
     public int defendChancePercent = 60;
 
-    // Damage Popup Components
+    [Header("Enemy Core Data")]
+    [Space(5)]
+    public int characterPosition = 1;
+    [Space(10)]
+    public int health = 100;
+    public int maxHealth = 100;
+    [Space(10)]
+    public int turnCounter = 10;
+    public int turnSpeed = 1;
+    [Space(10)]
+    public bool isPlayerCharacter = false;
+    
+    [Header("Enemy Components")]
+    [Space(5)]
+    public Slider healthSlider = null;
+    public GameObject defendingIcon = null;
+    [Space(10)]
+    public GameObject selectMarker = null;
+    [Space(10)]
+    public Animator enemyAnimator = null;
+
+    [Header("Enemy Status")]
+    [Space(5)]
+    public bool isDefeated = false;
+    public bool isTaunted = false;
+
+    [Header("Damage Floater Components")]
+    [Space(5)]
     public Animator normalDamageAnimator = null;
     public Animator criticalDamageAnimator = null;
+    [Space(10)]
     public TMP_Text normalDamageText = null;
     public TMP_Text criticalDamageText = null;
+    
+    [Header("Hit VFX Components")]
+    [Space(5)]
+    public GameObject hitFXObject = null;
 
     // Private Variables
     private int damageToDo = 0;
     private int selectedTarget = 0;
     private int defendStartHealth = 0;
     private bool isDefending = false;
+    private Animator hitFXAnimator = null;
 
     private void Start()
     {
         healthSlider.maxValue = maxHealth;
         defendStartHealth = (int)(maxHealth * defendStartHealthPercent);
+
+        hitFXAnimator = hitFXObject.gameObject.GetComponent<Animator>();
     }
     public void UpdateSelfState()
     {
+        if(health < 0)
+        {
+            health = 0;
+        }
         healthSlider.value = health;
 
         // Death Condition
         if(health <= 0)
         {
-
+            isDefeated = true;
+            enemyAnimator.SetTrigger("Death");
+            CombatManager.instance.ReportDeath();
         }
     }
 
@@ -219,6 +256,8 @@ public class EnemyCombat2D : MonoBehaviour
     {
         // Tell combat manager to deal damage to active enemy
         CombatManager.instance.HandleDealtDamage(damageToDo, selectedTarget);
+
+        CameraShake.instance.StartShake(0);
     }
 
     public void RequestResumeTime()
@@ -230,6 +269,11 @@ public class EnemyCombat2D : MonoBehaviour
     {
         // play damage animation
         enemyAnimator.SetTrigger("TakeDamage");
+
+        // play hit FX
+        int randomRotation = Random.Range(0, 45);
+        hitFXObject.transform.Rotate(0f, 0f, randomRotation);
+        hitFXAnimator.SetTrigger("HitEffect");
 
         // Reduce damage by 50% if defending
         if(isDefending == true)
@@ -260,4 +304,8 @@ public class EnemyCombat2D : MonoBehaviour
         UpdateSelfState();
     }
 
+    private void PlaySoundEffect(string sfxName)
+    {
+        AudioManager.instance.PlaySound(sfxName);
+    }
 }
