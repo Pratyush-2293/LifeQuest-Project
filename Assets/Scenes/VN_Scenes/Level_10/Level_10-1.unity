@@ -1,0 +1,5188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &23086190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23086191}
+  - component: {fileID: 23086193}
+  - component: {fileID: 23086192}
+  m_Layer: 5
+  m_Name: TextBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &23086191
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23086190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 244383393}
+  - {fileID: 88608331}
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -655.17}
+  m_SizeDelta: {x: 1080, y: 790.17}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &23086192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23086190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &23086193
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23086190}
+  m_CullTransparentMesh: 1
+--- !u!1 &46254466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46254467}
+  - component: {fileID: 46254471}
+  - component: {fileID: 46254470}
+  - component: {fileID: 46254469}
+  - component: {fileID: 46254468}
+  m_Layer: 5
+  m_Name: Evelyne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &46254467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46254466}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &46254468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46254466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &46254469
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46254466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &46254470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46254466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &46254471
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46254466}
+  m_CullTransparentMesh: 1
+--- !u!1 &88608330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88608331}
+  - component: {fileID: 88608333}
+  - component: {fileID: 88608332}
+  m_Layer: 5
+  m_Name: TextArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &88608331
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88608330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 706901190}
+  m_Father: {fileID: 23086191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -77.49997}
+  m_SizeDelta: {x: 1080, y: 635}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &88608332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88608330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &88608333
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88608330}
+  m_CullTransparentMesh: 1
+--- !u!1 &141600459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141600461}
+  - component: {fileID: 141600460}
+  - component: {fileID: 141600463}
+  - component: {fileID: 141600462}
+  - component: {fileID: 141600464}
+  m_Layer: 0
+  m_Name: VN_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &141600460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141600459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16123193065c0a549a90b567b8b2167e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 167242085}
+  - {fileID: 1418513536}
+  - {fileID: 1661909642}
+  - {fileID: 46254466}
+  - {fileID: 1293988970}
+  - {fileID: 1467654256}
+  - {fileID: 2100051550}
+  backgrounds:
+  - {fileID: 21300000, guid: c2f96219bcaca814da53c5b22ac0c555, type: 3}
+  - {fileID: 21300000, guid: ed3073ca5400d71449241555fe10bb58, type: 3}
+  - {fileID: 21300000, guid: 765092b0da73e5440ae258c62857c564, type: 3}
+  - {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
+  soundEffects: []
+  initialBackgroundMusic: {fileID: 8300000, guid: c35df77203c2677449e3b3cb661dc4a3,
+    type: 3}
+  backgroundMusic:
+  - {fileID: 8300000, guid: 196b8d0e43c9a6149af29121ec408348, type: 3}
+  - {fileID: 8300000, guid: 5bd5c0179f2742b429c473906d2c6c1c, type: 3}
+  - {fileID: 8300000, guid: b8d6f28fd453f0d4fb8f9300db6aee02, type: 3}
+  - {fileID: 8300000, guid: 1270bd465c849ed49a9e9caa3672d96d, type: 3}
+  textSpeed: 0.02
+  textSounds:
+  - {fileID: 8300000, guid: 269b831dcdc545c43b6a52b2aec09c75, type: 3}
+  - {fileID: 8300000, guid: cae5a0d767b09d94cbbd2d777939fc3d, type: 3}
+  soundPitchMin: 0.9
+  soundPitchMax: 1.1
+  soundInterval: 5
+  background: {fileID: 2056154121}
+  backgroundTransition: {fileID: 2121551453}
+  nextButton: {fileID: 1991554708}
+  BGM_Source: {fileID: 141600463}
+  SFX_Source: {fileID: 141600462}
+  textSoundSource: {fileID: 141600464}
+  nameTab: {fileID: 244383392}
+  nameTabText: {fileID: 1516781603}
+  dialogueBoxText: {fileID: 706901191}
+  dialogues:
+  - dialogueID: 0
+    nextDialogue: 1
+    characterName: Narrator
+    dialogueText: Alden and Evelyne walk through the heart of the city, passing by
+      increasingly lavish buildings.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 1
+    nextDialogue: 2
+    characterName: Narrator
+    dialogueText: "The air here is different\u2014cleaner, calmer. The people move
+      with an air of refinement, their conversations hushed, their clothes pristine."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 2
+    nextDialogue: 3
+    characterName: Narrator
+    dialogueText: "Alden, still dressed in the same travel-worn attire he\u2019s
+      had since he arrived in the city, can\u2019t help but feel out of place."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 3
+    nextDialogue: 4
+    characterName: Narrator
+    dialogueText: "Eventually, they stop before a sophisticated teahouse with a wooden
+      fa\xE7ade, its name inscribed in elegant golden lettering: The Gilded Leaf
+      Teahouse."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 4
+    nextDialogue: 5
+    characterName: Alden
+    dialogueText: <Alden exhales quietly, eyeing the place up and down>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 5
+    nextDialogue: 6
+    characterName: Alden
+    dialogueText: This is way fancier than I expected...
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 6
+    nextDialogue: 7
+    characterName: Evelyne
+    dialogueText: <Evelyne glances at him with a teasing smirk>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 7
+    nextDialogue: 8
+    characterName: Evelyne
+    dialogueText: "What, you thought I was taking you to some dingy back-alley caf\xE9?"
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 8
+    nextDialogue: 9
+    characterName: Alden
+    dialogueText: "No, but...I didn\u2019t think it\u2019d be this high-end either.
+      You sure I won\u2019t get thrown out just for existing?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 9
+    nextDialogue: 10
+    characterName: Evelyne
+    dialogueText: "Relax, you\u2019re with me. That alone is enough to keep anyone
+      from kicking you out."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 10
+    nextDialogue: 11
+    characterName: Narrator
+    dialogueText: She pushes open the door, and the scent of freshly brewed tea and
+      warm pastries greets them.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 11
+    nextDialogue: 12
+    characterName: Narrator
+    dialogueText: 'The interior is softly lit, the wooden floors polished to a mirror
+      sheen. The furniture is elegantly simple, arranged with careful precision,
+      creating an atmosphere that is refined but not overwhelming. '
+    character: 0
+    background: 0
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 12
+    nextDialogue: 13
+    characterName: Narrator
+    dialogueText: Patrons sit at neatly arranged tables, engaged in quiet conversation,
+      sipping from delicate porcelain teacups.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 13
+    nextDialogue: 14
+    characterName: Narrator
+    dialogueText: Alden straightens instinctively, suddenly feeling even more aware
+      of his presence.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 14
+    nextDialogue: 15
+    characterName: Narrator
+    dialogueText: A waitress in a neatly pressed uniform approaches, offering a polite
+      bow.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 15
+    nextDialogue: 16
+    characterName: Waitress
+    dialogueText: Welcome, Princess Evelyne. Your usual table?
+    character: 4
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 16
+    nextDialogue: 17
+    characterName: Evelyne
+    dialogueText: "Yes, that would be perfect. And we\u2019ll have a pot of Silverleaf
+      Tea, along with..."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 17
+    nextDialogue: 18
+    characterName: Narrator
+    dialogueText: She smoothly lists off several dishes, the names rolling off her
+      tongue without hesitation. The waitress takes note and bows again.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 18
+    nextDialogue: 19
+    characterName: Waitress
+    dialogueText: Understood. Your food and tea will arrive shortly. Please enjoy
+      your time here.
+    character: 4
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 19
+    nextDialogue: 20
+    characterName: Narrator
+    dialogueText: "As they take their seats near a large window, Alden exhales and
+      leans back slightly. The cushion is far too comfortable for his liking\u2014he\u2019s
+      too used to rough chairs and tavern benches."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 20
+    nextDialogue: 21
+    characterName: Alden
+    dialogueText: <Alden glances around>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 21
+    nextDialogue: 22
+    characterName: Alden
+    dialogueText: "I gotta admit...this place is nice. Different from what I\u2019m
+      used to, but nice."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 22
+    nextDialogue: 23
+    characterName: Evelyne
+    dialogueText: "It has its charm, doesn\u2019t it?"
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 23
+    nextDialogue: 24
+    characterName: Narrator
+    dialogueText: A moment of quiet lingers between them as the gentle hum of the
+      teahouse continues around them. Alden glances at Evelyne, debating whether
+      to start a conversation while they wait.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 24
+    nextDialogue: 25
+    characterName: Alden
+    dialogueText: You seem comfortable here. Do you come often?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 25
+    nextDialogue: 26
+    characterName: Evelyne
+    dialogueText: <Evelyne tilts her head slightly, reminiscing>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 26
+    nextDialogue: 27
+    characterName: Evelyne
+    dialogueText: I used to. Back when I had more time, my friends and I would meet
+      here all the time.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 27
+    nextDialogue: 28
+    characterName: Alden
+    dialogueText: "Used to? You don\u2019t anymore?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 28
+    nextDialogue: 29
+    characterName: Evelyne
+    dialogueText: "Not as often. My studies take up most of my time these days. I
+      still stop by now and then, but it\u2019s nothing like before."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 29
+    nextDialogue: 30
+    characterName: Alden
+    dialogueText: I get that. Still, must be nice to have a place like this, somewhere
+      that stays the same even when life gets busy.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 30
+    nextDialogue: 31
+    characterName: Evelyne
+    dialogueText: Yeah...
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 31
+    nextDialogue: 32
+    characterName: Evelyne
+    dialogueText: "That\u2019s why I like coming back here whenever I can. It reminds
+      me of simpler times."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 32
+    nextDialogue: 33
+    characterName: Alden
+    dialogueText: So...about Valric.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 33
+    nextDialogue: 34
+    characterName: Evelyne
+    dialogueText: <Evelyne raises an amused brow, stirring her tea lazily>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 34
+    nextDialogue: 35
+    characterName: Evelyne
+    dialogueText: What about him?
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 35
+    nextDialogue: 36
+    characterName: Alden
+    dialogueText: "You two seemed familiar back in the infirmary. I take it you\u2019ve
+      known each other a long time?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 36
+    nextDialogue: 37
+    characterName: Evelyne
+    dialogueText: You could say that. Valric is my cousin, after all.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 37
+    nextDialogue: 38
+    characterName: Evelyne
+    dialogueText: <Evelyne chuckles softly>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 38
+    nextDialogue: 39
+    characterName: Alden
+    dialogueText: <Alden blinks, caught off guard>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 39
+    nextDialogue: 40
+    characterName: Alden
+    dialogueText: "Wait\u2014seriously? Valric? Royal blood?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 40
+    nextDialogue: 41
+    characterName: Evelyne
+    dialogueText: Technically, yes.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 41
+    nextDialogue: 42
+    characterName: Evelyne
+    dialogueText: "Though his family isn\u2019t royalty in the way mine is. His lineage
+      isn\u2019t about ruling\u2014it\u2019s about serving."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 42
+    nextDialogue: 43
+    characterName: Alden
+    dialogueText: Serving?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 43
+    nextDialogue: 44
+    characterName: Evelyne
+    dialogueText: "The Everhart family\u2014Valric\u2019s bloodline\u2014has an oath
+      that dates back generations."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 44
+    nextDialogue: 45
+    characterName: Evelyne
+    dialogueText: "For as long as anyone can remember, one member of their family
+      has always served as the Queen\u2019s Guard."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 45
+    nextDialogue: 46
+    characterName: Alden
+    dialogueText: "The Queen\u2019s Guard? That\u2019s an inherited position?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 46
+    nextDialogue: 47
+    characterName: Evelyne
+    dialogueText: "Not inherited, exactly\u2026but it is tradition."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 47
+    nextDialogue: 48
+    characterName: Evelyne
+    dialogueText: In every generation, the Everharts select the most skilled and
+      capable among them to take up the mantle. That person devotes their life to
+      protecting the queen, no matter the cost.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 48
+    nextDialogue: 49
+    characterName: Narrator
+    dialogueText: Alden takes a moment to process that, glancing out the window as
+      he thinks.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 49
+    nextDialogue: 50
+    characterName: Narrator
+    dialogueText: "A family tradition of unwavering loyalty, stretching back generations.
+      No wonder Valric carries himself the way he does\u2014his role in life was
+      never really a choice, was it?"
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 50
+    nextDialogue: 51
+    characterName: Alden
+    dialogueText: <Alden scratches his chin>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 51
+    nextDialogue: 52
+    characterName: Alden
+    dialogueText: So Valric was always meant to be where he is now?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 52
+    nextDialogue: 53
+    characterName: Evelyne
+    dialogueText: <Evelyne sighs softly>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 53
+    nextDialogue: 54
+    characterName: Evelyne
+    dialogueText: "Pretty much. Even as kids, everyone knew he\u2019d be the next
+      in line. He was always stronger, faster, sharper than the rest of us."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 54
+    nextDialogue: 55
+    characterName: Alden
+    dialogueText: So he was the golden child?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 55
+    nextDialogue: 56
+    characterName: Evelyne
+    dialogueText: <Evelyne laughs softly>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 56
+    nextDialogue: 57
+    characterName: Evelyne
+    dialogueText: Oh, he hated that term. But yes, he was always the best of us.
+      And the pressure that came with it? That was immense.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 57
+    nextDialogue: 58
+    characterName: Alden
+    dialogueText: <Alden leans back, thinking out loud>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 58
+    nextDialogue: 59
+    characterName: Alden
+    dialogueText: "Huh...I guess I never considered that side of things. Must\u2019ve
+      been a heavy weight on his shoulders, knowing his whole life was already mapped
+      out for him."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 59
+    nextDialogue: 60
+    characterName: Evelyne
+    dialogueText: "It was. Valric doesn\u2019t talk about it much, but if you ever
+      ask, you\u2019ll see it\u2014he carries that weight every day."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 60
+    nextDialogue: 61
+    characterName: Evelyne
+    dialogueText: He takes his duty seriously because he has to. His entire family
+      is watching, waiting for him to live up to his name.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 61
+    nextDialogue: 62
+    characterName: Alden
+    dialogueText: Sounds exhausting.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 62
+    nextDialogue: 63
+    characterName: Evelyne
+    dialogueText: "It is. But if there\u2019s one thing about Valric, it\u2019s that
+      he never complains. He just pushes forward, no matter how hard things get."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 63
+    nextDialogue: 64
+    characterName: Narrator
+    dialogueText: Alden takes another sip of his tea, thinking about the knight in
+      a new light.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 64
+    nextDialogue: 65
+    characterName: Narrator
+    dialogueText: "He\u2019d seen Valric as a skilled warrior, a bit too intense
+      at times, but now... now he saw someone carrying the weight of generations.
+      Someone who never really had a choice in his path."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 65
+    nextDialogue: 66
+    characterName: Alden
+    dialogueText: "So what\u2019s the full story behind this oath? How did it all
+      start?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 66
+    nextDialogue: 67
+    characterName: Evelyne
+    dialogueText: <Evelyne pauses, looking slightly unsure>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 67
+    nextDialogue: 68
+    characterName: Evelyne
+    dialogueText: "Honestly\u2026I don\u2019t know the exact history. It\u2019s just
+      something that\u2019s always been."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 68
+    nextDialogue: 69
+    characterName: Evelyne
+    dialogueText: "If you really want to know, you\u2019d have to ask Valric himself."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 69
+    nextDialogue: 70
+    characterName: Alden
+    dialogueText: <Alden smirks slightly>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 70
+    nextDialogue: 71
+    characterName: Alden
+    dialogueText: You mean, have an actual conversation with him?
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 71
+    nextDialogue: 72
+    characterName: Evelyne
+    dialogueText: <Evelyne grins>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 72
+    nextDialogue: 73
+    characterName: Evelyne
+    dialogueText: "Oh, come on. He doesn\u2019t bite. Well\u2014most of the time."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 73
+    nextDialogue: 74
+    characterName: Narrator
+    dialogueText: "Alden chuckles, shaking his head. He\u2019d always thought of
+      Valric as just a disciplined, borderline intimidating knight. But now, he was
+      starting to see the layers beneath."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 74
+    nextDialogue: 75
+    characterName: Alden
+    dialogueText: <Alden leans on the table>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 75
+    nextDialogue: 76
+    characterName: Alden
+    dialogueText: "So, I was wondering\u2014why didn\u2019t you take a carriage to
+      the market? It\u2019s rare to see a princess walking through the city like
+      that."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 76
+    nextDialogue: 77
+    characterName: Evelyne
+    dialogueText: <Evelyne smiles sligthly>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 77
+    nextDialogue: 78
+    characterName: Evelyne
+    dialogueText: I like walking through markets. It gives me time to move at my
+      own pace, stop wherever I want, and actually see the city.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 78
+    nextDialogue: 79
+    characterName: Alden
+    dialogueText: "Isn\u2019t that kind of...unsafe?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 79
+    nextDialogue: 80
+    characterName: Evelyne
+    dialogueText: "I don\u2019t want to be a queen who only knows her kingdom from
+      behind castle walls. I want to see how people live, what they talk about, what
+      they struggle with."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 80
+    nextDialogue: 81
+    characterName: Evelyne
+    dialogueText: Walking through the market lets me understand my people in a way
+      I never could from a distance.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 81
+    nextDialogue: 82
+    characterName: Alden
+    dialogueText: That actually makes a lot of sense.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 82
+    nextDialogue: 83
+    characterName: Evelyne
+    dialogueText: <Evelyne grins playfully>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 83
+    nextDialogue: 84
+    characterName: Evelyne
+    dialogueText: And besides, I was with you today. If I had taken a carriage, how
+      would I have shown you around?
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 84
+    nextDialogue: 85
+    characterName: Alden
+    dialogueText: Fair point.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 85
+    nextDialogue: 86
+    characterName: Narrator
+    dialogueText: Alden and Evelyne sit in comfortable silence, the gentle ambiance
+      of the teahouse surrounding them.
+    character: 0
+    background: 0
+    SFX: -1
+    BGM: 0
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 86
+    nextDialogue: 87
+    characterName: Narrator
+    dialogueText: The waitress approaches, carrying a tray laden with beautifully
+      arranged dishes. The aroma of delicate pastries and fragrant tea fills the
+      air.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 87
+    nextDialogue: 88
+    characterName: Waitress
+    dialogueText: <The waitress places the dishes on the table with practiced grace>
+    character: 4
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 88
+    nextDialogue: 89
+    characterName: Waitress
+    dialogueText: Silverleaf Tea and refreshments for the Princess and her guest.
+    character: 4
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 89
+    nextDialogue: 90
+    characterName: Narrator
+    dialogueText: She bows politely and departs. Evelyne smiles, gesturing to the
+      spread before them.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 90
+    nextDialogue: 91
+    characterName: Evelyne
+    dialogueText: Alright, dig in! You must be starving after all that walking.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 91
+    nextDialogue: 92
+    characterName: Narrator
+    dialogueText: Alden's eyes widen slightly as he takes in the assortment of pastries,
+      each one intricately decorated. He picks up a small, flaky pastry and takes
+      a bite, savoring the delicate sweetness.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 92
+    nextDialogue: 93
+    characterName: Alden
+    dialogueText: This is...incredible.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 93
+    nextDialogue: 94
+    characterName: Evelyne
+    dialogueText: <Evelyne chuckles, pouring tea into his cup>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 94
+    nextDialogue: 95
+    characterName: Evelyne
+    dialogueText: Told you it was worth the walk. The Gilded Leaf is known for its
+      pastries. And their Silverleaf tea is quite special too.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 95
+    nextDialogue: 96
+    characterName: Narrator
+    dialogueText: Alden takes a sip of the tea, the warm, subtly floral flavor soothing
+      his senses. He relaxes back against the plush cushion, a rare moment of peace
+      settling over him.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 96
+    nextDialogue: 97
+    characterName: Alden
+    dialogueText: Yeah...this is nice. Thanks for bringing me here, Your Highness.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 97
+    nextDialogue: 98
+    characterName: Evelyne
+    dialogueText: <Evelyne smiles warmly>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 98
+    nextDialogue: 99
+    characterName: Evelyne
+    dialogueText: Please, Alden, just Evelyne.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 99
+    nextDialogue: 100
+    characterName: Evelyne
+    dialogueText: And you're welcome. Everyone deserves a moment of peace, even adventurers.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 100
+    nextDialogue: 101
+    characterName: Narrator
+    dialogueText: They eat in comfortable silence for a few moments, the gentle sounds
+      of the teahouse creating a tranquil atmosphere.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 101
+    nextDialogue: 102
+    characterName: Narrator
+    dialogueText: "The rhythmic hammering of metal fills the air as Alden and Evelyne
+      step into the blacksmith\u2019s forge once more. The scent of heated leather,
+      metal, and oil lingers in the warm air."
+    character: 0
+    background: 1
+    SFX: -1
+    BGM: 1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 102
+    nextDialogue: 103
+    characterName: Bromund
+    dialogueText: Ah, back already.
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 103
+    nextDialogue: 104
+    characterName: Bromund
+    dialogueText: "Good timing. Your armor\u2019s done\u2014reinforced the leather,
+      added some extra studding where needed."
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 104
+    nextDialogue: 105
+    characterName: Narrator
+    dialogueText: "He gestures toward a nearby rack where Alden\u2019s reinforced
+      leather armor rests."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 105
+    nextDialogue: 106
+    characterName: Narrator
+    dialogueText: The dark leather has been carefully treated, the surface lined
+      with small, strategically placed metal studs to absorb impact. Additional layers
+      reinforce the chest and shoulders while keeping the arms and legs flexible.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 106
+    nextDialogue: 107
+    characterName: Narrator
+    dialogueText: A well-crafted balance between defense and mobility.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 107
+    nextDialogue: 108
+    characterName: Narrator
+    dialogueText: Alden steps forward, running his fingers over the material before
+      donning the armor piece by piece. The leather molds comfortably to his frame,
+      snug but not restrictive.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 108
+    nextDialogue: 109
+    characterName: Narrator
+    dialogueText: "He rolls his shoulders, testing the fit, shifting his stance.
+      The armor moves with him, neither too heavy nor too light\u2014just right."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 109
+    nextDialogue: 110
+    characterName: Alden
+    dialogueText: <Alden nods, satisfied>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 110
+    nextDialogue: 111
+    characterName: Alden
+    dialogueText: Fits well. Feels sturdy, but I can still move easily.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 111
+    nextDialogue: 112
+    characterName: Bromund
+    dialogueText: "That\u2019s the point. Heavy armor\u2019s for those who want to
+      take a hit and stand their ground. Light armor\u2019s for dodging everything
+      outright."
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 112
+    nextDialogue: 113
+    characterName: Bromund
+    dialogueText: "But medium armor\u2026it\u2019s for fighters like you\u2014ones
+      who want to stay quick and tough."
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 113
+    nextDialogue: 114
+    characterName: Narrator
+    dialogueText: "Alden smirks at that. He tightens the last strap before reaching
+      for his coin pouch. Just as he\u2019s about to pay, Evelyne places a hand on
+      his arm."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 114
+    nextDialogue: 115
+    characterName: Evelyne
+    dialogueText: I can cover it.
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 115
+    nextDialogue: 116
+    characterName: Alden
+    dialogueText: <Alden shaked his head, offering a small smile>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 116
+    nextDialogue: 117
+    characterName: Alden
+    dialogueText: "I appreciate it, but I\u2019d rather pay for myself."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 117
+    nextDialogue: 118
+    characterName: Evelyne
+    dialogueText: <Evelyne studies him for a moment, then chuckles softly before
+      withdrawing her hand>
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 118
+    nextDialogue: 119
+    characterName: Evelyne
+    dialogueText: "Alright, I won\u2019t argue."
+    character: 3
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 119
+    nextDialogue: 120
+    characterName: Narrator
+    dialogueText: Alden hands over the necessary coin, and the blacksmith nods approvingly.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 120
+    nextDialogue: 121
+    characterName: Bromund
+    dialogueText: Good doing business with you.
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 121
+    nextDialogue: 122
+    characterName: Bromund
+    dialogueText: "And remember\u2014if you need more upgrades, don\u2019t hesitate
+      to come back. Armor\u2019s only as good as the one maintaining it."
+    character: 5
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 122
+    nextDialogue: 123
+    characterName: Narrator
+    dialogueText: "Alden nods before carefully picking up the key resting on the
+      counter, slipping it into his pouch. Then, turning to Evelyne\u2026"
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 123
+    nextDialogue: 124
+    characterName: Alden
+    dialogueText: "Alright, let\u2019s get this to Osmir."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 124
+    nextDialogue: 125
+    characterName: Narrator
+    dialogueText: "Back at the library, the musty scent of old parchment and ink
+      welcomes them. Osmir is exactly where they left him\u2014half-buried in scrolls
+      and tomes, quill in hand as he scribbles something in the margins of a book."
+    character: 0
+    background: 2
+    SFX: -1
+    BGM: 2
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 125
+    nextDialogue: 126
+    characterName: Narrator
+    dialogueText: As they approach, the old scholar glances up, adjusting his spectacles
+      with a knowing look.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 126
+    nextDialogue: 127
+    characterName: Osmir
+    dialogueText: "Ah, you\u2019re back. And with the key, I presume?"
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 127
+    nextDialogue: 128
+    characterName: Narrator
+    dialogueText: Alden retrieves the key from his pouch, placing it gently on the
+      desk. Osmir leans forward, inspecting the craftsmanship before nodding in approval.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 128
+    nextDialogue: 129
+    characterName: Osmir
+    dialogueText: Good, good. Now, the attunement process will take a little time.
+      Come back tomorrow morning, and it should be ready.
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 129
+    nextDialogue: 130
+    characterName: Alden
+    dialogueText: <Alden raises a brow>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 130
+    nextDialogue: 131
+    characterName: Alden
+    dialogueText: "That\u2019s all?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 131
+    nextDialogue: 132
+    characterName: Osmir
+    dialogueText: "Patience, young man. Magic is not simply a matter of force\u2014it
+      requires finesse. Return in the morning."
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 132
+    nextDialogue: 133
+    characterName: Narrator
+    dialogueText: "Alden exhales but nods, stepping back as he exchanges a glance
+      with Evelyne. There\u2019s nothing left to do for now except wait."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 133
+    nextDialogue: 134
+    characterName: Narrator
+    dialogueText: "The first rays of morning sunlight filter through the library\u2019s
+      high windows as Alden makes his way inside once more."
+    character: 0
+    background: 2
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 134
+    nextDialogue: 135
+    characterName: Narrator
+    dialogueText: The hallways are quieter at this hour, the usual flow of scholars
+      and students not yet filling the space.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 135
+    nextDialogue: 136
+    characterName: Narrator
+    dialogueText: Osmir is already at his desk, sipping from a steaming cup of tea.
+      Upon seeing Alden, he sets the cup down and reaches into a small wooden box
+      beside him.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 136
+    nextDialogue: 137
+    characterName: Osmir
+    dialogueText: <Osmir nods in greeting>
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 137
+    nextDialogue: 138
+    characterName: Osmir
+    dialogueText: "You\u2019re early. Good."
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 138
+    nextDialogue: 139
+    characterName: Narrator
+    dialogueText: He pulls out the key, now subtly changed.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 139
+    nextDialogue: 140
+    characterName: Narrator
+    dialogueText: "Faint, arcane lines shimmer along its surface, shifting slightly
+      as if reacting to the light. It\u2019s still the same shape, but there\u2019s
+      something unmistakably different about it\u2014something alive in its magic."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 140
+    nextDialogue: 141
+    characterName: Osmir
+    dialogueText: "It\u2019s ready."
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 141
+    nextDialogue: 142
+    characterName: Alden
+    dialogueText: <Alden takes the key, feeling a faint warmth in his palm>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 142
+    nextDialogue: 143
+    characterName: Alden
+    dialogueText: "So\u2026how exactly does this work? There\u2019s no keyhole in
+      the wall."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 143
+    nextDialogue: 144
+    characterName: Osmir
+    dialogueText: <Osmir smirks slightly>
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 144
+    nextDialogue: 145
+    characterName: Osmir
+    dialogueText: Ah, a fair question.
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 145
+    nextDialogue: 146
+    characterName: Osmir
+    dialogueText: "You won\u2019t need a keyhole. Simply thrust the key against the
+      wall\u2014firmly. If the attunement is correct, the illusion will break."
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 146
+    nextDialogue: 147
+    characterName: Alden
+    dialogueText: "And if the attunement isn\u2019t correct?"
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 147
+    nextDialogue: 148
+    characterName: Osmir
+    dialogueText: "Then I suppose you\u2019ll just have a very expensive piece of
+      metal in your hand."
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 148
+    nextDialogue: 149
+    characterName: Osmir
+    dialogueText: <Osmir chuckles>
+    character: 6
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 149
+    nextDialogue: 150
+    characterName: Narrator
+    dialogueText: "Alden sighs but pockets the key. There\u2019s only one way to
+      find out if it works."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 150
+    nextDialogue: 151
+    characterName: Narrator
+    dialogueText: The faint scent of medicinal herbs lingers in the air as Alden
+      steps into the infirmary.
+    character: 0
+    background: 3
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 151
+    nextDialogue: 152
+    characterName: Narrator
+    dialogueText: Valric is sitting upright on the cot, rolling his shoulder as he
+      tests his range of motion. The bandages are still there, but he already looks
+      much better than he did yesterday.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 152
+    nextDialogue: 153
+    characterName: Narrator
+    dialogueText: Upon seeing Alden, Valric raises a brow.
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 153
+    nextDialogue: 154
+    characterName: Valric
+    dialogueText: You're up early.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 154
+    nextDialogue: 155
+    characterName: Alden
+    dialogueText: <Alden smirks, pulling the key from his pouch>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 155
+    nextDialogue: 156
+    characterName: Alden
+    dialogueText: Had something important to pick up.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 156
+    nextDialogue: 157
+    characterName: Valric
+    dialogueText: <Valric eyes the key, studying it for a moment before nodding slightly>
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 157
+    nextDialogue: 158
+    characterName: Valric
+    dialogueText: "So that\u2019s the key? Should work, then."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 158
+    nextDialogue: 159
+    characterName: Alden
+    dialogueText: "I hope so. With this, I might finally get some answers about what\u2019s
+      going on with the goblins."
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: 3
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 159
+    nextDialogue: 160
+    characterName: Valric
+    dialogueText: <Valric leans forward slightly, his expression more serious>
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 160
+    nextDialogue: 161
+    characterName: Valric
+    dialogueText: Just be careful.
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 161
+    nextDialogue: 162
+    characterName: Valric
+    dialogueText: "Goblins don\u2019t usually act in organized ways like this\u2014if
+      someone is pulling the strings, you might be dealing with more than just a
+      few rogue tribes."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 162
+    nextDialogue: 163
+    characterName: Narrator
+    dialogueText: "Alden nods. He already has a feeling that whatever\u2019s behind
+      this isn\u2019t simple."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 163
+    nextDialogue: 164
+    characterName: Valric
+    dialogueText: By the way, did you get your gear fixed?
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 164
+    nextDialogue: 165
+    characterName: Alden
+    dialogueText: Yeah. Bromund took care of it.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 165
+    nextDialogue: 166
+    characterName: Valric
+    dialogueText: "Good. But keep in mind\u2014if your equipment ever falls short,
+      you know where to go. Visit the blacksmith again. And the alchemist, too."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 166
+    nextDialogue: 167
+    characterName: Alden
+    dialogueText: "If you\u2019re serious about getting through whatever\u2019s ahead,
+      you need to stay prepared."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 167
+    nextDialogue: 168
+    characterName: Alden
+    dialogueText: <Alden smirks, shaking his head slightly>
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 168
+    nextDialogue: 169
+    characterName: Alden
+    dialogueText: You sound like a training instructor.
+    character: 1
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 169
+    nextDialogue: 170
+    characterName: Valric
+    dialogueText: <Valric grins faintly>
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 1
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 170
+    nextDialogue: 171
+    characterName: Valric
+    dialogueText: "And you sound like someone who\u2019s going to get himself into
+      trouble. Might as well be ready for it."
+    character: 2
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 0
+    lastDialogue: 0
+    loadCombat: 
+  - dialogueID: 171
+    nextDialogue: 172
+    characterName: Narrator
+    dialogueText: "Alden chuckles, but he knows Valric is right. There\u2019s no
+      telling what he\u2019ll find behind that illusory wall\u2014but whatever it
+      is, he intends to face it head-on."
+    character: 0
+    background: -1
+    SFX: -1
+    BGM: -1
+    tabRight: 0
+    tabLeft: 1
+    lastDialogue: 0
+    loadCombat: 
+--- !u!4 &141600461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141600459}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -130.2634, y: -15.830234, z: 61.45467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &141600462
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141600459}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &141600463
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141600459}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &141600464
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141600459}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &167242085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167242086}
+  - component: {fileID: 167242088}
+  - component: {fileID: 167242087}
+  - component: {fileID: 167242090}
+  - component: {fileID: 167242089}
+  m_Layer: 5
+  m_Name: Narrator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &167242086
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167242085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1200, y: 120}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &167242087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167242085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &167242088
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167242085}
+  m_CullTransparentMesh: 1
+--- !u!114 &167242089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167242085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &167242090
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167242085}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85c3f9bd125cb7d4ebefdb3af6c9dfe8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &175031385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175031386}
+  - component: {fileID: 175031390}
+  - component: {fileID: 175031389}
+  - component: {fileID: 175031388}
+  - component: {fileID: 175031387}
+  m_Layer: 5
+  m_Name: OpeningFadeOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &175031386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175031385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015258789, y: -60.00199}
+  m_SizeDelta: {x: 1080, y: 1800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &175031387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175031385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &175031388
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175031385}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb56d5abac8c4d14687f686c4007b94e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &175031389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175031385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c418e692b87548440ac870d7c82ddb31, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &175031390
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175031385}
+  m_CullTransparentMesh: 1
+--- !u!1 &244383392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244383393}
+  - component: {fileID: 244383395}
+  - component: {fileID: 244383394}
+  - component: {fileID: 244383396}
+  m_Layer: 5
+  m_Name: NameTab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &244383393
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244383392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1516781602}
+  m_Father: {fileID: 23086191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -315, y: 317.5}
+  m_SizeDelta: {x: 450, y: 155}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &244383394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244383392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &244383395
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244383392}
+  m_CullTransparentMesh: 1
+--- !u!95 &244383396
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244383392}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 431bdc5f5ef5758409eb48a7831f1827, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &303963682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303963683}
+  - component: {fileID: 303963686}
+  - component: {fileID: 303963685}
+  - component: {fileID: 303963684}
+  m_Layer: 5
+  m_Name: Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &303963683
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 684439331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -450, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &303963684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 303963685}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &303963685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.75411415, b: 0.4292453, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &303963686
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303963682}
+  m_CullTransparentMesh: 1
+--- !u!1 &656357254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656357255}
+  - component: {fileID: 656357257}
+  - component: {fileID: 656357256}
+  m_Layer: 5
+  m_Name: LevelDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &656357255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656357254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 684439331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 730, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &656357256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656357254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 10. Unlocking the Cave Pt. 3
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &656357257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656357254}
+  m_CullTransparentMesh: 1
+--- !u!1 &678982523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678982527}
+  - component: {fileID: 678982526}
+  - component: {fileID: 678982525}
+  - component: {fileID: 678982524}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &678982524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678982523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &678982525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678982523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &678982526
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678982523}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &678982527
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678982523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1956419587}
+  - {fileID: 2142213069}
+  - {fileID: 684439331}
+  - {fileID: 2056154120}
+  - {fileID: 1467654257}
+  - {fileID: 2100051551}
+  - {fileID: 1293988971}
+  - {fileID: 1661909643}
+  - {fileID: 46254467}
+  - {fileID: 1418513537}
+  - {fileID: 23086191}
+  - {fileID: 167242086}
+  - {fileID: 2121551454}
+  - {fileID: 1991554709}
+  - {fileID: 175031386}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &684439330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684439331}
+  - component: {fileID: 684439333}
+  - component: {fileID: 684439332}
+  m_Layer: 5
+  m_Name: MenuBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &684439331
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684439330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 656357255}
+  - {fileID: 303963683}
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 922.5}
+  m_SizeDelta: {x: 1080, y: 165}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &684439332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684439330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &684439333
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684439330}
+  m_CullTransparentMesh: 1
+--- !u!1 &706901189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 706901190}
+  - component: {fileID: 706901192}
+  - component: {fileID: 706901191}
+  m_Layer: 5
+  m_Name: DialgoueBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &706901190
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706901189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 88608331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1000, y: 540}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &706901191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706901189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 2
+  m_wordSpacing: 2
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &706901192
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706901189}
+  m_CullTransparentMesh: 1
+--- !u!1 &776015741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776015744}
+  - component: {fileID: 776015743}
+  - component: {fileID: 776015742}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &776015742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776015741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &776015743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776015741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &776015744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776015741}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &963194225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963194228}
+  - component: {fileID: 963194227}
+  - component: {fileID: 963194229}
+  m_Layer: 0
+  m_Name: UICamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &963194227
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 960
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 32
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &963194228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &963194229
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+--- !u!1 &1293988970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293988971}
+  - component: {fileID: 1293988975}
+  - component: {fileID: 1293988974}
+  - component: {fileID: 1293988973}
+  - component: {fileID: 1293988972}
+  m_Layer: 5
+  m_Name: Waitress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1293988971
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293988970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1293988972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293988970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1293988973
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293988970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1293988974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293988970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fd784dd63de37d64b9b2110e2d56e5c0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1293988975
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293988970}
+  m_CullTransparentMesh: 1
+--- !u!1 &1418513536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418513537}
+  - component: {fileID: 1418513541}
+  - component: {fileID: 1418513540}
+  - component: {fileID: 1418513539}
+  - component: {fileID: 1418513538}
+  m_Layer: 5
+  m_Name: Alden
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1418513537
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1418513538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1418513539
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85c3f9bd125cb7d4ebefdb3af6c9dfe8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1418513540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fde402133d01c0449885dd3028675c5a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1418513541
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418513536}
+  m_CullTransparentMesh: 1
+--- !u!1 &1467654256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467654257}
+  - component: {fileID: 1467654261}
+  - component: {fileID: 1467654260}
+  - component: {fileID: 1467654259}
+  - component: {fileID: 1467654258}
+  m_Layer: 5
+  m_Name: Bromund
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1467654257
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467654256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1467654258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467654256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1467654259
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467654256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1467654260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467654256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 71145ab90493a5844b992ef546effc6a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1467654261
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467654256}
+  m_CullTransparentMesh: 1
+--- !u!1 &1516781601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516781602}
+  - component: {fileID: 1516781604}
+  - component: {fileID: 1516781603}
+  m_Layer: 5
+  m_Name: NameText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1516781602
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516781601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 244383393}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 400, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1516781603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516781601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1516781604
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516781601}
+  m_CullTransparentMesh: 1
+--- !u!1 &1661909642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661909643}
+  - component: {fileID: 1661909647}
+  - component: {fileID: 1661909646}
+  - component: {fileID: 1661909645}
+  - component: {fileID: 1661909644}
+  m_Layer: 5
+  m_Name: Valric
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1661909643
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661909642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1661909644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661909642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1661909645
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661909642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1661909646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661909642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3c419ff3dd9e48142a63ccb931d014ed, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1661909647
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661909642}
+  m_CullTransparentMesh: 1
+--- !u!1 &1901202296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901202298}
+  - component: {fileID: 1901202297}
+  m_Layer: 0
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1901202297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901202296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336745b02de2a4b42b92f9ced458ab79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ROOT: {fileID: 0}
+  previousMenu: {fileID: 0}
+--- !u!4 &1901202298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901202296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.054244, y: -29.370422, z: -6.9976335}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1956419586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956419587}
+  - component: {fileID: 1956419589}
+  - component: {fileID: 1956419588}
+  m_Layer: 5
+  m_Name: BlackSpacerTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1956419587
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956419586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1072.4994}
+  m_SizeDelta: {x: 1080, y: -2145}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1956419588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956419586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1956419589
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956419586}
+  m_CullTransparentMesh: 1
+--- !u!1 &1991554708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991554709}
+  - component: {fileID: 1991554712}
+  - component: {fileID: 1991554711}
+  - component: {fileID: 1991554710}
+  m_Layer: 5
+  m_Name: NextButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1991554709
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991554708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -657.59}
+  m_SizeDelta: {x: 1080, y: 795}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1991554710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991554708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+    m_PressedColor: {r: 1, g: 0.7647059, b: 0.37254903, a: 1}
+    m_SelectedColor: {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1991554711}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 141600460}
+        m_TargetAssemblyTypeName: VN_Manager, Assembly-CSharp
+        m_MethodName: OnNextButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1991554711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991554708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1991554712
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991554708}
+  m_CullTransparentMesh: 1
+--- !u!1 &2056154119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056154120}
+  - component: {fileID: 2056154122}
+  - component: {fileID: 2056154121}
+  m_Layer: 5
+  m_Name: BackgroundImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2056154120
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056154119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 290}
+  m_SizeDelta: {x: 1100, y: 1100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2056154121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056154119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1c97a3d598abe4841b04fa67fa012800, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2056154122
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056154119}
+  m_CullTransparentMesh: 1
+--- !u!1 &2100051550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100051551}
+  - component: {fileID: 2100051555}
+  - component: {fileID: 2100051554}
+  - component: {fileID: 2100051553}
+  - component: {fileID: 2100051552}
+  m_Layer: 5
+  m_Name: Osmir
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2100051551
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100051550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1200, y: 230}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2100051552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100051550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc812da08572324b812d4956dc01e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2100051553
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100051550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0ec2fe4bc54cf94a8f4027ec7929150, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2100051554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100051550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 42eca1cd96ce37c40a48361f02419b21, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2100051555
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100051550}
+  m_CullTransparentMesh: 1
+--- !u!1 &2121551453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121551454}
+  - component: {fileID: 2121551456}
+  - component: {fileID: 2121551455}
+  - component: {fileID: 2121551457}
+  m_Layer: 5
+  m_Name: BackgroundImageTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2121551454
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121551453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015258789, y: -60.00199}
+  m_SizeDelta: {x: 1080, y: 1800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2121551455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121551453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c418e692b87548440ac870d7c82ddb31, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2121551456
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121551453}
+  m_CullTransparentMesh: 1
+--- !u!95 &2121551457
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121551453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1e2279fba7803746bec7f09b6836fed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2142213068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2142213069}
+  - component: {fileID: 2142213071}
+  - component: {fileID: 2142213070}
+  m_Layer: 5
+  m_Name: BlackSpacerBottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2142213069
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142213068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 678982527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1109.1001}
+  m_SizeDelta: {x: 1080, y: -2219.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2142213070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142213068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2142213071
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142213068}
+  m_CullTransparentMesh: 1
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1901202298}
+  - {fileID: 963194228}
+  - {fileID: 678982527}
+  - {fileID: 776015744}
+  - {fileID: 141600461}
