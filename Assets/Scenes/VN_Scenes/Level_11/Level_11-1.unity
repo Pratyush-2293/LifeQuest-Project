@@ -313,7 +313,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 532b47a247d6e944680197e7022610c5, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
   soundEffects: []
-  initialBackgroundMusic: {fileID: 8300000, guid: 5bd5c0179f2742b429c473906d2c6c1c,
+  initialBackgroundMusic: {fileID: 8300000, guid: 72220501be6d52643bbee4d910a2c8ff,
     type: 3}
   backgroundMusic: []
   textSpeed: 0.02

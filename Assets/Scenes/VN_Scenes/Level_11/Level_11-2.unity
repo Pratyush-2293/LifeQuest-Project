@@ -317,9 +317,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cc5aa46a2f1d51a4a9383f08041042a7, type: 3}
   buttonClickSound: {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
   soundEffects: []
-  initialBackgroundMusic: {fileID: 8300000, guid: 5bd5c0179f2742b429c473906d2c6c1c,
+  initialBackgroundMusic: {fileID: 8300000, guid: 17fb740c23f458548b660b345aded768,
     type: 3}
-  backgroundMusic: []
+  backgroundMusic:
+  - {fileID: 8300000, guid: 72220501be6d52643bbee4d910a2c8ff, type: 3}
+  - {fileID: 8300000, guid: 66211f1f428b1d7419bd7d602d3ba424, type: 3}
+  - {fileID: 8300000, guid: 1270bd465c849ed49a9e9caa3672d96d, type: 3}
   textSpeed: 0.02
   textSounds:
   - {fileID: 8300000, guid: 269b831dcdc545c43b6a52b2aec09c75, type: 3}
@@ -471,7 +474,7 @@ MonoBehaviour:
     character: 3
     background: -1
     SFX: -1
-    BGM: -1
+    BGM: 0
     tabRight: 1
     tabLeft: 0
     lastDialogue: 0
@@ -832,7 +835,7 @@ MonoBehaviour:
     character: 3
     background: -1
     SFX: -1
-    BGM: -1
+    BGM: 1
     tabRight: 0
     tabLeft: 0
     lastDialogue: 0
@@ -1043,7 +1046,7 @@ MonoBehaviour:
     character: 0
     background: 1
     SFX: -1
-    BGM: -1
+    BGM: 2
     tabRight: 0
     tabLeft: 1
     lastDialogue: 0
@@ -2602,7 +2605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e7d0e3dc1f45424fa091016a08c2dfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c419ff3dd9e48142a63ccb931d014ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
