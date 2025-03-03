@@ -31,6 +31,13 @@ public class GameData : MonoBehaviour
     public int aldenHP = 100;
     public int aldenMP = 100;
     public int aldenCRIT = 10;
+    // Update this in the loader function
+    public Item aldenEquippedWeapon;
+    public Item aldenEquippedOffHand;
+    public Item aldenEquippedHeadgear;
+    public Item aldenEquippedChestpiece;
+    public Item aldenEquippedLegguards;
+    public Item aldenEquippedBoots;
 
     private void Awake()
     {

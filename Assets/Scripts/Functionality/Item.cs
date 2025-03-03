@@ -5,13 +5,60 @@ using UnityEngine;
 [System.Serializable]
 public class Item
 {
-    public ScriptableObject itemData = null;
-    public enum ItemType { Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor};
-    public enum WeaponType { None, Sword, Staff};
-    public enum OffhandType { None, Relic, Shield, Tome, Sword};
-    public enum ArmorType { Headgear, Chestpiece, Legguards, Boots}
+    // Item Data
+    public ItemType itemType;
+    public WeaponType weaponType;
+    public OffhandType offhandType;
+    public ArmorType armorType;
+
+    public bool isStackable = false;
+    public int itemQuantity = 1;
 
     public Sprite itemIcon = null;
     public string itemName = null;
 
+    public ItemRarity itemRarity;
+
+    public int enhancementLevel = 0;
+
+    public MainStatType mainStatType;
+    public int mainStatValue = 0;
+
+    public SubStatType subStatType;
+    public int subStatValue = 0;
+
+    // ------------------------- Enum Definitions -------------------------------
+    // Item Type Config
+    public enum ItemType { Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor};
+    public enum WeaponType { None, Sword, Staff};
+    public enum OffhandType { None, Relic, Shield, Tome, Sword};
+    public enum ArmorType { None, Headgear, Chestpiece, Legguards, Boots};
+
+    // Item Stats Data
+    public enum ItemRarity { Common, Uncommon, Rare, Mystic, Epic, Legendary };
+    public enum MainStatType { ATK, DEF, HP};
+    public enum SubStatType { None, CR, CD, ATK, DEF, HP, MP};
+    // ------------------------- Enum Definitions -------------------------------
+
+
+    public Item(ItemSO itemData)
+    {
+        itemType = (ItemType)itemData.itemType;
+        weaponType = (WeaponType)itemData.weaponType;
+        offhandType = (OffhandType)itemData.offhandType;
+        armorType = (ArmorType)itemData.armorType;
+
+        isStackable = itemData.isStackable;
+        itemQuantity = itemData.itemQuantity;
+
+        itemIcon = itemData.itemIcon;
+        itemName = itemData.itemName;
+
+        itemRarity = (ItemRarity)itemData.itemRarity;
+        enhancementLevel = itemData.enhancementLevel;
+        mainStatType = (MainStatType)itemData.mainStatType;
+        mainStatValue = itemData.mainStatValue;
+        subStatType = (SubStatType)itemData.subStatType;
+        subStatValue = itemData.subStatValue;
+    }
 }
