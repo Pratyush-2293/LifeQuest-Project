@@ -27,10 +27,10 @@ public class GameData : MonoBehaviour
     public int aldenEXPForNextLevel = 100;
     public int aldenSTR = 10;
     public int aldenDEF = 5;
-    public int aldenVIT = 5;
     public int aldenHP = 100;
     public int aldenMP = 100;
-    public int aldenCRIT = 10;
+    public int aldenCR = 10;
+    public int aldenCD = 100;
     // Update this in the loader function
     public Item aldenEquippedWeapon;
     public Item aldenEquippedOffHand;
@@ -82,10 +82,10 @@ public class GameData : MonoBehaviour
             aldenEXPForNextLevel = aldenEXPForNextLevel,
             aldenSTR = aldenSTR,
             aldenDEF = aldenDEF,
-            aldenVIT = aldenVIT,
             aldenHP = aldenHP,
             aldenMP = aldenMP,
-            aldenCRIT = aldenCRIT
+            aldenCR = aldenCR,
+            aldenCD = aldenCD
         };
     }
 
@@ -106,10 +106,10 @@ public class GameData : MonoBehaviour
         aldenEXPForNextLevel = data.aldenEXPForNextLevel;
         aldenSTR = data.aldenSTR;
         aldenDEF = data.aldenDEF;
-        aldenVIT = data.aldenVIT;
         aldenHP = data.aldenHP;
         aldenMP = data.aldenMP;
-        aldenCRIT = data.aldenCRIT;
+        aldenCR = data.aldenCR;
+        aldenCD = data.aldenCD;
     }
 }
 
@@ -132,9 +132,9 @@ public class GameDataSave
     public int aldenEXPForNextLevel;
     public int aldenSTR;
     public int aldenDEF;
-    public int aldenVIT;
     public int aldenHP;
     public int aldenMP;
-    public int aldenCRIT;
+    public int aldenCR;
+    public int aldenCD;
 }
 

@@ -16,10 +16,10 @@ public class HeroesMenuManager : MonoBehaviour
 
     public TMP_Text charStrDisplay = null;
     public TMP_Text charDefDisplay = null;
-    public TMP_Text charVitDisplay = null;
     public TMP_Text charMaxHPDisplay = null;
     public TMP_Text charMaxMPDisplay = null;
     public TMP_Text charCritRateDisplay = null;
+    public TMP_Text charCritDamageDisplay = null;
 
     private void Start()
     {
@@ -55,10 +55,10 @@ public class HeroesMenuManager : MonoBehaviour
         // Setting the character stats
         charStrDisplay.text = GameData.instance.aldenSTR.ToString();
         charDefDisplay.text = GameData.instance.aldenDEF.ToString();
-        charVitDisplay.text = GameData.instance.aldenVIT.ToString();
         charMaxHPDisplay.text = GameData.instance.aldenHP.ToString();
         charMaxMPDisplay.text = GameData.instance.aldenMP.ToString();
-        charCritRateDisplay.text = GameData.instance.aldenCRIT.ToString();
+        charCritRateDisplay.text = GameData.instance.aldenCR.ToString();
+        charCritDamageDisplay.text = GameData.instance.aldenCD.ToString();
     }
 
     public void OnBackButton()

@@ -59,14 +59,14 @@ public class InventoryManager : MonoBehaviour
     private void HideInventory()
     {
         inventoryPanelAnimator.SetTrigger("SlideOut");
-        aldenCharAnimator.SetTrigger("Appear");
+        aldenCharAnimator.SetTrigger("FadeIn");
     }
 
 
     // ------------------------ Button Functions -----------------------------
-    public void OnMainWeaponButton()
+    public void OnWeaponButton()
     {
-
+        ShowInventory();
     }
 
     public void OnOffhandButton()
@@ -92,5 +92,10 @@ public class InventoryManager : MonoBehaviour
     public void OnBootsButton()
     {
 
+    }
+
+    public void OnCloseInventoryButton()
+    {
+        HideInventory();
     }
 }
