@@ -57,8 +57,8 @@ public class HeroesMenuManager : MonoBehaviour
         charDefDisplay.text = GameData.instance.aldenDEF.ToString();
         charMaxHPDisplay.text = GameData.instance.aldenHP.ToString();
         charMaxMPDisplay.text = GameData.instance.aldenMP.ToString();
-        charCritRateDisplay.text = GameData.instance.aldenCR.ToString();
-        charCritDamageDisplay.text = GameData.instance.aldenCD.ToString();
+        charCritRateDisplay.text = GameData.instance.aldenCR.ToString() + "%";
+        charCritDamageDisplay.text = GameData.instance.aldenCD.ToString() + "%";
     }
 
     public void OnBackButton()

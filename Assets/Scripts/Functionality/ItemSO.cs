@@ -43,6 +43,6 @@ public class ItemSO : ScriptableObject
 
     // Item Stats Data
     public enum ItemRarity { Common, Uncommon, Rare, Mystic, Epic, Legendary };
-    public enum MainStatType { ATK, DEF, HP };
-    public enum SubStatType { None, CR, CD, ATK, DEF, HP, MP };
+    public enum MainStatType { ATK, DEF };
+    public enum SubStatType { None, CR, CD, ATK, DEF, MP };
 }

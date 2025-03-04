@@ -31,7 +31,6 @@ public class GameData : MonoBehaviour
     public int aldenMP = 100;
     public int aldenCR = 10;
     public int aldenCD = 100;
-    // Update this in the loader function
     public Item aldenEquippedWeapon;
     public Item aldenEquippedOffHand;
     public Item aldenEquippedHeadgear;
@@ -85,7 +84,14 @@ public class GameData : MonoBehaviour
             aldenHP = aldenHP,
             aldenMP = aldenMP,
             aldenCR = aldenCR,
-            aldenCD = aldenCD
+            aldenCD = aldenCD,
+
+            aldenEquippedWeapon = aldenEquippedWeapon,
+            aldenEquippedOffHand = aldenEquippedOffHand,
+            aldenEquippedHeadgear = aldenEquippedHeadgear,
+            aldenEquippedChestpiece = aldenEquippedChestpiece,
+            aldenEquippedLegguards = aldenEquippedLegguards,
+            aldenEquippedBoots = aldenEquippedBoots
         };
     }
 
@@ -110,6 +116,13 @@ public class GameData : MonoBehaviour
         aldenMP = data.aldenMP;
         aldenCR = data.aldenCR;
         aldenCD = data.aldenCD;
+
+        aldenEquippedWeapon = data.aldenEquippedWeapon;
+        aldenEquippedOffHand = data.aldenEquippedOffHand;
+        aldenEquippedHeadgear = data.aldenEquippedHeadgear;
+        aldenEquippedChestpiece = data.aldenEquippedChestpiece;
+        aldenEquippedLegguards = data.aldenEquippedLegguards;
+        aldenEquippedBoots = data.aldenEquippedBoots;
     }
 }
 
@@ -136,5 +149,12 @@ public class GameDataSave
     public int aldenMP;
     public int aldenCR;
     public int aldenCD;
+
+    public Item aldenEquippedWeapon;
+    public Item aldenEquippedOffHand;
+    public Item aldenEquippedHeadgear;
+    public Item aldenEquippedChestpiece;
+    public Item aldenEquippedLegguards;
+    public Item aldenEquippedBoots;
 }
 
