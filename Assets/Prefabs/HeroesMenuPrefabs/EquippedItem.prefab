@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 5060510753296958820}
   - component: {fileID: 4526174265457225296}
   - component: {fileID: 1649138070875072907}
+  - component: {fileID: 4845425562775394964}
   m_Layer: 5
   m_Name: EquippedItem
   m_TagString: Untagged
@@ -173,7 +174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 830}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1020, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4526174265457225296
@@ -214,6 +215,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4845425562775394964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638317404124252030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7efdccee14112468b3e1c8331b93e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  itemIcon: {fileID: 2956925406065437494}
+  itemName: {fileID: 4266766721148989622}
+  mainStat: {fileID: 4247435040805606638}
+  subStat: {fileID: 1125213987745616228}
 --- !u!1 &2254696800816188664
 GameObject:
   m_ObjectHideFlags: 0

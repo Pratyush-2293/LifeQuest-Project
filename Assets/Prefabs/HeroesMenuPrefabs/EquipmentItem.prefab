@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 7901146299307106087}
   - component: {fileID: 5484213649721074694}
   - component: {fileID: 2779735105855903499}
+  - component: {fileID: 913667437495897605}
   m_Layer: 5
   m_Name: EquipmentItem
   m_TagString: Untagged
@@ -201,6 +202,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &913667437495897605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262318014868149103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7efdccee14112468b3e1c8331b93e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  itemIcon: {fileID: 1690516874381056424}
+  itemName: {fileID: 4230253648219466279}
+  mainStat: {fileID: 3012482791275254204}
+  subStat: {fileID: 7566584306616930610}
 --- !u!1 &2172608821280868487
 GameObject:
   m_ObjectHideFlags: 0

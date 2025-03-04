@@ -80,6 +80,17 @@ public class InventoryManager : MonoBehaviour
     // ------------------------ Button Functions -----------------------------
     public void OnWeaponButton()
     {
+        // Clear all old instantiated items
+        if(equippedItemPosition.GetChild(0).gameObject != null)
+        {
+            Destroy(equippedItemPosition.GetChild(0).gameObject);
+        }
+
+        foreach(Transform child in itemListContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
         // Fetch the equipped weapon for the active character and display it in the equipped slot
         if(activeCharacter == ActiveCharacter.Alden)
         {
@@ -109,6 +120,12 @@ public class InventoryManager : MonoBehaviour
         }
 
         ShowInventory();
+    }
+
+    private IEnumerator InitialiseItem(ItemUI itemUIObject, Item item)
+    {
+        yield return new WaitForEndOfFrame();
+        itemUIObject.Initialise(item);
     }
 
     public void OnOffhandButton()

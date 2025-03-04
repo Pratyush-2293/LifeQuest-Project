@@ -47,6 +47,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff92a41c866447144bc99dc2de57897a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aldenWeaponTest: {fileID: 11400000, guid: 69cfc23bd22576941bee049b5ff3d006, type: 2}
+  aldenOffhandTest: {fileID: 0}
+  aldenHeadgearTest: {fileID: 0}
+  aldenChestpieceTest: {fileID: 0}
+  aldenLegguardsTest: {fileID: 0}
+  aldenBootsTest: {fileID: 0}
+  inventoryTestItems:
+  - {fileID: 11400000, guid: 208e3bef35cf16d4f9be78c1399c5d0e, type: 2}
+  - {fileID: 11400000, guid: 7aba4bace4655734f91137b35870bb93, type: 2}
 --- !u!114 &7104516352283506780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,12 +99,103 @@ MonoBehaviour:
   maxCompletedLevel: 1
   maxUnlockedLevel: 1
   maxAvailableLevel: 2
+  inventory: []
   aldenLevel: 1
   aldenEXP: 30
   aldenEXPForNextLevel: 100
   aldenSTR: 10
   aldenDEF: 5
-  aldenVIT: 5
   aldenHP: 100
   aldenMP: 100
-  aldenCRIT: 10
+  aldenCR: 10
+  aldenCD: 100
+  aldenEquippedWeapon:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  aldenEquippedOffHand:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  aldenEquippedHeadgear:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  aldenEquippedChestpiece:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  aldenEquippedLegguards:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+  aldenEquippedBoots:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
