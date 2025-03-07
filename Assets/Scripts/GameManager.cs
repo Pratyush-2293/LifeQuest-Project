@@ -32,11 +32,15 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Add Test Items")]
     public void AddTestItems()
     {
+        GameData.instance.inventory.Clear();
+
         foreach(ItemSO itemSO in inventoryTestItems)
         {
             GameData.instance.inventory.Add(new Item(itemSO));
         }
 
         GameData.instance.aldenEquippedWeapon = new Item(aldenWeaponTest);
+        GameData.instance.aldenEquippedOffHand = new Item(aldenOffhandTest);
+        GameData.instance.aldenEquippedHeadgear = new Item(aldenHeadgearTest);
     }
 }

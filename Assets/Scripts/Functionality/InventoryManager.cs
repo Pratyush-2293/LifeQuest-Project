@@ -21,7 +21,7 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject itemUI = null;
     public GameObject equippedItemUI = null;
-    public GameObject emptyWeaponItemUI = null;
+    public GameObject emptyEquipmentItemUI = null;
     public Transform itemListContainer = null;
     public Transform equippedItemPosition = null;
 
@@ -97,6 +97,22 @@ public class InventoryManager : MonoBehaviour
                 // Remove the stats associated with weapon from alden's total stats
                 RemoveStats(item);
             }
+            else if(item.itemType == Item.ItemType.Offhand) // If the unequipped item is an off-hand
+            {
+                GameData.instance.inventory.Add(GameData.instance.aldenEquippedOffHand); // Add the unequipped off-hand back to inventory
+                GameData.instance.aldenEquippedOffHand = new Item(emptyItemSO); // Set alden's equipped item to an empty item.
+
+                // Remove the stats associated with off-hand from alden's total stats
+                RemoveStats(item);
+            }
+            else if(item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Headgear) // If the unequipped item is a medium headgear
+            {
+                GameData.instance.inventory.Add(GameData.instance.aldenEquippedHeadgear); // Add the unequipped headgear back to inventory
+                GameData.instance.aldenEquippedHeadgear = new Item(emptyItemSO); // Set alden's equipped item to an empty item.
+
+                // Remove the stats associated with headgear from alden's total stats
+                RemoveStats(item);
+            }
             // continue this chain to handle other equipment types
         }
         // continue this chain to handle other player characters
@@ -104,7 +120,8 @@ public class InventoryManager : MonoBehaviour
         // Change the displayed stats
         HeroesMenuManager.instance.UpdateStatsDisplay();
 
-        // Save changes to GameData - COME BACK TO THIS LATER
+        // Save changes to GameData
+        SaveManager.instance.SaveGameData();
 
         // Hide back the inventory window.
         HideInventory();
@@ -120,6 +137,16 @@ public class InventoryManager : MonoBehaviour
                 GameData.instance.inventory.Add(GameData.instance.aldenEquippedWeapon); // Add the unequipped weapon back to inventory
                 RemoveStats(GameData.instance.aldenEquippedWeapon);
             }
+            else if(item.itemType == Item.ItemType.Offhand)
+            {
+                GameData.instance.inventory.Add(GameData.instance.aldenEquippedOffHand); // Add the unequipped off hand back to inventory
+                RemoveStats(GameData.instance.aldenEquippedOffHand);
+            }
+            else if(item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Headgear)
+            {
+                GameData.instance.inventory.Add(GameData.instance.aldenEquippedHeadgear); // Add the unequipped medium headgear back to inventory
+                RemoveStats(GameData.instance.aldenEquippedHeadgear);
+            }
             // continue this chain for other equipment types
         }
 
@@ -133,13 +160,30 @@ public class InventoryManager : MonoBehaviour
                 // Add the stats associated with weapon to alden's total stats
                 AddStats(item);
             }
+            else if(item.itemType == Item.ItemType.Offhand)  // If the equipped item is an off-hand
+            {
+                GameData.instance.aldenEquippedOffHand = item; // Set alden's equipped item to the new item
+                GameData.instance.inventory.Remove(item); // Remove the equipped off-hand from the inventory - Possible Removal Failure; Note: Seems to be working fine for now.
+
+                // Add the stats associated with off-hand to alden's total stats
+                AddStats(item);
+            }
+            else if(item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Headgear) // If the equipped item is a medium headgear
+            {
+                GameData.instance.aldenEquippedHeadgear = item; // Set alden's equipped item to the new item
+                GameData.instance.inventory.Remove(item); // Remove the equipped headgear from the inventory - Possible Removal Failure; Note: Seems to be working fine for now.
+
+                // Add the stats associated with meidum headgear to alden's total stats
+                AddStats(item);
+            }
             // continue this chain for other equipment types
         }
 
         // Change the displayed stats
         HeroesMenuManager.instance.UpdateStatsDisplay();
 
-        // Save changes to GameData - COME BACK TO THIS LATER
+        // Save changes to GameData
+        SaveManager.instance.SaveGameData();
 
         // Hide back the inventory window.
         HideInventory();
@@ -223,12 +267,7 @@ public class InventoryManager : MonoBehaviour
     public void OnWeaponButton()
     {
         // Clear all old instantiated items
-        Destroy(equippedItemPosition.GetChild(0).gameObject);
-
-        foreach (Transform child in itemListContainer)
-        {
-            Destroy(child.gameObject);
-        }
+        ClearInventoryPanel();
 
         // Fetch the equipped weapon for the active character and display it in the equipped slot
         if(HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)
@@ -240,7 +279,7 @@ public class InventoryManager : MonoBehaviour
             }
             else
             {
-                Instantiate(emptyWeaponItemUI, equippedItemPosition);
+                Instantiate(emptyEquipmentItemUI, equippedItemPosition);
             }
         }
         // Continue this chain for handling other characters
@@ -257,6 +296,7 @@ public class InventoryManager : MonoBehaviour
                     weaponItemsList.Add(item);
                 }
             }
+            // Continue this chain to handle for other characters
         }
 
         // Sort the list to show the weapon with the highest stat at the top
@@ -274,12 +314,97 @@ public class InventoryManager : MonoBehaviour
 
     public void OnOffhandButton()
     {
+        // Clear all old instantiated items
+        ClearInventoryPanel();
 
+        // Fetch the equipped off hand for the active character and display it in the equipped slot
+        if (HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)        // Handling for Alden
+        {
+            if (GameData.instance.aldenEquippedOffHand.offhandType != Item.OffhandType.None)
+            {
+                ItemUI equippedItemUIObject = Instantiate(equippedItemUI, equippedItemPosition).GetComponent<ItemUI>();
+                equippedItemUIObject.Initialise(GameData.instance.aldenEquippedOffHand);
+            }
+            else
+            {
+                Instantiate(emptyEquipmentItemUI, equippedItemPosition);
+            }
+        }
+        // Continue this chain for handling other characters
+
+        // fetch the available off hand items from the inventory which are suitable for the active character
+        List<Item> offHandItemsList = new List<Item>();
+
+        foreach (Item item in GameData.instance.inventory)
+        {
+            if (HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)  // if active character is alden, we select all items that are an off hand of type Relic.
+            {
+                if (item.itemType == Item.ItemType.Offhand && item.offhandType == Item.OffhandType.Relic)
+                {
+                    offHandItemsList.Add(item);
+                }
+            }
+        }
+
+        // Sort the list to show the weapon with the highest stat at the top
+        offHandItemsList.Sort((a, b) => b.mainStatValue.CompareTo(a.mainStatValue));
+
+        // Instantiate all the items in the list and make them children of the scrolling area container
+        foreach (Item item in offHandItemsList)
+        {
+            ItemUI itemUIObject = Instantiate(itemUI, itemListContainer).GetComponent<ItemUI>();
+            itemUIObject.Initialise(item);
+        }
+
+        ShowInventory();
     }
 
     public void OnHeadgearButton()
     {
+        // Clear all old instantiated items
+        ClearInventoryPanel();
 
+        // Fetch the equipped headgear for the active character and display it in the equipped slot
+        if (HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)
+        {
+            if (GameData.instance.aldenEquippedHeadgear.armorType != Item.ArmorType.None)
+            {
+                ItemUI equippedItemUIObject = Instantiate(equippedItemUI, equippedItemPosition).GetComponent<ItemUI>();
+                equippedItemUIObject.Initialise(GameData.instance.aldenEquippedHeadgear);
+            }
+            else
+            {
+                Instantiate(emptyEquipmentItemUI, equippedItemPosition);
+            }
+        }
+        // Continue this chain for handling other characters
+
+        // fetch the available headgear items from the inventory which are suitable for the active character
+        List<Item> headgearItemsList = new List<Item>();
+
+        foreach (Item item in GameData.instance.inventory)
+        {
+            if (HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)  // if active character is alden, we select all items that are armor type of Medium Headgear
+            {
+                if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Headgear)  // sorting only medium headgear for alden
+                {
+                    headgearItemsList.Add(item);
+                }
+            }
+            // continue this chain for handling other characters
+        }
+
+        // Sort the list to show the headgear with the highest stat at the top
+        headgearItemsList.Sort((a, b) => b.mainStatValue.CompareTo(a.mainStatValue));
+
+        // Instantiate all the items in the list and make them children of the scrolling area container
+        foreach (Item item in headgearItemsList)
+        {
+            ItemUI itemUIObject = Instantiate(itemUI, itemListContainer).GetComponent<ItemUI>();
+            itemUIObject.Initialise(item);
+        }
+
+        ShowInventory();
     }
 
     public void OnChestPieceButton()
@@ -300,5 +425,16 @@ public class InventoryManager : MonoBehaviour
     public void OnCloseInventoryButton()
     {
         HideInventory();
+    }
+
+    private void ClearInventoryPanel()
+    {
+        // Clear all old instantiated items
+        Destroy(equippedItemPosition.GetChild(0).gameObject);
+
+        foreach (Transform child in itemListContainer)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }

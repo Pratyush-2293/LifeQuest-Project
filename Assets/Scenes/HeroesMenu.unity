@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 251326268}
   - component: {fileID: 251326267}
   m_Layer: 5
-  m_Name: BootButton
+  m_Name: BootsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,7 +1020,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 251326268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524340205}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OnBootsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &251326268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,7 +2350,7 @@ MonoBehaviour:
   itemUI: {fileID: 638317404124252030, guid: 6f45dd1b54399b24d96314a80a9a0c44, type: 3}
   equippedItemUI: {fileID: 638317404124252030, guid: a4c3cad1e90b7aa438cb767f22c47556,
     type: 3}
-  emptyWeaponItemUI: {fileID: 638317404124252030, guid: 32c69015efd4c634e9a0c4e73354cc13,
+  emptyEquipmentItemUI: {fileID: 638317404124252030, guid: 32c69015efd4c634e9a0c4e73354cc13,
     type: 3}
   itemListContainer: {fileID: 1739885235}
   equippedItemPosition: {fileID: 1908259156}
@@ -2407,7 +2419,7 @@ GameObject:
   - component: {fileID: 592417763}
   - component: {fileID: 592417762}
   m_Layer: 5
-  m_Name: HelmButton
+  m_Name: HeadgearButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2476,7 +2488,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 592417763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524340205}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OnHeadgearButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &592417763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3885,7 +3909,7 @@ GameObject:
   - component: {fileID: 1180417043}
   - component: {fileID: 1180417042}
   m_Layer: 5
-  m_Name: LeggingButton
+  m_Name: LegguardsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3954,7 +3978,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1180417043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524340205}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OnLegguardsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1180417043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5612,7 +5648,7 @@ GameObject:
   - component: {fileID: 1539528512}
   - component: {fileID: 1539528511}
   m_Layer: 5
-  m_Name: ChestButton
+  m_Name: ChestpieceButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5681,7 +5717,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1539528512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524340205}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OnChestPieceButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1539528512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7459,7 +7507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2013115788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524340205}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OnOffhandButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2013115788
 MonoBehaviour:
   m_ObjectHideFlags: 0

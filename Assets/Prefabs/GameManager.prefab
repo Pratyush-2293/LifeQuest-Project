@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aldenWeaponTest: {fileID: 11400000, guid: 208e3bef35cf16d4f9be78c1399c5d0e, type: 2}
-  aldenOffhandTest: {fileID: 0}
-  aldenHeadgearTest: {fileID: 0}
+  aldenOffhandTest: {fileID: 11400000, guid: a253126d05a7db14b83d1ffa6e302398, type: 2}
+  aldenHeadgearTest: {fileID: 11400000, guid: ebf806139febb574293bb9492ed0e677, type: 2}
   aldenChestpieceTest: {fileID: 0}
   aldenLegguardsTest: {fileID: 0}
   aldenBootsTest: {fileID: 0}
@@ -57,6 +57,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 69cfc23bd22576941bee049b5ff3d006, type: 2}
   - {fileID: 11400000, guid: 7aba4bace4655734f91137b35870bb93, type: 2}
   - {fileID: 11400000, guid: 7aba4bace4655734f91137b35870bb93, type: 2}
+  - {fileID: 11400000, guid: 4296ad50bea07a444bc45fc8db11489d, type: 2}
+  - {fileID: 11400000, guid: 19b4a156a7ff6a8469ee32ddf994d5c3, type: 2}
+  - {fileID: 11400000, guid: b40898a0f079f1e4c92d4e8ca515f7a0, type: 2}
+  - {fileID: 11400000, guid: cb64eb176abd34047aaa464ae8e4cd77, type: 2}
 --- !u!114 &7104516352283506780
 MonoBehaviour:
   m_ObjectHideFlags: 0

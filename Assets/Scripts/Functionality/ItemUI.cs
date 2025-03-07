@@ -84,6 +84,63 @@ public class ItemUI : MonoBehaviour
                     subStat.color = lowerValueColor;
                 }
             }
+            else if(item.itemType == Item.ItemType.Offhand)
+            {
+                if (item.mainStatValue > GameData.instance.aldenEquippedOffHand.mainStatValue)
+                {
+                    mainStat.color = greaterValueColor;
+                }
+                else if (item.mainStatValue == GameData.instance.aldenEquippedOffHand.mainStatValue)
+                {
+                    mainStat.color = Color.white;
+                }
+                else
+                {
+                    mainStat.color = lowerValueColor;
+                }
+
+                if (item.subStatValue > GameData.instance.aldenEquippedOffHand.subStatValue)
+                {
+                    subStat.color = greaterValueColor;
+                }
+                else if (item.subStatValue == GameData.instance.aldenEquippedOffHand.subStatValue)
+                {
+                    subStat.color = Color.white;
+                }
+                else
+                {
+                    subStat.color = lowerValueColor;
+                }
+            }
+            else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Headgear)
+            {
+                if (item.mainStatValue > GameData.instance.aldenEquippedHeadgear.mainStatValue)
+                {
+                    mainStat.color = greaterValueColor;
+                }
+                else if (item.mainStatValue == GameData.instance.aldenEquippedHeadgear.mainStatValue)
+                {
+                    mainStat.color = Color.white;
+                }
+                else
+                {
+                    mainStat.color = lowerValueColor;
+                }
+
+                if (item.subStatValue > GameData.instance.aldenEquippedHeadgear.subStatValue)
+                {
+                    subStat.color = greaterValueColor;
+                }
+                else if (item.subStatValue == GameData.instance.aldenEquippedHeadgear.subStatValue)
+                {
+                    subStat.color = Color.white;
+                }
+                else
+                {
+                    subStat.color = lowerValueColor;
+                }
+            }
+            // Continue this chain for other equipment types
         }
     }
 
