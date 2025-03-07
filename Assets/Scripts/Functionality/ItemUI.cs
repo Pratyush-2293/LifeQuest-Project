@@ -13,6 +13,9 @@ public class ItemUI : MonoBehaviour
     public TMP_Text mainStat = null;
     public TMP_Text subStat = null;
 
+    public Color greaterValueColor;
+    public Color lowerValueColor;
+
     public void Initialise(Item itemData)
     {
         item = itemData;
@@ -31,6 +34,9 @@ public class ItemUI : MonoBehaviour
 
         // Load the item's sub stat on the UI
         LoadSubStatText();
+
+        // Add the value color to the text
+        ColorText();
     }
 
     public void OnUnequipButton()
@@ -41,6 +47,44 @@ public class ItemUI : MonoBehaviour
     public void OnEquipButton()
     {
         InventoryManager.instance.EquipItem(item);
+    }
+
+    private void ColorText()
+    {
+        // Check if the mainstat & substat value of the given item is lower or greater than the equipped item.
+        // If lower, then color red, if greater then color green.
+
+        if(HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)
+        {
+            if (item.itemType == Item.ItemType.Weapon)
+            {
+                if(item.mainStatValue > GameData.instance.aldenEquippedWeapon.mainStatValue)
+                {
+                    mainStat.color = greaterValueColor;
+                }
+                else if(item.mainStatValue == GameData.instance.aldenEquippedWeapon.mainStatValue)
+                {
+                    mainStat.color = Color.white;
+                }
+                else
+                {
+                    mainStat.color = lowerValueColor;
+                }
+
+                if (item.subStatValue > GameData.instance.aldenEquippedWeapon.subStatValue)
+                {
+                    subStat.color = greaterValueColor;
+                }
+                else if (item.subStatValue == GameData.instance.aldenEquippedWeapon.subStatValue)
+                {
+                    subStat.color = Color.white;
+                }
+                else
+                {
+                    subStat.color = lowerValueColor;
+                }
+            }
+        }
     }
 
     private void LoadItemNameText()

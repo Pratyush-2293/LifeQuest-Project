@@ -246,6 +246,8 @@ MonoBehaviour:
   itemName: {fileID: 4266766721148989622}
   mainStat: {fileID: 4247435040805606638}
   subStat: {fileID: 1125213987745616228}
+  greaterValueColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
+  lowerValueColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2254696800816188664
 GameObject:
   m_ObjectHideFlags: 0

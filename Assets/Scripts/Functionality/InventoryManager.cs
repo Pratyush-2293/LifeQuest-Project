@@ -243,6 +243,7 @@ public class InventoryManager : MonoBehaviour
                 Instantiate(emptyWeaponItemUI, equippedItemPosition);
             }
         }
+        // Continue this chain for handling other characters
 
         // fetch the available weapon items from the inventory which are suitable for the active character
         List<Item> weaponItemsList = new List<Item>();
@@ -258,20 +259,17 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
+        // Sort the list to show the weapon with the highest stat at the top
+        weaponItemsList.Sort((a, b) => b.mainStatValue.CompareTo(a.mainStatValue));
+
         // Instantiate all the items in the list and make them children of the scrolling area container
-        foreach(Item item in weaponItemsList)
+        foreach (Item item in weaponItemsList)
         {
             ItemUI itemUIObject = Instantiate(itemUI, itemListContainer).GetComponent<ItemUI>();
             itemUIObject.Initialise(item);
         }
 
         ShowInventory();
-    }
-
-    private IEnumerator InitialiseItem(ItemUI itemUIObject, Item item)
-    {
-        yield return new WaitForEndOfFrame();
-        itemUIObject.Initialise(item);
     }
 
     public void OnOffhandButton()

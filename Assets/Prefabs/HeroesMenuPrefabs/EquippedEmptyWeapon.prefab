@@ -242,3 +242,5 @@ MonoBehaviour:
   itemName: {fileID: 4266766721148989622}
   mainStat: {fileID: 0}
   subStat: {fileID: 0}
+  greaterValueColor: {r: 0.47058824, g: 1, b: 0.38039216, a: 0}
+  lowerValueColor: {r: 1, g: 0.38431373, b: 0.38431373, a: 0}
