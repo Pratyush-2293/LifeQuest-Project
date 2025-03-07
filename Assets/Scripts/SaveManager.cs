@@ -50,6 +50,7 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Save Game Data Test")]
     public void SaveGameData()
     {
         GameDataSave gameDataSaveObject = GameData.instance.ToSaveData();

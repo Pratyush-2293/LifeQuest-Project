@@ -33,6 +33,11 @@ public class ItemUI : MonoBehaviour
         LoadSubStatText();
     }
 
+    public void OnUnequipButton()
+    {
+        InventoryManager.instance.UnequipItem(item);
+    }
+
     private void LoadItemNameText()
     {
         // Load the item's name & enhancement level on the UI

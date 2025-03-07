@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class HeroesMenuManager : MonoBehaviour
 {
+    public static HeroesMenuManager instance = null;
+
     public int pageNumber = 0;
 
     public TMP_Text expPointsDisplay = null;
@@ -14,12 +16,22 @@ public class HeroesMenuManager : MonoBehaviour
     public Slider charExpSliderDisplay = null;
     public TMP_Text charExpDisplay = null;
 
-    public TMP_Text charStrDisplay = null;
+    public TMP_Text charAtkDisplay = null;
     public TMP_Text charDefDisplay = null;
     public TMP_Text charMaxHPDisplay = null;
     public TMP_Text charMaxMPDisplay = null;
     public TMP_Text charCritRateDisplay = null;
     public TMP_Text charCritDamageDisplay = null;
+
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.Log("Trying to create more than one HeroesMenuManager instance!");
+            Destroy(gameObject);
+        }
+        instance = this;
+    }
 
     private void Start()
     {
@@ -53,7 +65,7 @@ public class HeroesMenuManager : MonoBehaviour
         charExpDisplay.text = GameData.instance.aldenEXP.ToString() + " / " + GameData.instance.aldenEXPForNextLevel;
 
         // Setting the character stats
-        charStrDisplay.text = GameData.instance.aldenSTR.ToString();
+        charAtkDisplay.text = GameData.instance.aldenATK.ToString();
         charDefDisplay.text = GameData.instance.aldenDEF.ToString();
         charMaxHPDisplay.text = GameData.instance.aldenHP.ToString();
         charMaxMPDisplay.text = GameData.instance.aldenMP.ToString();

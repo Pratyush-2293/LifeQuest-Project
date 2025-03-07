@@ -47,14 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff92a41c866447144bc99dc2de57897a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aldenWeaponTest: {fileID: 11400000, guid: 69cfc23bd22576941bee049b5ff3d006, type: 2}
+  aldenWeaponTest: {fileID: 11400000, guid: 208e3bef35cf16d4f9be78c1399c5d0e, type: 2}
   aldenOffhandTest: {fileID: 0}
   aldenHeadgearTest: {fileID: 0}
   aldenChestpieceTest: {fileID: 0}
   aldenLegguardsTest: {fileID: 0}
   aldenBootsTest: {fileID: 0}
   inventoryTestItems:
-  - {fileID: 11400000, guid: 208e3bef35cf16d4f9be78c1399c5d0e, type: 2}
+  - {fileID: 11400000, guid: 69cfc23bd22576941bee049b5ff3d006, type: 2}
   - {fileID: 11400000, guid: 7aba4bace4655734f91137b35870bb93, type: 2}
 --- !u!114 &7104516352283506780
 MonoBehaviour:
@@ -103,11 +103,11 @@ MonoBehaviour:
   aldenLevel: 1
   aldenEXP: 30
   aldenEXPForNextLevel: 100
-  aldenSTR: 10
+  aldenATK: 34
   aldenDEF: 5
   aldenHP: 100
   aldenMP: 100
-  aldenCR: 10
+  aldenCR: 13
   aldenCD: 100
   aldenEquippedWeapon:
     itemType: 0

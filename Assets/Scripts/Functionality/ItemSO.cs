@@ -36,7 +36,7 @@ public class ItemSO : ScriptableObject
     public int subStatValue = 0;
 
     // Item Type Config
-    public enum ItemType { Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor };
+    public enum ItemType { None, Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor };
     public enum WeaponType { None, Sword, Staff };
     public enum OffhandType { None, Relic, Shield, Tome, Sword };
     public enum ArmorType { None, Headgear, Chestpiece, Legguards, Boots };

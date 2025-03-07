@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e154f003d8e69544b48ccb33eec32b1, type: 3}
   m_Name: Eternity
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 1
   weaponType: 1
   offhandType: 0
   armorType: 0
