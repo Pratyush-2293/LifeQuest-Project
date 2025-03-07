@@ -23,6 +23,9 @@ public class HeroesMenuManager : MonoBehaviour
     public TMP_Text charCritRateDisplay = null;
     public TMP_Text charCritDamageDisplay = null;
 
+    public enum ActiveCharacter { Alden, Valric, Osmir, Assassin };
+    public ActiveCharacter activeCharacter = ActiveCharacter.Alden;
+
     private void Awake()
     {
         if(instance != null)
@@ -40,6 +43,14 @@ public class HeroesMenuManager : MonoBehaviour
 
         // Load alden's stats to start with
         LoadAldenStats();
+    }
+
+    public void UpdateStatsDisplay()
+    {
+        if(activeCharacter == ActiveCharacter.Alden)
+        {
+            LoadAldenStats();
+        }
     }
 
     private void LoadAldenStats()
