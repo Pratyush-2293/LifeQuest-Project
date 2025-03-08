@@ -42,5 +42,7 @@ public class GameManager : MonoBehaviour
         GameData.instance.aldenEquippedWeapon = new Item(aldenWeaponTest);
         GameData.instance.aldenEquippedOffHand = new Item(aldenOffhandTest);
         GameData.instance.aldenEquippedHeadgear = new Item(aldenHeadgearTest);
+        GameData.instance.aldenEquippedChestpiece = new Item(aldenChestpieceTest);
+        GameData.instance.aldenEquippedLegguards = new Item(aldenLegguardsTest);
     }
 }

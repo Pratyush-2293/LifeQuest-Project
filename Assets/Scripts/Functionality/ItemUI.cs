@@ -54,7 +54,7 @@ public class ItemUI : MonoBehaviour
         // Check if the mainstat & substat value of the given item is lower or greater than the equipped item.
         // If lower, then color red, if greater then color green.
 
-        if(HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)
+        if(HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)  // Handle for Alden
         {
             if (item.itemType == Item.ItemType.Weapon)
             {
@@ -140,8 +140,93 @@ public class ItemUI : MonoBehaviour
                     subStat.color = lowerValueColor;
                 }
             }
-            // Continue this chain for other equipment types
+            else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Chestpiece)
+            {
+                if (item.mainStatValue > GameData.instance.aldenEquippedChestpiece.mainStatValue)
+                {
+                    mainStat.color = greaterValueColor;
+                }
+                else if (item.mainStatValue == GameData.instance.aldenEquippedChestpiece.mainStatValue)
+                {
+                    mainStat.color = Color.white;
+                }
+                else
+                {
+                    mainStat.color = lowerValueColor;
+                }
+
+                if (item.subStatValue > GameData.instance.aldenEquippedChestpiece.subStatValue)
+                {
+                    subStat.color = greaterValueColor;
+                }
+                else if (item.subStatValue == GameData.instance.aldenEquippedChestpiece.subStatValue)
+                {
+                    subStat.color = Color.white;
+                }
+                else
+                {
+                    subStat.color = lowerValueColor;
+                }
+            }
+            else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Legguards)
+            {
+                if (item.mainStatValue > GameData.instance.aldenEquippedLegguards.mainStatValue)
+                {
+                    mainStat.color = greaterValueColor;
+                }
+                else if (item.mainStatValue == GameData.instance.aldenEquippedLegguards.mainStatValue)
+                {
+                    mainStat.color = Color.white;
+                }
+                else
+                {
+                    mainStat.color = lowerValueColor;
+                }
+
+                if (item.subStatValue > GameData.instance.aldenEquippedLegguards.subStatValue)
+                {
+                    subStat.color = greaterValueColor;
+                }
+                else if (item.subStatValue == GameData.instance.aldenEquippedLegguards.subStatValue)
+                {
+                    subStat.color = Color.white;
+                }
+                else
+                {
+                    subStat.color = lowerValueColor;
+                }
+            }
+            else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Boots)
+            {
+                if (item.mainStatValue > GameData.instance.aldenEquippedBoots.mainStatValue)
+                {
+                    mainStat.color = greaterValueColor;
+                }
+                else if (item.mainStatValue == GameData.instance.aldenEquippedBoots.mainStatValue)
+                {
+                    mainStat.color = Color.white;
+                }
+                else
+                {
+                    mainStat.color = lowerValueColor;
+                }
+
+                if (item.subStatValue > GameData.instance.aldenEquippedBoots.subStatValue)
+                {
+                    subStat.color = greaterValueColor;
+                }
+                else if (item.subStatValue == GameData.instance.aldenEquippedBoots.subStatValue)
+                {
+                    subStat.color = Color.white;
+                }
+                else
+                {
+                    subStat.color = lowerValueColor;
+                }
+            }
+            // CONTINUE THIS CHAIN FOR HANDLING OTHER EQUIPMENT TYPES
         }
+        // CONTINUE THIS CHAIN FOR HANDLING OTHER CHARACTERS
     }
 
     private void LoadItemNameText()

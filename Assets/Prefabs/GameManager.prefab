@@ -47,12 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff92a41c866447144bc99dc2de57897a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aldenWeaponTest: {fileID: 11400000, guid: 208e3bef35cf16d4f9be78c1399c5d0e, type: 2}
-  aldenOffhandTest: {fileID: 11400000, guid: a253126d05a7db14b83d1ffa6e302398, type: 2}
-  aldenHeadgearTest: {fileID: 11400000, guid: ebf806139febb574293bb9492ed0e677, type: 2}
-  aldenChestpieceTest: {fileID: 0}
-  aldenLegguardsTest: {fileID: 0}
-  aldenBootsTest: {fileID: 0}
+  aldenWeaponTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
+  aldenOffhandTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
+  aldenHeadgearTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
+  aldenChestpieceTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077,
+    type: 2}
+  aldenLegguardsTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
+  aldenBootsTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
   inventoryTestItems:
   - {fileID: 11400000, guid: 69cfc23bd22576941bee049b5ff3d006, type: 2}
   - {fileID: 11400000, guid: 7aba4bace4655734f91137b35870bb93, type: 2}
@@ -61,6 +62,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 19b4a156a7ff6a8469ee32ddf994d5c3, type: 2}
   - {fileID: 11400000, guid: b40898a0f079f1e4c92d4e8ca515f7a0, type: 2}
   - {fileID: 11400000, guid: cb64eb176abd34047aaa464ae8e4cd77, type: 2}
+  - {fileID: 11400000, guid: d0553e72356e04e40a053e2562e30cd9, type: 2}
+  - {fileID: 11400000, guid: 2fd1fde08df2de746a2b4e93bf0cef2f, type: 2}
+  - {fileID: 11400000, guid: 1a1f2ee8b8c88924eb47040f9a62b0de, type: 2}
+  - {fileID: 11400000, guid: 281fcd034a0b54942b2b3b7c67f384b0, type: 2}
+  - {fileID: 11400000, guid: 20e26254e4cd9e4419d0e44e42c5384e, type: 2}
+  - {fileID: 11400000, guid: ebf806139febb574293bb9492ed0e677, type: 2}
+  - {fileID: 11400000, guid: e100e50237811a44fb463ab235385668, type: 2}
+  - {fileID: 11400000, guid: a253126d05a7db14b83d1ffa6e302398, type: 2}
+  - {fileID: 11400000, guid: 208e3bef35cf16d4f9be78c1399c5d0e, type: 2}
+  - {fileID: 11400000, guid: 90c63f65cb61dff47b4a9d744046ec46, type: 2}
+  - {fileID: 11400000, guid: 31e24dc5728d1ea4fa6a4d3b3956b9e1, type: 2}
+  - {fileID: 11400000, guid: fad4c866eb2b99c4885a7b78f85de3c2, type: 2}
 --- !u!114 &7104516352283506780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,11 +121,11 @@ MonoBehaviour:
   aldenLevel: 1
   aldenEXP: 30
   aldenEXPForNextLevel: 100
-  aldenATK: 34
+  aldenATK: 10
   aldenDEF: 5
   aldenHP: 100
   aldenMP: 100
-  aldenCR: 13
+  aldenCR: 10
   aldenCD: 100
   aldenEquippedWeapon:
     itemType: 0
