@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3850489}
   - component: {fileID: 3850488}
   m_Layer: 5
-  m_Name: CraftPreviewPanel
+  m_Name: CraftDetailsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,12 +416,12 @@ GameObject:
   - component: {fileID: 127204615}
   - component: {fileID: 127204616}
   m_Layer: 0
-  m_Name: BromundSprite
+  m_Name: BromundChar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &127204613
 Transform:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &134717149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -716,9 +716,9 @@ RectTransform:
   - {fileID: 838582636}
   m_Father: {fileID: 2082040825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -340}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150408421
@@ -1462,9 +1462,9 @@ RectTransform:
   - {fileID: 1644111142}
   m_Father: {fileID: 2082040825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -170}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319160428
@@ -1510,7 +1510,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 319160429}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnCraftButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &319160429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,7 +1577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &324657718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1831,7 +1843,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 373583037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnCraftDetailsCancelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &373583037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,9 +2563,9 @@ RectTransform:
   - {fileID: 124633490}
   m_Father: {fileID: 2082040825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -510}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454898388
@@ -4092,7 +4116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953996014
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4149,9 +4173,9 @@ RectTransform:
   - {fileID: 1122163559}
   m_Father: {fileID: 324657718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -595}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1001122188
@@ -4809,12 +4833,12 @@ GameObject:
   - component: {fileID: 1102283653}
   - component: {fileID: 1102283652}
   m_Layer: 5
-  m_Name: MerchantPanel
+  m_Name: MerchantListPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1102283651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4910,9 +4934,9 @@ RectTransform:
   - {fileID: 626758734}
   m_Father: {fileID: 324657718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -255}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104727767
@@ -5473,12 +5497,12 @@ GameObject:
   - component: {fileID: 1187726382}
   - component: {fileID: 1187726381}
   m_Layer: 5
-  m_Name: CraftPreviewPanelBlocker
+  m_Name: CraftDetailsPanelBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1187726380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5746,6 +5770,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208285239}
   m_CullTransparentMesh: 1
+--- !u!1 &1247357733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247357735}
+  - component: {fileID: 1247357734}
+  m_Layer: 0
+  m_Name: MarketMenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1247357734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247357733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45994dc08a65946419a521cf11c5932a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1247357735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247357733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -79.17246, y: 25.018185, z: 2448.8462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1275090750
 GameObject:
   m_ObjectHideFlags: 0
@@ -6263,7 +6331,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1387207801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnSwordsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1387207801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7066,6 +7146,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551185330}
   m_CullTransparentMesh: 1
+--- !u!1 &1636188390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1636188392}
+  - component: {fileID: 1636188391}
+  m_Layer: 0
+  m_Name: BlacksmithManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1636188391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636188390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbd5e3d08ba96048982b605a1052c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordsCraftItems:
+  - {fileID: 11400000, guid: d94d682ab2e16604fa6d42d395d200ed, type: 2}
+  - {fileID: 11400000, guid: 46dfab0b16cd93141958b66470059a84, type: 2}
+  shieldsCraftItems: []
+  mediumHeadgearCraftItems: []
+  mediumChestpieceCraftItems: []
+  mediumLegguardsCraftItems: []
+  mediumBootsCraftItems: []
+  bromundChar: {fileID: 127204612}
+  mainMenuPanel: {fileID: 2082040824}
+  craftOptionsPanel: {fileID: 76002889}
+  armorWeightOptionsPanel: {fileID: 2073401937}
+  armorTypeOptionsPanel: {fileID: 324657717}
+  merchantListPanel: {fileID: 1102283650}
+  itemTypeLabelText: {fileID: 1470682151}
+  merchantListContainer: {fileID: 1739885235}
+  craftListItemUI: {fileID: 638317404124252030, guid: e21caffe32f9d0a4dac9aa0199f18320,
+    type: 3}
+  purchaseListItemUI: {fileID: 0}
+  craftDetailsPanel: {fileID: 1187726379}
+  craftDetailsCraftButton: {fileID: 592637263}
+  craftItemNameText: {fileID: 2011286060}
+  craftItemIcon: {fileID: 1208285241}
+  craftItemMainStatText: {fileID: 1803577860}
+  craftItemSubStatText: {fileID: 428616113}
+  craftingMaterialObjects:
+  - {fileID: 2055303493}
+  - {fileID: 1742659915}
+  - {fileID: 134717148}
+  - {fileID: 953996013}
+  craftMaterialIcons:
+  - {fileID: 1782911489}
+  - {fileID: 1394308236}
+  - {fileID: 1444046155}
+  - {fileID: 547028696}
+  craftMaterialNames:
+  - {fileID: 1660061201}
+  - {fileID: 384197428}
+  - {fileID: 554255346}
+  - {fileID: 1763926428}
+  availableQuantityText:
+  - {fileID: 1193837101}
+  - {fileID: 2107357620}
+  - {fileID: 1406453667}
+  - {fileID: 1038799160}
+  craftingCostText: {fileID: 580713456}
+  insufficientMaterialsColor: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
+--- !u!4 &1636188392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636188390}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -79.17246, y: 25.018185, z: 2448.8462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1644111141
 GameObject:
   m_ObjectHideFlags: 0
@@ -7713,7 +7884,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000061035156}
-  m_SizeDelta: {x: 1080, y: 0}
+  m_SizeDelta: {x: 1080, y: 60}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1739885236
 MonoBehaviour:
@@ -7770,7 +7941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1742659916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8036,9 +8207,9 @@ RectTransform:
   - {fileID: 694908669}
   m_Father: {fileID: 324657718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -85}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784277713
@@ -8595,8 +8766,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: HeroesMenuManager, Assembly-CSharp
+      - m_Target: {fileID: 1247357734}
+        m_TargetAssemblyTypeName: MarketMenuManager, Assembly-CSharp
         m_MethodName: OnBackButton
         m_Mode: 1
         m_Arguments:
@@ -8679,9 +8850,9 @@ RectTransform:
   - {fileID: 1841341306}
   m_Father: {fileID: 324657718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -425}
   m_SizeDelta: {x: 650, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907775736
@@ -9322,7 +9493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2055303494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9622,7 +9793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2082040825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10054,3 +10225,5 @@ SceneRoots:
   - {fileID: 1275090753}
   - {fileID: 2144690080}
   - {fileID: 294417774}
+  - {fileID: 1247357735}
+  - {fileID: 1636188392}

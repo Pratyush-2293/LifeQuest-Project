@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ae66d86bed88a4eba4ddf560704118, type: 3}
+  m_Name: SteelSwordCraftItem
+  m_EditorClassIdentifier: 
+  unlockLevel: 1
+  itemName: Steel Sword
+  itemIcon: {fileID: 0}
+  mainStatType: 0
+  mainStatValue: 20
+  subStatType: 1
+  subStatValue: 4
+  totalMaterialTypes: 4
+  craftingMaterial1: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
+  materialQuantity1: 2
+  craftingMaterial2: {fileID: 11400000, guid: 249ef8d52c807874a912e45be07da5d0, type: 2}
+  materialQuantity2: 2
+  craftingMaterial3: {fileID: 11400000, guid: e5036cd6aec96ed419770443b7e7fbde, type: 2}
+  materialQuantity3: 2
+  craftingMaterial4: {fileID: 11400000, guid: 73231a4c7de045e48898295d9e5966b8, type: 2}
+  materialQuantity4: 2
+  craftingCost: 220
+  craftingReward: {fileID: 11400000, guid: bd55c632c148ab34db142d9e10f21f0a, type: 2}

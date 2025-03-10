@@ -14,4 +14,9 @@ public class GameHubMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("HeroesMenu");
     }
+
+    public void OnMarketButton()
+    {
+        SceneManager.LoadScene("MarketMenu");
+    }
 }
