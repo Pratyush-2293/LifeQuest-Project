@@ -120,7 +120,7 @@ MonoBehaviour:
   inventory: []
   aldenLevel: 1
   aldenEXP: 30
-  aldenEXPForNextLevel: 100
+  aldenEXPForNextLevel: 75
   aldenATK: 10
   aldenDEF: 5
   aldenHP: 100

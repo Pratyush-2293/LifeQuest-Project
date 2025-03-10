@@ -24,12 +24,12 @@ public class GameData : MonoBehaviour
     [Header("Alden's Data")]
     public int aldenLevel = 1;
     public int aldenEXP = 0;
-    public int aldenEXPForNextLevel = 100;
-    public int aldenATK = 34;
-    public int aldenDEF = 5;
-    public int aldenHP = 100;
+    public int aldenEXPForNextLevel = 75;
+    public int aldenATK = 8;
+    public int aldenDEF = 6;
+    public int aldenHP = 10;
     public int aldenMP = 100;
-    public int aldenCR = 13;
+    public int aldenCR = 10;
     public int aldenCD = 100;
     public Item aldenEquippedWeapon;
     public Item aldenEquippedOffHand;

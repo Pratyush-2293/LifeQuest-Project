@@ -45,4 +45,44 @@ public class GameManager : MonoBehaviour
         GameData.instance.aldenEquippedChestpiece = new Item(aldenChestpieceTest);
         GameData.instance.aldenEquippedLegguards = new Item(aldenLegguardsTest);
     }
+
+    [ContextMenu("Reset Alden Data")]
+    public void ResetAldenData()
+    {
+        // Only call this when alden has nothing equipped, otherwise the stats will break upon unequipping and will have to be manually set again.
+        GameData.instance.aldenLevel = 1;
+        GameData.instance.aldenEXP = 0;
+        GameData.instance.aldenEXPForNextLevel = 75;
+        GameData.instance.aldenATK = 8;
+        GameData.instance.aldenDEF = 6;
+        GameData.instance.aldenHP = 10;
+    }
+
+    [ContextMenu("Give Me EXP")]
+    public void GiveMeEXP()
+    {
+        GameData.instance.expPoints += 4000;
+    }
+
+    // Save Handling for mobile devices:
+    void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus) // App goes to background
+        {
+            SaveManager.instance.SaveGameData();
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        SaveManager.instance.SaveGameData();
+    }
+
+    void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus) // App loses focus (e.g., notification popup, switching apps)
+        {
+            SaveManager.instance.SaveGameData();
+        }
+    }
 }
