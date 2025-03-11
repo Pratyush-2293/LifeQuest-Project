@@ -50,6 +50,7 @@ public class BlacksmithManager : MonoBehaviour
 
     [Header("Crafting Menu Components")]
     [Space(5)]
+    public GameObject craftDetailsPanelParent;
     public GameObject craftDetailsPanel;
     public Button craftDetailsCraftButton;
     public TMP_Text craftItemNameText;
@@ -62,6 +63,12 @@ public class BlacksmithManager : MonoBehaviour
     public TMP_Text[] availableQuantityText = new TMP_Text[4];
     public TMP_Text craftingCostText;
     public Color insufficientMaterialsColor;
+
+    [Header("Craft Success Panel Components")]
+    [Space(5)]
+    public GameObject craftSuccessPanel;
+    public Image craftSuccessItemIcon;
+    public TMP_Text craftSuccessItemNameText;
 
     // Private Variables
     private BlacksmithCraftItemSO activeCraftItem;
@@ -318,7 +325,7 @@ public class BlacksmithManager : MonoBehaviour
         bromundChar.gameObject.SetActive(false);
 
         // Open the crafting details panel
-        craftDetailsPanel.gameObject.SetActive(true);
+        craftDetailsPanelParent.gameObject.SetActive(true);
     }
 
 
@@ -421,14 +428,68 @@ public class BlacksmithManager : MonoBehaviour
         Item craftedItem = new Item(activeCraftItem.craftingReward);
         GameData.instance.inventory.Add(craftedItem);
 
-        // Display a panel which shows 'crafting success' along with item icon and name
+        // Deducting the crafting materials required from the player's inventory
+        foreach(Item item in GameData.instance.inventory)
+        {
+            if (activeCraftItem.totalMaterialTypes >= 1)
+            {
+                if(activeCraftItem.craftingMaterial1.itemName == item.itemName)
+                {
+                    item.itemQuantity -= activeCraftItem.materialQuantity1;
+                }
+            }
 
-        // Now run a check to see if the player still has enough materials to craft the item again, if not then disable the craft button.
+            if (activeCraftItem.totalMaterialTypes >= 2)
+            {
+                if (activeCraftItem.craftingMaterial2.itemName == item.itemName)
+                {
+                    item.itemQuantity -= activeCraftItem.materialQuantity2;
+                }
+            }
+
+            if (activeCraftItem.totalMaterialTypes >= 3)
+            {
+                if (activeCraftItem.craftingMaterial3.itemName == item.itemName)
+                {
+                    item.itemQuantity -= activeCraftItem.materialQuantity3;
+                }
+            }
+
+            if (activeCraftItem.totalMaterialTypes == 4)
+            {
+                if (activeCraftItem.craftingMaterial4.itemName == item.itemName)
+                {
+                    item.itemQuantity -= activeCraftItem.materialQuantity4;
+                }
+            }
+        }
+
+        // Removing items from inventory if their quantity becomes 0
+        GameData.instance.inventory.RemoveAll(item => item.itemQuantity < 1);        // Could cause potential issues, if it doesn't operate as intended (Marked for later changes)
+
+        // Deduct the crafting cost & update it on the gold coins display
+        GameData.instance.goldCoins -= activeCraftItem.craftingCost;
+        MarketMenuManager.instance.UpdateGoldCoinsDisplay();
+
+        // Display a panel which shows 'crafting success' along with item icon and name
+        craftDetailsPanel.gameObject.SetActive(false);
+        craftSuccessPanel.gameObject.SetActive(true);
+
+        // Now load the icon and the name into the success panel
+        craftSuccessItemIcon.sprite = craftedItem.itemIcon;
+        craftSuccessItemNameText.text = craftedItem.itemName;
+    }
+
+    public void OnCraftSuccessConfirmButton()
+    {
+        craftSuccessPanel.gameObject.SetActive(false);
+        craftDetailsPanel.gameObject.SetActive(true);
+        craftDetailsPanelParent.gameObject.SetActive(false);
     }
 
     public void OnCraftDetailsCancelButton()
     {
-        craftDetailsPanel.gameObject.SetActive(false);
+        craftDetailsPanelParent.gameObject.SetActive(false);
 
         for(int i = 0; i < 4; i++)
         {

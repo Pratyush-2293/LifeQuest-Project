@@ -39,6 +39,7 @@ public class ItemSO : ScriptableObject
     [Space(5)]
     public int itemPrice = 0;
     public int unlockLevel = 1;
+    public int sellValue = 0;
 
     // Item Type Config
     public enum ItemType { None, Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor };

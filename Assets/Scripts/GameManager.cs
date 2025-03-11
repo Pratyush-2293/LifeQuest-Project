@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Save Handling for mobile devices:
+    /*
     void OnApplicationPause(bool pauseStatus)
     {
         if (pauseStatus) // App goes to background
@@ -85,4 +86,5 @@ public class GameManager : MonoBehaviour
             SaveManager.instance.SaveGameData();
         }
     }
+    */
 }
