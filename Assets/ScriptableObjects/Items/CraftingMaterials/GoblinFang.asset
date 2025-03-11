@@ -26,3 +26,5 @@ MonoBehaviour:
   mainStatValue: 0
   subStatType: 0
   subStatValue: 0
+  itemPrice: 50
+  unlockLevel: 1

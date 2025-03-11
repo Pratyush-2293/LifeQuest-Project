@@ -23,6 +23,11 @@ public class BlacksmithManager : MonoBehaviour
     public List<BlacksmithCraftItemSO> mediumLegguardsCraftItems;
     public List<BlacksmithCraftItemSO> mediumBootsCraftItems;
 
+    [Header("Materials Available For Purchase")]
+    [Space(5)]
+    public List<ItemSO> purchaseItems;
+    public List<PurchaseItemUI> purchaseItemUIs;
+
     [Header("Blacksmith Character Components")]
     [Space(5)]
     public GameObject bromundChar;
@@ -33,6 +38,7 @@ public class BlacksmithManager : MonoBehaviour
     public GameObject craftOptionsPanel;
     public GameObject armorWeightOptionsPanel;
     public GameObject armorTypeOptionsPanel;
+    public GameObject backButton;
 
     [Header("Item List Components")]
     [Space(5)]
@@ -59,6 +65,7 @@ public class BlacksmithManager : MonoBehaviour
 
     // Private Variables
     private BlacksmithCraftItemSO activeCraftItem;
+    private int currentMenuID = 1;
 
 
     private void Awake()
@@ -322,10 +329,65 @@ public class BlacksmithManager : MonoBehaviour
 
 
     // ------------------------ BUTTON FUNCTIONS ------------------------
+
+    public void OnBackButton()
+    {
+        if(currentMenuID == 2)
+        {
+            craftOptionsPanel.gameObject.SetActive(false);
+            mainMenuPanel.gameObject.SetActive(true);
+
+            backButton.gameObject.SetActive(false);
+            currentMenuID = 1;
+        }
+        else if(currentMenuID == 3)
+        {
+            armorWeightOptionsPanel.gameObject.SetActive(false);
+            craftOptionsPanel.gameObject.SetActive(true);
+            currentMenuID = 2;
+        }
+        else if(currentMenuID == 4)
+        {
+            armorTypeOptionsPanel.gameObject.SetActive(false);
+            armorWeightOptionsPanel.gameObject.SetActive(true);
+            currentMenuID = 3;
+        }
+    }
+
     public void OnCraftButton()
     {
         mainMenuPanel.gameObject.SetActive(false);
         craftOptionsPanel.gameObject.SetActive(true);
+
+        backButton.gameObject.SetActive(true);
+        currentMenuID = 2;
+    }
+
+    public void OnPurchaseButton()
+    {
+        // First we turn off bromund's sprite
+        bromundChar.gameObject.SetActive(false);
+
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // Next we instantiate all pruchasable items which are available at current level and child them to item list container
+        foreach (ItemSO purchaseItem in purchaseItems)
+        {
+            if(purchaseItem.unlockLevel <= GameData.instance.aldenLevel)
+            {
+                PurchaseItemUI purchaseItemUIObject = Instantiate(purchaseListItemUI, merchantListContainer).GetComponent<PurchaseItemUI>();
+                // Save the script reference for later use
+                purchaseItemUIs.Add(purchaseItemUIObject);
+                purchaseItemUIObject.Initialise(purchaseItem);
+            }
+        }
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Purchase Materials";
+
+        // Next we display the list with all purchasable items
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     public void OnSwordsButton()
@@ -334,13 +396,20 @@ public class BlacksmithManager : MonoBehaviour
         bromundChar.gameObject.SetActive(false);
 
         // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
 
         // Next we instantiate all craftable items of sword type which are available at current level and child them to item list container
         foreach(BlacksmithCraftItemSO swordCraftItem in swordsCraftItems)
         {
-            CraftItemUI craftItemUIObject = Instantiate(craftListItemUI, merchantListContainer).GetComponent<CraftItemUI>();
-            craftItemUIObject.Initialise(swordCraftItem);
+            if(swordCraftItem.unlockLevel <= GameData.instance.aldenLevel)
+            {
+                CraftItemUI craftItemUIObject = Instantiate(craftListItemUI, merchantListContainer).GetComponent<CraftItemUI>();
+                craftItemUIObject.Initialise(swordCraftItem);
+            }
         }
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Swords";
 
         // Next we display the list with all craftable swords
         merchantListPanel.gameObject.SetActive(true);
@@ -348,7 +417,13 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnCraftDetailsCraftButton()
     {
+        // Adding the crafted item into the player's inventory
+        Item craftedItem = new Item(activeCraftItem.craftingReward);
+        GameData.instance.inventory.Add(craftedItem);
 
+        // Display a panel which shows 'crafting success' along with item icon and name
+
+        // Now run a check to see if the player still has enough materials to craft the item again, if not then disable the craft button.
     }
 
     public void OnCraftDetailsCancelButton()
@@ -358,6 +433,14 @@ public class BlacksmithManager : MonoBehaviour
         for(int i = 0; i < 4; i++)
         {
             craftingMaterialObjects[i].gameObject.SetActive(false);
+        }
+    }
+
+    private void ClearMerchantListPanel()
+    {
+        foreach (Transform child in merchantListContainer)
+        {
+            Destroy(child.gameObject);
         }
     }
 }

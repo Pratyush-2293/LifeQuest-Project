@@ -498,6 +498,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f93513a2003654d930c725a3a257d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  itemIcon: {fileID: 2956925406065437494}
+  itemName: {fileID: 4266766721148989622}
+  itemPrice: {fileID: 1649735484537630505}
+  itemQuantity: {fileID: 7103162748310148853}
+  minusButton: {fileID: 7962871862742055185}
+  buyButton: {fileID: 5014404487024465738}
+  tooExpensiveColor: {r: 1, g: 0.38431373, b: 0.38431373, a: 1}
 --- !u!1 &2254696800816188664
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,11 +756,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 4518195883023476618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8908783495752575586}
+        m_TargetAssemblyTypeName: PurchaseItemUI, Assembly-CSharp
+        m_MethodName: OnMinusButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3071433462721451332
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +785,7 @@ GameObject:
   - component: {fileID: 8330480146556853260}
   - component: {fileID: 8046979621971854008}
   m_Layer: 5
-  m_Name: Image
+  m_Name: GoldCoinIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1102,7 +1122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1291,7 +1311,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3982784254622948434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8908783495752575586}
+        m_TargetAssemblyTypeName: PurchaseItemUI, Assembly-CSharp
+        m_MethodName: OnPlusButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9048599551954538643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,9 +1445,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CraftItemUI, Assembly-CSharp
-        m_MethodName: OnCraftButton
+      - m_Target: {fileID: 8908783495752575586}
+        m_TargetAssemblyTypeName: PurchaseItemUI, Assembly-CSharp
+        m_MethodName: OnBuyButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

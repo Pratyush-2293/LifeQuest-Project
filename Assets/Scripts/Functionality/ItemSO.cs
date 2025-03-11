@@ -35,6 +35,11 @@ public class ItemSO : ScriptableObject
     public SubStatType subStatType;
     public int subStatValue = 0;
 
+    [Header("Item Vendor Config")]
+    [Space(5)]
+    public int itemPrice = 0;
+    public int unlockLevel = 1;
+
     // Item Type Config
     public enum ItemType { None, Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor };
     public enum WeaponType { None, Sword, Staff };
