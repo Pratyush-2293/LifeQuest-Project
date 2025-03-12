@@ -26,7 +26,7 @@ public class BlacksmithManager : MonoBehaviour
     [Header("Materials Available For Purchase")]
     [Space(5)]
     public List<ItemSO> purchaseItems;
-    public List<PurchaseItemUI> purchaseItemUIs;
+    [HideInInspector] public List<PurchaseItemUI> purchaseItemUIs;
 
     [Header("Blacksmith Character Components")]
     [Space(5)]
@@ -542,22 +542,122 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnHeadgearButton()
     {
+        // First we turn off bromund's sprite
+        bromundChar.gameObject.SetActive(false);
 
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // loading list of all medium headgears
+        if (selectedWeightType == SelectedWeightType.Medium)
+        {
+            // Next we instantiate all craftable items of Headgear type which are available at current level and child them to item list container
+            foreach (BlacksmithCraftItemSO mediumHeadgearCraftItem in mediumHeadgearCraftItems)
+            {
+                if (mediumHeadgearCraftItem.unlockLevel <= GameData.instance.aldenLevel)
+                {
+                    CraftItemUI craftItemUIObject = Instantiate(craftListItemUI, merchantListContainer).GetComponent<CraftItemUI>();
+                    craftItemUIObject.Initialise(mediumHeadgearCraftItem);
+                }
+            }
+        }
+        // CONTINUE THIS CHAIN TO HANDLE OTHER WEIGHT TYPES
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Medium Headgear";
+
+        // Next we display the list with all craftable Headgear
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     public void OnChestpieceButton()
     {
+        // First we turn off bromund's sprite
+        bromundChar.gameObject.SetActive(false);
 
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // loading list of all medium Chestpiece
+        if (selectedWeightType == SelectedWeightType.Medium)
+        {
+            // Next we instantiate all craftable items of Chestpiece type which are available at current level and child them to item list container
+            foreach (BlacksmithCraftItemSO mediumChestpieceCraftItem in mediumChestpieceCraftItems)
+            {
+                if (mediumChestpieceCraftItem.unlockLevel <= GameData.instance.aldenLevel)
+                {
+                    CraftItemUI craftItemUIObject = Instantiate(craftListItemUI, merchantListContainer).GetComponent<CraftItemUI>();
+                    craftItemUIObject.Initialise(mediumChestpieceCraftItem);
+                }
+            }
+        }
+        // CONTINUE THIS CHAIN TO HANDLE OTHER WEIGHT TYPES
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Medium Chestpiece";
+
+        // Next we display the list with all craftable Chestpiece
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     public void OnLegguardsButton()
     {
+        // First we turn off bromund's sprite
+        bromundChar.gameObject.SetActive(false);
 
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // loading list of all medium Legguards
+        if (selectedWeightType == SelectedWeightType.Medium)
+        {
+            // Next we instantiate all craftable items of Legguards type which are available at current level and child them to item list container
+            foreach (BlacksmithCraftItemSO mediumLegguardsCraftItem in mediumLegguardsCraftItems)
+            {
+                if (mediumLegguardsCraftItem.unlockLevel <= GameData.instance.aldenLevel)
+                {
+                    CraftItemUI craftItemUIObject = Instantiate(craftListItemUI, merchantListContainer).GetComponent<CraftItemUI>();
+                    craftItemUIObject.Initialise(mediumLegguardsCraftItem);
+                }
+            }
+        }
+        // CONTINUE THIS CHAIN TO HANDLE OTHER WEIGHT TYPES
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Medium Legguards";
+
+        // Next we display the list with all craftable Legguards
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     public void OnBootsButton()
     {
+        // First we turn off bromund's sprite
+        bromundChar.gameObject.SetActive(false);
 
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // loading list of all medium Boots
+        if (selectedWeightType == SelectedWeightType.Medium)
+        {
+            // Next we instantiate all craftable items of Boots type which are available at current level and child them to item list container
+            foreach (BlacksmithCraftItemSO mediumBootsCraftItem in mediumBootsCraftItems)
+            {
+                if (mediumBootsCraftItem.unlockLevel <= GameData.instance.aldenLevel)
+                {
+                    CraftItemUI craftItemUIObject = Instantiate(craftListItemUI, merchantListContainer).GetComponent<CraftItemUI>();
+                    craftItemUIObject.Initialise(mediumBootsCraftItem);
+                }
+            }
+        }
+        // CONTINUE THIS CHAIN TO HANDLE OTHER WEIGHT TYPES
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Medium Boots";
+
+        // Next we display the list with all craftable Boots
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     private void ClearMerchantListPanel()

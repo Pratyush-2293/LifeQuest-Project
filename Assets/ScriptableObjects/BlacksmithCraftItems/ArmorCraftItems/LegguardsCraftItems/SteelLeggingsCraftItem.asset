@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ae66d86bed88a4eba4ddf560704118, type: 3}
-  m_Name: BronzeHelmCraftItem
+  m_Name: SteelLeggingsCraftItem
   m_EditorClassIdentifier: 
   unlockLevel: 1
-  itemName: Bronze Helm
+  itemName: Steel Leggings
   itemIcon: {fileID: 0}
   mainStatType: 1
-  mainStatValue: 10
+  mainStatValue: 50
   subStatType: 3
-  subStatValue: 2
+  subStatValue: 30
   totalMaterialTypes: 1
   craftingMaterial1: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
-  materialQuantity1: 1
+  materialQuantity1: 2
   craftingMaterial2: {fileID: 0}
   materialQuantity2: 1
   craftingMaterial3: {fileID: 0}
   materialQuantity3: 1
   craftingMaterial4: {fileID: 0}
   materialQuantity4: 1
-  craftingCost: 10
-  craftingReward: {fileID: 11400000, guid: 5ac88b3d9b0db7d4aad9631593585b18, type: 2}
+  craftingCost: 20
+  craftingReward: {fileID: 11400000, guid: 309645e4dadf27a428d5d917f5063bc2, type: 2}

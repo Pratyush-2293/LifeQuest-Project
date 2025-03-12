@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ae66d86bed88a4eba4ddf560704118, type: 3}
-  m_Name: BronzeHelmCraftItem
+  m_Name: SteelBreastplateCraftItem
   m_EditorClassIdentifier: 
   unlockLevel: 1
-  itemName: Bronze Helm
+  itemName: Steel Breastplate
   itemIcon: {fileID: 0}
   mainStatType: 1
-  mainStatValue: 10
+  mainStatValue: 80
   subStatType: 3
-  subStatValue: 2
+  subStatValue: 40
   totalMaterialTypes: 1
   craftingMaterial1: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
   materialQuantity1: 1
@@ -28,5 +28,5 @@ MonoBehaviour:
   materialQuantity3: 1
   craftingMaterial4: {fileID: 0}
   materialQuantity4: 1
-  craftingCost: 10
-  craftingReward: {fileID: 11400000, guid: 5ac88b3d9b0db7d4aad9631593585b18, type: 2}
+  craftingCost: 20
+  craftingReward: {fileID: 11400000, guid: a03cf8c2930514341ba269fe413a950a, type: 2}

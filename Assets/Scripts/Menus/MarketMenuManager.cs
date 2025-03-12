@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MarketMenuManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class MarketMenuManager : MonoBehaviour
     public TMP_Text goldCoinsDisplay;
     public GameObject merchantListPanel;
     public GameObject bromundChar;
+    public Button leftMerchantButton;
+    public Button rightMerchantButton;
+    public GameObject backButton;
 
     private void Awake()
     {

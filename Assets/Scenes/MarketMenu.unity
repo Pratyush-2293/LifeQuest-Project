@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 281242513}
   - component: {fileID: 281242512}
   m_Layer: 5
-  m_Name: CharNavPanel
+  m_Name: MerchantNavPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2818,7 +2818,7 @@ GameObject:
   - component: {fileID: 438647453}
   - component: {fileID: 438647452}
   m_Layer: 5
-  m_Name: LeftCharButton
+  m_Name: LeftMerchantButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2883,7 +2883,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 438647453}
   m_OnClick:
     m_PersistentCalls:
@@ -6213,7 +6213,7 @@ GameObject:
   - component: {fileID: 1187469512}
   - component: {fileID: 1187469511}
   m_Layer: 5
-  m_Name: RightCharButton
+  m_Name: RightMerchantButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8154,10 +8154,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d94d682ab2e16604fa6d42d395d200ed, type: 2}
   - {fileID: 11400000, guid: 46dfab0b16cd93141958b66470059a84, type: 2}
   shieldsCraftItems: []
-  mediumHeadgearCraftItems: []
-  mediumChestpieceCraftItems: []
-  mediumLegguardsCraftItems: []
-  mediumBootsCraftItems: []
+  mediumHeadgearCraftItems:
+  - {fileID: 11400000, guid: 4addaffb6d68c7741ba94756b6605dff, type: 2}
+  - {fileID: 11400000, guid: 724619fd95bb3b64eb7a2c0c3b4e4ead, type: 2}
+  mediumChestpieceCraftItems:
+  - {fileID: 11400000, guid: 31bc1a4ed374f1c408ba22f4bf03eb40, type: 2}
+  - {fileID: 11400000, guid: 8aae5eccf82bece4bae8568e29b1fb62, type: 2}
+  mediumLegguardsCraftItems:
+  - {fileID: 11400000, guid: d6618601fa2b8a64c97d65a1dad31064, type: 2}
+  - {fileID: 11400000, guid: 2baa4157865cfce4e94939117e902504, type: 2}
+  mediumBootsCraftItems:
+  - {fileID: 11400000, guid: 648e0b4dbd48e924eb320e3af0362655, type: 2}
+  - {fileID: 11400000, guid: 17319b91bf17b1943b90c232ecdb3079, type: 2}
   purchaseItems:
   - {fileID: 11400000, guid: 73231a4c7de045e48898295d9e5966b8, type: 2}
   - {fileID: 11400000, guid: 249ef8d52c807874a912e45be07da5d0, type: 2}
