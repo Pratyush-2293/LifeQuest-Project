@@ -64,6 +64,12 @@ public class GameManager : MonoBehaviour
         GameData.instance.expPoints += 4000;
     }
 
+    [ContextMenu("Remove Empty Items")]
+    public void RemoveEmptyObjectsInInventory()
+    {
+        GameData.instance.inventory.RemoveAll(item => item.itemType == Item.ItemType.None);
+    }
+
     // Save Handling for mobile devices:
     /*
     void OnApplicationPause(bool pauseStatus)

@@ -27,6 +27,8 @@ public class Item
     public SubStatType subStatType;
     public int subStatValue = 0;
 
+    public int sellValue = 0;
+
     // ------------------------- Enum Definitions -------------------------------
     // Item Type Config
     public enum ItemType { None, Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor};
@@ -60,5 +62,7 @@ public class Item
         mainStatValue = itemData.mainStatValue;
         subStatType = (SubStatType)itemData.subStatType;
         subStatValue = itemData.subStatValue;
+
+        sellValue = itemData.sellValue;
     }
 }

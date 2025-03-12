@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e154f003d8e69544b48ccb33eec32b1, type: 3}
-  m_Name: GoblinFang
+  m_Name: SteelLeggings
   m_EditorClassIdentifier: 
-  itemType: 3
+  itemType: 6
   weaponType: 0
   offhandType: 0
-  armorType: 0
-  isStackable: 1
+  armorType: 3
+  isStackable: 0
   itemQuantity: 1
   itemIcon: {fileID: 0}
-  itemName: Goblin Fang
-  itemRarity: 1
+  itemName: Steel Leggings
+  itemRarity: 0
   enhancementLevel: 0
-  mainStatType: 0
-  mainStatValue: 0
-  subStatType: 0
-  subStatValue: 0
-  itemPrice: 50
+  mainStatType: 1
+  mainStatValue: 50
+  subStatType: 3
+  subStatValue: 30
+  itemPrice: 0
   unlockLevel: 1
-  sellValue: 20
+  sellValue: 40

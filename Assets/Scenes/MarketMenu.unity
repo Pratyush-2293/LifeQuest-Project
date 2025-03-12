@@ -3045,7 +3045,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 454898389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnSellButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &454898389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3162,7 +3174,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 526449569}
   m_OnClick:
     m_PersistentCalls:
@@ -3287,7 +3299,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529098937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnMediumArmorButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &529098937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4934,7 +4958,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1001122189}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnBootsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1001122189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5695,7 +5731,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1104727768}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnChestpieceButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1104727768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8129,6 +8177,8 @@ MonoBehaviour:
     type: 3}
   purchaseListItemUI: {fileID: 638317404124252030, guid: bd80f08116e4107468390990ac4b318f,
     type: 3}
+  sellListItemUI: {fileID: 638317404124252030, guid: ecc20ebb4d52f8a42b31e86708389c70,
+    type: 3}
   craftDetailsPanelParent: {fileID: 1187726379}
   craftDetailsPanel: {fileID: 3850486}
   craftDetailsCraftButton: {fileID: 592637263}
@@ -8745,7 +8795,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1725853708}
   m_OnClick:
     m_PersistentCalls:
@@ -9194,7 +9244,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1784277714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnHeadgearButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1784277714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9849,7 +9911,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1907775737}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnLegguardsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1907775737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10485,7 +10559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2039969147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636188391}
+        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+        m_MethodName: OnArmorsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2039969147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10679,7 +10765,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2057252569}
   m_OnClick:
     m_PersistentCalls:

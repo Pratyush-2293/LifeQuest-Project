@@ -161,32 +161,50 @@ public class InventoryManager : MonoBehaviour
             {
                 if (item.itemType == Item.ItemType.Weapon)
                 {
-                    GameData.instance.inventory.Add(GameData.instance.aldenEquippedWeapon); // Add the unequipped weapon back to inventory
+                    if(GameData.instance.aldenEquippedWeapon.itemType != Item.ItemType.None)
+                    {
+                        GameData.instance.inventory.Add(GameData.instance.aldenEquippedWeapon); // Add the unequipped weapon back to inventory
+                    }
                     RemoveStats(GameData.instance.aldenEquippedWeapon);
                 }
                 else if (item.itemType == Item.ItemType.Offhand)
                 {
-                    GameData.instance.inventory.Add(GameData.instance.aldenEquippedOffHand); // Add the unequipped off hand back to inventory
+                    if(GameData.instance.aldenEquippedOffHand.itemType != Item.ItemType.None)
+                    {
+                        GameData.instance.inventory.Add(GameData.instance.aldenEquippedOffHand); // Add the unequipped off hand back to inventory
+                    }
                     RemoveStats(GameData.instance.aldenEquippedOffHand);
                 }
                 else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Headgear)
                 {
-                    GameData.instance.inventory.Add(GameData.instance.aldenEquippedHeadgear); // Add the unequipped medium headgear back to inventory
+                    if(GameData.instance.aldenEquippedHeadgear.itemType != Item.ItemType.None)
+                    {
+                        GameData.instance.inventory.Add(GameData.instance.aldenEquippedHeadgear); // Add the unequipped medium headgear back to inventory
+                    }
                     RemoveStats(GameData.instance.aldenEquippedHeadgear);
                 }
                 else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Chestpiece)
                 {
-                    GameData.instance.inventory.Add(GameData.instance.aldenEquippedChestpiece); // Add the unequipped medium Chestpiece back to inventory
+                    if(GameData.instance.aldenEquippedChestpiece.itemType != Item.ItemType.None)
+                    {
+                        GameData.instance.inventory.Add(GameData.instance.aldenEquippedChestpiece); // Add the unequipped medium Chestpiece back to inventory
+                    }
                     RemoveStats(GameData.instance.aldenEquippedChestpiece);
                 }
                 else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Legguards)
                 {
-                    GameData.instance.inventory.Add(GameData.instance.aldenEquippedLegguards); // Add the unequipped medium Legguards back to inventory
+                    if(GameData.instance.aldenEquippedLegguards.itemType != Item.ItemType.None)
+                    {
+                        GameData.instance.inventory.Add(GameData.instance.aldenEquippedLegguards); // Add the unequipped medium Legguards back to inventory
+                    }
                     RemoveStats(GameData.instance.aldenEquippedLegguards);
                 }
                 else if (item.itemType == Item.ItemType.MediumArmor && item.armorType == Item.ArmorType.Boots)
                 {
-                    GameData.instance.inventory.Add(GameData.instance.aldenEquippedBoots); // Add the unequipped medium Boots back to inventory
+                    if(GameData.instance.aldenEquippedBoots.itemType != Item.ItemType.None)
+                    {
+                        GameData.instance.inventory.Add(GameData.instance.aldenEquippedBoots); // Add the unequipped medium Boots back to inventory
+                    }
                     RemoveStats(GameData.instance.aldenEquippedBoots);
                 }
                 // CONTINUE THIS CHAIN FOR HANDLING OTHER EQUIPMENT TYPES

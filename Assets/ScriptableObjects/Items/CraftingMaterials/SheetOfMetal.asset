@@ -27,3 +27,5 @@ MonoBehaviour:
   subStatType: 0
   subStatValue: 0
   itemPrice: 20
+  unlockLevel: 1
+  sellValue: 10

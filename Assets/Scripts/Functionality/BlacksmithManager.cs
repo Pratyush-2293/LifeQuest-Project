@@ -40,13 +40,14 @@ public class BlacksmithManager : MonoBehaviour
     public GameObject armorTypeOptionsPanel;
     public GameObject backButton;
 
-    [Header("Item List Components")]
+    [Header("Merchant List Components")]
     [Space(5)]
     public GameObject merchantListPanel;
     public TMP_Text itemTypeLabelText;
     public Transform merchantListContainer;
     public GameObject craftListItemUI;
     public GameObject purchaseListItemUI;
+    public GameObject sellListItemUI;
 
     [Header("Crafting Menu Components")]
     [Space(5)]
@@ -73,6 +74,8 @@ public class BlacksmithManager : MonoBehaviour
     // Private Variables
     private BlacksmithCraftItemSO activeCraftItem;
     private int currentMenuID = 1;
+    private enum SelectedWeightType { Light, Medium, Heavy};
+    private SelectedWeightType selectedWeightType = SelectedWeightType.Medium;
 
 
     private void Awake()
@@ -397,6 +400,28 @@ public class BlacksmithManager : MonoBehaviour
         merchantListPanel.gameObject.SetActive(true);
     }
 
+    public void OnSellButton()
+    {
+        // First we turn off bromund's sprite
+        bromundChar.gameObject.SetActive(false);
+
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // Next we instantiate all items in the inventory (excluding equipped items) and child them to item list container
+        foreach (Item sellItem in GameData.instance.inventory)
+        {
+            SellItemUI sellItemUIObject = Instantiate(sellListItemUI, merchantListContainer).GetComponent<SellItemUI>();
+            sellItemUIObject.Initialise(sellItem);
+        }
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Sell Items";
+
+        // Next we display the list with all purchasable items
+        merchantListPanel.gameObject.SetActive(true);
+    }
+
     public void OnSwordsButton()
     {
         // First we turn off bromund's sprite
@@ -495,6 +520,44 @@ public class BlacksmithManager : MonoBehaviour
         {
             craftingMaterialObjects[i].gameObject.SetActive(false);
         }
+    }
+
+    public void OnArmorsButton()
+    {
+        craftOptionsPanel.gameObject.SetActive(false);
+        armorWeightOptionsPanel.gameObject.SetActive(true);
+
+        currentMenuID = 3;
+    }
+
+    public void OnMediumArmorButton()
+    {
+        selectedWeightType = SelectedWeightType.Medium;
+
+        armorWeightOptionsPanel.gameObject.SetActive(false);
+        armorTypeOptionsPanel.gameObject.SetActive(true);
+
+        currentMenuID = 4;
+    }
+
+    public void OnHeadgearButton()
+    {
+
+    }
+
+    public void OnChestpieceButton()
+    {
+
+    }
+
+    public void OnLegguardsButton()
+    {
+
+    }
+
+    public void OnBootsButton()
+    {
+
     }
 
     private void ClearMerchantListPanel()
