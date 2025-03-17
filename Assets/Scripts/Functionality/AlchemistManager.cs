@@ -56,9 +56,18 @@ public class AlchemistManager : MonoBehaviour
     public Image enhancingSuccessItemIcon;
     public TMP_Text enhancingSuccessItemNameText;
 
+    [Header("Materials Dictionary")]
+    [Space(5)]
+    public List<ItemSO> materialsList = new List<ItemSO>();
+    private Dictionary<string, ItemSO> materialDictionary = new Dictionary<string, ItemSO>();
+
     // Private Variables
     private int currentMenuID = 1;
+
     private Item activeEnhanceItem;
+    private EnhanceItemUI activeEnhanceItemUI;
+    private bool isCurrentlyEquipped = false;
+    private EnhanceItemUI.EquippedCharName currentlyEquippedCharName = EnhanceItemUI.EquippedCharName.None;
 
 
     private void Awake()
@@ -71,17 +80,25 @@ public class AlchemistManager : MonoBehaviour
         instance = this;
     }
 
-    public void OpenEnhancingDetails(Item item)
+    private void Start()
     {
-
+        foreach(var material in materialsList)
+        {
+            materialDictionary.Add(material.itemName, material);
+        }
     }
-    /*
-    public void OpenEnhancingDetails(Item enhanceItem)
-    {
-        // Save the enhanceItem to a global variable for other functions' use
-        activeEnhanceItem = enhanceItem;
 
-        // Start a material availability counter, which checks if all items are available for crafting
+    public void OpenEnhancingDetails(Item enhanceItem, bool isEquipped, EnhanceItemUI.EquippedCharName equippedCharName, EnhanceItemUI enhanceItemUI)
+    {
+        // Save the reference to enhanceItem to a global variable for other functions' use
+        activeEnhanceItem = enhanceItem;
+        activeEnhanceItemUI = enhanceItemUI;
+
+        // Save equip data to global variables
+        isCurrentlyEquipped = isEquipped;
+        currentlyEquippedCharName = equippedCharName;
+
+        // Start a material availability counter, which checks if all items are available for enhancing
         int totalMaterialsAvailable = 0;
         bool sufficientGoldAvailable = false;
 
@@ -139,34 +156,45 @@ public class AlchemistManager : MonoBehaviour
         }
         // --------------------------------------------------
 
+        // ------------- Load the enhanced main stat preview text -------------
+        enhancedItemMainStatText.text = FindEnhancedMainStatValue(activeEnhanceItem.mainStatValue).ToString();
+        bool subStatIsCritRate = false;
+        if(activeEnhanceItem.subStatType == Item.SubStatType.CR)
+        {
+            subStatIsCritRate = true;
+        }
+        enhancedItemSubStatText.text = FindEnhancedSubStatValue(activeEnhanceItem.subStatValue, subStatIsCritRate).ToString();
+
         // ------------------ Load the Material Icons, Names and Quantities ------------------
+        int enhancementLevel = enhanceItem.enhancementLevel;
+
         // Load the first material
-        if (enhanceItem.totalMaterialTypes >= 1)
+        if (enhanceItem.upgradeMaterialsList[enhancementLevel].totalMaterialTypes >= 1)
         {
             // Setting the material active
-            craftingMaterialObjects[0].gameObject.SetActive(true);
+            enhancingMaterialObjects[0].gameObject.SetActive(true);
 
             // loading the icon
-            craftMaterialIcons[0].sprite = craftItem.craftingMaterial1.itemIcon;
+            enhancingMaterialIcons[0].sprite = materialDictionary[enhanceItem.upgradeMaterialsList[enhancementLevel].materialName1].itemIcon;
 
             // loading the name
-            craftMaterialNames[0].text = craftItem.craftingMaterial1.itemName;
+            enhancingMaterialNames[0].text = enhanceItem.upgradeMaterialsList[enhancementLevel].materialName1;
 
             // loading the quanities into the name
-            craftMaterialNames[0].text += " X " + craftItem.materialQuantity1.ToString();
+            enhancingMaterialNames[0].text += " X " + enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity1.ToString();
 
             // loading the available quantities of the material from player inventory
             int availableQuantity = 0;
             foreach (Item item in GameData.instance.inventory)
             {
-                if (item.itemName == craftItem.craftingMaterial1.itemName)
+                if (item.itemName == enhanceItem.upgradeMaterialsList[enhancementLevel].materialName1)
                 {
                     availableQuantity = item.itemQuantity;
                 }
             }
             availableQuantityText[0].text = availableQuantity.ToString();
             // if available quantity is less than required, highlight it in red
-            if (availableQuantity < craftItem.materialQuantity1)
+            if (availableQuantity < enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity1)
             {
                 availableQuantityText[0].color = insufficientMaterialsColor;
             }
@@ -178,32 +206,32 @@ public class AlchemistManager : MonoBehaviour
         }
 
         // Load the second material
-        if (craftItem.totalMaterialTypes >= 2) // Load the second material
+        if (enhanceItem.upgradeMaterialsList[enhancementLevel].totalMaterialTypes >= 2)
         {
             // Setting the material active
-            craftingMaterialObjects[1].gameObject.SetActive(true);
+            enhancingMaterialObjects[1].gameObject.SetActive(true);
 
             // loading the icon
-            craftMaterialIcons[1].sprite = craftItem.craftingMaterial2.itemIcon;
+            enhancingMaterialIcons[1].sprite = materialDictionary[enhanceItem.upgradeMaterialsList[enhancementLevel].materialName2].itemIcon;
 
             // loading the name
-            craftMaterialNames[1].text = craftItem.craftingMaterial2.itemName;
+            enhancingMaterialNames[1].text = enhanceItem.upgradeMaterialsList[enhancementLevel].materialName2;
 
             // loading the quanities into the name
-            craftMaterialNames[1].text += " X " + craftItem.materialQuantity2.ToString();
+            enhancingMaterialNames[1].text += " X " + enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity2.ToString();
 
             // loading the available quantities of the material from player inventory
             int availableQuantity = 0;
             foreach (Item item in GameData.instance.inventory)
             {
-                if (item.itemName == craftItem.craftingMaterial2.itemName)
+                if (item.itemName == enhanceItem.upgradeMaterialsList[enhancementLevel].materialName2)
                 {
                     availableQuantity = item.itemQuantity;
                 }
             }
             availableQuantityText[1].text = availableQuantity.ToString();
             // if available quantity is less than required, highlight it in red
-            if (availableQuantity < craftItem.materialQuantity2)
+            if (availableQuantity < enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity2)
             {
                 availableQuantityText[1].color = insufficientMaterialsColor;
             }
@@ -215,32 +243,32 @@ public class AlchemistManager : MonoBehaviour
         }
 
         // Load the third material
-        if (craftItem.totalMaterialTypes >= 3)
+        if (enhanceItem.upgradeMaterialsList[enhancementLevel].totalMaterialTypes >= 3)
         {
             // Setting the material active
-            craftingMaterialObjects[2].gameObject.SetActive(true);
+            enhancingMaterialObjects[2].gameObject.SetActive(true);
 
             // loading the icon
-            craftMaterialIcons[2].sprite = craftItem.craftingMaterial3.itemIcon;
+            enhancingMaterialIcons[2].sprite = materialDictionary[enhanceItem.upgradeMaterialsList[enhancementLevel].materialName3].itemIcon;
 
             // loading the name
-            craftMaterialNames[2].text = craftItem.craftingMaterial3.itemName;
+            enhancingMaterialNames[2].text = enhanceItem.upgradeMaterialsList[enhancementLevel].materialName3;
 
             // loading the quanities into the name
-            craftMaterialNames[2].text += " X " + craftItem.materialQuantity3.ToString();
+            enhancingMaterialNames[2].text += " X " + enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity3.ToString();
 
             // loading the available quantities of the material from player inventory
             int availableQuantity = 0;
             foreach (Item item in GameData.instance.inventory)
             {
-                if (item.itemName == craftItem.craftingMaterial3.itemName)
+                if (item.itemName == enhanceItem.upgradeMaterialsList[enhancementLevel].materialName3)
                 {
                     availableQuantity = item.itemQuantity;
                 }
             }
             availableQuantityText[2].text = availableQuantity.ToString();
             // if available quantity is less than required, highlight it in red
-            if (availableQuantity < craftItem.materialQuantity3)
+            if (availableQuantity < enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity3)
             {
                 availableQuantityText[2].color = insufficientMaterialsColor;
             }
@@ -252,32 +280,32 @@ public class AlchemistManager : MonoBehaviour
         }
 
         // Load the fourth material
-        if (craftItem.totalMaterialTypes >= 4)
+        if (enhanceItem.upgradeMaterialsList[enhancementLevel].totalMaterialTypes >= 4)
         {
             // Setting the material active
-            craftingMaterialObjects[3].gameObject.SetActive(true);
+            enhancingMaterialObjects[3].gameObject.SetActive(true);
 
             // loading the icon
-            craftMaterialIcons[3].sprite = craftItem.craftingMaterial4.itemIcon;
+            enhancingMaterialIcons[3].sprite = materialDictionary[enhanceItem.upgradeMaterialsList[enhancementLevel].materialName4].itemIcon;
 
             // loading the name
-            craftMaterialNames[3].text = craftItem.craftingMaterial4.itemName;
+            enhancingMaterialNames[3].text = enhanceItem.upgradeMaterialsList[enhancementLevel].materialName4;
 
             // loading the quanities into the name
-            craftMaterialNames[3].text += " X " + craftItem.materialQuantity4.ToString();
+            enhancingMaterialNames[3].text += " X " + enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity4.ToString();
 
             // loading the available quantities of the material from player inventory
             int availableQuantity = 0;
             foreach (Item item in GameData.instance.inventory)
             {
-                if (item.itemName == craftItem.craftingMaterial4.itemName)
+                if (item.itemName == enhanceItem.upgradeMaterialsList[enhancementLevel].materialName4)
                 {
                     availableQuantity = item.itemQuantity;
                 }
             }
             availableQuantityText[3].text = availableQuantity.ToString();
             // if available quantity is less than required, highlight it in red
-            if (availableQuantity < craftItem.materialQuantity4)
+            if (availableQuantity < enhanceItem.upgradeMaterialsList[enhancementLevel].materialQuantity4)
             {
                 availableQuantityText[3].color = insufficientMaterialsColor;
             }
@@ -289,36 +317,36 @@ public class AlchemistManager : MonoBehaviour
         }
         // -----------------------------------------------------------------------------------
 
-        // Load the crafting cost text
-        craftingCostText.text = craftItem.craftingCost.ToString();
+        // Load the enhancing cost text
+        enhancingCostText.text = enhanceItem.upgradeMaterialsList[enhancementLevel].upgradeCost.ToString();
         // highlight the text in red if gold is insufficient
-        if (craftItem.craftingCost > GameData.instance.goldCoins)
+        if (enhanceItem.upgradeMaterialsList[enhancementLevel].upgradeCost > GameData.instance.goldCoins)
         {
-            craftingCostText.color = insufficientMaterialsColor;
+            enhancingCostText.color = insufficientMaterialsColor;
         }
         else
         {
-            craftingCostText.color = Color.white;
+            enhancingCostText.color = Color.white;
             sufficientGoldAvailable = true;
         }
 
-        // Set the craft button active if all conditions are met, else disable it
-        if (totalMaterialsAvailable == craftItem.totalMaterialTypes && sufficientGoldAvailable)
+        // Set the enhance button active if all conditions are met, else disable it
+        if (totalMaterialsAvailable == enhanceItem.upgradeMaterialsList[enhancementLevel].totalMaterialTypes && sufficientGoldAvailable)
         {
-            craftDetailsCraftButton.interactable = true;
+            enhancingDetailsEnhanceButton.interactable = true;
         }
         else
         {
-            craftDetailsCraftButton.interactable = false;
+            enhancingDetailsEnhanceButton.interactable = false;
         }
 
-        // Turn off Bromund's Character sprite
-        bromundChar.gameObject.SetActive(false);
+        // Turn off Agatha's Character sprite
+        agathaChar.gameObject.SetActive(false);
 
-        // Open the crafting details panel
-        craftDetailsPanelParent.gameObject.SetActive(true);
+        // Open the enhancing details panel
+        enhancingDetailsPanelParent.gameObject.SetActive(true);
     }
-    */
+
 
     // ------------------------ BUTTON FUNCTIONS ------------------------
 
@@ -329,6 +357,16 @@ public class AlchemistManager : MonoBehaviour
 
         backButton.gameObject.SetActive(true);
         currentMenuID = 2;
+    }
+
+    public void OnPurchaseButton()
+    {
+
+    }
+
+    public void OnSellButton()
+    {
+
     }
 
     public void OnWeaponsButton()
@@ -343,7 +381,30 @@ public class AlchemistManager : MonoBehaviour
 
         // Next we instantiate all weapon items in the inventory and also those equipped by player characters
 
-        foreach (Item enhanceItem in GameData.instance.inventory) // Adding items from inventory
+        // Adding Alden's equipped weapon to the list
+        if(GameData.instance.aldenEquippedWeapon.itemType != Item.ItemType.None) // checking if the equipped item isn't empty
+        {
+            EnhanceItemUI aldenEnhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
+            aldenEnhanceItemUIObject.Initialise(GameData.instance.aldenEquippedWeapon, true, EnhanceItemUI.EquippedCharName.Alden);
+        }
+        // ADD HANDLING FOR OTHER CHARACTERS HERE
+
+        // Adding all weapon items from inventory
+
+        // We sort the inventory list into a new list so that we can display the items with highest level at the top
+        List<Item> weaponItemsList = new List<Item>();
+        foreach (Item item in GameData.instance.inventory) 
+        {
+            if (item.itemType == Item.ItemType.Weapon)
+            {
+                weaponItemsList.Add(item);
+            }
+        }
+
+        // Sort the list to show the weapon with the highest unlock level at the top
+        weaponItemsList.Sort((a, b) => b.mainStatValue.CompareTo(a.unlockLevel));
+
+        foreach (Item enhanceItem in weaponItemsList) // Instantiate all items from the sorted weaponItemsList onto the merchant panel
         {
             EnhanceItemUI enhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
             enhanceItemUIObject.Initialise(enhanceItem, false, EnhanceItemUI.EquippedCharName.None);
@@ -354,6 +415,239 @@ public class AlchemistManager : MonoBehaviour
 
         // Next we display the list with all craftable swords
         merchantListPanel.gameObject.SetActive(true);
+    }
+
+    private int FindEnhancedMainStatValue(int originalMainStatValue)
+    {
+        int newMainStatValue = originalMainStatValue;
+
+        if (activeEnhanceItem.itemRarity == Item.ItemRarity.Common) // handling Common rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.03f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Uncommon) // handling Uncommon rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.05f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Rare) // handling Rare rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.07f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Mystic) // handling Mystic rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.10f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Epic) // handling Epic rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.12f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Legendary) // handling Legendary rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.15f));
+        }
+
+        return newMainStatValue;
+    }
+
+    private int FindEnhancedSubStatValue(int originalSubStatValue, bool substatIsCritRate)
+    {
+        int newSubStatValue = originalSubStatValue;
+
+        if (activeEnhanceItem.itemRarity == Item.ItemRarity.Common) // handling Common rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.03f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Uncommon) // handling Uncommon rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.05f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Rare) // handling Rare rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.07f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Mystic) // handling Mystic rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.10f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Epic) // handling Epic rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.12f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Legendary) // handling Legendary rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.15f));
+            }
+        }
+
+        return newSubStatValue;
+    }
+
+    public void OnEnhancingDetailsEnhanceButton()
+    {
+        // Changing the equipment's stats to the new, enhanced stats:
+
+        // We keep a copy of the base values for reference
+        int originalMainStatValue = activeEnhanceItem.mainStatValue;
+        int originalSubStatValue = activeEnhanceItem.subStatValue;
+
+        // We create variables to hold new values
+        bool substatIsCritRate = false;
+        if(activeEnhanceItem.subStatType == Item.SubStatType.CR)
+        {
+            substatIsCritRate = true;
+        }
+
+        int newMainStatValue = originalMainStatValue;
+        int newSubStatValue = originalSubStatValue;
+
+        // next, we check the equipment's rarity and then enhance it's values by the tier's step multiplier to get new, upgraded values.
+        // Note: if the stat is crit rate, we do not modify it and let it remain static.
+
+        newMainStatValue = FindEnhancedMainStatValue(originalMainStatValue);
+        newSubStatValue = FindEnhancedSubStatValue(originalSubStatValue, substatIsCritRate);
+
+        // Update the item with the new stats
+        activeEnhanceItem.mainStatValue = newMainStatValue;
+        activeEnhanceItem.subStatValue = newSubStatValue;
+
+        // If the item was equipped, then we also need to modify the character's stats who equipped it
+        if (isCurrentlyEquipped)
+        {
+            if(currentlyEquippedCharName == EnhanceItemUI.EquippedCharName.Alden) // Handling for alden
+            {
+                // we must first subtract the weapon's previous value from it's new value to find the difference in stats (the stat increase value)
+                int mainStatDifference = newMainStatValue - originalMainStatValue;
+                int subStatDifference = newSubStatValue - originalSubStatValue;
+
+                // we then add this stat increase value to the equipping character's stats
+
+                // Adding Main Stat values
+                if (activeEnhanceItem.mainStatType == Item.MainStatType.ATK)
+                {
+                    GameData.instance.aldenATK += mainStatDifference;
+                }
+                else
+                {
+                    GameData.instance.aldenDEF += mainStatDifference;
+                }
+
+                // Adding sub stat values
+                if(activeEnhanceItem.subStatType == Item.SubStatType.ATK)
+                {
+                    GameData.instance.aldenATK += subStatDifference;
+                }
+                else if(activeEnhanceItem.subStatType == Item.SubStatType.CD)
+                {
+                    GameData.instance.aldenCD += subStatDifference;
+                }
+                else if (activeEnhanceItem.subStatType == Item.SubStatType.DEF)
+                {
+                    GameData.instance.aldenDEF += subStatDifference;
+                }
+                else if (activeEnhanceItem.subStatType == Item.SubStatType.MP)
+                {
+                    GameData.instance.aldenMP += subStatDifference;
+                }
+            }
+            // CONTINUE THIS CHAIN TO HANDLE OTHER CHARACTERS
+        }
+
+        // Deducting the enhancing materials required from the player's inventory
+        foreach (Item item in GameData.instance.inventory)
+        {
+            if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].totalMaterialTypes >= 1)
+            {
+                if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialName1 == item.itemName)
+                {
+                    item.itemQuantity -= activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialQuantity1;
+                }
+            }
+
+            if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].totalMaterialTypes >= 2)
+            {
+                if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialName2 == item.itemName)
+                {
+                    item.itemQuantity -= activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialQuantity2;
+                }
+            }
+
+            if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].totalMaterialTypes >= 3)
+            {
+                if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialName3 == item.itemName)
+                {
+                    item.itemQuantity -= activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialQuantity3;
+                }
+            }
+
+            if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].totalMaterialTypes == 4)
+            {
+                if (activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialName4 == item.itemName)
+                {
+                    item.itemQuantity -= activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].materialQuantity4;
+                }
+            }
+        }
+
+        // Deduct the crafting cost & update it on the gold coins display
+        GameData.instance.goldCoins -= activeEnhanceItem.upgradeMaterialsList[activeEnhanceItem.enhancementLevel].upgradeCost;
+        MarketMenuManager.instance.UpdateGoldCoinsDisplay();
+
+        // Increment the equipment's enhancement level
+        activeEnhanceItem.enhancementLevel++;
+
+        // Display a panel which shows 'Enhancement success' along with item icon and name
+        enhancingDetailsPanel.gameObject.SetActive(false);
+        enhancingSuccessPanel.gameObject.SetActive(true);
+
+        // Now load the icon and the name into the success panel
+        enhancingSuccessItemIcon.sprite = activeEnhanceItem.itemIcon;
+        enhancingSuccessItemNameText.text = activeEnhanceItem.itemName;
+
+        // Update the enhance item in the merchant list to enable or disable it's enhance button
+        activeEnhanceItemUI.UpdateEnhanceButtonActive();
+
+        // Save the changes
+    }
+
+    public void OnBackButton()
+    {
+        if (currentMenuID == 2)
+        {
+            enhanceOptionsPanel.gameObject.SetActive(false);
+            mainMenuPanel.gameObject.SetActive(true);
+
+            backButton.gameObject.SetActive(false);
+            currentMenuID = 1;
+        }
     }
 
     private void ClearMerchantListPanel()

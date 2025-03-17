@@ -54,6 +54,7 @@ MonoBehaviour:
     type: 2}
   aldenLegguardsTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
   aldenBootsTest: {fileID: 11400000, guid: 2a74d6091725fee4d830512e42d16077, type: 2}
+  addTestItem: {fileID: 11400000, guid: 16659b21df6ac684985cd61b083a885c, type: 2}
   inventoryTestItems:
   - {fileID: 11400000, guid: 69cfc23bd22576941bee049b5ff3d006, type: 2}
   - {fileID: 11400000, guid: 7aba4bace4655734f91137b35870bb93, type: 2}
@@ -142,6 +143,9 @@ MonoBehaviour:
     mainStatValue: 0
     subStatType: 0
     subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []
   aldenEquippedOffHand:
     itemType: 0
     weaponType: 0
@@ -157,6 +161,9 @@ MonoBehaviour:
     mainStatValue: 0
     subStatType: 0
     subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []
   aldenEquippedHeadgear:
     itemType: 0
     weaponType: 0
@@ -172,6 +179,9 @@ MonoBehaviour:
     mainStatValue: 0
     subStatType: 0
     subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []
   aldenEquippedChestpiece:
     itemType: 0
     weaponType: 0
@@ -187,6 +197,9 @@ MonoBehaviour:
     mainStatValue: 0
     subStatType: 0
     subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []
   aldenEquippedLegguards:
     itemType: 0
     weaponType: 0
@@ -202,6 +215,9 @@ MonoBehaviour:
     mainStatValue: 0
     subStatType: 0
     subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []
   aldenEquippedBoots:
     itemType: 0
     weaponType: 0
@@ -217,3 +233,6 @@ MonoBehaviour:
     mainStatValue: 0
     subStatType: 0
     subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []

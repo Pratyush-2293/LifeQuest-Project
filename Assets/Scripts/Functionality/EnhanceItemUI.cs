@@ -6,7 +6,7 @@ using TMPro;
 
 public class EnhanceItemUI : MonoBehaviour
 {
-    public Item item;
+    [HideInInspector] public Item item;
 
     public Image itemIcon = null;
     public Image equippedCharIcon = null;
@@ -22,6 +22,9 @@ public class EnhanceItemUI : MonoBehaviour
     public Color greaterValueColor;
     public Color lowerValueColor;
 
+    public Button enhanceButton;
+    public TMP_Text enhanceButtonText;
+
     public enum EquippedCharName { None, Alden, Valric, Osmir, Assassin};
     public EquippedCharName currentEquippedCharName = EquippedCharName.None;
 
@@ -31,6 +34,7 @@ public class EnhanceItemUI : MonoBehaviour
     {
         item = itemData;
         isCurrentlyEquipped = isEquipped;
+        currentEquippedCharName = equippedCharName;
 
         // Load the item's icon onto the UI
         if (item.itemIcon != null)
@@ -115,11 +119,23 @@ public class EnhanceItemUI : MonoBehaviour
 
         // Load the item's sub stat on the UI
         LoadSubStatText();
+
+        // Disable the enhance button and change it's text to 'max' if item is already at +10
+        UpdateEnhanceButtonActive();
+    }
+
+    public void UpdateEnhanceButtonActive()
+    {
+        if (item.enhancementLevel == 10)
+        {
+            enhanceButton.interactable = false;
+            enhanceButtonText.text = "MAX";
+        }
     }
 
     public void OnEnhanceButton()
     {
-        AlchemistManager.instance.OpenEnhancingDetails(item);
+        AlchemistManager.instance.OpenEnhancingDetails(item, isCurrentlyEquipped, currentEquippedCharName, this);
     }
 
     private void LoadMainStatText()

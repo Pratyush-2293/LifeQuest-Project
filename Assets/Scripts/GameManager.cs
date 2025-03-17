@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public ItemSO aldenLegguardsTest;
     public ItemSO aldenBootsTest;
     [Space(5)]
+    public ItemSO addTestItem;
+    [Space(5)]
     public List<ItemSO> inventoryTestItems = new List<ItemSO>();
 
     private void Awake()
@@ -44,6 +46,12 @@ public class GameManager : MonoBehaviour
         GameData.instance.aldenEquippedHeadgear = new Item(aldenHeadgearTest);
         GameData.instance.aldenEquippedChestpiece = new Item(aldenChestpieceTest);
         GameData.instance.aldenEquippedLegguards = new Item(aldenLegguardsTest);
+    }
+
+    [ContextMenu("Add Test Item")]
+    public void AddTestItem()
+    {
+        GameData.instance.inventory.Add(new Item(addTestItem));
     }
 
     [ContextMenu("Reset Alden Data")]

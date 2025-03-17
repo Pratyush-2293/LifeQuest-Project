@@ -41,6 +41,10 @@ public class ItemSO : ScriptableObject
     public int unlockLevel = 1;
     public int sellValue = 0;
 
+    [Header("Item Upgrade Config")]
+    [Space(5)]
+    public RequiredUpgradeMaterials[] upgradeMaterialsList = new RequiredUpgradeMaterials[10];
+
     // Item Type Config
     public enum ItemType { None, Weapon, Offhand, Material, QuestItem, HeavyArmor, MediumArmor, LightArmor };
     public enum WeaponType { None, Sword, Staff };
@@ -51,4 +55,24 @@ public class ItemSO : ScriptableObject
     public enum ItemRarity { Common, Uncommon, Rare, Mystic, Epic, Legendary };
     public enum MainStatType { ATK, DEF };
     public enum SubStatType { None, CR, CD, ATK, DEF, MP };
+}
+
+[System.Serializable]
+public class RequiredUpgradeMaterials
+{
+    public int totalMaterialTypes = 1;
+
+    public string materialName1;
+    public int materialQuantity1;
+
+    public string materialName2;
+    public int materialQuantity2;
+
+    public string materialName3;
+    public int materialQuantity3;
+
+    public string materialName4;
+    public int materialQuantity4;
+
+    public int upgradeCost = 0;
 }

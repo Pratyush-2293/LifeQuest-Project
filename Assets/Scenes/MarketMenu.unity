@@ -905,9 +905,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1636188391}
-        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
-        m_MethodName: OnSwordsButton
+      - m_Target: {fileID: 1057997305}
+        m_TargetAssemblyTypeName: AlchemistManager, Assembly-CSharp
+        m_MethodName: OnWeaponsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1106,7 +1106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &127204613
 Transform:
   m_ObjectHideFlags: 0
@@ -5751,9 +5751,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1636188391}
-        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
-        m_MethodName: OnCraftButton
+      - m_Target: {fileID: 1057997305}
+        m_TargetAssemblyTypeName: AlchemistManager, Assembly-CSharp
+        m_MethodName: OnEnhanceButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6150,7 +6150,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 607592289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057997305}
+        m_TargetAssemblyTypeName: AlchemistManager, Assembly-CSharp
+        m_MethodName: OnBackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &607592289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8037,7 +8049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &897296695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9172,6 +9184,11 @@ MonoBehaviour:
   enhancingSuccessPanel: {fileID: 698968635}
   enhancingSuccessItemIcon: {fileID: 1355714143}
   enhancingSuccessItemNameText: {fileID: 683461999}
+  materialsList:
+  - {fileID: 11400000, guid: 73231a4c7de045e48898295d9e5966b8, type: 2}
+  - {fileID: 11400000, guid: 249ef8d52c807874a912e45be07da5d0, type: 2}
+  - {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
+  - {fileID: 11400000, guid: e5036cd6aec96ed419770443b7e7fbde, type: 2}
 --- !u!4 &1057997306
 Transform:
   m_ObjectHideFlags: 0
@@ -11972,8 +11989,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1636188391}
-        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+      - m_Target: {fileID: 1057997305}
+        m_TargetAssemblyTypeName: AlchemistManager, Assembly-CSharp
         m_MethodName: OnSellButton
         m_Mode: 1
         m_Arguments:
@@ -12861,7 +12878,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 902}
-  m_SizeDelta: {x: 800, y: 100}
+  m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470682151
 MonoBehaviour:
@@ -12910,8 +12927,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13587,7 +13604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1600505692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14934,8 +14951,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1636188391}
-        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+      - m_Target: {fileID: 1057997305}
+        m_TargetAssemblyTypeName: AlchemistManager, Assembly-CSharp
         m_MethodName: OnPurchaseButton
         m_Mode: 1
         m_Arguments:
@@ -15783,7 +15800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1857555394
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16469,7 +16486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1949814890
 RectTransform:
   m_ObjectHideFlags: 0

@@ -228,6 +228,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0761d201dcf14d3489d99880c4e1f873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item:
+    itemType: 0
+    weaponType: 0
+    offhandType: 0
+    armorType: 0
+    isStackable: 0
+    itemQuantity: 0
+    itemIcon: {fileID: 0}
+    itemName: 
+    itemRarity: 0
+    enhancementLevel: 0
+    mainStatType: 0
+    mainStatValue: 0
+    subStatType: 0
+    subStatValue: 0
+    unlockLevel: 0
+    sellValue: 0
+    upgradeMaterialsList: []
+  itemIcon: {fileID: 2956925406065437494}
+  equippedCharIcon: {fileID: 236125784874061506}
+  itemName: {fileID: 4266766721148989622}
+  mainStat: {fileID: 4247435040805606638}
+  subStat: {fileID: 1125213987745616228}
+  aldenEquippedSprite: {fileID: 0}
+  valricEquippedSprite: {fileID: 0}
+  osmirEquippedSprite: {fileID: 0}
+  assassinEquippedSprite: {fileID: 0}
+  greaterValueColor: {r: 0.47058824, g: 1, b: 0.38039216, a: 0}
+  lowerValueColor: {r: 1, g: 0.38431373, b: 0.38431373, a: 0}
+  enhanceButton: {fileID: 5014404487024465738}
+  enhanceButtonText: {fileID: 8113744062230934572}
+  currentEquippedCharName: 0
 --- !u!1 &911699253702331109
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,9 +933,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CraftItemUI, Assembly-CSharp
-        m_MethodName: OnCraftButton
+      - m_Target: {fileID: 7522528333156181023}
+        m_TargetAssemblyTypeName: EnhanceItemUI, Assembly-CSharp
+        m_MethodName: OnEnhanceButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -27,7 +27,10 @@ public class Item
     public SubStatType subStatType;
     public int subStatValue = 0;
 
+    public int unlockLevel = 1;
     public int sellValue = 0;
+
+    public RequiredUpgradeMaterials[] upgradeMaterialsList = new RequiredUpgradeMaterials[10];
 
     // ------------------------- Enum Definitions -------------------------------
     // Item Type Config
@@ -63,6 +66,9 @@ public class Item
         subStatType = (SubStatType)itemData.subStatType;
         subStatValue = itemData.subStatValue;
 
+        unlockLevel = itemData.unlockLevel;
         sellValue = itemData.sellValue;
+
+        upgradeMaterialsList = itemData.upgradeMaterialsList;
     }
 }
