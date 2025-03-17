@@ -89,7 +89,43 @@ public class EnhanceItemUI : MonoBehaviour
         }
 
         // Add the item's rarity label to the name
-        if(item.itemRarity == Item.ItemRarity.Common)
+        AddItemRarityLabel();
+
+        // Load the item's main stat on the UI
+        LoadMainStatText();
+
+        // Load the item's sub stat on the UI
+        LoadSubStatText();
+
+        // Disable the enhance button and change it's text to 'max' if item is already at +10
+        UpdateEnhanceButtonActive();
+    }
+
+    public void UpdateEnhanceButtonActive()
+    {
+        if (item.enhancementLevel == 10)
+        {
+            enhanceButton.interactable = false;
+            enhanceButtonText.text = "MAX";
+        }
+    }
+
+    public void UpdateUI()
+    {
+        itemName.text = item.itemName + " +" + item.enhancementLevel.ToString();
+        AddItemRarityLabel();
+        LoadMainStatText();
+        LoadSubStatText();
+    }
+
+    public void OnEnhanceButton()
+    {
+        AlchemistManager.instance.OpenEnhancingDetails(item, isCurrentlyEquipped, currentEquippedCharName, this);
+    }
+
+    private void AddItemRarityLabel()
+    {
+        if (item.itemRarity == Item.ItemRarity.Common)
         {
             itemName.text += " (Common)";
         }
@@ -113,29 +149,6 @@ public class EnhanceItemUI : MonoBehaviour
         {
             itemName.text += " (Legendary)";
         }
-
-        // Load the item's main stat on the UI
-        LoadMainStatText();
-
-        // Load the item's sub stat on the UI
-        LoadSubStatText();
-
-        // Disable the enhance button and change it's text to 'max' if item is already at +10
-        UpdateEnhanceButtonActive();
-    }
-
-    public void UpdateEnhanceButtonActive()
-    {
-        if (item.enhancementLevel == 10)
-        {
-            enhanceButton.interactable = false;
-            enhanceButtonText.text = "MAX";
-        }
-    }
-
-    public void OnEnhanceButton()
-    {
-        AlchemistManager.instance.OpenEnhancingDetails(item, isCurrentlyEquipped, currentEquippedCharName, this);
     }
 
     private void LoadMainStatText()

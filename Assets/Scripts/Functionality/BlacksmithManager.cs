@@ -332,12 +332,6 @@ public class BlacksmithManager : MonoBehaviour
     }
 
 
-
-
-
-
-
-
     // ------------------------ BUTTON FUNCTIONS ------------------------
 
     public void OnBackButton()

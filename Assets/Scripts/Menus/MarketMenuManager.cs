@@ -15,7 +15,8 @@ public class MarketMenuManager : MonoBehaviour
     public GameObject agathaChar;
     public Button leftMerchantButton;
     public Button rightMerchantButton;
-    public GameObject backButton;
+    public GameObject blackSmithBackButton;
+    public GameObject alchemistBackButton;
     public TMP_Text merchantNameText;
     public Sprite blacksmithShopBG;
     public Sprite alchemistShopBG;
@@ -29,6 +30,7 @@ public class MarketMenuManager : MonoBehaviour
 
     [Header("Alchemist Menus")]
     public GameObject alchemistMainMenu;
+    public GameObject alchemistEnhanceMenu;
 
     private int merchantPageNumber = 1;
 
@@ -73,12 +75,16 @@ public class MarketMenuManager : MonoBehaviour
 
             // Change the merchant BG
             backgroundImage.sprite = alchemistShopBG;
+
+            // Disable the blacksmith back button
+            blackSmithBackButton.gameObject.SetActive(false);
         }
 
         if(currentMerchantPageNumber == 2 && nextMerchantPageNumber == 1) // If current merchant is alchemist and moving to blacksmith
         {
             // turn off all menus for the alchemist
             alchemistMainMenu.gameObject.SetActive(false);
+            alchemistEnhanceMenu.gameObject.SetActive(false);
 
             // turn on the main menu for the blacksmith
             blacksmithMainMenu.gameObject.SetActive(true);
@@ -92,10 +98,10 @@ public class MarketMenuManager : MonoBehaviour
 
             // Change the merchant BG
             backgroundImage.sprite = blacksmithShopBG;
-        }
 
-        // lastly, disable the back button
-        backButton.gameObject.SetActive(false);
+            // Disable the alchemist back button
+            alchemistBackButton.gameObject.SetActive(false);
+        }
     }
 
     // -------------------------- BUTTON FUNCTIONS --------------------------
@@ -108,7 +114,14 @@ public class MarketMenuManager : MonoBehaviour
     public void OnMerchantPanelCloseButton()
     {
         merchantListPanel.gameObject.SetActive(false);
-        bromundChar.gameObject.SetActive(true);
+        if(merchantPageNumber == 1)
+        {
+            bromundChar.gameObject.SetActive(true);
+        }
+        else if(merchantPageNumber == 2)
+        {
+            agathaChar.gameObject.SetActive(true);
+        }
     }
 
     public void OnRightMerchantButton()

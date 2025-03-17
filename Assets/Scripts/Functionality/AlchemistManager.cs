@@ -103,7 +103,7 @@ public class AlchemistManager : MonoBehaviour
         bool sufficientGoldAvailable = false;
 
         // Load the data into the enhancing details panel's UI
-        enhanceItemNameText.text = enhanceItem.itemName;
+        enhanceItemNameText.text = enhanceItem.itemName + " +" + enhanceItem.enhancementLevel.ToString();
         if (enhanceItem.itemIcon != null)
         {
             enhanceItemIcon.sprite = enhanceItem.itemIcon;
@@ -361,12 +361,51 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnPurchaseButton()
     {
+        // First we turn off bromund's sprite
+        agathaChar.gameObject.SetActive(false);
 
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // Next we instantiate all pruchasable items which are available at current level and child them to item list container
+        foreach (ItemSO purchaseItem in purchaseItems)
+        {
+            if (purchaseItem.unlockLevel <= GameData.instance.aldenLevel)
+            {
+                PurchaseItemUI purchaseItemUIObject = Instantiate(purchaseListItemUI, merchantListContainer).GetComponent<PurchaseItemUI>();
+                // Save the script reference for later use
+                purchaseItemUIs.Add(purchaseItemUIObject);
+                purchaseItemUIObject.Initialise(purchaseItem);
+            }
+        }
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Purchase Materials";
+
+        // Next we display the list with all purchasable items
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     public void OnSellButton()
     {
+        // First we turn off bromund's sprite
+        agathaChar.gameObject.SetActive(false);
 
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // Next we instantiate all items in the inventory (excluding equipped items) and child them to item list container
+        foreach (Item sellItem in GameData.instance.inventory)
+        {
+            SellItemUI sellItemUIObject = Instantiate(sellListItemUI, merchantListContainer).GetComponent<SellItemUI>();
+            sellItemUIObject.Initialise(sellItem);
+        }
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Sell Items";
+
+        // Next we display the list with all purchasable items
+        merchantListPanel.gameObject.SetActive(true);
     }
 
     public void OnWeaponsButton()
@@ -417,99 +456,6 @@ public class AlchemistManager : MonoBehaviour
         merchantListPanel.gameObject.SetActive(true);
     }
 
-    private int FindEnhancedMainStatValue(int originalMainStatValue)
-    {
-        int newMainStatValue = originalMainStatValue;
-
-        if (activeEnhanceItem.itemRarity == Item.ItemRarity.Common) // handling Common rarity
-        {
-            // Enhancing main stat
-            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.03f));
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Uncommon) // handling Uncommon rarity
-        {
-            // Enhancing main stat
-            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.05f));
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Rare) // handling Rare rarity
-        {
-            // Enhancing main stat
-            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.07f));
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Mystic) // handling Mystic rarity
-        {
-            // Enhancing main stat
-            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.10f));
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Epic) // handling Epic rarity
-        {
-            // Enhancing main stat
-            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.12f));
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Legendary) // handling Legendary rarity
-        {
-            // Enhancing main stat
-            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.15f));
-        }
-
-        return newMainStatValue;
-    }
-
-    private int FindEnhancedSubStatValue(int originalSubStatValue, bool substatIsCritRate)
-    {
-        int newSubStatValue = originalSubStatValue;
-
-        if (activeEnhanceItem.itemRarity == Item.ItemRarity.Common) // handling Common rarity
-        {
-            // Enhancing sub stat
-            if (substatIsCritRate == false)
-            {
-                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.03f));
-            }
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Uncommon) // handling Uncommon rarity
-        {
-            // Enhancing sub stat
-            if (substatIsCritRate == false)
-            {
-                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.05f));
-            }
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Rare) // handling Rare rarity
-        {
-            // Enhancing sub stat
-            if (substatIsCritRate == false)
-            {
-                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.07f));
-            }
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Mystic) // handling Mystic rarity
-        {
-            // Enhancing sub stat
-            if (substatIsCritRate == false)
-            {
-                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.10f));
-            }
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Epic) // handling Epic rarity
-        {
-            // Enhancing sub stat
-            if (substatIsCritRate == false)
-            {
-                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.12f));
-            }
-        }
-        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Legendary) // handling Legendary rarity
-        {
-            // Enhancing sub stat
-            if (substatIsCritRate == false)
-            {
-                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.15f));
-            }
-        }
-
-        return newSubStatValue;
-    }
 
     public void OnEnhancingDetailsEnhanceButton()
     {
@@ -631,11 +577,32 @@ public class AlchemistManager : MonoBehaviour
         // Now load the icon and the name into the success panel
         enhancingSuccessItemIcon.sprite = activeEnhanceItem.itemIcon;
         enhancingSuccessItemNameText.text = activeEnhanceItem.itemName;
+        enhancingSuccessItemNameText.text += " +" + activeEnhanceItem.enhancementLevel.ToString();
 
         // Update the enhance item in the merchant list to enable or disable it's enhance button
         activeEnhanceItemUI.UpdateEnhanceButtonActive();
 
+        // update the name of the enhanced item in the merchant list
+        activeEnhanceItemUI.UpdateUI();
+
         // Save the changes
+    }
+
+    public void OnEnhancingDetailsCancelButton()
+    {
+        enhancingDetailsPanelParent.gameObject.SetActive(false);
+
+        for (int i = 0; i < 4; i++)
+        {
+            enhancingMaterialObjects[i].gameObject.SetActive(false);
+        }
+    }
+
+    public void OnEnhancingSuccessConfirmButton()
+    {
+        enhancingSuccessPanel.gameObject.SetActive(false);
+        enhancingDetailsPanel.gameObject.SetActive(true);
+        enhancingDetailsPanelParent.gameObject.SetActive(false);
     }
 
     public void OnBackButton()
@@ -656,5 +623,99 @@ public class AlchemistManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+
+    private int FindEnhancedMainStatValue(int originalMainStatValue)
+    {
+        int newMainStatValue = originalMainStatValue;
+
+        if (activeEnhanceItem.itemRarity == Item.ItemRarity.Common) // handling Common rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.03f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Uncommon) // handling Uncommon rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.05f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Rare) // handling Rare rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.07f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Mystic) // handling Mystic rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.10f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Epic) // handling Epic rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.12f));
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Legendary) // handling Legendary rarity
+        {
+            // Enhancing main stat
+            newMainStatValue = Mathf.CeilToInt(originalMainStatValue + (originalMainStatValue * 0.15f));
+        }
+
+        return newMainStatValue;
+    }
+
+    private int FindEnhancedSubStatValue(int originalSubStatValue, bool substatIsCritRate)
+    {
+        int newSubStatValue = originalSubStatValue;
+
+        if (activeEnhanceItem.itemRarity == Item.ItemRarity.Common) // handling Common rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.03f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Uncommon) // handling Uncommon rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.05f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Rare) // handling Rare rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.07f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Mystic) // handling Mystic rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.10f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Epic) // handling Epic rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.12f));
+            }
+        }
+        else if (activeEnhanceItem.itemRarity == Item.ItemRarity.Legendary) // handling Legendary rarity
+        {
+            // Enhancing sub stat
+            if (substatIsCritRate == false)
+            {
+                newSubStatValue = Mathf.CeilToInt(originalSubStatValue + (originalSubStatValue * 0.15f));
+            }
+        }
+
+        return newSubStatValue;
     }
 }
