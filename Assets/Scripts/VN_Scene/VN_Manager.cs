@@ -10,24 +10,41 @@ using UnityEditorInternal;
 public class VN_Manager : MonoBehaviour
 {
     [Header("Character Prefabs")]
-    public List<GameObject> characters = new List<GameObject>();
+    [Space(5)]
+    public List<Character> characters = new List<Character>();
+
     [Header("Background Sprites")]
+    [Space(5)]
     public List<Sprite> backgrounds = new List<Sprite>();
+
     [Header("SFX Audioclips")]
+    [Space(5)]
     public AudioClip buttonClickSound = null;
     public List<AudioClip> soundEffects = new List<AudioClip>();
+
     [Header("Background Musics")]
+    [Space(5)]
     public AudioClip initialBackgroundMusic = null;
     public List<AudioClip> backgroundMusic = new List<AudioClip>();
+
+    [Header("Create Dialogues:")]
+    [Space(5)]
+    public List<DialogueEntry> dialogues = new List<DialogueEntry>();
+
     [Header("Text Display Speed")]
+    [Space(5)]
     public float textSpeed = 0.01f;
+
     [Header("Typing Sound Settings")]
+    [Space(5)]
     public AudioClip[] textSounds = new AudioClip[2];
+    [Space(5)]
     public float soundPitchMin = 0.9f;
     public float soundPitchMax = 1.1f;
     public int soundInterval = 1;
 
     [Header("Plug in these components:")]
+    [Space(5)]
     public Image background = null;
     public GameObject backgroundTransition = null;
     public GameObject nextButton = null;
@@ -38,13 +55,11 @@ public class VN_Manager : MonoBehaviour
     public TMP_Text nameTabText;
     public TMP_Text dialogueBoxText = null;
 
-    [Header("Create Dialogues:")]
-    public List<DialogueEntry> dialogues = new List<DialogueEntry>();
-
     // Internal Variables
     private Animator nameTabAnimator;
     private float nextDialogue = 0;
     private int activeCharacter = -1;
+    public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
 
     public void Start()
     {
@@ -98,7 +113,7 @@ public class VN_Manager : MonoBehaviour
             }
             else
             {
-                characters[currentDialogue.character].gameObject.SetActive(true);
+                characters[currentDialogue.character].CharacterSlideIn();
             }
         }
 
@@ -113,13 +128,17 @@ public class VN_Manager : MonoBehaviour
         {
             if (currentDialogue.character != activeCharacter) // character needs to be changed
             {
-                characters[activeCharacter].gameObject.GetComponent<Animator>().SetTrigger("SlideOut");  // Removing the old active character
+                characters[activeCharacter].CharacterSlideOut();  // Removing the old active character
 
-                characters[currentDialogue.character].gameObject.SetActive(true);  //spawning in the new character after short delay
+                characters[currentDialogue.character].CharacterSlideIn();  //spawning in the new character after short delay
                 activeCharacter = currentDialogue.character;  // Refreshing the current active character
             }
         }
 
+        // Updating the character's expression
+        characters[currentDialogue.character].UpdateExpression(currentDialogue.characterExpression);
+        
+        // EDIT THIS TO AUTOMATE THE NAME TAB SLIDING
         // Moving the name tab if needed
         if (currentDialogue.tabRight == true)
         {
@@ -148,6 +167,12 @@ public class VN_Manager : MonoBehaviour
         {
             SFX_Source.clip = soundEffects[currentDialogue.SFX];
             SFX_Source.Play();
+        }
+
+        // Starting Screenshake if needed
+        if (currentDialogue.screenShake == true)
+        {
+            CameraShake.instance.StartShake(2);
         }
 
         // Changing BGM if needed
@@ -256,9 +281,11 @@ public class DialogueEntry
     [TextArea(5, 10)]
     public string dialogueText = null;
     public int character = -1;
+    public VN_Manager.Expression characterExpression;
     public int background = -1;
     public int SFX = -1;
     public int BGM = -1;
+    public bool screenShake = false;
     public bool tabRight = false;
     public bool tabLeft = false;
     public bool lastDialogue = false;
