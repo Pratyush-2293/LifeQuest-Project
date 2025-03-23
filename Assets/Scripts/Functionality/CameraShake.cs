@@ -6,6 +6,8 @@ public class CameraShake : MonoBehaviour
 {
     public static CameraShake instance = null;
 
+    public Transform uiShakeTarget; // Assign this in UI-only scenes
+
     [Header("Light Shake Settings")]
     public float lightDuration = 0.0f;
     public float lightMagnitude = 0.0f;
@@ -28,39 +30,36 @@ public class CameraShake : MonoBehaviour
         instance = this;
     }
 
-    public void StartShake(int shakeStrengthLevel)
+    public void StartShake(int shakeStrengthLevel, bool isUIShake = false)
     {
-        if(shakeStrengthLevel == 0)
-        {
-            StartCoroutine(Shake(lightDuration, lightMagnitude));
-        }
-        else if(shakeStrengthLevel == 1)
-        {
-            StartCoroutine(Shake(mediumDuration, mediumMagnitude));
-        }
-        else if(shakeStrengthLevel == 2)
-        {
-            StartCoroutine(Shake(strongDuration, strongMagnitude));
-        }
+        float duration = 0f, magnitude = 0f;
+
+        if (shakeStrengthLevel == 0) { duration = lightDuration; magnitude = lightMagnitude; }
+        else if (shakeStrengthLevel == 1) { duration = mediumDuration; magnitude = mediumMagnitude; }
+        else if (shakeStrengthLevel == 2) { duration = strongDuration; magnitude = strongMagnitude; }
+
+        if (isUIShake && uiShakeTarget != null)
+            StartCoroutine(Shake(uiShakeTarget, duration, magnitude));
+        else
+            StartCoroutine(Shake(transform, duration, magnitude));
     }
 
-    private IEnumerator Shake(float duration, float magnitude)
+    private IEnumerator Shake(Transform target, float duration, float magnitude)
     {
-        Vector3 originalPos = transform.localPosition;
-
+        Vector3 originalPos = target.localPosition;
         float elapsedTime = 0.0f;
 
-        while(elapsedTime < duration)
+        while (elapsedTime < duration)
         {
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            transform.localPosition = new Vector3(x, y, originalPos.z);
+            target.localPosition = new Vector3(x, y, originalPos.z);
             elapsedTime += Time.deltaTime;
 
             yield return null;
         }
 
-        transform.localPosition = originalPos;
+        target.localPosition = originalPos;
     }
 }

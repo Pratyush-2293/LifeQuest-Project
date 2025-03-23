@@ -6,6 +6,7 @@ using TMPro;
 using System;
 using UnityEditor;
 using UnityEditorInternal;
+using UnityEngine.SceneManagement;
 
 public class VN_Manager : MonoBehaviour
 {
@@ -54,11 +55,14 @@ public class VN_Manager : MonoBehaviour
     public GameObject nameTab = null;
     public TMP_Text nameTabText;
     public TMP_Text dialogueBoxText = null;
+    public LevelCompleteManager levelCompleteManager;
 
     // Internal Variables
     private Animator nameTabAnimator;
     private float nextDialogue = 0;
     private int activeCharacter = -1;
+    private bool dialoguesFinished = false;
+    private string combatSceneName = "";
     public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
 
     public void Start()
@@ -81,6 +85,20 @@ public class VN_Manager : MonoBehaviour
 
     public IEnumerator UpdateSceneData()
     {
+        // Check if dialogues are finished & load appropriate scene
+        if(dialoguesFinished == true)
+        {
+            if(combatSceneName != "")
+            {
+                SceneManager.LoadScene(combatSceneName);
+            }
+            else
+            {
+                levelCompleteManager.LoadLevelCompletePanel();
+            }
+            yield break;
+        }
+
         // Play button clicked SFX
         SFX_Source.clip = buttonClickSound;
         SFX_Source.Play();
@@ -107,13 +125,20 @@ public class VN_Manager : MonoBehaviour
         // Making the active character slide into frame
         if (currentDialogue != null && currentDialogue.character != -1)
         {
-            if (currentDialogue.background != -1)
+            if(currentDialogue.dialogueID == 0)
             {
-                StartCoroutine(SlideAfterTransition(currentDialogue));
+                characters[currentDialogue.character].CharacterSlideInstant();
             }
             else
             {
-                characters[currentDialogue.character].CharacterSlideIn();
+                if (currentDialogue.background != -1)
+                {
+                    StartCoroutine(SlideAfterTransition(currentDialogue));
+                }
+                else
+                {
+                    characters[currentDialogue.character].CharacterSlideIn();
+                }
             }
         }
 
@@ -172,7 +197,7 @@ public class VN_Manager : MonoBehaviour
         // Starting Screenshake if needed
         if (currentDialogue.screenShake == true)
         {
-            CameraShake.instance.StartShake(2);
+            CameraShake.instance.StartShake(2, true);
         }
 
         // Changing BGM if needed
@@ -183,6 +208,13 @@ public class VN_Manager : MonoBehaviour
 
         // Moving to next dialogue
         nextDialogue = currentDialogue.nextDialogue;
+
+        // Check if this was the last scene
+        if(currentDialogue.lastDialogue == true)
+        {
+            dialoguesFinished = true;
+            combatSceneName = currentDialogue.loadCombat;
+        }
     }
 
     public IEnumerator BGMFadeTransition(int BGM_Index)

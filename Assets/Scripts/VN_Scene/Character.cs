@@ -48,6 +48,11 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void CharacterSlideInstant()
+    {
+        characterAnimator.SetTrigger("SlideInstant");
+    }
+
     public void CharacterSlideIn()
     {
         if (isLeftCharacter)
