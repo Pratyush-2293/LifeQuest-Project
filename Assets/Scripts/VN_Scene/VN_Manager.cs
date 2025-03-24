@@ -55,12 +55,19 @@ public class VN_Manager : MonoBehaviour
     public GameObject nameTab = null;
     public TMP_Text nameTabText;
     public TMP_Text dialogueBoxText = null;
+    public GameObject dialogueOptionsPanel;
+    public GameObject[] optionButtons = new GameObject[4];
+    public TMP_Text[] optionButtonTexts = new TMP_Text[4];
     public LevelCompleteManager levelCompleteManager;
 
     // Internal Variables
+    private DialogueEntry currentDialogue = null;
     private Animator nameTabAnimator;
     private float nextDialogue = 0;
     private int activeCharacter = -1;
+    private bool nameTabAtLeft = true;
+    private bool tabMoving = false;
+    public int[] dialogueOptionPointers = new int[4];
     private bool dialoguesFinished = false;
     private string combatSceneName = "";
     public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
@@ -78,15 +85,10 @@ public class VN_Manager : MonoBehaviour
         nameTabAnimator = nameTab.gameObject.GetComponent<Animator>();
     }
 
-    public void OnNextButton() // Loads the scene with the next dialogue's data.
-    {
-        StartCoroutine(UpdateSceneData());
-    }
-
-    public IEnumerator UpdateSceneData()
+    public IEnumerator UpdateSceneData(bool calledFromOptions = false)
     {
         // Check if dialogues are finished & load appropriate scene
-        if(dialoguesFinished == true)
+        if (dialoguesFinished == true)
         {
             if(combatSceneName != "")
             {
@@ -104,41 +106,51 @@ public class VN_Manager : MonoBehaviour
         SFX_Source.Play();
 
         // Fetching the appropriate dialogue data for next step
-        DialogueEntry currentDialogue = null;
-        for (int i = 0; i < dialogues.Count; i++)
+        if (calledFromOptions == false)
         {
-            if (dialogues[i].dialogueID == nextDialogue)
+            for (int i = 0; i < dialogues.Count; i++)
             {
-                currentDialogue = dialogues[i];
-                break;
+                if (dialogues[i].dialogueID == nextDialogue)
+                {
+                    currentDialogue = dialogues[i];
+                    break;
+                }
             }
+        }
+
+        // Check if this is an options dialogue & load appropriate options
+        if (currentDialogue.showOptions == true)
+        {
+            dialogueOptionsPanel.gameObject.SetActive(true);
+            dialogueOptionPointers = currentDialogue.optionPointers;
+
+            for(int i = 0; i < currentDialogue.numberOfOptions; i++)
+            {
+                optionButtons[i].gameObject.SetActive(true);
+                optionButtonTexts[i].text = currentDialogue.optionTexts[i];
+            }
+
+            dialogueBoxText.gameObject.SetActive(false);
+            nextButton.gameObject.SetActive(false);
+
+            yield break;
         }
 
         // Checking if BG transition is needed; -1 = Not Needed.
         if (currentDialogue != null && currentDialogue.background != -1)
         {
             StartCoroutine(SwapBackground(currentDialogue.background));
+            characters[activeCharacter].CharacterSlideOut();
             nextButton.gameObject.SetActive(false);                                 // to prevent user from skipping dialogue mid transition
             yield return new WaitForSeconds(1.5f);
         }
 
-        // Making the active character slide into frame
+        // Making the first dialogue character slide into frame
         if (currentDialogue != null && currentDialogue.character != -1)
         {
             if(currentDialogue.dialogueID == 0)
             {
                 characters[currentDialogue.character].CharacterSlideInstant();
-            }
-            else
-            {
-                if (currentDialogue.background != -1)
-                {
-                    StartCoroutine(SlideAfterTransition(currentDialogue));
-                }
-                else
-                {
-                    characters[currentDialogue.character].CharacterSlideIn();
-                }
             }
         }
 
@@ -153,7 +165,10 @@ public class VN_Manager : MonoBehaviour
         {
             if (currentDialogue.character != activeCharacter) // character needs to be changed
             {
-                characters[activeCharacter].CharacterSlideOut();  // Removing the old active character
+                if(currentDialogue.background == -1)
+                {
+                    characters[activeCharacter].CharacterSlideOut();  // Removing the old active character
+                }
 
                 characters[currentDialogue.character].CharacterSlideIn();  //spawning in the new character after short delay
                 activeCharacter = currentDialogue.character;  // Refreshing the current active character
@@ -161,23 +176,37 @@ public class VN_Manager : MonoBehaviour
         }
 
         // Updating the character's expression
-        characters[currentDialogue.character].UpdateExpression(currentDialogue.characterExpression);
+        characters[activeCharacter].UpdateExpression(currentDialogue.characterExpression);
         
-        // EDIT THIS TO AUTOMATE THE NAME TAB SLIDING
-        // Moving the name tab if needed
-        if (currentDialogue.tabRight == true)
+
+        // Moving the name tab to right if a right character has become active
+        if(characters[activeCharacter].isLeftCharacter == false)
         {
-            nameTabAnimator.SetTrigger("MoveRight");
+            if(nameTabAtLeft == true)
+            {
+                nameTabAnimator.SetTrigger("MoveRight");
+                nameTabAtLeft = false;
+
+                tabMoving = true;
+            }
         }
-        if (currentDialogue.tabLeft == true)
+        // Moving the name tab to left if a left character has become active
+        if (characters[activeCharacter].isLeftCharacter == true)
         {
-            nameTabAnimator.SetTrigger("MoveLeft");
+            if(nameTabAtLeft == false)
+            {
+                nameTabAnimator.SetTrigger("MoveLeft");
+                nameTabAtLeft = true;
+
+                tabMoving = true;
+            }
         }
 
         // Inserting the character name in the name tab
-        if (currentDialogue.tabLeft == true || currentDialogue.tabRight == true)
+        if (tabMoving == true)
         {
             StartCoroutine(InsertCharacterName(currentDialogue.characterName));   // with delay when name tab moves
+            tabMoving = false;
         }
         else
         {
@@ -292,6 +321,34 @@ public class VN_Manager : MonoBehaviour
         characters[currentDialogue.character].gameObject.SetActive(true);
     }
 
+    private void HandleOptionButtonAction(int buttonID)
+    {
+        // Play button click sound
+        SFX_Source.clip = buttonClickSound;
+        SFX_Source.Play();
+
+        // Turn on the dialogue box
+        dialogueBoxText.gameObject.SetActive(true);
+
+        // Turn on the next button
+        nextButton.SetActive(true);
+
+        // Change the current dialogue according to the assigned pointer of the button
+        currentDialogue = dialogues[dialogueOptionPointers[buttonID]];
+
+        // Update the scene with the new dialogue
+        StartCoroutine(UpdateSceneData(true));
+
+        // Turn off all the option buttons
+        foreach (GameObject optionButton in optionButtons)
+        {
+            optionButton.gameObject.SetActive(false);
+        }
+
+        // Close the options panel
+        dialogueOptionsPanel.gameObject.SetActive(false);
+    }
+
     [ContextMenu("Auto Index")]
     public void AutoIndexDialogues()
     {
@@ -301,6 +358,33 @@ public class VN_Manager : MonoBehaviour
             dialogues[i].nextDialogue = i + 1;
         }
     }
+
+    // -------------------------- BUTTON FUNCTIONS --------------------------
+
+    public void OnNextButton() // Loads the scene with the next dialogue's data.
+    {
+        StartCoroutine(UpdateSceneData());
+    }
+
+    public void OnOption1Button()
+    {
+        HandleOptionButtonAction(0);
+    }
+
+    public void OnOption2Button()
+    {
+        HandleOptionButtonAction(1);
+    }
+
+    public void OnOption3Button()
+    {
+        HandleOptionButtonAction(2);
+    }
+
+    public void OnOption4Button()
+    {
+        HandleOptionButtonAction(3);
+    }
 }
 
 [Serializable] 
@@ -308,6 +392,11 @@ public class DialogueEntry
 {
     public float dialogueID = -1;
     public float nextDialogue = -1;
+    public bool showOptions = false;
+    [Range(0,4)]
+    public int numberOfOptions = 0;
+    public string[] optionTexts = new string[4];
+    public int[] optionPointers = new int[4];
     [TextArea(1, 5)]
     public string characterName = null;
     [TextArea(5, 10)]
@@ -318,8 +407,6 @@ public class DialogueEntry
     public int SFX = -1;
     public int BGM = -1;
     public bool screenShake = false;
-    public bool tabRight = false;
-    public bool tabLeft = false;
     public bool lastDialogue = false;
     [TextArea(1, 5)]
     public String loadCombat = null;
