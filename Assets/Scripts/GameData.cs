@@ -17,6 +17,7 @@ public class GameData : MonoBehaviour
     public int maxCompletedLevel = 1;
     public int maxUnlockedLevel = 1;
     public int maxAvailableLevel = 2;
+    public float levelViewedID = 0f;
 
     [Header("Inventory")]
     public List<Item> inventory = new List<Item>();
@@ -74,6 +75,7 @@ public class GameData : MonoBehaviour
             maxCompletedLevel = maxCompletedLevel,
             maxUnlockedLevel = maxUnlockedLevel,
             maxAvailableLevel = maxAvailableLevel,
+            levelViewedID = levelViewedID,
             inventory = inventory,
 
             aldenLevel = aldenLevel,
@@ -105,6 +107,7 @@ public class GameData : MonoBehaviour
         maxCompletedLevel = data.maxCompletedLevel;
         maxUnlockedLevel = data.maxUnlockedLevel;
         maxAvailableLevel = data.maxAvailableLevel;
+        levelViewedID = data.levelViewedID;
         inventory = data.inventory;
 
         aldenLevel = data.aldenLevel;
@@ -137,6 +140,7 @@ public class GameDataSave
     public int maxCompletedLevel;
     public int maxUnlockedLevel;
     public int maxAvailableLevel;
+    public float levelViewedID;
     public List<Item> inventory;
 
     // Alden's Data

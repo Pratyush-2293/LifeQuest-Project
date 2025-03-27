@@ -31,13 +31,14 @@ public class LevelCompleteManager : MonoBehaviour
 
     [Header("Level Complete Panel Components")]
     [Space(5)]
+    public GameObject[] rewardItemsUI = new GameObject[5];
     public Image[] rewardIconDisplay = new Image[3];
     public TMP_Text[] rewardNamesDisplay = new TMP_Text[5];
     [Space(10)]
     public Animator levelCompletePanelAnimator;
     public GameObject touchBlockerPanel;
 
-    public void LoadLevelCompletePanel()
+    public void LoadLevelCompletePanel(bool completingFirstTime)
     {
         // turn on the touch blocker
         touchBlockerPanel.gameObject.SetActive(true);
@@ -45,56 +46,57 @@ public class LevelCompleteManager : MonoBehaviour
         // Trigger level complete panel intro animation
         levelCompletePanelAnimator.SetTrigger("Enter");
 
-        // load the reward items into the panel UI
-        // - Load item icons
-        if(itemReward1 != null)
-        {
-            rewardIconDisplay[0].sprite = itemReward1.itemIcon;
-        }
-        if(itemReward2 != null)
-        {
-            rewardIconDisplay[1].sprite = itemReward2.itemIcon;
-        }
-        if(itemReward3 != null)
-        {
-            rewardIconDisplay[2].sprite = itemReward3.itemIcon;
-        }
-
         // Loading in the quantity of experience obtained
         rewardNamesDisplay[0].text += " X" + expReward.ToString();
 
         // Loading in the quantity of gold obtained
         rewardNamesDisplay[1].text += " X" + goldReward.ToString();
 
-        // - Load item names & item quantities
-        if(itemReward1 != null)
+        // load the reward items into the panel UI if first time completing level
+        if(completingFirstTime == true)
         {
-            rewardNamesDisplay[2].text = itemReward1.itemName + " X" + itemRewardQuantity1.ToString();
+            // - Load item datas
+            if (itemReward1 != null)
+            {
+                rewardItemsUI[2].gameObject.SetActive(true);
+                rewardIconDisplay[0].sprite = itemReward1.itemIcon;
+                rewardNamesDisplay[2].text = itemReward1.itemName + " X" + itemRewardQuantity1.ToString();
+            }
+            if (itemReward2 != null)
+            {
+                rewardItemsUI[3].gameObject.SetActive(true);
+                rewardIconDisplay[1].sprite = itemReward2.itemIcon;
+                rewardNamesDisplay[3].text = itemReward2.itemName + " X" + itemRewardQuantity2.ToString();
+            }
+            if (itemReward3 != null)
+            {
+                rewardItemsUI[4].gameObject.SetActive(true);
+                rewardIconDisplay[2].sprite = itemReward3.itemIcon;
+                rewardNamesDisplay[4].text = itemReward3.itemName + " X" + itemRewardQuantity3.ToString();
+            }
+
+            // Add the reward items to the player's inventory
+
+            // - Add the exp
+            GameData.instance.expPoints += expReward;
+
+            // - Add the gold
+            GameData.instance.goldCoins += goldReward;
+
+            // - Add the reward items
+            AddRewardItems();
+
+            // Increment the completed story level counter in GameData
+            GameData.instance.maxCompletedLevel++;
+
+            // Save changes made to GameData
+            // SaveManager.instance.SaveGameData(); // Uncomment this later
         }
-        if(itemReward2 != null)
+        else
         {
-            rewardNamesDisplay[3].text = itemReward2.itemName + " X" + itemRewardQuantity2.ToString();
+            rewardItemsUI[0].gameObject.SetActive(false);
+            rewardItemsUI[1].gameObject.SetActive(false);
         }
-        if(itemReward3 != null)
-        {
-            rewardNamesDisplay[4].text = itemReward3.itemName + " X" + itemRewardQuantity3.ToString();
-        }
-
-        // Add the reward items to the player's inventory
-
-        // - Add the exp
-        // GameData.instance.expPoints += expReward;
-
-        // - Add the gold
-        // GameData.instance.goldCoins += goldReward;
-
-        // - Add the reward items
-        // AddRewardItems();
-
-        // Increment the completed story level counter in GameData
-        //GameData.instance.maxCompletedLevel++;  // Uncomment this later
-
-        // Save changes made to GameData
     }
 
     private void AddRewardItems()

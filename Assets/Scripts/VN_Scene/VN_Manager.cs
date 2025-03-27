@@ -10,6 +10,11 @@ using UnityEngine.SceneManagement;
 
 public class VN_Manager : MonoBehaviour
 {
+    [Header("Level ID")]
+    [Space(5)]
+    public float levelID = 0f;
+    public int skipToDialogueFromLast = 1;
+
     [Header("Character Prefabs")]
     [Space(5)]
     public List<Character> characters = new List<Character>();
@@ -67,7 +72,7 @@ public class VN_Manager : MonoBehaviour
     private int activeCharacter = -1;
     private bool nameTabAtLeft = true;
     private bool tabMoving = false;
-    public int[] dialogueOptionPointers = new int[4];
+    [HideInInspector] public int[] dialogueOptionPointers = new int[4];
     private bool dialoguesFinished = false;
     private string combatSceneName = "";
     public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
@@ -92,11 +97,13 @@ public class VN_Manager : MonoBehaviour
         {
             if(combatSceneName != "")
             {
+                GameData.instance.levelViewedID = levelID;
                 SceneManager.LoadScene(combatSceneName);
             }
             else
             {
-                levelCompleteManager.LoadLevelCompletePanel();
+                GameData.instance.levelViewedID = levelID;
+                levelCompleteManager.LoadLevelCompletePanel((int)levelID > GameData.instance.maxCompletedLevel ? true : false);
             }
             yield break;
         }
@@ -347,6 +354,12 @@ public class VN_Manager : MonoBehaviour
 
         // Close the options panel
         dialogueOptionsPanel.gameObject.SetActive(false);
+    }
+
+    public void SkipToDialogue()
+    {
+        nextDialogue = dialogues.Count - skipToDialogueFromLast;
+        StartCoroutine(UpdateSceneData());
     }
 
     [ContextMenu("Auto Index")]
