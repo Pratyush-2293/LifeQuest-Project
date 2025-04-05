@@ -10,18 +10,28 @@ public class CombatManager : MonoBehaviour
     public static CombatManager instance = null;
 
     [Header("Player Characters")]
+    [Space(5)]
     public GameObject[] playerCharacters = new GameObject[4];
 
+
     [Header("Enemy Characters")]
+    [Space(5)]
     public GameObject[] enemyCharacters = new GameObject[4];
 
+
     [Header("Action Panel")]
+    [Space(5)]
     public Animator actionPanelAnimator = null;
     public TMP_Text nameLabel = null;
     public Slider HPSlider = null;
     public Slider MPSlider = null;
+    public Button skill1Button = null;
+    public Button skill2Button = null;
+    public Button skill3Button = null;
+    public GameObject actionPanelBlocker;
 
     [Header("Selected Enemy Panel")]
+    [Space(5)]
     public Animator enemyInfoPanelAnimator = null;
     public Image enemyProfileImageDisplay = null;
     public TMP_Text enemyNameDisplay = null;
@@ -29,12 +39,33 @@ public class CombatManager : MonoBehaviour
     public Slider enemyHealthDisplay = null;
     public TMP_Text enemyHealthValueDisplay = null;
 
+    // Enemy Status Display Icons
+    [Space(10)]
+    public GameObject statusBar;
+    [Space(10)]
+    // Boons
+    public Image enemyMight;
+    public Image enemyFocus;
+    public Image enemyHaste;
+    public Image enemyClarity;
+    public Image enemyBarrier;
+    [Space(10)]
+    //Conditions
+    public Image enemyFrailty;
+    public Image enemySlowed;
+    public Image enemyConfusion;
+    public Image enemyExposed;
+
+
     [Header("End Scene Panels")]
+    [Space(5)]
     public GameObject touchBlockerPanel = null;
     public Animator victoryPanelAnimator = null;
     public Animator defeatPanelAnimator = null;
 
+
     [Header("Time Sliders")]
+    [Space(5)]
     // player character sliders
     public Slider aldenTimeSlider = null;
 
@@ -45,9 +76,10 @@ public class CombatManager : MonoBehaviour
     public List<Sprite> enemySliderMarkers = new List<Sprite>();
 
     // Storing script files for all characters on field
-    public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
-    public EnemyCombat2D[] enemyCombatControllers = new EnemyCombat2D[4];
+    [HideInInspector] public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
+    [HideInInspector] public EnemyCombat2D[] enemyCombatControllers = new EnemyCombat2D[4];
 
+    // Private Variables
     private bool timeStart = true;
 
     private bool isAldenTurn = false;
@@ -221,7 +253,7 @@ public class CombatManager : MonoBehaviour
                 }
             }
 
-            // Tick time for all characters on field
+            // Tick time, mana and statuses for all characters on field
             if(timeStart == true)
             {
                 for (int i = 0; i < 4; i++)
@@ -231,6 +263,7 @@ public class CombatManager : MonoBehaviour
                         if(playerCombatControllers[i].isDefeated == false)
                         {
                             playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
+                            playerCombatControllers[i].AddManaTick();
                         }
                         else
                         {
@@ -243,6 +276,7 @@ public class CombatManager : MonoBehaviour
                         if(enemyCombatControllers[i].isDefeated == false)
                         {
                             enemyCombatControllers[i].turnCounter += enemyCombatControllers[i].turnSpeed;
+                            enemyCombatControllers[i].TickStatuses();
                         }
                         else
                         {
@@ -295,6 +329,9 @@ public class CombatManager : MonoBehaviour
 
             // updating name label
             nameLabel.text = playerCombatControllers[aldenIndex].characterName;
+
+            // Updating skill button availability
+            playerCombatControllers[aldenIndex].UpdateSkillButtons();
         }
 
         // Setting initial selected target
@@ -314,6 +351,9 @@ public class CombatManager : MonoBehaviour
         enemyInfoPanelAnimator.SetTrigger("SlideIn");
 
         actionPanelAnimator.SetTrigger("SlideUp");
+
+        // Disabling the Touch Blocker for the action panel
+        actionPanelBlocker.gameObject.SetActive(false);
     }
 
     private void UpdateInfoPanel()
@@ -324,6 +364,39 @@ public class CombatManager : MonoBehaviour
             if(enemyCombatControllers[currentSelectedTarget].enemyProfileSprite != null)
             {
                 enemyProfileImageDisplay.sprite = enemyCombatControllers[currentSelectedTarget].enemyProfileSprite;
+            }
+
+            // Update the enemy status display if any status exists
+            foreach(Transform child in statusBar.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+
+            foreach(Status status in enemyCombatControllers[currentSelectedTarget].activeStatuses)
+            {
+                // handling conditions
+                if(status.statusName == Status.StatusName.Frailty)
+                {
+                    enemyFrailty.gameObject.SetActive(true);
+                    enemyFrailty.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if(status.statusName == Status.StatusName.Slowed)
+                {
+                    enemySlowed.gameObject.SetActive(true);
+                    enemySlowed.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Confusion)
+                {
+                    enemyConfusion.gameObject.SetActive(true);
+                    enemyConfusion.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Exposed)
+                {
+                    enemyExposed.gameObject.SetActive(true);
+                    enemyExposed.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+
+                // TODO: handling boons
             }
             
             // Update the enemy name
@@ -443,6 +516,241 @@ public class CombatManager : MonoBehaviour
         playerCombatControllers[selectedTarget].Action_TakeDamage(dealtDamage);
     }
 
+    public void HandleDealtAffliction(Status.StatusName statusName, int statusDuration)
+    {
+        if(statusName == Status.StatusName.Frailty)
+        {
+            // Check if the enemy already has the frailty status
+            Status frailty = enemyCombatControllers[currentSelectedTarget].activeStatuses.Find(status => status.statusName == Status.StatusName.Frailty);
+
+            // If enemy already has frailty status, then we just increase the duration
+            if(frailty != null)
+            {
+                frailty.statusDuration += statusDuration;
+                frailty.statusCurrentDuration += statusDuration;
+            }
+            else  // Otherwise, we initialise a new one
+            {
+                // Initialise the status
+                frailty = new Status();
+                frailty.statusName = Status.StatusName.Frailty;
+                frailty.statusDuration = statusDuration;
+                frailty.statusCurrentDuration = statusDuration;
+
+                // Add the status to the enemy
+                enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(frailty);
+            }
+        }
+        else if(statusName == Status.StatusName.Slowed)
+        {
+            // Initialise the status
+            Status slowed = new Status();
+            slowed.statusName = Status.StatusName.Slowed;
+            slowed.statusDuration = statusDuration;
+            slowed.statusCurrentDuration = statusDuration;
+
+            // Add the status to the enemy
+            enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(slowed);
+        }
+        else if (statusName == Status.StatusName.Confusion)
+        {
+            // Initialise the status
+            Status confusion = new Status();
+            confusion.statusName = Status.StatusName.Confusion;
+            confusion.statusDuration = statusDuration;
+            confusion.statusCurrentDuration = statusDuration;
+
+            // Add the status to the enemy
+            enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(confusion);
+        }
+        else if (statusName == Status.StatusName.Exposed)
+        {
+            // Initialise the status
+            Status exposed = new Status();
+            exposed.statusName = Status.StatusName.Exposed;
+            exposed.statusDuration = statusDuration;
+            exposed.statusCurrentDuration = statusDuration;
+
+            // Add the status to the enemy
+            enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(exposed);
+        }
+    }
+
+    // Blessings are granted to all allies in party
+    public void HandleGrantedBlessing(Status.StatusName statusName, int statusDuration)
+    {
+        if(statusName == Status.StatusName.Might)
+        {
+            // Adding blessing to Alden
+            if(aldenIndex != -1)
+            {
+                if(playerCombatControllers[aldenIndex].isDefeated == false)
+                {
+                    // Check if Alden already has the Might status
+                    Status might = playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Find(status => status.statusName == Status.StatusName.Might);
+
+                    // If alden already has the Might status, we simply add it's duration
+                    if (might != null)
+                    {
+                        might.statusDuration += statusDuration;
+                        might.statusCurrentDuration += statusDuration;
+                    }
+                    else  // Otherwise, we initialise a new one
+                    {
+                        // Initialise the status
+                        might = new Status();
+                        might.statusName = Status.StatusName.Might;
+                        might.statusDuration = statusDuration;
+                        might.statusCurrentDuration = statusDuration;
+
+                        // Add the status to Alden
+                        playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(might);
+                    }
+                }
+            }
+
+            // Adding blessings to Valric - Same as above
+            // Adding blessings to Osmir - Same as above
+            // Adding blessings to Assassin - Same as above
+        }
+        else if(statusName == Status.StatusName.Focus)
+        {
+            // Adding blessing to Alden
+            if (aldenIndex != -1)
+            {
+                if (playerCombatControllers[aldenIndex].isDefeated == false)
+                {
+                    // Check if Alden already has the Focus status
+                    Status focus = playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Find(status => status.statusName == Status.StatusName.Focus);
+
+                    // If alden already has the Focus status, we simply add it's duration
+                    if (focus != null)
+                    {
+                        focus.statusDuration += statusDuration;
+                        focus.statusCurrentDuration += statusDuration;
+                    }
+                    else  // Otherwise, we initialise a new one
+                    {
+                        // Initialise the status
+                        focus = new Status();
+                        focus.statusName = Status.StatusName.Focus;
+                        focus.statusDuration = statusDuration;
+                        focus.statusCurrentDuration = statusDuration;
+
+                        // Add the status to Alden
+                        playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(focus);
+                    }
+                }
+            }
+
+            // Adding blessings to Valric - Same as above
+            // Adding blessings to Osmir - Same as above
+            // Adding blessings to Assassin - Same as above
+        }
+        else if (statusName == Status.StatusName.Haste)
+        {
+            // Adding blessing to Alden
+            if (aldenIndex != -1)
+            {
+                if (playerCombatControllers[aldenIndex].isDefeated == false)
+                {
+                    // Check if Alden already has the Haste status
+                    Status haste = playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Find(status => status.statusName == Status.StatusName.Haste);
+
+                    // If alden already has the Haste status, we simply add it's duration
+                    if (haste != null)
+                    {
+                        haste.statusDuration += statusDuration;
+                        haste.statusCurrentDuration += statusDuration;
+                    }
+                    else  // Otherwise, we initialise a new one
+                    {
+                        // Initialise the status
+                        haste = new Status();
+                        haste.statusName = Status.StatusName.Haste;
+                        haste.statusDuration = statusDuration;
+                        haste.statusCurrentDuration = statusDuration;
+
+                        // Add the status to Alden
+                        playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(haste);
+                    }
+                }
+            }
+
+            // Adding blessings to Valric - Same as above
+            // Adding blessings to Osmir - Same as above
+            // Adding blessings to Assassin - Same as above
+        }
+        else if (statusName == Status.StatusName.Clarity)
+        {
+            // Adding blessing to Alden
+            if (aldenIndex != -1)
+            {
+                if (playerCombatControllers[aldenIndex].isDefeated == false)
+                {
+                    // Check if Alden already has the Clarity status
+                    Status clarity = playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Find(status => status.statusName == Status.StatusName.Clarity);
+
+                    // If alden already has the Clarity status, we simply add it's duration
+                    if (clarity != null)
+                    {
+                        clarity.statusDuration += statusDuration;
+                        clarity.statusCurrentDuration += statusDuration;
+                    }
+                    else  // Otherwise, we initialise a new one
+                    {
+                        // Initialise the status
+                        clarity = new Status();
+                        clarity.statusName = Status.StatusName.Clarity;
+                        clarity.statusDuration = statusDuration;
+                        clarity.statusCurrentDuration = statusDuration;
+
+                        // Add the status to Alden
+                        playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(clarity);
+                    }
+                }
+            }
+
+            // Adding blessings to Valric - Same as above
+            // Adding blessings to Osmir - Same as above
+            // Adding blessings to Assassin - Same as above
+        }
+        else if (statusName == Status.StatusName.Barrier)
+        {
+            // Adding blessing to Alden
+            if (aldenIndex != -1)
+            {
+                if (playerCombatControllers[aldenIndex].isDefeated == false)
+                {
+                    // Check if Alden already has the Barrier status
+                    Status barrier = playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Find(status => status.statusName == Status.StatusName.Barrier);
+
+                    // If alden already has the Barrier status, we simply add it's duration
+                    if (barrier != null)
+                    {
+                        barrier.statusDuration += statusDuration;
+                        barrier.statusCurrentDuration += statusDuration;
+                    }
+                    else  // Otherwise, we initialise a new one
+                    {
+                        // Initialise the status
+                        barrier = new Status();
+                        barrier.statusName = Status.StatusName.Clarity;
+                        barrier.statusDuration = statusDuration;
+                        barrier.statusCurrentDuration = statusDuration;
+
+                        // Add the status to Alden
+                        playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(barrier);
+                    }
+                }
+            }
+
+            // Adding blessings to Valric - Same as above
+            // Adding blessings to Osmir - Same as above
+            // Adding blessings to Assassin - Same as above
+        }
+    }
+
     // Handling Action Panel Commands
     public void OnAttackButton()
     {
@@ -487,7 +795,35 @@ public class CombatManager : MonoBehaviour
 
     public void OnSkill1Button()
     {
+        // When Skill 1 button is pressed during Alden's turn
+        if (isAldenTurn)
+        {
+            // Play Skill 1 animation according to selected target
+            playerCombatControllers[aldenIndex].DoAction("Skill1", currentSelectedTarget);
+        }
 
+        // When Skill 1 button is pressed during Valric's turn
+        if (isValricTurn)
+        {
+
+        }
+
+        // When Skill 1 button is pressed during Osmir's turn
+        if (isOsmirTurn)
+        {
+
+        }
+
+        // When Skill 1 button is pressed during Assassin's Turn
+        if (isAssassinTurn)
+        {
+
+        }
+
+        // Hide the skill buttons (to reset for next time the drawer shows up)
+        actionPanelAnimator.SetTrigger("SkillHide");
+
+        AfterButtonPressHandler();
     }
 
     public void OnSkill2Button()
@@ -533,9 +869,18 @@ public class CombatManager : MonoBehaviour
 
     private void AfterButtonPressHandler()
     {
+        // Turn on action panel touch blocker
+        actionPanelBlocker.gameObject.SetActive(true);
+
         enemyCombatControllers[currentSelectedTarget].selectMarker.gameObject.SetActive(false);
         actionPanelAnimator.SetTrigger("SlideDown");
         enemyInfoPanelAnimator.SetTrigger("SlideOut");
+        
+        // Turn off all statuses
+        foreach(Transform child in statusBar.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     public void OnLeftButton()

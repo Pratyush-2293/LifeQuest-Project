@@ -25,6 +25,10 @@ public class PlayerCombat2D : MonoBehaviour
         {
             Action_Defend();
         }
+        else if(actionName == "Skill1")
+        {
+            Action_Skill1(targetPosition);
+        }
     }
 
     private void AddTimeCost(int timeCost)
@@ -101,6 +105,29 @@ public class PlayerCombat2D : MonoBehaviour
         return -1;
     }
 
+    public void AddManaTick()
+    {
+        if (characterName == "Alden")
+        {
+            if (aldenCombatController.mana < 100)
+            {
+                aldenCombatController.mana++;
+            }
+        }
+        else if (characterName == "Valric")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // do the same as above
+        }
+    }
+
     public void Action_Attack(int targetPosition)
     {
         if(characterName == "Alden")
@@ -143,6 +170,27 @@ public class PlayerCombat2D : MonoBehaviour
         }
     }
 
+    public void Action_Skill1(int targetPosition)
+    {
+        if (characterName == "Alden")
+        {
+            aldenCombatController.AldenSkill1(targetPosition, characterPosition);
+            AddTimeCost(aldenCombatController.skill1TimeCost);
+        }
+        else if (characterName == "Valric")
+        {
+            // same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // same as above
+        }
+    }
+
     public void Action_TakeDamage(int incomingDamage)
     {
         if (characterName == "Alden")
@@ -161,5 +209,51 @@ public class PlayerCombat2D : MonoBehaviour
         {
             // same as above
         }
+    }
+
+    public void UpdateSkillButtons()
+    {
+        if (characterName == "Alden")
+        {
+            aldenCombatController.EnableSkillButtons();
+        }
+        else if (characterName == "Valric")
+        {
+            // same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // same as above
+        }
+    }
+
+    // ------------------------ STATUS MANAGEMENT FUNCTIONS ------------------------
+
+    public void DealFrailty(int duration)
+    {
+        CombatManager.instance.HandleDealtAffliction(Status.StatusName.Frailty, duration);
+    }
+
+    public void DealSlowed(int duration)
+    {
+        CombatManager.instance.HandleDealtAffliction(Status.StatusName.Slowed, duration);
+    }
+    public void DealConfusion(int duration)
+    {
+        CombatManager.instance.HandleDealtAffliction(Status.StatusName.Confusion, duration);
+    }
+
+    public void DealExposed(int duration)
+    {
+        CombatManager.instance.HandleDealtAffliction(Status.StatusName.Exposed, duration);
+    }
+
+    public void GrantMight(int duration)
+    {
+
     }
 }

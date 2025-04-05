@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class EnemyCombat2D : MonoBehaviour
 {
@@ -66,6 +67,8 @@ public class EnemyCombat2D : MonoBehaviour
     private int defendStartHealth = 0;
     private bool isDefending = false;
     private Animator hitFXAnimator = null;
+
+    public List<Status> activeStatuses = new List<Status>();
 
     private void Start()
     {
@@ -134,6 +137,15 @@ public class EnemyCombat2D : MonoBehaviour
         // CALCULATE DAMAGE TO DO
         // Can implement attack patterns here later, right now we only have 1 basic attack.
         damageToDo = attackDamage;
+
+        // Reduce damage output based on active afflictions (conditions)
+        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty))
+        {
+            damageToDo -= (int)(damageToDo * 0.25f);
+        }
+
+        // Increase damage output based on active blessings (boons)
+
 
         // check available player character
         int availableCharacters = 0;
@@ -307,5 +319,15 @@ public class EnemyCombat2D : MonoBehaviour
     private void PlaySoundEffect(string sfxName)
     {
         AudioManager.instance.PlaySound(sfxName);
+    }
+
+    public void TickStatuses()
+    {
+        foreach(Status status in activeStatuses)
+        {
+            status.statusCurrentDuration--;
+        }
+
+        activeStatuses.RemoveAll(status => status.statusCurrentDuration <= 0);
     }
 }

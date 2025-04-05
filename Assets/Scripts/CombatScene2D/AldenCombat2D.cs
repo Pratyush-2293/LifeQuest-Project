@@ -17,6 +17,9 @@ public class AldenCombat2D : MonoBehaviour
     public int health = 100;
     public int mana = 100;
 
+    // List of Active Statuses
+    public List<Status> activeStatuses = new List<Status>();
+
     // Attacks Scaling
     [Header("Attacks & Skills Scaling")]
     public int attackScaling = 1;
@@ -28,9 +31,19 @@ public class AldenCombat2D : MonoBehaviour
     // Actions info
     public int attackTimeCost = 30;
     public int defendTimeCost = 30;
-    public int skill1TimeCost = 30;
+    public int skill1TimeCost = 50;
     public int skill2TimeCost = 30;
     public int skill3TimeCost = 30;
+
+    // Skill Mana Costs
+    public int skill1ManaCost = 20;
+    public int skill2ManaCost = 30;
+    public int skill3ManaCost = 40;
+
+    // Skill Unlock Levels
+    public int skill1UnlockLevel = 1;
+    public int skill2UnlockLevel = 2;
+    public int skill3UnlockLevel = 3;
 
     // Alden Components
     public Animator aldenAnimator = null;
@@ -113,6 +126,66 @@ public class AldenCombat2D : MonoBehaviour
         // time cost will be added in playercombat
     }
 
+    public void AldenSkill1(int targetPosition, int selfPosition)
+    {
+        isCritical = false;
+
+        // CALCULATING DAMAGE
+        // Scaling damage based on strength and the skill's scaling multiplier
+        damageToDo = strength * skill1Scaling;
+        // Scaling damage based on active blessings
+        // Scaling damage based on active afflictions
+        // Checking to see if this attack will be a critical hit
+        Random.InitState(System.DateTime.Now.Millisecond);
+        randomNumber = Random.Range(1, 101);
+        if (randomNumber <= critRate)
+        {
+            isCritical = true;
+            damageToDo *= 2;
+        }
+
+        // Play the attack animation
+        if (selfPosition == 1)
+        {
+            if (targetPosition == 0)
+            {
+                aldenAnimator.SetTrigger("CripplingCleave_1-1");  // Deal the damage by calling DealDamage() using animation event
+            }
+            else if (targetPosition == 1)
+            {
+                aldenAnimator.SetTrigger("CripplingCleave_1-2");
+            }
+            else if (targetPosition == 2)
+            {
+                aldenAnimator.SetTrigger("CripplingCleave_1-3");
+            }
+            else if (targetPosition == 3)
+            {
+                aldenAnimator.SetTrigger("CripplingCleave_1-4");
+            }
+        }
+        else if (selfPosition == 2)
+        {
+            // same as above
+        }
+        else if (selfPosition == 3)
+        {
+            // same as above
+        }
+        else if (selfPosition == 4)
+        {
+            // same as above
+        }
+
+        // Deduct mana cost
+        mana -= skill1ManaCost;
+
+        // time cost will be added in playercombat
+
+        // Update the mana bar visually only (for visual feedback of mana being used)
+        CombatManager.instance.MPSlider.value -= skill1ManaCost;
+    }
+
     public void AldenTakeDamage(int incomingDamage)
     {
         // play damage animation
@@ -186,5 +259,61 @@ public class AldenCombat2D : MonoBehaviour
     private void PlaySoundEffect(string sfxName)
     {
         AudioManager.instance.PlaySound(sfxName);
+    }
+
+
+    // TODO: Edit this later to enable changing the button sprite based on the case
+    public void EnableSkillButtons()
+    {
+        // Checking for skill button 1
+        if(level >= skill1UnlockLevel)
+        {
+            if (mana >= skill1ManaCost)
+            {
+                CombatManager.instance.skill1Button.interactable = true;
+            }
+            else
+            {
+                CombatManager.instance.skill1Button.interactable = false;
+            }
+        }
+        else
+        {
+            CombatManager.instance.skill1Button.interactable = false;
+        }
+
+        // Checking for skill button 2
+        if(level >= skill2UnlockLevel)
+        {
+            if (mana >= skill2ManaCost)
+            {
+                CombatManager.instance.skill2Button.interactable = true;
+            }
+            else
+            {
+                CombatManager.instance.skill2Button.interactable = false;
+            }
+        }
+        else
+        {
+            CombatManager.instance.skill2Button.interactable = false;
+        }
+
+        // Checking for skill button 3
+        if(level >= skill3UnlockLevel)
+        {
+            if (mana >= skill3ManaCost)
+            {
+                CombatManager.instance.skill3Button.interactable = true;
+            }
+            else
+            {
+                CombatManager.instance.skill3Button.interactable = false;
+            }
+        }
+        else
+        {
+            CombatManager.instance.skill3Button.interactable = false;
+        }
     }
 }
