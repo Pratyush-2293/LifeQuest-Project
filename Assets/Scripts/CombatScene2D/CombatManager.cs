@@ -30,6 +30,23 @@ public class CombatManager : MonoBehaviour
     public Button skill3Button = null;
     public GameObject actionPanelBlocker;
 
+    // Player Status Display Icons
+    [Space(10)]
+    public GameObject playerStatusBar;
+    // Boons
+    public Image playerMight;
+    public Image playerFocus;
+    public Image playerHaste;
+    public Image playerClarity;
+    public Image playerBarrier;
+    [Space(5)]
+    //Conditions
+    public Image playerFrailty;
+    public Image playerSlowed;
+    public Image playerConfusion;
+    public Image playerExposed;
+
+
     [Header("Selected Enemy Panel")]
     [Space(5)]
     public Animator enemyInfoPanelAnimator = null;
@@ -41,7 +58,7 @@ public class CombatManager : MonoBehaviour
 
     // Enemy Status Display Icons
     [Space(10)]
-    public GameObject statusBar;
+    public GameObject enemyStatusBar;
     [Space(10)]
     // Boons
     public Image enemyMight;
@@ -319,8 +336,14 @@ public class CombatManager : MonoBehaviour
 
     private void ShowUpdatedActionPanel()
     {
+        // Turn off all previous statuses on player bar
+        foreach (Transform child in playerStatusBar.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
         // Updating action panel with active character's stats
-        if(isAldenTurn == true)
+        if (isAldenTurn == true)
         {
             // updating HP and MP bars
             HPSlider.maxValue = playerCombatControllers[aldenIndex].GetMaxHealthValue();
@@ -332,7 +355,62 @@ public class CombatManager : MonoBehaviour
 
             // Updating skill button availability
             playerCombatControllers[aldenIndex].UpdateSkillButtons();
+
+            // Loading the active statuses
+            foreach (Status status in playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses)
+            {
+                // handling conditions
+                if (status.statusName == Status.StatusName.Frailty)
+                {
+                    playerFrailty.gameObject.SetActive(true);
+                    playerFrailty.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Slowed)
+                {
+                    playerSlowed.gameObject.SetActive(true);
+                    playerSlowed.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Confusion)
+                {
+                    playerConfusion.gameObject.SetActive(true);
+                    playerConfusion.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Exposed)
+                {
+                    playerExposed.gameObject.SetActive(true);
+                    playerExposed.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+
+                // handling boons
+                if (status.statusName == Status.StatusName.Might)
+                {
+                    playerMight.gameObject.SetActive(true);
+                    playerMight.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Focus)
+                {
+                    playerFocus.gameObject.SetActive(true);
+                    playerFocus.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Haste)
+                {
+                    playerHaste.gameObject.SetActive(true);
+                    playerHaste.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Barrier)
+                {
+                    playerBarrier.gameObject.SetActive(true);
+                    playerBarrier.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Clarity)
+                {
+                    playerClarity.gameObject.SetActive(true);
+                    playerClarity.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+            }
         }
+        // TODO: Add functionality for other characters
+
 
         // Setting initial selected target
         int activeEnemies = CheckActiveEnemies();
@@ -367,7 +445,7 @@ public class CombatManager : MonoBehaviour
             }
 
             // Update the enemy status display if any status exists
-            foreach(Transform child in statusBar.transform)
+            foreach(Transform child in enemyStatusBar.transform)
             {
                 child.gameObject.SetActive(false);
             }
@@ -396,7 +474,32 @@ public class CombatManager : MonoBehaviour
                     enemyExposed.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
                 }
 
-                // TODO: handling boons
+                // handling boons
+                if (status.statusName == Status.StatusName.Might)
+                {
+                    enemyMight.gameObject.SetActive(true);
+                    enemyMight.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Focus)
+                {
+                    enemyFocus.gameObject.SetActive(true);
+                    enemyFocus.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Haste)
+                {
+                    enemyHaste.gameObject.SetActive(true);
+                    enemyHaste.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Barrier)
+                {
+                    enemyBarrier.gameObject.SetActive(true);
+                    enemyBarrier.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
+                else if (status.statusName == Status.StatusName.Clarity)
+                {
+                    enemyClarity.gameObject.SetActive(true);
+                    enemyClarity.fillAmount = (float)status.statusCurrentDuration / status.statusDuration;
+                }
             }
             
             // Update the enemy name
@@ -828,7 +931,66 @@ public class CombatManager : MonoBehaviour
 
     public void OnSkill2Button()
     {
+        // When Skill 2 button is pressed during Alden's turn
+        if (isAldenTurn)
+        {
+            // Play Skill 2 animation according to selected target
+            playerCombatControllers[aldenIndex].DoAction("Skill2", currentSelectedTarget);
+        }
 
+        // When Skill 1 button is pressed during Valric's turn
+        if (isValricTurn)
+        {
+
+        }
+
+        // When Skill 1 button is pressed during Osmir's turn
+        if (isOsmirTurn)
+        {
+
+        }
+
+        // When Skill 1 button is pressed during Assassin's Turn
+        if (isAssassinTurn)
+        {
+
+        }
+
+        // Hide the skill buttons (to reset for next time the drawer shows up)
+        actionPanelAnimator.SetTrigger("SkillHide");
+
+        AfterButtonPressHandler();
+    }
+
+    public void OnSkill3Button()
+    {
+        // When Skill 3 button is pressed during Alden's turn
+        if (isAldenTurn)
+        {
+            // Play Skill 3 animation according to selected target
+            playerCombatControllers[aldenIndex].DoAction("Skill3", currentSelectedTarget);
+        }
+
+        // When Skill 1 button is pressed during Valric's turn
+        if (isValricTurn)
+        {
+
+        }
+
+        // When Skill 1 button is pressed during Osmir's turn
+        if (isOsmirTurn)
+        {
+
+        }
+
+        // When Skill 1 button is pressed during Assassin's Turn
+        if (isAssassinTurn)
+        {
+
+        }
+
+        // Hide the skill buttons (to reset for next time the drawer shows up)
+        actionPanelAnimator.SetTrigger("SkillHide");
     }
 
     public void OnDefendButton()
@@ -862,11 +1024,6 @@ public class CombatManager : MonoBehaviour
         AfterButtonPressHandler();
     }
 
-    public void OnSkill3Button()
-    {
-
-    }
-
     private void AfterButtonPressHandler()
     {
         // Turn on action panel touch blocker
@@ -876,8 +1033,8 @@ public class CombatManager : MonoBehaviour
         actionPanelAnimator.SetTrigger("SlideDown");
         enemyInfoPanelAnimator.SetTrigger("SlideOut");
         
-        // Turn off all statuses
-        foreach(Transform child in statusBar.transform)
+        // Turn off all statuses on enemy bar
+        foreach(Transform child in enemyStatusBar.transform)
         {
             child.gameObject.SetActive(false);
         }

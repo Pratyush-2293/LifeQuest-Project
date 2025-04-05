@@ -29,6 +29,14 @@ public class PlayerCombat2D : MonoBehaviour
         {
             Action_Skill1(targetPosition);
         }
+        else if (actionName == "Skill2")
+        {
+            Action_Skill2(targetPosition);
+        }
+        else if (actionName == "Skill3")
+        {
+            Action_Skill3(targetPosition);
+        }
     }
 
     private void AddTimeCost(int timeCost)
@@ -191,6 +199,48 @@ public class PlayerCombat2D : MonoBehaviour
         }
     }
 
+    public void Action_Skill2(int targetPosition)
+    {
+        if (characterName == "Alden")
+        {
+            aldenCombatController.AldenSkill2(targetPosition, characterPosition);
+            AddTimeCost(aldenCombatController.skill2TimeCost);
+        }
+        else if (characterName == "Valric")
+        {
+            // same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // same as above
+        }
+    }
+
+    public void Action_Skill3(int targetPosition)
+    {
+        if (characterName == "Alden")
+        {
+            aldenCombatController.AldenSkill3(targetPosition, characterPosition);
+            AddTimeCost(aldenCombatController.skill3TimeCost);
+        }
+        else if (characterName == "Valric")
+        {
+            // same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // same as above
+        }
+    }
+
     public void Action_TakeDamage(int incomingDamage)
     {
         if (characterName == "Alden")
@@ -254,6 +304,26 @@ public class PlayerCombat2D : MonoBehaviour
 
     public void GrantMight(int duration)
     {
+        CombatManager.instance.HandleGrantedBlessing(Status.StatusName.Might, duration);
+    }
 
+    public void GrantFocus(int duration)
+    {
+        CombatManager.instance.HandleGrantedBlessing(Status.StatusName.Focus, duration);
+    }
+
+    public void GrantHaste(int duration)
+    {
+        CombatManager.instance.HandleGrantedBlessing(Status.StatusName.Haste, duration);
+    }
+
+    public void GrantClarity(int duration)
+    {
+        CombatManager.instance.HandleGrantedBlessing(Status.StatusName.Clarity, duration);
+    }
+
+    public void GrantBarrier(int duration)
+    {
+        CombatManager.instance.HandleGrantedBlessing(Status.StatusName.Barrier, duration);
     }
 }

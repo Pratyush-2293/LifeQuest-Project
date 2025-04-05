@@ -22,11 +22,11 @@ public class AldenCombat2D : MonoBehaviour
 
     // Attacks Scaling
     [Header("Attacks & Skills Scaling")]
-    public int attackScaling = 1;
-    public int skill1Scaling = 1;
-    public int skill2Scaling = 1;
-    public int skill3Scaling = 1;
-    public int defendScaling = 1;
+    public float attackScaling = 1;
+    public float skill1Scaling = 1.5f;
+    public float skill2Scaling = 1;
+    public float skill3Scaling = 1.5f;
+    public float defendScaling = 1;
 
     // Actions info
     public int attackTimeCost = 30;
@@ -70,7 +70,7 @@ public class AldenCombat2D : MonoBehaviour
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling mulitplier
-        damageToDo = strength * attackScaling;
+        damageToDo = (int)(strength * attackScaling);
         // Scaling damage based on active blessings
         // Scaling damage based on active afflictions
         // Checking to see if this attack will be a critical hit
@@ -132,7 +132,7 @@ public class AldenCombat2D : MonoBehaviour
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo = strength * skill1Scaling;
+        damageToDo = (int)(strength * skill1Scaling);
         // Scaling damage based on active blessings
         // Scaling damage based on active afflictions
         // Checking to see if this attack will be a critical hit
@@ -184,6 +184,126 @@ public class AldenCombat2D : MonoBehaviour
 
         // Update the mana bar visually only (for visual feedback of mana being used)
         CombatManager.instance.MPSlider.value -= skill1ManaCost;
+    }
+
+    public void AldenSkill2(int targetPosition, int selfPosition)
+    {
+        isCritical = false;
+
+        // CALCULATING DAMAGE
+        // Scaling damage based on strength and the skill's scaling multiplier
+        damageToDo = (int)(strength * skill1Scaling);
+        // Scaling damage based on active blessings
+        // Scaling damage based on active afflictions
+        // Checking to see if this attack will be a critical hit
+        Random.InitState(System.DateTime.Now.Millisecond);
+        randomNumber = Random.Range(1, 101);
+        if (randomNumber <= critRate)
+        {
+            isCritical = true;
+            damageToDo *= 2;
+        }
+
+        // Play the attack animation
+        if (selfPosition == 1)
+        {
+            if (targetPosition == 0)
+            {
+                aldenAnimator.SetTrigger("BladeSurge_1-1");  // Deal the damage by calling DealDamage() using animation event
+            }
+            else if (targetPosition == 1)
+            {
+                aldenAnimator.SetTrigger("BladeSurge_1-2");
+            }
+            else if (targetPosition == 2)
+            {
+                aldenAnimator.SetTrigger("BladeSurge_1-3");
+            }
+            else if (targetPosition == 3)
+            {
+                aldenAnimator.SetTrigger("BladeSurge_1-4");
+            }
+        }
+        else if (selfPosition == 2)
+        {
+            // same as above
+        }
+        else if (selfPosition == 3)
+        {
+            // same as above
+        }
+        else if (selfPosition == 4)
+        {
+            // same as above
+        }
+
+        // Deduct mana cost
+        mana -= skill2ManaCost;
+
+        // time cost will be added in playercombat
+
+        // Update the mana bar visually only (for visual feedback of mana being used)
+        CombatManager.instance.MPSlider.value -= skill2ManaCost;
+    }
+
+    public void AldenSkill3(int targetPosition, int selfPosition)
+    {
+        isCritical = false;
+
+        // CALCULATING DAMAGE
+        // Scaling damage based on strength and the skill's scaling multiplier
+        damageToDo = (int)(strength * skill1Scaling);
+        // Scaling damage based on active blessings
+        // Scaling damage based on active afflictions
+        // Checking to see if this attack will be a critical hit
+        Random.InitState(System.DateTime.Now.Millisecond);
+        randomNumber = Random.Range(1, 101);
+        if (randomNumber <= critRate)
+        {
+            isCritical = true;
+            damageToDo *= 2;
+        }
+
+        // Play the attack animation
+        if (selfPosition == 1)
+        {
+            if (targetPosition == 0)
+            {
+                aldenAnimator.SetTrigger("BladeStorm_1-1");  // Deal the damage by calling DealDamage() using animation event
+            }
+            else if (targetPosition == 1)
+            {
+                aldenAnimator.SetTrigger("BladeStorm_1-2");
+            }
+            else if (targetPosition == 2)
+            {
+                aldenAnimator.SetTrigger("BladeStorm_1-3");
+            }
+            else if (targetPosition == 3)
+            {
+                aldenAnimator.SetTrigger("BladeStorm_1-4");
+            }
+        }
+        else if (selfPosition == 2)
+        {
+            // same as above
+        }
+        else if (selfPosition == 3)
+        {
+            // same as above
+        }
+        else if (selfPosition == 4)
+        {
+            // same as above
+        }
+
+        // Deduct mana cost
+        mana -= skill3ManaCost;
+
+        // time cost will be added in playercombat
+
+        // Update the mana bar visually only (for visual feedback of mana being used)
+        CombatManager.instance.MPSlider.value -= skill3ManaCost;
     }
 
     public void AldenTakeDamage(int incomingDamage)
