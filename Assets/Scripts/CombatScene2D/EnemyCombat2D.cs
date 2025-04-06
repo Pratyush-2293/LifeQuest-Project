@@ -51,11 +51,10 @@ public class EnemyCombat2D : MonoBehaviour
 
     [Header("Damage Floater Components")]
     [Space(5)]
-    public Animator normalDamageAnimator = null;
-    public Animator criticalDamageAnimator = null;
-    [Space(10)]
-    public TMP_Text normalDamageText = null;
-    public TMP_Text criticalDamageText = null;
+    public Transform damageFloaterSpawnPoint;
+    [Space(5)]
+    public GameObject normalDamageFloater;
+    public GameObject criticalDamageFloater;
     
     [Header("Hit VFX Components")]
     [Space(5)]
@@ -88,9 +87,14 @@ public class EnemyCombat2D : MonoBehaviour
         // Death Condition
         if(health <= 0)
         {
+            if (isDefeated == false)
+            {
+                CombatManager.instance.ReportDeath();
+                enemyAnimator.SetTrigger("Death");
+                selectMarker.gameObject.SetActive(false);
+            }
+
             isDefeated = true;
-            enemyAnimator.SetTrigger("Death");
-            CombatManager.instance.ReportDeath();
         }
     }
 
@@ -139,13 +143,16 @@ public class EnemyCombat2D : MonoBehaviour
         damageToDo = attackDamage;
 
         // Reduce damage output based on active afflictions (conditions)
-        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty))
+        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // Reduce outgoing damage by 25% if affected by frailty
         {
             damageToDo -= (int)(damageToDo * 0.25f);
         }
 
         // Increase damage output based on active blessings (boons)
-
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Might)) // Increase outgoing damage by 25% if affected by might
+        {
+            damageToDo += (int)(damageToDo * 0.25f);
+        }
 
         // check available player character
         int availableCharacters = 0;
@@ -287,27 +294,45 @@ public class EnemyCombat2D : MonoBehaviour
         hitFXObject.transform.Rotate(0f, 0f, randomRotation);
         hitFXAnimator.SetTrigger("HitEffect");
 
-        // Reduce damage by 50% if defending
-        if(isDefending == true)
+        // Adjust incoming damage based on active statuses
+
+        // Handling afflictions
+        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Exposed))
         {
-            incomingDamage = (int)(incomingDamage * 0.5f);
+            incomingDamage += (int)(incomingDamage * 0.25f);
+        }
+
+        // Handling blessings
+        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Barrier))
+        {
+            incomingDamage -= (int)(incomingDamage * 0.25f);
+        }
+
+
+        // Reduce damage by 50% if defending
+        if (isDefending == true)
+        {
+            incomingDamage -= (int)(incomingDamage * 0.5f);
             isDefending = false;
             defendingIcon.gameObject.SetActive(false);
         }
 
-        // Calculate reductions from blessings if any
-
         // play damage number animation
         if (isCritical == true)
         {
+            // Instantiate a critical damage floater
+            GameObject critDamageObject = Instantiate(criticalDamageFloater, damageFloaterSpawnPoint);
 
-            criticalDamageText.text = incomingDamage.ToString();
-            criticalDamageAnimator.SetTrigger("CritDamagePopup");
+            // Setting the damage text
+            critDamageObject.transform.GetChild(0).GetComponent<TMP_Text>().text = incomingDamage.ToString();
         }
         else
         {
-            normalDamageText.text = incomingDamage.ToString();
-            normalDamageAnimator.SetTrigger("DamagePopup");
+            // Instantiate the normal damage floater
+            GameObject normalDamageObject = Instantiate(normalDamageFloater, damageFloaterSpawnPoint);
+
+            // Setting the damage text
+            normalDamageObject.GetComponent<TMP_Text>().text = incomingDamage.ToString();
         }
 
         // reduce enemy health

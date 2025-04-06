@@ -8,4 +8,5 @@ public class Status
     public StatusName statusName;
     public int statusDuration = 0;
     public int statusCurrentDuration = 0;
+    public bool isBlessing = false;
 }

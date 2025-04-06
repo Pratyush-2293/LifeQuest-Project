@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class AldenCombat2D : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class AldenCombat2D : MonoBehaviour
     public int vitality = 5;
     public int defense = 5;
     public int strength = 5;
-    private int critRate = 70; // x100 to get % value
+    private int critRate = 50; // x100 to get % value
 
     // Common stats - need to be calculated on awake
     public int maxHealth = 100;
@@ -47,15 +48,23 @@ public class AldenCombat2D : MonoBehaviour
 
     // Alden Components
     public Animator aldenAnimator = null;
-    public Animator normalDamageAnimator = null;
-    public TMP_Text normalDamageText = null;
+    public Transform damageFloaterSpawnpoint;
+    public GameObject normalDamageFloater;
     public GameObject hitFXObject = null;
     public Animator shieldAuraAnimator = null;
 
     // Private Variables
-    private int damageToDo = 1;
-    private bool isCritical = false;
-    private double randomNumber = 0;
+    private int dealDamageSequenceCounter = 1;
+    private int damageToDo_1 = 1;
+    private int damageToDo_2 = 1;
+    private int damageToDo_3 = 1;
+    private bool isCritical_1 = false;
+    private bool isCritical_2 = false;
+    private bool isCritical_3 = false;
+
+    private double randomNumber_1 = 0;
+    private double randomNumber_2 = 0;
+    private double randomNumber_3 = 0;
     private Animator hitFXAnimator = null;
     private bool isDefending = false;
 
@@ -66,20 +75,31 @@ public class AldenCombat2D : MonoBehaviour
 
     public void AldenAttack(int targetPosition, int selfPosition)
     {
-        isCritical = false;
+        isCritical_1 = false;
 
         // CALCULATING DAMAGE
+
         // Scaling damage based on strength and the skill's scaling mulitplier
-        damageToDo = (int)(strength * attackScaling);
-        // Scaling damage based on active blessings
+        damageToDo_1 = (int)(strength * attackScaling);
+
         // Scaling damage based on active afflictions
+        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
+        { 
+            damageToDo_1 -= (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Scaling damage based on active blessings
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Might)) // If affected by might, increase outgoing damage by 25%
+        { 
+            damageToDo_1 += (int)(damageToDo_1 * 0.25f);
+        }
+
         // Checking to see if this attack will be a critical hit
-        Random.InitState(System.DateTime.Now.Millisecond);
-        randomNumber = Random.Range(1, 101);
-        if (randomNumber <= critRate)
+        randomNumber_1 = Random.Range(1, 101);
+        if (randomNumber_1 <= critRate)
         {
-            isCritical = true;
-            damageToDo *= 2;
+            isCritical_1 = true;
+            damageToDo_1 *= 2;
         }
 
         // Play the attack animation
@@ -128,20 +148,30 @@ public class AldenCombat2D : MonoBehaviour
 
     public void AldenSkill1(int targetPosition, int selfPosition)
     {
-        isCritical = false;
+        isCritical_1 = false;
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo = (int)(strength * skill1Scaling);
-        // Scaling damage based on active blessings
+        damageToDo_1 = (int)(strength * skill1Scaling);
+
         // Scaling damage based on active afflictions
-        // Checking to see if this attack will be a critical hit
-        Random.InitState(System.DateTime.Now.Millisecond);
-        randomNumber = Random.Range(1, 101);
-        if (randomNumber <= critRate)
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
         {
-            isCritical = true;
-            damageToDo *= 2;
+            damageToDo_1 -= (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Scaling damage based on active blessings
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Might)) // If affected by might, increase outgoing damage by 25%
+        {
+            damageToDo_1 += (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Checking to see if this attack will be a critical hit
+        randomNumber_1 = Random.Range(1, 101);
+        if (randomNumber_1 <= critRate)
+        {
+            isCritical_1 = true;
+            damageToDo_1 *= 2;
         }
 
         // Play the attack animation
@@ -188,20 +218,40 @@ public class AldenCombat2D : MonoBehaviour
 
     public void AldenSkill2(int targetPosition, int selfPosition)
     {
-        isCritical = false;
+        isCritical_1 = false;
+        isCritical_2 = false;
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo = (int)(strength * skill1Scaling);
-        // Scaling damage based on active blessings
+        damageToDo_1 = (int)(strength * skill1Scaling);
+
         // Scaling damage based on active afflictions
-        // Checking to see if this attack will be a critical hit
-        Random.InitState(System.DateTime.Now.Millisecond);
-        randomNumber = Random.Range(1, 101);
-        if (randomNumber <= critRate)
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
         {
-            isCritical = true;
-            damageToDo *= 2;
+            damageToDo_1 -= (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Scaling damage based on active blessings
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Might)) // If affected by might, increase outgoing damage by 25%
+        {
+            damageToDo_1 += (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Assigning damage value to other attacks
+        damageToDo_2 = damageToDo_1;
+
+        // Checking to see if the attacks will be critical hits
+        randomNumber_1 = Random.Range(1, 101);
+        randomNumber_2 = Random.Range(1, 101);
+        if (randomNumber_1 <= critRate)
+        {
+            isCritical_1 = true;
+            damageToDo_1 *= 2;
+        }
+        if (randomNumber_2 <= critRate)
+        {
+            isCritical_2 = true;
+            damageToDo_2 *= 2;
         }
 
         // Play the attack animation
@@ -248,20 +298,56 @@ public class AldenCombat2D : MonoBehaviour
 
     public void AldenSkill3(int targetPosition, int selfPosition)
     {
-        isCritical = false;
+        isCritical_1 = false;
+        isCritical_2 = false;
+        isCritical_3 = false;
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo = (int)(strength * skill1Scaling);
-        // Scaling damage based on active blessings
+        damageToDo_1 = (int)(strength * skill1Scaling);
+
         // Scaling damage based on active afflictions
-        // Checking to see if this attack will be a critical hit
-        Random.InitState(System.DateTime.Now.Millisecond);
-        randomNumber = Random.Range(1, 101);
-        if (randomNumber <= critRate)
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
         {
-            isCritical = true;
-            damageToDo *= 2;
+            damageToDo_1 -= (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Scaling damage based on active blessings
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Might)) // If affected by might, increase outgoing damage by 25%
+        {
+            damageToDo_1 += (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Increase outgoing damage by 25% if under effect of quickness
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Haste)) // If affected by haste, further increase outgoing damage by 25%
+        {
+            damageToDo_1 += (int)(damageToDo_1 * 0.25f);
+        }
+
+        // Strip a boon from the enemy if under effect of quickness - Handled in animation event
+
+        // Assigning damage value to other attacks
+        damageToDo_2 = damageToDo_1;
+        damageToDo_3 = damageToDo_1;
+
+        // Checking to see if the attacks will be critical hits
+        randomNumber_1 = Random.Range(1, 101);
+        randomNumber_2 = Random.Range(1, 101);
+        randomNumber_3 = Random.Range(1, 101);
+        if (randomNumber_1 <= critRate)
+        {
+            isCritical_1 = true;
+            damageToDo_1 *= 2;
+        }
+        if (randomNumber_2 <= critRate)
+        {
+            isCritical_2 = true;
+            damageToDo_2 *= 2;
+        }
+        if (randomNumber_3 <= critRate)
+        {
+            isCritical_3 = true;
+            damageToDo_3 *= 2;
         }
 
         // Play the attack animation
@@ -319,19 +405,31 @@ public class AldenCombat2D : MonoBehaviour
         // calculate def reductions
         incomingDamage -= defense;
 
-        // calculate blessings reductions, if any
+        // calculate incoming damage by status modifiers
+
+        // Calculating damage increase due to afflictions
+        if(activeStatuses.Any(status => status.statusName == Status.StatusName.Exposed)) // If affected by exposed, increase incoming damage by 25%
+        {
+            incomingDamage += (int)(incomingDamage * 0.25);
+        }
+
+        // Calculating damage reductions due to blessings
+        if (activeStatuses.Any(status => status.statusName == Status.StatusName.Barrier)) // If affected by barrier, reduce incoming damage by 25%
+        {
+            incomingDamage -= (int)(incomingDamage * 0.25);
+        }
 
         // Reduce damage if defending
         if (isDefending == true)
         {
-            incomingDamage = (int)(incomingDamage * 0.5f);
+            incomingDamage -= (int)(incomingDamage * 0.5f);
             isDefending = false;
             shieldAuraAnimator.SetTrigger("ShieldAuraIdle");
         }
 
         // play damage number animation
-        normalDamageText.text = incomingDamage.ToString();
-        normalDamageAnimator.SetTrigger("DamagePopup");
+        GameObject normalDamageObject = Instantiate(normalDamageFloater, damageFloaterSpawnpoint);
+        normalDamageObject.GetComponent<TMP_Text>().text = incomingDamage.ToString();
 
         // reduce player health
         health -= incomingDamage;
@@ -358,21 +456,66 @@ public class AldenCombat2D : MonoBehaviour
     public void DealDamage()
     {
         // Tell combat manager to deal damage to active enemy
-        CombatManager.instance.HandleDealtDamage(damageToDo, isCritical);
+        if(dealDamageSequenceCounter == 1)
+        {
+            CombatManager.instance.HandleDealtDamage(damageToDo_1, isCritical_1);
+            dealDamageSequenceCounter++;
 
-        if (isCritical)
-        {
-            CameraShake.instance.StartShake(1);
-            HitStop.instance.StartHitStop(0);
+            if (isCritical_1)
+            {
+                CameraShake.instance.StartShake(1);
+                HitStop.instance.StartHitStop(0);
+            }
+            else
+            {
+                CameraShake.instance.StartShake(0);
+            }
         }
-        else
+        else if(dealDamageSequenceCounter == 2)
         {
-            CameraShake.instance.StartShake(0);
+            CombatManager.instance.HandleDealtDamage(damageToDo_2, isCritical_2);
+            dealDamageSequenceCounter++;
+
+            if (isCritical_2)
+            {
+                CameraShake.instance.StartShake(1);
+                HitStop.instance.StartHitStop(0);
+            }
+            else
+            {
+                CameraShake.instance.StartShake(0);
+            }
         }
+        else if(dealDamageSequenceCounter == 3)
+        {
+            CombatManager.instance.HandleDealtDamage(damageToDo_3, isCritical_3);
+            dealDamageSequenceCounter++;
+
+            if (isCritical_3)
+            {
+                CameraShake.instance.StartShake(1);
+                HitStop.instance.StartHitStop(0);
+            }
+            else
+            {
+                CameraShake.instance.StartShake(0);
+            }
+        }
+    }
+
+    private void ResetDamageSequence()
+    {
+        dealDamageSequenceCounter = 1;
+    }
+
+    public void RemoveEnemyBlessing()
+    {
+        CombatManager.instance.StripEnemyBlessing();
     }
 
     public void RequestResumeTime()
     {
+        ResetDamageSequence();
         CombatManager.instance.ResumeTime();
     }
 

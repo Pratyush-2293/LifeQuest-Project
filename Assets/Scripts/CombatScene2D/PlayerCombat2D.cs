@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerCombat2D : MonoBehaviour
 {
     public int turnCounter = 30;
     public int turnSpeed = 2;
+    public int fastTurnSpeed = 0;
+    public int slowTurnSpeed = 0;
     public bool isPlayerCharacter = true;
     public string characterName = "Alden";
     public int characterPosition = 1;
@@ -14,6 +17,68 @@ public class PlayerCombat2D : MonoBehaviour
     public OsmirCombat2D osmirCombatController = null;
     public AssassinCombat2D assassinCombatController = null;
     public bool isDefeated = false;
+
+    private void Start()
+    {
+        fastTurnSpeed = turnSpeed + Mathf.CeilToInt(turnSpeed * 0.25f);
+        slowTurnSpeed = turnSpeed - Mathf.CeilToInt(turnSpeed * 0.25f);
+    }
+
+    public void TickTurnCounter()
+    {
+        if (characterName == "Alden")
+        {
+            if(aldenCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Haste))
+            {
+                turnCounter += fastTurnSpeed;
+            }
+            else if(aldenCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Slowed))
+            {
+                turnCounter += slowTurnSpeed;
+            }
+            else
+            {
+                turnCounter += turnSpeed;
+            }
+        }
+        else if (characterName == "Valric")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // do the same as above
+        }
+    }
+
+    public void TickStatuses()
+    {
+        if(characterName == "Alden")
+        {
+            foreach (Status status in aldenCombatController.activeStatuses)
+            {
+                status.statusCurrentDuration--;
+            }
+
+            aldenCombatController.activeStatuses.RemoveAll(status => status.statusCurrentDuration <= 0);
+        }
+        else if (characterName == "Valric")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Osmir")
+        {
+            // do the same as above
+        }
+        else if (characterName == "Assassin")
+        {
+            // do the same as above
+        }
+    }
 
     public void DoAction(string actionName, int targetPosition)
     {
@@ -119,7 +184,18 @@ public class PlayerCombat2D : MonoBehaviour
         {
             if (aldenCombatController.mana < 100)
             {
-                aldenCombatController.mana++;
+                if(aldenCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Clarity))
+                {
+                    aldenCombatController.mana += 2;
+                }
+                else if(aldenCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Confusion))
+                {
+                    aldenCombatController.mana += 0;
+                }
+                else
+                {
+                    aldenCombatController.mana++;
+                }
             }
         }
         else if (characterName == "Valric")

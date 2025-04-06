@@ -279,7 +279,8 @@ public class CombatManager : MonoBehaviour
                     {
                         if(playerCombatControllers[i].isDefeated == false)
                         {
-                            playerCombatControllers[i].turnCounter += playerCombatControllers[i].turnSpeed;
+                            playerCombatControllers[i].TickTurnCounter();
+                            playerCombatControllers[i].TickStatuses();
                             playerCombatControllers[i].AddManaTick();
                         }
                         else
@@ -646,36 +647,72 @@ public class CombatManager : MonoBehaviour
         }
         else if(statusName == Status.StatusName.Slowed)
         {
-            // Initialise the status
-            Status slowed = new Status();
-            slowed.statusName = Status.StatusName.Slowed;
-            slowed.statusDuration = statusDuration;
-            slowed.statusCurrentDuration = statusDuration;
+            // Check if the enemy already has the slowed status
+            Status slowed = enemyCombatControllers[currentSelectedTarget].activeStatuses.Find(status => status.statusName == Status.StatusName.Slowed);
 
-            // Add the status to the enemy
-            enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(slowed);
+            // If enemy already has slowed status, then we just increase the duration
+            if (slowed != null)
+            {
+                slowed.statusDuration += statusDuration;
+                slowed.statusCurrentDuration += statusDuration;
+            }
+            else  // Otherwise, we initialise a new one
+            {
+                // Initialise the status
+                slowed = new Status();
+                slowed.statusName = Status.StatusName.Frailty;
+                slowed.statusDuration = statusDuration;
+                slowed.statusCurrentDuration = statusDuration;
+
+                // Add the status to the enemy
+                enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(slowed);
+            }
         }
         else if (statusName == Status.StatusName.Confusion)
         {
-            // Initialise the status
-            Status confusion = new Status();
-            confusion.statusName = Status.StatusName.Confusion;
-            confusion.statusDuration = statusDuration;
-            confusion.statusCurrentDuration = statusDuration;
+            // Check if the enemy already has the confusion status
+            Status confusion = enemyCombatControllers[currentSelectedTarget].activeStatuses.Find(status => status.statusName == Status.StatusName.Confusion);
 
-            // Add the status to the enemy
-            enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(confusion);
+            // If enemy already has confusion status, then we just increase the duration
+            if (confusion != null)
+            {
+                confusion.statusDuration += statusDuration;
+                confusion.statusCurrentDuration += statusDuration;
+            }
+            else  // Otherwise, we initialise a new one
+            {
+                // Initialise the status
+                confusion = new Status();
+                confusion.statusName = Status.StatusName.Frailty;
+                confusion.statusDuration = statusDuration;
+                confusion.statusCurrentDuration = statusDuration;
+
+                // Add the status to the enemy
+                enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(confusion);
+            }
         }
         else if (statusName == Status.StatusName.Exposed)
         {
-            // Initialise the status
-            Status exposed = new Status();
-            exposed.statusName = Status.StatusName.Exposed;
-            exposed.statusDuration = statusDuration;
-            exposed.statusCurrentDuration = statusDuration;
+            // Check if the enemy already has the exposed status
+            Status exposed = enemyCombatControllers[currentSelectedTarget].activeStatuses.Find(status => status.statusName == Status.StatusName.Exposed);
 
-            // Add the status to the enemy
-            enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(exposed);
+            // If enemy already has exposed status, then we just increase the duration
+            if (exposed != null)
+            {
+                exposed.statusDuration += statusDuration;
+                exposed.statusCurrentDuration += statusDuration;
+            }
+            else  // Otherwise, we initialise a new one
+            {
+                // Initialise the status
+                exposed = new Status();
+                exposed.statusName = Status.StatusName.Frailty;
+                exposed.statusDuration = statusDuration;
+                exposed.statusCurrentDuration = statusDuration;
+
+                // Add the status to the enemy
+                enemyCombatControllers[currentSelectedTarget].activeStatuses.Add(exposed);
+            }
         }
     }
 
@@ -705,6 +742,7 @@ public class CombatManager : MonoBehaviour
                         might.statusName = Status.StatusName.Might;
                         might.statusDuration = statusDuration;
                         might.statusCurrentDuration = statusDuration;
+                        might.isBlessing = true;
 
                         // Add the status to Alden
                         playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(might);
@@ -739,6 +777,7 @@ public class CombatManager : MonoBehaviour
                         focus.statusName = Status.StatusName.Focus;
                         focus.statusDuration = statusDuration;
                         focus.statusCurrentDuration = statusDuration;
+                        focus.isBlessing = true;
 
                         // Add the status to Alden
                         playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(focus);
@@ -773,6 +812,7 @@ public class CombatManager : MonoBehaviour
                         haste.statusName = Status.StatusName.Haste;
                         haste.statusDuration = statusDuration;
                         haste.statusCurrentDuration = statusDuration;
+                        haste.isBlessing = true;
 
                         // Add the status to Alden
                         playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(haste);
@@ -807,6 +847,7 @@ public class CombatManager : MonoBehaviour
                         clarity.statusName = Status.StatusName.Clarity;
                         clarity.statusDuration = statusDuration;
                         clarity.statusCurrentDuration = statusDuration;
+                        clarity.isBlessing = true;
 
                         // Add the status to Alden
                         playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(clarity);
@@ -841,6 +882,7 @@ public class CombatManager : MonoBehaviour
                         barrier.statusName = Status.StatusName.Clarity;
                         barrier.statusDuration = statusDuration;
                         barrier.statusCurrentDuration = statusDuration;
+                        barrier.isBlessing = true;
 
                         // Add the status to Alden
                         playerCombatControllers[aldenIndex].aldenCombatController.activeStatuses.Add(barrier);
@@ -851,6 +893,17 @@ public class CombatManager : MonoBehaviour
             // Adding blessings to Valric - Same as above
             // Adding blessings to Osmir - Same as above
             // Adding blessings to Assassin - Same as above
+        }
+    }
+
+    // Strips (removes) the first blessing it finds in the enemies' active statuses
+    public void StripEnemyBlessing()
+    {
+        Status blessing = enemyCombatControllers[currentSelectedTarget].activeStatuses.Find(status => status.isBlessing == true);
+
+        if(blessing != null)
+        {
+            enemyCombatControllers[currentSelectedTarget].activeStatuses.Remove(blessing);
         }
     }
 
@@ -991,6 +1044,8 @@ public class CombatManager : MonoBehaviour
 
         // Hide the skill buttons (to reset for next time the drawer shows up)
         actionPanelAnimator.SetTrigger("SkillHide");
+
+        AfterButtonPressHandler();
     }
 
     public void OnDefendButton()
