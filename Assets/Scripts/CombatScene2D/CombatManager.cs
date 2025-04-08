@@ -514,7 +514,7 @@ public class CombatManager : MonoBehaviour
             enemyHealthDisplay.value = enemyCombatControllers[currentSelectedTarget].health;
 
             // Update the health text
-            enemyHealthValueDisplay.text = enemyCombatControllers[currentSelectedTarget].health.ToString() + " / " + enemyCombatControllers[currentSelectedTarget].maxHealth.ToString();
+            enemyHealthValueDisplay.text = enemyCombatControllers[currentSelectedTarget].health.ToString();
         }
     }
 
