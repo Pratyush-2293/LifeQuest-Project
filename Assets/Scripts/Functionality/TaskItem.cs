@@ -111,6 +111,11 @@ public class TaskItem : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void OnEditButton()
+    {
+        TaskListMenu.instance.OnTaskEditButton(this);
+    }
+
     public void OnQuestKeyButton()
     {
         GameData.instance.levelKeys++;
@@ -118,13 +123,13 @@ public class TaskItem : MonoBehaviour
         PlayerPrefs.SetInt("QuestKeyClaimCount", TaskListMenu.instance.questKeyClaimCount);
         PlayerPrefs.Save();
 
-        AfterRewardButtonHandler();
+        AfterButtonHandler();
     }
 
     public void OnDungeonKeyButton()
     {
         GameData.instance.dungeonKeys++;
-        AfterRewardButtonHandler();
+        AfterButtonHandler();
     }
 
     public void OnExpPointsButton()
@@ -142,7 +147,7 @@ public class TaskItem : MonoBehaviour
             GameData.instance.expPoints += TaskListMenu.instance.expRewardHardTask;
         }
 
-        AfterRewardButtonHandler();
+        AfterButtonHandler();
     }
 
     public void OnGoldCoinsRewardButton()
@@ -160,10 +165,10 @@ public class TaskItem : MonoBehaviour
             GameData.instance.goldCoins += (TaskListMenu.instance.goldRewardEasyTask * 3);
         }
 
-        AfterRewardButtonHandler();
+        AfterButtonHandler();
     }
 
-    private void AfterRewardButtonHandler()
+    public void AfterButtonHandler()
     {
         TaskListMenu.instance.RemoveTaskItemData(taskTitle);
         SaveManager.instance.SavePlayerTasksData();

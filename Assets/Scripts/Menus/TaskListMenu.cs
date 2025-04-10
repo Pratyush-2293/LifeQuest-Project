@@ -13,11 +13,16 @@ public class TaskListMenu : Menu
     public Transform taskListTransform = null;
 
     // Task Creation Menu
+    public Text taskCreationPanelTitle = null;
     public InputField titleInput = null;
     public InputField descriptionInput = null;
     public Toggle easyToggle = null;
     public Toggle mediumToggle = null;
     public Toggle hardToggle = null;
+    public GameObject createTaskButton;
+    public GameObject cancelCreateTaskButton;
+    public GameObject confirmEditTaskButton;
+    public GameObject cancelEditTaskButton;
 
     // Reward Claim Data
     public int questKeyClaimCount = 0;
@@ -31,6 +36,9 @@ public class TaskListMenu : Menu
     // Save Data
     public PlayerTasksData playerTasksData = new PlayerTasksData();
     private bool tasksLoaded = false;
+
+    // Private variables
+    private TaskItem editingTaskItem;
 
     private void Awake()
     {
@@ -147,6 +155,79 @@ public class TaskListMenu : Menu
     public void OnBackButton()
     {
         TurnOff(true);
+    }
+
+    public void OnTaskEditButton(TaskItem task)
+    {
+        // Load the task data into the editing panel
+        taskCreationPanelTitle.text = "Edit Task";
+        titleInput.text = task.taskTitle;
+        descriptionInput.text = task.taskDescription;
+
+        if (task.taskDifficulty == TaskItem.Difficulty.easy)
+        {
+            easyToggle.isOn = true;
+        }
+        else if (task.taskDifficulty == TaskItem.Difficulty.medium)
+        {
+            mediumToggle.isOn = true;
+        }
+        else if (task.taskDifficulty == TaskItem.Difficulty.hard)
+        {
+            hardToggle.isOn = true;
+        }
+
+        // Turn off task creation buttons
+        createTaskButton.gameObject.SetActive(false);
+        cancelCreateTaskButton.gameObject.SetActive(false);
+
+        // Turn on task editing buttons
+        confirmEditTaskButton.gameObject.SetActive(true);
+        cancelEditTaskButton.gameObject.SetActive(true);
+
+        // Display the editing panel
+        TaskListMenu.instance.OnCreateNewTaskButton();
+
+        // Save the task reference for other functions
+        editingTaskItem = task;
+    }
+
+    public void OnEditConfirmButton()
+    {
+        // Delete the old task using it's reference
+        editingTaskItem.AfterButtonHandler();
+
+        // Create the new task using the edited info in the editing/creation panel
+        OnCreateTaskButton();
+
+        ResetTaskCreationPanel();
+
+        createTaskMenu.gameObject.SetActive(false);
+    }
+
+    public void OnEditCancelButton()
+    {
+        // On cancel, we do not delete the old task & just refresh the edit/create panel
+        ResetTaskCreationPanel();
+
+        createTaskMenu.gameObject.SetActive(false);
+    }
+
+    private void ResetTaskCreationPanel()
+    {
+        taskCreationPanelTitle.text = "Create New Task";
+        titleInput.text = "";
+        descriptionInput.text = "";
+
+        easyToggle.isOn = true;
+
+        // Disable the editing buttons in the panel
+        confirmEditTaskButton.gameObject.SetActive(false);
+        cancelEditTaskButton.gameObject.SetActive(false);
+
+        // Enable the task creation buttons in the panel
+        createTaskButton.gameObject.SetActive(true);
+        cancelCreateTaskButton.gameObject.SetActive(true);
     }
 
     private void CalculateExpReward()

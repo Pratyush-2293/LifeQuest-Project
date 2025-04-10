@@ -199,7 +199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 817341300133922096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1958926552098945569}
+        m_TargetAssemblyTypeName: TaskItem, Assembly-CSharp
+        m_MethodName: OnEditButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1463218716928758857
 GameObject:
   m_ObjectHideFlags: 0
