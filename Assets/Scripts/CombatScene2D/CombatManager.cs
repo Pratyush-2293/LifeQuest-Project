@@ -9,6 +9,11 @@ public class CombatManager : MonoBehaviour
 {
     public static CombatManager instance = null;
 
+    [Header("Level Info")]
+    public float levelID;
+    public string loadNextSceneName;
+    public bool isRepeatableScene = false;
+
     [Header("Player Characters")]
     [Space(5)]
     public GameObject[] playerCharacters = new GameObject[4];
@@ -91,6 +96,9 @@ public class CombatManager : MonoBehaviour
 
     // enemy slider markers
     public List<Sprite> enemySliderMarkers = new List<Sprite>();
+
+    [Header("Other Components")]
+    public RewardsManager rewardsManager;
 
     // Storing script files for all characters on field
     [HideInInspector] public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
@@ -201,6 +209,11 @@ public class CombatManager : MonoBehaviour
             {
                 Debug.Log("Victory");
                 timeStart = false;
+                rewardsManager.LoadLevelCompletePanel(levelID > GameData.instance.combatCompletedID ? true : false);
+                if (isRepeatableScene == false)
+                {
+                    GameData.instance.combatCompletedID = levelID;
+                }
                 StartCoroutine(DisplayVictoryPanel());
             }
 
@@ -1093,6 +1106,11 @@ public class CombatManager : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
+    }
+
+    public void OnContinueButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(loadNextSceneName);
     }
 
     public void OnLeftButton()

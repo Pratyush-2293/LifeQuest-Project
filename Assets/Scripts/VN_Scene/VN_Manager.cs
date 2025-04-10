@@ -102,8 +102,8 @@ public class VN_Manager : MonoBehaviour
             }
             else
             {
+                levelCompleteManager.LoadLevelCompletePanel(levelID > GameData.instance.levelViewedID ? true : false);
                 GameData.instance.levelViewedID = levelID;
-                levelCompleteManager.LoadLevelCompletePanel((int)levelID > GameData.instance.maxCompletedLevel ? true : false);
             }
             yield break;
         }

@@ -19,6 +19,15 @@ public class TaskListMenu : Menu
     public Toggle mediumToggle = null;
     public Toggle hardToggle = null;
 
+    // Reward Claim Data
+    public int questKeyClaimCount = 0;
+    public string questKeyLastClaimDate;
+    public string todayDate;
+    public int expRewardEasyTask = 0;
+    public int expRewardMediumTask = 0;
+    public int expRewardHardTask = 0;
+    public int goldRewardEasyTask = 0;
+
     // Save Data
     public PlayerTasksData playerTasksData = new PlayerTasksData();
     private bool tasksLoaded = false;
@@ -36,7 +45,19 @@ public class TaskListMenu : Menu
 
     private void Start()
     {
-        //LoadPlayerTasks();
+        // Updating the Quest Key Claim Data
+        questKeyClaimCount = PlayerPrefs.GetInt("QuestKeyClaimCount", 0);
+        questKeyLastClaimDate = PlayerPrefs.GetString("QuestKeyLastClaimDate", "");
+        todayDate = System.DateTime.Now.ToString("yyyy-MM-dd");
+
+        if (questKeyLastClaimDate != todayDate)
+        {
+            // It's a new day, reset count
+            questKeyClaimCount = 0;
+            PlayerPrefs.SetInt("QuestKeyClaimCount", 0);
+            PlayerPrefs.SetString("QuestKeyLastClaimDate", todayDate);
+            PlayerPrefs.Save();
+        }
     }
 
     public void LoadPlayerTasks()
@@ -48,7 +69,7 @@ public class TaskListMenu : Menu
             for (int i = 0; i < playerTasksData.playerTaskItemDatas.Count; i++)
             {
                 taskItem = Instantiate(taskItemPrefab);
-                taskItem.transform.SetParent(taskListTransform);
+                taskItem.transform.SetParent(taskListTransform, false);
 
                 taskItem.taskTitle = playerTasksData.playerTaskItemDatas[i].taskTitle;
                 taskItem.taskDescription = playerTasksData.playerTaskItemDatas[i].taskDescription;
@@ -57,6 +78,9 @@ public class TaskListMenu : Menu
 
             tasksLoaded = true;
         }
+
+        CalculateExpReward();
+        CalculateGoldReward();
     }
 
     public void RemoveTaskItemData(string taskTitle)
@@ -79,7 +103,7 @@ public class TaskListMenu : Menu
     {
         // Instantiating and Adding to layout
         taskItem = Instantiate(taskItemPrefab);
-        taskItem.transform.SetParent(taskListTransform);
+        taskItem.transform.SetParent(taskListTransform, false);
 
         // Filling in values
         taskItem.taskTitle = titleInput.text;
@@ -123,6 +147,33 @@ public class TaskListMenu : Menu
     public void OnBackButton()
     {
         TurnOff(true);
+    }
+
+    private void CalculateExpReward()
+    {
+        if(GameData.instance.aldenLevel < 10)
+        {
+            expRewardEasyTask = 50;
+        }
+        else if(GameData.instance.aldenLevel >= 10 && GameData.instance.aldenLevel < 20)
+        {
+            expRewardEasyTask = 375;
+        }
+
+        expRewardMediumTask = expRewardEasyTask * 2;
+        expRewardHardTask = expRewardEasyTask * 3;
+    }
+
+    private void CalculateGoldReward()
+    {
+        if (GameData.instance.aldenLevel < 10)
+        {
+            goldRewardEasyTask = 50;
+        }
+        else if (GameData.instance.aldenLevel >= 10 && GameData.instance.aldenLevel < 20)
+        {
+            goldRewardEasyTask = 150;
+        }
     }
 }
 
