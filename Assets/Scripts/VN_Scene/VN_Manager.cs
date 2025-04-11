@@ -75,6 +75,7 @@ public class VN_Manager : MonoBehaviour
     [HideInInspector] public int[] dialogueOptionPointers = new int[4];
     private bool dialoguesFinished = false;
     private string combatSceneName = "";
+    private bool typingDialogue = false;
     public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
 
     public void Start()
