@@ -76,6 +76,7 @@ public class VN_Manager : MonoBehaviour
     private bool dialoguesFinished = false;
     private string combatSceneName = "";
     private bool typingDialogue = false;
+    private Coroutine typingCoroutine;
     public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
 
     public void Start()
@@ -222,7 +223,7 @@ public class VN_Manager : MonoBehaviour
         }
 
         // Inserting character dialogue
-        StartCoroutine(AnimateText(currentDialogue.dialogueText));
+        typingCoroutine = StartCoroutine(AnimateText(currentDialogue.dialogueText));
 
         // Playing dialogue SFX if it exists
         if (currentDialogue.SFX != -1)
@@ -280,7 +281,9 @@ public class VN_Manager : MonoBehaviour
 
     public IEnumerator AnimateText(string characterDialogue)
     {
-        for(int i=0; i < characterDialogue.Length + 1; i++)
+        typingDialogue = true;
+
+        for (int i=0; i < characterDialogue.Length + 1; i++)
         {
             dialogueBoxText.text = characterDialogue.Substring(0, i);
 
@@ -300,6 +303,8 @@ public class VN_Manager : MonoBehaviour
 
             yield return new WaitForSeconds(textSpeed);
         }
+
+        typingDialogue = false;
     }
 
     public IEnumerator InsertCharacterName(string characterName)
@@ -377,7 +382,21 @@ public class VN_Manager : MonoBehaviour
 
     public void OnNextButton() // Loads the scene with the next dialogue's data.
     {
-        StartCoroutine(UpdateSceneData());
+        // If still typing, skip animation and show full text instantly
+        if (typingDialogue)
+        {
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+            }
+
+            dialogueBoxText.text = currentDialogue.dialogueText; // Show full text immediately
+            typingDialogue = false;
+        }
+        else
+        {
+            StartCoroutine(UpdateSceneData());
+        }
     }
 
     public void OnOption1Button()
