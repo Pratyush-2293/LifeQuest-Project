@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelScenes/OldScenes/Level_1-1 (Old).unity
     guid: 01934415d1ccbed40a20d1a51ac44d8c
   - enabled: 1
-    path: Assets/Scenes/LevelScenes/Level_2/Level_2-1.unity
+    path: Assets/Scenes/LevelScenes/OldScenes/Level_2-1 (Old).unity
     guid: e9ea91b861074f143a3a01c71561f3dc
   - enabled: 1
     path: Assets/Scenes/MarketMenu.unity

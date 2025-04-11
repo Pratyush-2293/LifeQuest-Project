@@ -43,7 +43,18 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // do the same as above
+            if (valricCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Haste))
+            {
+                turnCounter += fastTurnSpeed;
+            }
+            else if (valricCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Slowed))
+            {
+                turnCounter += slowTurnSpeed;
+            }
+            else
+            {
+                turnCounter += turnSpeed;
+            }
         }
         else if (characterName == "Osmir")
         {
@@ -68,7 +79,12 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // do the same as above
+            foreach (Status status in valricCombatController.activeStatuses)
+            {
+                status.statusCurrentDuration--;
+            }
+
+            valricCombatController.activeStatuses.RemoveAll(status => status.statusCurrentDuration <= 0);
         }
         else if (characterName == "Osmir")
         {
@@ -117,7 +133,7 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if(characterName == "Valric")
         {
-            // do the same as above
+            return valricCombatController.health;
         }
         else if(characterName == "Osmir")
         {
@@ -140,7 +156,7 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // do the same as above
+            return valricCombatController.maxHealth;
         }
         else if (characterName == "Osmir")
         {
@@ -163,7 +179,7 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // do the same as above
+            return valricCombatController.mana;
         }
         else if (characterName == "Osmir")
         {
@@ -200,7 +216,21 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // do the same as above
+            if (valricCombatController.mana < 100)
+            {
+                if (valricCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Clarity))
+                {
+                    valricCombatController.mana += 2;
+                }
+                else if (valricCombatController.activeStatuses.Any(status => status.statusName == Status.StatusName.Confusion))
+                {
+                    valricCombatController.mana += 0;
+                }
+                else
+                {
+                    valricCombatController.mana++;
+                }
+            }
         }
         else if (characterName == "Osmir")
         {
@@ -221,7 +251,8 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if(characterName == "Valric")
         {
-            // same as above
+            valricCombatController.ValricAttack(targetPosition, characterPosition);
+            AddTimeCost(valricCombatController.attackTimeCost);
         }
         else if(characterName == "Osmir")
         {
@@ -242,7 +273,8 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // same as above
+            valricCombatController.ValricDefend();
+            AddTimeCost(valricCombatController.defendTimeCost);
         }
         else if (characterName == "Osmir")
         {
@@ -325,7 +357,7 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // same as above
+            valricCombatController.ValricTakeDamage(incomingDamage);
         }
         else if (characterName == "Osmir")
         {
@@ -345,7 +377,7 @@ public class PlayerCombat2D : MonoBehaviour
         }
         else if (characterName == "Valric")
         {
-            // same as above
+            valricCombatController.EnableSkillButtons();
         }
         else if (characterName == "Osmir")
         {

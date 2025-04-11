@@ -517,6 +517,7 @@ public class AldenCombat2D : MonoBehaviour
     {
         ResetDamageSequence();
         CombatManager.instance.ResumeTime();
+        CombatManager.instance.isAldenTurn = false;
     }
 
     private void PlaySoundEffect(string sfxName)

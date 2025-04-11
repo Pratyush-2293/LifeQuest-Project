@@ -90,6 +90,7 @@ public class CombatManager : MonoBehaviour
     [Space(5)]
     // player character sliders
     public Slider aldenTimeSlider = null;
+    public Slider valricTimeSlider = null;
 
     // enemy sliders
     public List<Slider> enemySliders = new List<Slider>();
@@ -107,10 +108,10 @@ public class CombatManager : MonoBehaviour
     // Private Variables
     private bool timeStart = true;
 
-    private bool isAldenTurn = false;
-    private bool isValricTurn = false;
-    private bool isOsmirTurn = false;
-    private bool isAssassinTurn = false;
+    public bool isAldenTurn = false;
+    public bool isValricTurn = false;
+    public bool isOsmirTurn = false;
+    public bool isAssassinTurn = false;
 
     public int aldenIndex = -1;
     public int valricIndex = -1;
@@ -554,7 +555,7 @@ public class CombatManager : MonoBehaviour
                 if(playerCombatControllers[i].isDefeated == false)
                 {
                     aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
-                    // similar for valric
+                    valricTimeSlider.value = playerCombatControllers[valricIndex].turnCounter;
                     // similar for osmir
                     // similar for assassin girl
                 }
@@ -933,7 +934,8 @@ public class CombatManager : MonoBehaviour
         // When attack button is pressed during Valric's turn
         if (isValricTurn)
         {
-
+            // Play attack animation according to selected target
+            playerCombatControllers[valricIndex].DoAction("Attack", currentSelectedTarget);
         }
 
         // When attack button is pressed during Osmir's turn

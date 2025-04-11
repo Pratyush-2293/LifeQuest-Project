@@ -149,7 +149,10 @@ public class VN_Manager : MonoBehaviour
         if (currentDialogue != null && currentDialogue.background != -1)
         {
             StartCoroutine(SwapBackground(currentDialogue.background));
-            characters[activeCharacter].CharacterSlideOut();
+            if(characters[activeCharacter] != characters[currentDialogue.character])
+            {
+                characters[activeCharacter].CharacterSlideOut();
+            }
             nextButton.gameObject.SetActive(false);                                 // to prevent user from skipping dialogue mid transition
             yield return new WaitForSeconds(1.5f);
         }
