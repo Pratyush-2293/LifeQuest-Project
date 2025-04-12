@@ -10,7 +10,10 @@ public class CombatManager : MonoBehaviour
     public static CombatManager instance = null;
 
     [Header("Level Info")]
+    [Space(5)]
+    public string currentSceneName;
     public float levelID;
+    [Space(10)]
     public string loadNextSceneName;
     public bool isRepeatableScene = false;
 
@@ -100,6 +103,7 @@ public class CombatManager : MonoBehaviour
 
     [Header("Other Components")]
     public RewardsManager rewardsManager;
+    public SceneTransition sceneTransition;
 
     // Storing script files for all characters on field
     [HideInInspector] public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
@@ -108,15 +112,15 @@ public class CombatManager : MonoBehaviour
     // Private Variables
     private bool timeStart = true;
 
-    public bool isAldenTurn = false;
-    public bool isValricTurn = false;
-    public bool isOsmirTurn = false;
-    public bool isAssassinTurn = false;
+    [HideInInspector] public bool isAldenTurn = false;
+    [HideInInspector] public bool isValricTurn = false;
+    [HideInInspector] public bool isOsmirTurn = false;
+    [HideInInspector] public bool isAssassinTurn = false;
 
-    public int aldenIndex = -1;
-    public int valricIndex = -1;
-    public int osmirIndex = -1;
-    public int assassinIndex = -1;
+    [HideInInspector] public int aldenIndex = -1;
+    [HideInInspector] public int valricIndex = -1;
+    [HideInInspector] public int osmirIndex = -1;
+    [HideInInspector] public int assassinIndex = -1;
 
     private int currentSelectedTarget = 0;
     private int enemiesAlive = 0;
@@ -1115,7 +1119,12 @@ public class CombatManager : MonoBehaviour
 
     public void OnContinueButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(loadNextSceneName);
+        sceneTransition.LoadSceneWithTransition(loadNextSceneName);
+    }
+
+    public void OnRetryButton()
+    {
+        sceneTransition.LoadSceneWithTransition(currentSceneName);
     }
 
     public void OnLeftButton()
