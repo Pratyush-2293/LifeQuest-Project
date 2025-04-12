@@ -74,18 +74,18 @@ LightmapSettings:
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 512
+    m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentSampleCount: 500
     m_PVREnvironmentReferencePointCount: 2048
-    m_PVRFilteringMode: 1
-    m_PVRDenoiserTypeDirect: 1
-    m_PVRDenoiserTypeIndirect: 1
-    m_PVRDenoiserTypeAO: 1
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -122,7 +122,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &254637796
+--- !u!224 &274545155 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
+    type: 3}
+  m_PrefabInstance: {fileID: 2003612418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &274545159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4138395458333428556, guid: 9fcf09c77fb9d2245b68c67943cede54,
+    type: 3}
+  m_PrefabInstance: {fileID: 2003612418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2942bc58ee0664c8967ec49d5eef4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &981412628
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -184,77 +202,79 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f,
+      objectReference: {fileID: 21300000, guid: cc5aa46a2f1d51a4a9383f08041042a7,
         type: 3}
     - target: {fileID: 4498828051602129069, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: m_text
-      value: 2. At the Infirmary
+      value: 12. The Necromancer
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: levelID
-      value: 2.1
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.size
-      value: 129
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: characters.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: backgrounds.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: initialBackgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2, type: 3}
+      objectReference: {fileID: 8300000, guid: b8d6f28fd453f0d4fb8f9300db6aee02, type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: characters.Array.data[2]
       value: 
-      objectReference: {fileID: 1268217279}
+      objectReference: {fileID: 274545159}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: characters.Array.data[3]
       value: 
-      objectReference: {fileID: 6512309762313822512}
+      objectReference: {fileID: 1423318575}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: characters.Array.data[4]
       value: 
-      objectReference: {fileID: 4993510973849525537}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: characters.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: characters.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: backgrounds.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: d76299879d46dd4479d261244e3026f0,
+      objectReference: {fileID: 21300000, guid: 765092b0da73e5440ae258c62857c564,
         type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: backgrounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f,
-        type: 3}
+      propertyPath: dialogues.Array.data[0].BGM
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: backgrounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 956c485ebe64cc14b83c2f5fcb7c1833,
-        type: 3}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: backgrounds.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: d52a1f52d804d444daec30e300f95e02,
-        type: 3}
+      propertyPath: dialogues.Array.data[0].SFX
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[10].BGM
@@ -508,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[35].BGM
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -628,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[47].BGM
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -857,6 +877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[70].BGM
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[70].SFX
       value: -1
       objectReference: {fileID: 0}
@@ -988,11 +1013,6 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[83].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[84].BGM
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
@@ -1154,12 +1174,12 @@ PrefabInstance:
         type: 3}
       propertyPath: backgroundMusic.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: eb6f45f1328f0074c9c0962b173695cc, type: 3}
+      objectReference: {fileID: 8300000, guid: 196b8d0e43c9a6149af29121ec408348, type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: backgroundMusic.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 55454ddcf05af274cb38334bb203efe2, type: 3}
+      objectReference: {fileID: 8300000, guid: 1270bd465c849ed49a9e9caa3672d96d, type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[100].BGM
@@ -1193,7 +1213,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[103].BGM
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1352,106 +1372,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[119].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[119].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].BGM
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].SFX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
       propertyPath: dialogues.Array.data[1].character
       value: 0
       objectReference: {fileID: 0}
@@ -1463,31 +1383,51 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[3].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[6].character
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[7].character
+      propertyPath: dialogues.Array.data[4].character
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[8].character
+      propertyPath: dialogues.Array.data[5].character
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[6].character
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[7].character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[8].character
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[9].character
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].background
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[10].character
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[11].character
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
@@ -1498,7 +1438,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[13].character
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1508,7 +1448,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[15].character
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1518,27 +1458,57 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[17].character
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[18].character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[19].character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[1].dialogueID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[20].character
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[21].character
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[25].character
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[22].character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[23].character
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[24].character
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[25].character
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[26].character
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1548,37 +1518,72 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[28].character
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[29].character
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[2].dialogueID
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[30].character
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[31].character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[32].character
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[33].character
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[34].character
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[35].character
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[36].character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[37].character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[39].character
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[3].dialogueID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[40].character
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1587,23 +1592,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[42].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[43].character
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[44].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
       propertyPath: dialogues.Array.data[45].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1623,12 +1613,22 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[49].character
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[4].dialogueID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[50].character
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[52].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1642,43 +1642,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[55].character
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
       propertyPath: dialogues.Array.data[56].character
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[57].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[58].character
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[59].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[60].character
-      value: 3
+      propertyPath: dialogues.Array.data[5].dialogueID
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[63].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[64].character
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1688,7 +1673,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[66].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1698,7 +1683,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[68].character
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1707,18 +1692,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[73].character
-      value: 4
+      propertyPath: dialogues.Array.data[6].dialogueID
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[74].character
+      propertyPath: dialogues.Array.data[70].character
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[71].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[72].character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[73].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[74].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[75].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1733,12 +1738,17 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[78].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[79].character
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[7].dialogueID
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1748,12 +1758,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[81].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[82].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1763,87 +1773,132 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[84].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[85].character
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[86].character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[87].character
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[88].character
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[91].character
-      value: 4
+      propertyPath: dialogues.Array.data[89].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[8].dialogueID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[90].character
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[92].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[93].character
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[94].character
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[95].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[96].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[97].character
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[98].character
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[99].character
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[9].dialogueID
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[100].character
-      value: 4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[102].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[103].character
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[104].character
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[105].character
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[106].character
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[107].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[108].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[109].character
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1858,17 +1913,17 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[110].character
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[111].character
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[112].character
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1878,27 +1933,22 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[114].character
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[115].character
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[116].character
-      value: 2
+      propertyPath: dialogues.Array.data[117].character
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[118].character
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[119].character
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1909,36 +1959,6 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[11].dialogueID
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].character
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].character
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].character
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].character
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].character
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -2178,7 +2198,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[35].background
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -2532,6 +2552,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[70].background
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[70].dialogueID
       value: 70
       objectReference: {fileID: 0}
@@ -2828,7 +2853,13 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[0].dialogueText
-      value: Alden's vision slowly fades in.
+      value: The infirmary is quiet, save for the occasional flicker of lanternlight
+        casting shifting shadows along the stone walls.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].nextDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -2863,7 +2894,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[103].background
-      value: 3
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3013,7 +3044,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[118].background
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3022,136 +3053,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[119].background
-      value: -1
+      propertyPath: dialogues.Array.data[1].dialogueText
+      value: "The scent of herbal salves linger in the air, blending with the faint
+        mustiness of old parchment\u2014likely from the book resting beside Valric."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[119].dialogueID
-      value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].dialogueID
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].dialogueID
-      value: 121
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].dialogueID
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].dialogueID
-      value: 123
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].dialogueID
-      value: 124
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].dialogueID
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].dialogueID
-      value: 126
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].background
+      propertyPath: dialogues.Array.data[1].nextDialogue
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[127].dialogueID
-      value: 127
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].background
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].dialogueID
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[1].dialogueText
-      value: Sunlight streams through tall windows, casting a warm glow on polished
-        marble.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
       propertyPath: dialogues.Array.data[2].dialogueText
-      value: The air carries a hint of herbs and fresh linens, while a distant hearth
-        crackles beneath hushed voices.
+      value: The knight is sitting upright on the cot, his injured arm no longer
+        bound in a sling but still wrapped in bandages. His sword, polished and well-maintained,
+        leans against the bedside table.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[2].nextDialogue
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[3].dialogueText
-      value: <Alden groans>
+      value: As Alden steps inside, Valric glances up from his book.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[3].nextDialogue
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[4].dialogueText
-      value: ...
+      value: <Valric smirks slightly>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[4].nextDialogue
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[5].dialogueText
-      value: Where...?
+      value: Back already? What, was the necromancer just waiting for you with open
+        arms?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[5].nextDialogue
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[6].dialogueText
-      value: "A dull ache weighs on Alden's body as he stirs, the rustle of sheets
-        and a scraping chair telling him he\u2019s in bed\u2014and not alone."
+      value: "Not quite, but he definitely didn\u2019t go down easy."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3161,7 +3118,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[7].dialogueText
-      value: "You\u2019re awake. Took you long enough."
+      value: Alden pulls up a chair and sits across from Valric, reaching into his
+        coat.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3171,18 +3129,34 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[8].dialogueText
-      value: "\u2026Who\u2014?"
+      value: With a flick of his wrist, he produces the amulet and lets it dangle
+        between his fingers. The silver chain gleams in the dim light, and the dark
+        gemstone at its center pulses faintly.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[8].nextDialogue
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[9].dialogueText
-      value: <Alden turns his head to see a young man in polished armor leaning against
-        the wall>
+      value: "Valric\u2019s smirk fades slightly as his eyes locked onto it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[9].nextDialogue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].characterName
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[10].dialogueText
-      value: Sir Valric. Royal Knight of Liora.
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3192,9 +3166,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[11].dialogueText
-      value: "Valric pushes off the wall, stepping closer to Alden\u2019s bed. His
-        confident smirk doesn\u2019t quite mask the sharpness in his gaze, as if
-        he\u2019s measuring Alden, assessing him."
+      value: "That\u2019s not just some trophy, is it?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3204,7 +3176,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[12].dialogueText
-      value: <Alden winces, trying to sit up>
+      value: "No. This was around the necromancer\u2019s neck. I took it after I
+        put him down."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3214,7 +3187,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[13].dialogueText
-      value: The caravan... The bandits...
+      value: <Valric leans forward, arms resting on his knees as he studies the amulet>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3224,7 +3197,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[14].dialogueText
-      value: <Valric pulls over a chair, sitting down casually>
+      value: "And by \u2018put him down,\u2019 you mean\u2014?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3234,8 +3207,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[15].dialogueText
-      value: Dealt with. The survivors fled. We took care of the wounded and escorted
-        the caravan here.
+      value: "He wasn\u2019t exactly alive to begin with."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3245,7 +3217,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[16].dialogueText
-      value: You put up a decent fight, for a guild mercenary.
+      value: <Valric leans back against the cot, running a hand through his hair>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3255,7 +3227,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[17].dialogueText
-      value: "I wasn\u2019t just going to stand by and do nothing."
+      value: "Well, that\u2019s unsettling."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3265,8 +3237,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[18].dialogueText
-      value: "No, you weren\u2019t. And that\u2019s why you\u2019re here instead
-        of rotting in a ditch."
+      value: You're telling me.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3276,7 +3247,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[19].dialogueText
-      value: Before Alden can respond, the door creaks open.
+      value: Alden hands the amulet to Valric, who takes it carefully, turning it
+        over in his fingers. He traces the intricate engravings with his thumb, frowning
+        slightly.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3291,8 +3264,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[20].dialogueText
-      value: A soft pair of footsteps approaches, and a familiar voice cuts through
-        the tension.
+      value: "This metal is\u2026very cold. Feels like it hasn\u2019t been touched
+        by the sun in years."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3302,7 +3275,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[21].dialogueText
-      value: "You\u2019re awake! I\u2019m so glad."
+      value: <Alden crosses his arms, watching him>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3312,7 +3285,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[22].dialogueText
-      value: Alden looks toward the source and sees the young girl he rescued.
+      value: Recognize the markings?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3322,9 +3295,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[23].dialogueText
-      value: "Now in an elegant yet simple dress, she\u2019s no longer the frightened
-        traveler he saw in the caravan\u2014there\u2019s a composed, almost regal
-        air to her."
+      value: <Valric shakes his head>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3334,7 +3305,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[24].dialogueText
-      value: But her eyes, filled with genuine relief, soften that image.
+      value: "No. These runes\u2026I\u2019ve seen a lot of enchanted trinkets in
+        my time, but this?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3344,7 +3316,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[25].dialogueText
-      value: "\u2026You\u2026"
+      value: This is different.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3354,7 +3326,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[26].dialogueText
-      value: Sir Valric, would you allow us a moment?
+      value: <Valric hands the amulet back>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3364,8 +3336,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[27].dialogueText
-      value: <Valric hesitates, glancing between her and Alden before sighing and
-        standing up>
+      value: "Take it to Osmir. If anyone in this castle can make sense of it, it\u2019s
+        him."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3375,7 +3347,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[28].dialogueText
-      value: As you wish, Your Highness.
+      value: Figured as much.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3385,7 +3357,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[29].dialogueText
-      value: <Alden freezes>
+      value: Alden tucks the amulet back into his coat and stands to leave, but before
+        he could take a step, Valric speaks again.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3400,7 +3373,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[30].dialogueText
-      value: ...What...?
+      value: Hey.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3410,7 +3383,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[31].dialogueText
-      value: "Valric smirks at Alden\u2019s reaction before stepping out of the room. "
+      value: The unexpected remark makes Alden pause. He glances over his shoulder.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3420,8 +3393,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[32].dialogueText
-      value: The girl sighs softly before turning her gaze back to Alden, a mixture
-        of gratitude and something unreadable in her eyes.
+      value: You did well.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3431,7 +3403,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[33].dialogueText
-      value: I suppose introductions are in order.
+      value: <Alden grins sligthly>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3441,7 +3413,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[34].dialogueText
-      value: <The Princess takes a seat beside his bed>
+      value: Thanks.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3451,7 +3423,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[35].dialogueText
-      value: My name is Princess Evelyne of Liora.
+      value: The royal library is quiet at this hour, save for the occasional crackle
+        of candle flames and the scratching of quills against parchment.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3461,7 +3434,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[36].dialogueText
-      value: And you, Alden, saved my life.
+      value: Stacks of books tower over wooden desks, their pages filled with knowledge
+        spanning centuries.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3471,7 +3445,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[37].dialogueText
-      value: The weight of the Princess' words settles in.
+      value: At a grand desk near the back, Osmir sat reviewing an old manuscript,
+        his sharp eyes scanning its contents with practiced ease.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3481,8 +3456,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[38].dialogueText
-      value: "Alden swallows, mind racing. The girl he risked everything for\u2026was
-        royalty?"
+      value: As Alden steps into the chamber, Osmir looks up, his brow arching slightly.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3492,8 +3466,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[39].dialogueText
-      value: "He exhales sharply, barely able to process what he\u2019s just learned.
-        And yet, something about this feels\u2026off."
+      value: Long day?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3503,13 +3476,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[3].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[40].dialogueText
-      value: Why was a princess traveling in secret? And why was she targeted so
-        specifically?
+      value: <Alden sighs as he drops into a chair>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3519,7 +3491,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[41].dialogueText
-      value: ...
+      value: You could say that.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3529,7 +3501,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[42].dialogueText
-      value: What were you doing out there?
+      value: Osmir chuckles, but his expression shifts when Alden reaches into his
+        coat and pulls out the amulet.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3539,7 +3512,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[43].dialogueText
-      value: "That\u2026is a long story."
+      value: The dim candlelight reflects off the dark gemstone embedded in its center,
+        its faint pulse almost unnatural.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3549,8 +3523,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[44].dialogueText
-      value: "So\u2026a princess. That explains why you had a royal knight tailing
-        the caravan."
+      value: For a brief moment, Osmir says nothing. His eyes narrow slightly as
+        he leans forward, fingers hovering over the artifact before he finally touches
+        it.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3560,7 +3535,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[45].dialogueText
-      value: "But it doesn\u2019t explain why you were out there in the first place."
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3570,7 +3545,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[46].dialogueText
-      value: You ask a lot of questions for someone who just woke up.
+      value: Where did you find this?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3580,7 +3555,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[47].dialogueText
-      value: Nearly dying tends to do that to a man.
+      value: "On the necromancer\u2026but there\u2019s a problem."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3590,7 +3565,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[48].dialogueText
-      value: <The Princess chuckles, and shakes her head>
+      value: A problem? More than the fact that you have a sinister-looking trinket
+        pulsing with eerie energy?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3600,8 +3576,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[49].dialogueText
-      value: "There are things I cannot speak of freely. If you truly want answers,
-        you\u2019ll need to hear them from my mother."
+      value: The necromancer was undead.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3610,9 +3585,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[4].characterName
+      value: Valric
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[50].dialogueText
-      value: "Alden frowns. The princess\u2019s words feel deliberate, as if she\u2019s
-        holding something back."
+      value: "Not just a reanimated husk\u2014he had full control of his mind. He
+        could cast spells, raise the dead, command them."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3622,9 +3602,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[51].dialogueText
-      value: Alden sits upright on the infirmary bed, his wounds treated but still
-        sore. He flexes his fingers, testing his movement, while across from him,
-        Princess Evelyne watches with composed ease.
+      value: "Osmir\u2019s eyes widen slightly. He leans in, his fingers hovering
+        over the amulet but not yet touching it."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3634,7 +3613,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[52].dialogueText
-      value: "Well, nevermind that, at least I\u2019m in better shape than I expected."
+      value: "An undead necromancer\u2026retaining his faculties?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3644,8 +3623,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[53].dialogueText
-      value: I should hope so. It would be disappointing if my savior were bedridden
-        after just one battle.
+      value: "That shouldn\u2019t be possible."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3655,7 +3633,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[54].dialogueText
-      value: I was fortunate, Your Highness.
+      value: "That\u2019s what I thought too. Maybe the amulet had something to do
+        with it?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3665,7 +3644,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[55].dialogueText
-      value: <Evelyne tilts her head slightly, amusement flickering in her eyes>
+      value: Osmir hums in thought before finally picking up the amulet, turning
+        it over in his hands. His eyes scan the runes and symbols carved along its
+        surface.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3675,7 +3656,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[56].dialogueText
-      value: That is a very diplomatic way of saying you nearly collapsed.
+      value: "Interesting\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3685,7 +3666,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[57].dialogueText
-      value: "The situation was\u2026demanding."
+      value: "Very interesting\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3695,8 +3676,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[58].dialogueText
-      value: So humble. And yet, I distinctly remember you defeating men twice your
-        size.
+      value: Osmir doesn't react with his usual wit. Instead, he studies the engravings
+        along the amulet's surface, running his fingers over the delicate patterns.
+        A flicker of recognition crosses his face.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3706,7 +3688,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[59].dialogueText
-      value: I did what was necessary.
+      value: Without a word, he stands, moving toward a nearby bookshelf.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3715,9 +3697,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[5].characterName
+      value: Valric
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[60].dialogueText
-      value: Still. For someone who claims to be a mere mercenary, you handled yourself
-        well.
+      value: He suddenly turns, moving toward his overflowing bookshelves and starts
+        yanking out tomes, flipping through pages at a rapid pace.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3727,7 +3714,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[61].dialogueText
-      value: "Alden doesn\u2019t respond immediately."
+      value: Alden watches as he skims through ancient texts, muttering under his
+        breath before settling on one bound in deep blue leather.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3737,8 +3725,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[62].dialogueText
-      value: Compliments from nobility were rarely given lightly, but he isn't sure
-        how to take it. Instead, he inclines his head slightly.
+      value: He pulls it free, flipping through the pages quickly before stopping
+        at a section filled with carefully inked script.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3748,7 +3736,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[63].dialogueText
-      value: I am glad I was of service, Your Highness.
+      value: Old Varethian.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3758,7 +3746,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[64].dialogueText
-      value: <Evelyne sighs, shaking her head slightly as she rises from her seat>
+      value: You recognize it?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3768,7 +3756,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[65].dialogueText
-      value: "That formality suits you, but I do wonder\u2014does it ever tire you?"
+      value: <Osmir nods, comparing the text to the engravings on the amulet>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3778,7 +3766,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[66].dialogueText
-      value: It is only proper when speaking to royalty.
+      value: The writing on this amulet matches the script of the Varethian Empire.
+        An ancient civilization that thrived during the Age of War.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3788,7 +3777,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[67].dialogueText
-      value: <Evelyne hums in amusement as she turns toward the door>
+      value: "However, just like many other empires at the time\u2026 , it crumbled
+        and faded away as the age of war came to an end."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3798,7 +3788,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[68].dialogueText
-      value: Perhaps. But propriety can make for such dull conversation.
+      value: So this thing is ancient?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3808,7 +3798,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[69].dialogueText
-      value: "Come along, Ser Alden. It wouldn\u2019t do to keep my mother waiting."
+      value: Not necessarily. The language is ancient, but that doesn't mean the
+        object itself is. Someone could have crafted this using Varethian magic.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3818,12 +3809,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[6].characterName
-      value: Narrator
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[70].dialogueText
-      value: The vast chamber is adorned with banners bearing the crest of Liora.
+      value: And you can read it?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3833,8 +3824,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[71].dialogueText
-      value: Queen Elowen sits upon her ornate throne, her sharp gaze steady as Princess
-        Evelyne stands beside her and Sir Valric watches from a distance.
+      value: "Some of it. But full translation? No. That\u2019s beyond me."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3844,7 +3834,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[72].dialogueText
-      value: Alden steps forward with measured care, stopping to bow.
+      value: Do you know anyone who can?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3854,8 +3844,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[73].dialogueText
-      value: "You are Alden Redbrook, the mercenary responsible for my daughter\u2019s
-        safety?"
+      value: <Osmir raises a brow, then chuckles as he shakes his head>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3865,7 +3854,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[74].dialogueText
-      value: I am, Your Majesty.
+      value: Ah, if only the world worked like that, lad.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3875,8 +3864,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[75].dialogueText
-      value: For your actions, the crown extends its gratitude. You will be compensated
-        accordingly for your service.
+      value: What were the odds you'd bring me a random ancient script, and I'd just
+        happen to know someone who could read it?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3886,7 +3875,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[76].dialogueText
-      value: I am honored, Your Majesty.
+      value: <Alden grins slightly>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3896,7 +3885,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[77].dialogueText
-      value: However, I seek something beyond compensation.
+      value: "Would\u2019ve made things easier."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3906,7 +3895,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[78].dialogueText
-      value: And what is it that you seek?
+      value: "It would, but no, I don\u2019t know anyone personally. Though..."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3916,7 +3905,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[79].dialogueText
-      value: A place to serve.
+      value: "...if there\u2019s one place that might have the right scholars, it\u2019s
+        the Arcanum of Mistveil. If anyone can decipher this, you\u2019ll find them
+        there."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3926,13 +3917,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[7].characterName
-      value: Knight
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[80].dialogueText
-      value: I have spent years as a mercenary, but I wish to devote my skills to
-        something greater.
+      value: "I assume I can\u2019t just walk in and they\u2019ll hand me the answers?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3942,7 +3932,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[81].dialogueText
-      value: <Queen Elowen studies him carefully>
+      value: <Osmir grins as he rolls up his sleeve slightly, revealing an old, faintly
+        glowing sigil on his forearm>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3952,7 +3943,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[82].dialogueText
-      value: Service to the crown is not a decision to be made lightly.
+      value: "They won\u2019t. But with my name on a letter, you\u2019ll at least
+        get through the gate."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3962,7 +3954,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[83].dialogueText
-      value: I understand, Your Majesty.
+      value: You used to be with the Arcanum?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3972,8 +3964,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[84].dialogueText
-      value: But I have seen firsthand what dangers threaten this kingdom. If I can
-        be of use, I wish to be.
+      value: "Not quite. I wasn\u2019t one of the scholars\u2014I was a Defense Mage.
+        My job was keeping fools from sneaking into their vaults."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3983,7 +3975,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[85].dialogueText
-      value: There is a pause.
+      value: <Alden chuckles, shaking his head slightly>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3993,8 +3985,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[86].dialogueText
-      value: "The queen\u2019s fingers lightly tap the armrest of her throne, her
-        expression remaining composed."
+      value: Let me guess, that happened often?
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4004,8 +3995,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[87].dialogueText
-      value: Sir Valric, standing nearby, watches Alden with faint amusement before
-        speaking.
+      value: <Osmir laughs>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4015,7 +4005,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[88].dialogueText
-      value: A bold request. But not without merit.
+      value: You have no idea.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4025,8 +4015,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[89].dialogueText
-      value: The queen exhales softly, then turns to Evelyne, who remains silent
-        but observant.
+      value: One poor bastard tripped a magical ward and spent an entire night dangling
+        from the rafters. Another got tossed headfirst into a well for tampering
+        with a locked chest.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4036,12 +4027,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[8].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[90].dialogueText
-      value: After a moment, she looks back at Alden.
+      value: "Ah, those were the days\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4051,8 +4042,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[91].dialogueText
-      value: If you truly wish to serve, then you must prove that you are capable
-        of carrying the weight of such duty.
+      value: "A nostalgic grin plays on Osmir\u2019s face before he exhales and pulls
+        out a fresh parchment."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4062,7 +4053,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[92].dialogueText
-      value: <She shifts her gaze toward Valric>
+      value: "I\u2019ll write you a letter bearing my seal. That should get you inside. "
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4072,7 +4063,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[93].dialogueText
-      value: Sir Valric, you have seen his skill firsthand. Would you see him tested?
+      value: "So how far did you make it? You weren\u2019t just some vault guard
+        the whole time, right?"
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4082,7 +4074,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[94].dialogueText
-      value: Gladly, Your Majesty. I do enjoy a challenge.
+      value: "No\u2026that would be too boring for me."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4092,8 +4084,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[95].dialogueText
-      value: <Alden remains composed, though he feels the weight of the decision
-        settling in>
+      value: "I trained with my fellow Battle Mages in defensive magics\u2014wards,
+        barriers, reinforcement spells, and a bit of offensive magic as well, so
+        that we can put reckless fools back in line."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4103,7 +4096,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[96].dialogueText
-      value: "<The queen\u2019s gaze returns to Alden>"
+      value: We started as recruits, barely knowing how to sustain a shield under
+        pressure, but over time, we mastered the craft. I climbed the ranks, eventually
+        became High Warden of Mistveil.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4113,8 +4108,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[97].dialogueText
-      value: If you pass, you will take the oath. If you fail, you will be compensated
-        and dismissed.
+      value: High Warden? That sounds important.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4124,7 +4118,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[98].dialogueText
-      value: Do you accept these terms?
+      value: "It was. I oversaw the security of Mistveil\u2019s archives, vaults,
+        and high-profile scholars."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4134,7 +4129,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[99].dialogueText
-      value: I do.
+      value: "Any dangerous research, any restricted knowledge\u2014it was under
+        my jurisdiction to keep it protected."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4144,12 +4140,13 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[9].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[100].dialogueText
-      value: Then we shall see where your path leads, Alden.
+      value: "Then why\u2019d you leave? Doesn\u2019t seem like a position you just
+        walk away from."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4159,8 +4156,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[101].dialogueText
-      value: "Valric chuckles, clapping a hand on Alden\u2019s shoulder as the queen
-        inclines her head slightly."
+      value: "For a moment, Osmir\u2019s expression turns distant, his fingers idly
+        tapping against the desk. Then, with a soft chuckle, he shakes his head."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4170,8 +4167,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[102].dialogueText
-      value: The chamber remains silent as Alden steps forward into the next stage
-        of his journey.
+      value: High positions come with high responsibilities...and petty politics.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4181,8 +4177,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[103].dialogueText
-      value: Alden walks beside Sir Valric as they exit the royal chambers. The weight
-        of the conversation lingers in the air, but Alden remains focused.
+      value: The more authority I had, the more I got dragged into the endless games
+        of influence.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4192,8 +4188,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[104].dialogueText
-      value: "The hallways of the palace seem colder now, the grandeur of the castle
-        juxtaposed against the weight of the decision he\u2019s just made."
+      value: "Who gets access to which research, which scholar gets protection, who
+        holds favor with the Grand Magus\u2014it was all just...maneuvering pieces
+        on a board."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4203,7 +4200,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[105].dialogueText
-      value: "You\u2019ve made a bold choice, Alden. A dangerous one, too."
+      value: I got tired of being a piece.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4213,7 +4210,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[106].dialogueText
-      value: But it seems you have the resolve to back it up.
+      value: "I see\u2026and so you retired early."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4223,7 +4220,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[107].dialogueText
-      value: "I\u2019ve never wanted to be just another mercenary, Sir Valric."
+      value: Packed my things, took my leave, and came back to Liora.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4233,7 +4230,9 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[108].dialogueText
-      value: I want to do something that matters. Something more than coin.
+      value: "Books don\u2019t scheme, they don\u2019t pull underhanded tricks to
+        make you do their bidding. They just sit quietly, waiting for someone who
+        wants to understand them."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4243,7 +4242,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[109].dialogueText
-      value: "Good. That\u2019s the spirit."
+      value: <Alden smirks>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4258,8 +4257,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[110].dialogueText
-      value: "But remember, the road ahead won\u2019t be easy. There\u2019s much
-        more to this life than a few battles."
+      value: Sounds peaceful.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4269,7 +4267,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[111].dialogueText
-      value: "You\u2019ll have to prove yourself\u2014again and again."
+      value: It is.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4279,7 +4277,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[112].dialogueText
-      value: <Alden nods, understanding the gravity of the situation>
+      value: Unless some reckless adventurer barges in with a mysterious artifact
+        from a cursed necromancer, ruining my quiet evening.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4289,7 +4288,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[113].dialogueText
-      value: "I\u2019m ready. I\u2019ll do whatever it takes."
+      value: "I\u2019ll try not to make a habit of it."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4299,7 +4298,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[114].dialogueText
-      value: <Valric gestures towards a hallway leading to the infirmary>
+      value: <Osmir chuckles, grabbing a parchment>
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4309,8 +4308,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[115].dialogueText
-      value: "Before we start any of that, you need to rest. You\u2019re still injured,
-        and I\u2019d rather you didn\u2019t push yourself too soon."
+      value: "I\u2019ll have a cartographer map out a route for you. Come back tomorrow
+        morning, and I\u2019ll have your letter ready."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4320,7 +4319,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[116].dialogueText
-      value: The trials will wait.
+      value: Alden gives a nod and turns to leave, the flickering candlelight casting
+        his shadow across the floor.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4330,8 +4330,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[117].dialogueText
-      value: They walk toward the royal infirmary, the smell of antiseptic and healing
-        herbs filling the air as they step inside.
+      value: "And get some rest, lad. You\u2019ll need it."
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4341,8 +4340,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[118].dialogueText
-      value: "You\u2019re welcome to stay here and rest for as long as you need.
-        The healers here are among the best."
+      value: I'll try.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4351,115 +4349,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[119].dialogueText
-      value: "But I have to say\u2014"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[119].nextDialogue
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
       propertyPath: dialogues.Array.data[11].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].dialogueText
-      value: <Alden interrupts with a smile>
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].nextDialogue
-      value: 121
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].dialogueText
-      value: But I should go home. My family will be worried about me.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].nextDialogue
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].dialogueText
-      value: "Exactly. Your family deserves to know that you\u2019re alright."
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].nextDialogue
-      value: 123
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].dialogueText
-      value: A mercenary might not be a knight, but your loyalty to your family comes
-        before anything else.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].nextDialogue
-      value: 124
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].dialogueText
-      value: "Get some rest, Alden. When you're ready, I\u2019ll find you. And then
-        we begin."
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].nextDialogue
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].dialogueText
-      value: "Thank you, Sir Valric. I\u2019ll head home now. I appreciate everything\u2026truly."
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].nextDialogue
-      value: 126
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].dialogueText
-      value: Alden bows slightly, then turns and exits the infirmary, feeling the
-        weight of both the journey ahead and the comfort of being able to return
-        home.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].nextDialogue
-      value: 127
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].dialogueText
-      value: "The sky outside is still bright, but there\u2019s a chill in the air,
-        an early evening breeze that carries the scent of the farmlands and distant
-        hills."
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].nextDialogue
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].dialogueText
-      value: As Alden steps forward, the familiar road unfurls before him, steady
-        and certain, guiding him home.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].nextDialogue
-      value: 129
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4469,7 +4360,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[13].characterName
-      value: Alden
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4479,7 +4370,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[15].characterName
-      value: Valric
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4489,12 +4380,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[17].characterName
-      value: Alden
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[18].characterName
-      value: Valric
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4504,37 +4395,37 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[20].characterName
-      value: Narrator
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[21].characterName
-      value: ???
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[22].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[23].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[24].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[25].characterName
       value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[22].characterName
+      value: Alden
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[23].characterName
+      value: Valric
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[24].characterName
+      value: Valric
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[25].characterName
+      value: Valric
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[26].characterName
-      value: ???
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4544,17 +4435,17 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[28].characterName
-      value: Valric
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[29].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[30].characterName
-      value: Alden
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4564,27 +4455,27 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[32].characterName
-      value: Narrator
+      value: Valric
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[33].characterName
-      value: Princess
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[34].characterName
-      value: Princess
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[35].characterName
-      value: Princess Evelyne
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[36].characterName
-      value: Princess Evelyne
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4599,12 +4490,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[39].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[40].characterName
-      value: Narrator
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4614,27 +4505,27 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[42].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[43].characterName
-      value: Princess Evelyne
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[44].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[45].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[46].characterName
-      value: Princess Evelyne
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4644,17 +4535,17 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[48].characterName
-      value: Princess Evelyne
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[49].characterName
-      value: Princess Evelyne
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[50].characterName
-      value: Narrator
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4664,12 +4555,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[52].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[53].characterName
-      value: Princess Evelyne
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4679,32 +4570,32 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[55].characterName
-      value: Princess Evelyne
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[56].characterName
-      value: Princess Evelyne
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[57].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[58].characterName
-      value: Princess Evelyne
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[59].characterName
-      value: Alden
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[60].characterName
-      value: Princess Evelyne
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4719,67 +4610,67 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[63].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[64].characterName
-      value: Princess Evelyne
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[65].characterName
-      value: Princess Evelyne
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[66].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[67].characterName
-      value: Princess Evelyne
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[68].characterName
-      value: Princess Evelyne
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[69].characterName
-      value: Princess Evelyne
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[70].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[71].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[72].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[73].characterName
-      value: Queen Elowen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[74].characterName
       value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[69].characterName
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[70].characterName
+      value: Alden
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[71].characterName
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[72].characterName
+      value: Alden
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[73].characterName
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[74].characterName
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[75].characterName
-      value: Queen Elowen
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4794,12 +4685,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[78].characterName
-      value: Queen Elowen
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[79].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4809,12 +4700,12 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[81].characterName
-      value: Queen Elowen
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[82].characterName
-      value: Queen Elowen
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4824,87 +4715,87 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[84].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[85].characterName
-      value: Narrator
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[86].characterName
-      value: Narrator
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[87].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[88].characterName
-      value: Valric
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[89].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[90].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[91].characterName
-      value: Queen Elowen
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[92].characterName
-      value: Queen Elowen
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[93].characterName
-      value: Queen Elowen
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[94].characterName
-      value: Valric
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[95].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[96].characterName
-      value: Queen Elowen
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[97].characterName
-      value: Queen Elowen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[98].characterName
-      value: Queen Elowen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[99].characterName
       value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[98].characterName
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[99].characterName
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[100].characterName
-      value: Queen Elowen
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4914,57 +4805,57 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[102].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[103].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[104].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[105].characterName
-      value: Valric
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[106].characterName
-      value: Valric
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[107].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[108].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[109].characterName
-      value: Valric
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[110].characterName
-      value: Valric
+      value: Alden
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[111].characterName
-      value: Valric
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[112].characterName
-      value: Alden
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -4974,77 +4865,27 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[114].characterName
-      value: Valric
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[115].characterName
-      value: Valric
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[116].characterName
-      value: Valric
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[117].characterName
-      value: Narrator
+      value: Osmir
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[118].characterName
-      value: Valric
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[119].characterName
-      value: Valric
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].characterName
       value: Alden
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].characterName
-      value: Alden
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].characterName
-      value: Valric
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].characterName
-      value: Valric
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].characterName
-      value: Valric
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].characterName
-      value: Alden
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].characterName
-      value: Narrator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].characterName
-      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -5070,6 +4911,56 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[9].numberOfOptions
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[0].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[1].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[2].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[3].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[4].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[5].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[6].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[7].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[8].optionTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[9].optionTexts.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -5618,52 +5509,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[119].optionTexts.Array.size
+      propertyPath: dialogues.Array.data[0].optionPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[120].optionTexts.Array.size
+      propertyPath: dialogues.Array.data[1].optionPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[121].optionTexts.Array.size
+      propertyPath: dialogues.Array.data[2].optionPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[122].optionTexts.Array.size
+      propertyPath: dialogues.Array.data[3].optionPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[123].optionTexts.Array.size
+      propertyPath: dialogues.Array.data[4].optionPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[124].optionTexts.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].optionTexts.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].optionTexts.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].optionTexts.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].optionTexts.Array.size
+      propertyPath: dialogues.Array.data[5].optionPointers.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
@@ -5688,6 +5559,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[6].optionPointers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[6].optionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -5705,6 +5581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[6].optionTexts.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[7].optionPointers.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -5728,6 +5609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[8].optionPointers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[8].optionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -5745,6 +5631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[8].optionTexts.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[9].optionPointers.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -6313,56 +6204,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
-      propertyPath: dialogues.Array.data[119].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[120].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[121].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[122].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[123].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[124].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[125].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[126].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[127].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: dialogues.Array.data[128].optionPointers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
       propertyPath: dialogues.Array.data[5].optionPointers.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -6395,132 +6236,264 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3605562818706793719, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6512309762313822511}
+      addedObject: {fileID: 274545155}
     - targetCorrespondingSourceObject: {fileID: 3605562818706793719, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4993510973849525538}
-    - targetCorrespondingSourceObject: {fileID: 3605562818706793719, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1268217278}
+      addedObject: {fileID: 1423318579}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdf508855721f344084d1748dc58c2aa, type: 3}
---- !u!224 &254637797 stripped
+--- !u!1001 &1256044811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1809732813}
+    m_Modifications:
+    - target: {fileID: 437176506056901052, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_Name
+      value: Osmir
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a50b045343717e84bac0bc9d4e2ff0e3, type: 3}
+--- !u!114 &1423318575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4138395458333428556, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1256044811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2942bc58ee0664c8967ec49d5eef4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &1423318579 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6352479070212944738, guid: a50b045343717e84bac0bc9d4e2ff0e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1256044811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1809732813 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3605562818706793719, guid: bdf508855721f344084d1748dc58c2aa,
     type: 3}
-  m_PrefabInstance: {fileID: 254637796}
+  m_PrefabInstance: {fileID: 981412628}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1268217277
+--- !u!1001 &2003612418
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 254637797}
+    m_TransformParent: {fileID: 1809732813}
     m_Modifications:
-    - target: {fileID: 437176506056901052, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 437176506056901052, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_Name
-      value: Valric
+      value: ValricNoArmor
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 1000
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 1000
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
+    - target: {fileID: 6352479070212944738, guid: 9fcf09c77fb9d2245b68c67943cede54,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -6529,299 +6502,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 09b364eb82b9d404d92263ed80bf5d4d, type: 3}
---- !u!224 &1268217278 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6352479070212944738, guid: 09b364eb82b9d404d92263ed80bf5d4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1268217277}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1268217279 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4138395458333428556, guid: 09b364eb82b9d404d92263ed80bf5d4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1268217277}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce2942bc58ee0664c8967ec49d5eef4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &4993510973849525536
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 254637797}
-    m_Modifications:
-    - target: {fileID: 2558492724027180453, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_Name
-      value: QueenElowen
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c63ced4b5798da8458252c020a7e98d3, type: 3}
---- !u!114 &4993510973849525537 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2089167315179999061, guid: c63ced4b5798da8458252c020a7e98d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 4993510973849525536}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce2942bc58ee0664c8967ec49d5eef4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &4993510973849525538 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 9059048006598375291, guid: c63ced4b5798da8458252c020a7e98d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 4993510973849525536}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6512309762313822510
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 254637797}
-    m_Modifications:
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374513568553277829, guid: d296ac540cf45484a88a9d017440c1e8,
-        type: 3}
-      propertyPath: m_Name
-      value: EvelyneRoyal
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d296ac540cf45484a88a9d017440c1e8, type: 3}
---- !u!224 &6512309762313822511 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4066234505611242331, guid: d296ac540cf45484a88a9d017440c1e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6512309762313822510}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6512309762313822512 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6424428908053812085, guid: d296ac540cf45484a88a9d017440c1e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6512309762313822510}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce2942bc58ee0664c8967ec49d5eef4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_SourcePrefab: {fileID: 100100000, guid: 9fcf09c77fb9d2245b68c67943cede54, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 254637796}
+  - {fileID: 981412628}
