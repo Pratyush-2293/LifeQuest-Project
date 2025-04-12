@@ -31,6 +31,8 @@ public class HeroesMenuManager : MonoBehaviour
     public enum ActiveCharacter { Alden, Valric, Osmir, Assassin };
     public ActiveCharacter activeCharacter = ActiveCharacter.Alden;
 
+    public SceneTransition sceneTransition;
+
     private int expToAdd = 50;
     private int baseExpToAdd = 50;
     private Coroutine saveCoroutine;    // NOTE: Remember to save data when exiting to main menu
@@ -104,7 +106,7 @@ public class HeroesMenuManager : MonoBehaviour
 
     public void OnBackButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameHubMenu");
+        sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 
     public void OnAddEXPButton()  //NOTE: Also need to update xp bar and xp text upon adding xp

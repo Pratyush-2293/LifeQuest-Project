@@ -64,6 +64,7 @@ public class VN_Manager : MonoBehaviour
     public GameObject[] optionButtons = new GameObject[4];
     public TMP_Text[] optionButtonTexts = new TMP_Text[4];
     public LevelCompleteManager levelCompleteManager;
+    public SceneTransition sceneTransition;
 
     // Internal Variables
     private DialogueEntry currentDialogue = null;
@@ -100,12 +101,14 @@ public class VN_Manager : MonoBehaviour
             if(combatSceneName != "")
             {
                 GameData.instance.levelViewedID = levelID;
-                SceneManager.LoadScene(combatSceneName);
+                SaveManager.instance.SaveGameData();
+                sceneTransition.LoadSceneWithTransition(combatSceneName);
             }
             else
             {
                 levelCompleteManager.LoadLevelCompletePanel(levelID > GameData.instance.levelViewedID ? true : false);
                 GameData.instance.levelViewedID = levelID;
+                SaveManager.instance.SaveGameData();
             }
             yield break;
         }
@@ -149,7 +152,10 @@ public class VN_Manager : MonoBehaviour
         if (currentDialogue != null && currentDialogue.background != -1)
         {
             StartCoroutine(SwapBackground(currentDialogue.background));
-            characters[activeCharacter].CharacterSlideOut();
+            if(characters[activeCharacter] != characters[currentDialogue.character])
+            {
+                characters[activeCharacter].CharacterSlideOut();
+            }
             nextButton.gameObject.SetActive(false);                                 // to prevent user from skipping dialogue mid transition
             yield return new WaitForSeconds(1.5f);
         }

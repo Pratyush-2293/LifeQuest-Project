@@ -37,6 +37,8 @@ public class LevelCompleteManager : MonoBehaviour
     [Space(10)]
     public Animator levelCompletePanelAnimator;
     public GameObject touchBlockerPanel;
+    [Space(10)]
+    public SceneTransition sceneTransition;
 
     public void LoadLevelCompletePanel(bool completingFirstTime)
     {
@@ -189,6 +191,6 @@ public class LevelCompleteManager : MonoBehaviour
     public void OnContinueButton()
     {
         // Load the level select scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelectMenu");
+        sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
     }
 }

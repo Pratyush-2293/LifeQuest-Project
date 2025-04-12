@@ -16,6 +16,9 @@ public class OptionsMenuManager : MonoBehaviour
     [SerializeField] private Slider bgmVolumeSlider = null;
     [SerializeField] private Slider sfxVolumeSlider = null;
 
+    [Header("Other Components")]
+    [SerializeField] private SceneTransition sceneTransition;
+
     // Use when you have muted and unmuted images
     /*
     [SerializeField] private Image bgmMuteButtonImage = null;
@@ -156,5 +159,6 @@ public class OptionsMenuManager : MonoBehaviour
     public void OnLeaveButton()
     {
         // add functionality here
+        sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
     }
 }

@@ -6,23 +6,28 @@ using System.Linq;
 
 public class AldenCombat2D : MonoBehaviour
 {
+    [Header("Character Stats")]
+    [Space(5)]
+    public bool overrideStats = false;
+    [Space(10)]
     // Player Stats - Load them on awake
     public int level = 1;
-    public int vitality = 5;
     public int defense = 5;
-    public int strength = 5;
-    private int critRate = 50; // x100 to get % value
-
+    public int attack = 5;
+    public int critRate = 50; 
+    public int critDamage = 100;
+    [Space(10)]
     // Common stats - need to be calculated on awake
     public int maxHealth = 100;
     public int health = 100;
     public int mana = 100;
 
     // List of Active Statuses
-    public List<Status> activeStatuses = new List<Status>();
+    [HideInInspector] public List<Status> activeStatuses = new List<Status>();
 
     // Attacks Scaling
     [Header("Attacks & Skills Scaling")]
+    [Space(5)]
     public float attackScaling = 1;
     public float skill1Scaling = 1.5f;
     public float skill2Scaling = 1;
@@ -30,6 +35,8 @@ public class AldenCombat2D : MonoBehaviour
     public float defendScaling = 1;
 
     // Actions info
+    [Header("Actions Time Cost")]
+    [Space(5)]
     public int attackTimeCost = 30;
     public int defendTimeCost = 30;
     public int skill1TimeCost = 50;
@@ -37,16 +44,22 @@ public class AldenCombat2D : MonoBehaviour
     public int skill3TimeCost = 30;
 
     // Skill Mana Costs
+    [Header("Skills Mana Cost")]
+    [Space(5)]
     public int skill1ManaCost = 20;
     public int skill2ManaCost = 30;
     public int skill3ManaCost = 40;
 
     // Skill Unlock Levels
+    [Header("Skill Unlock Levels")]
+    [Space(5)]
     public int skill1UnlockLevel = 1;
     public int skill2UnlockLevel = 2;
     public int skill3UnlockLevel = 3;
 
     // Alden Components
+    [Header("Alden Components")]
+    [Space(5)]
     public Animator aldenAnimator = null;
     public Transform damageFloaterSpawnpoint;
     public GameObject normalDamageFloater;
@@ -71,6 +84,15 @@ public class AldenCombat2D : MonoBehaviour
     private void Start()
     {
         hitFXAnimator = hitFXObject.gameObject.GetComponent<Animator>();
+
+        if(overrideStats == false)
+        {
+            level = GameData.instance.aldenLevel;
+            defense = GameData.instance.aldenDEF;
+            attack = GameData.instance.aldenATK;
+            critRate = GameData.instance.aldenCR;
+            critDamage = GameData.instance.aldenCD;
+        }
     }
 
     public void AldenAttack(int targetPosition, int selfPosition)
@@ -80,7 +102,7 @@ public class AldenCombat2D : MonoBehaviour
         // CALCULATING DAMAGE
 
         // Scaling damage based on strength and the skill's scaling mulitplier
-        damageToDo_1 = (int)(strength * attackScaling);
+        damageToDo_1 = (int)(attack * attackScaling);
 
         // Scaling damage based on active afflictions
         if(activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
@@ -99,7 +121,7 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 *= 2;
+            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
         }
 
         // Play the attack animation
@@ -152,7 +174,7 @@ public class AldenCombat2D : MonoBehaviour
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo_1 = (int)(strength * skill1Scaling);
+        damageToDo_1 = (int)(attack * skill1Scaling);
 
         // Scaling damage based on active afflictions
         if (activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
@@ -171,7 +193,7 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 *= 2;
+            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
         }
 
         // Play the attack animation
@@ -223,7 +245,7 @@ public class AldenCombat2D : MonoBehaviour
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo_1 = (int)(strength * skill1Scaling);
+        damageToDo_1 = (int)(attack * skill1Scaling);
 
         // Scaling damage based on active afflictions
         if (activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
@@ -246,12 +268,12 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 *= 2;
+            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
         }
         if (randomNumber_2 <= critRate)
         {
             isCritical_2 = true;
-            damageToDo_2 *= 2;
+            damageToDo_2 += damageToDo_2 * (int)(critDamage * 0.01f);
         }
 
         // Play the attack animation
@@ -304,7 +326,7 @@ public class AldenCombat2D : MonoBehaviour
 
         // CALCULATING DAMAGE
         // Scaling damage based on strength and the skill's scaling multiplier
-        damageToDo_1 = (int)(strength * skill1Scaling);
+        damageToDo_1 = (int)(attack * skill1Scaling);
 
         // Scaling damage based on active afflictions
         if (activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // If affected by frailty, reduce outgoing damage by 25%
@@ -337,17 +359,17 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 *= 2;
+            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
         }
         if (randomNumber_2 <= critRate)
         {
             isCritical_2 = true;
-            damageToDo_2 *= 2;
+            damageToDo_2 += damageToDo_2 * (int)(critDamage * 0.01f);
         }
         if (randomNumber_3 <= critRate)
         {
             isCritical_3 = true;
-            damageToDo_3 *= 2;
+            damageToDo_3 += damageToDo_3 * (int)(critDamage * 0.01f);
         }
 
         // Play the attack animation
@@ -517,6 +539,7 @@ public class AldenCombat2D : MonoBehaviour
     {
         ResetDamageSequence();
         CombatManager.instance.ResumeTime();
+        CombatManager.instance.isAldenTurn = false;
     }
 
     private void PlaySoundEffect(string sfxName)

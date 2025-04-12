@@ -10,7 +10,10 @@ public class CombatManager : MonoBehaviour
     public static CombatManager instance = null;
 
     [Header("Level Info")]
+    [Space(5)]
+    public string currentSceneName;
     public float levelID;
+    [Space(10)]
     public string loadNextSceneName;
     public bool isRepeatableScene = false;
 
@@ -90,6 +93,7 @@ public class CombatManager : MonoBehaviour
     [Space(5)]
     // player character sliders
     public Slider aldenTimeSlider = null;
+    public Slider valricTimeSlider = null;
 
     // enemy sliders
     public List<Slider> enemySliders = new List<Slider>();
@@ -99,6 +103,7 @@ public class CombatManager : MonoBehaviour
 
     [Header("Other Components")]
     public RewardsManager rewardsManager;
+    public SceneTransition sceneTransition;
 
     // Storing script files for all characters on field
     [HideInInspector] public PlayerCombat2D[] playerCombatControllers = new PlayerCombat2D[4];
@@ -107,15 +112,15 @@ public class CombatManager : MonoBehaviour
     // Private Variables
     private bool timeStart = true;
 
-    private bool isAldenTurn = false;
-    private bool isValricTurn = false;
-    private bool isOsmirTurn = false;
-    private bool isAssassinTurn = false;
+    [HideInInspector] public bool isAldenTurn = false;
+    [HideInInspector] public bool isValricTurn = false;
+    [HideInInspector] public bool isOsmirTurn = false;
+    [HideInInspector] public bool isAssassinTurn = false;
 
-    public int aldenIndex = -1;
-    public int valricIndex = -1;
-    public int osmirIndex = -1;
-    public int assassinIndex = -1;
+    [HideInInspector] public int aldenIndex = -1;
+    [HideInInspector] public int valricIndex = -1;
+    [HideInInspector] public int osmirIndex = -1;
+    [HideInInspector] public int assassinIndex = -1;
 
     private int currentSelectedTarget = 0;
     private int enemiesAlive = 0;
@@ -554,7 +559,10 @@ public class CombatManager : MonoBehaviour
                 if(playerCombatControllers[i].isDefeated == false)
                 {
                     aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
-                    // similar for valric
+                    if(valricIndex != -1)
+                    {
+                        valricTimeSlider.value = playerCombatControllers[valricIndex].turnCounter;
+                    }
                     // similar for osmir
                     // similar for assassin girl
                 }
@@ -933,7 +941,8 @@ public class CombatManager : MonoBehaviour
         // When attack button is pressed during Valric's turn
         if (isValricTurn)
         {
-
+            // Play attack animation according to selected target
+            playerCombatControllers[valricIndex].DoAction("Attack", currentSelectedTarget);
         }
 
         // When attack button is pressed during Osmir's turn
@@ -1110,7 +1119,12 @@ public class CombatManager : MonoBehaviour
 
     public void OnContinueButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(loadNextSceneName);
+        sceneTransition.LoadSceneWithTransition(loadNextSceneName);
+    }
+
+    public void OnRetryButton()
+    {
+        sceneTransition.LoadSceneWithTransition(currentSceneName);
     }
 
     public void OnLeftButton()

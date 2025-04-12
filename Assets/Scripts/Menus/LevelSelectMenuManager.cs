@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class LevelSelectMenuManager : MonoBehaviour
 {
@@ -11,6 +10,8 @@ public class LevelSelectMenuManager : MonoBehaviour
     public GameObject touchBlockerPanel = null;
     public GameObject unlockLevelPromptPanel = null;
     public GameObject insufficientKeysPromptPanel = null;
+
+    public SceneTransition sceneTransition;
 
     public List<Button> levelButtons = new List<Button>();
 
@@ -64,7 +65,7 @@ public class LevelSelectMenuManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Level_" + levelID.ToString() + "-1");
+            sceneTransition.LoadSceneWithTransition("Level_" + levelID.ToString() + "-1");
         }
     }
 
@@ -95,5 +96,10 @@ public class LevelSelectMenuManager : MonoBehaviour
         // close the panel
         insufficientKeysPromptPanel.gameObject.SetActive(false);
         touchBlockerPanel.gameObject.SetActive(false);
+    }
+
+    public void OnBackButton()
+    {
+        sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 }

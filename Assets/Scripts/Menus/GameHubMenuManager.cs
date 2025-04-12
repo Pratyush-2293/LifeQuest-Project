@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameHubMenuManager : MonoBehaviour
 {
+    public SceneTransition sceneTransition;
     public void OnLevelSelectButton()
     {
-        SceneManager.LoadScene("LevelSelectMenu");
+        sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
     }
 
     public void OnHeroesButton()
     {
-        SceneManager.LoadScene("HeroesMenu");
+        sceneTransition.LoadSceneWithTransition("HeroesMenu");
     }
 
     public void OnMarketButton()
     {
-        SceneManager.LoadScene("MarketMenu");
+        sceneTransition.LoadSceneWithTransition("MarketMenu");
     }
 }
