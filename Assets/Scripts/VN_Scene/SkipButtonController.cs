@@ -25,5 +25,6 @@ public class SkipButtonController : MonoBehaviour
     {
         // Load the combat scene provided in the last dialogue
         vnManager.SkipToDialogue();
+        gameObject.SetActive(false);
     }
 }

@@ -1158,6 +1158,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[37].loadCombat
+      value: Combat_1-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[5].showOptions
       value: 0
       objectReference: {fileID: 0}
@@ -1554,6 +1559,11 @@ PrefabInstance:
       propertyPath: dialogues.Array.data[37].dialogueText
       value: "Alden dashes toward the back of the caravan as the bandits close in\u2014he
         draws out his sword, ready for battle."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[37].lastDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}

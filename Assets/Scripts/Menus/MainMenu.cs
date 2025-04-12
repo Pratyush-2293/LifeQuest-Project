@@ -7,6 +7,8 @@ public class MainMenu : Menu
 {
     public static MainMenu instance = null;
 
+    public SceneTransition sceneTransition;
+
     private void Awake()
     {
         if (instance)
@@ -20,7 +22,7 @@ public class MainMenu : Menu
 
     public void OnStartGameButton()
     {
-        SceneManager.LoadScene("GameHubMenu");
+        sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 
     public void OnTaskListButton()

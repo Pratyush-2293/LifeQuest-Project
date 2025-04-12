@@ -555,7 +555,10 @@ public class CombatManager : MonoBehaviour
                 if(playerCombatControllers[i].isDefeated == false)
                 {
                     aldenTimeSlider.value = playerCombatControllers[aldenIndex].turnCounter;
-                    valricTimeSlider.value = playerCombatControllers[valricIndex].turnCounter;
+                    if(valricIndex != -1)
+                    {
+                        valricTimeSlider.value = playerCombatControllers[valricIndex].turnCounter;
+                    }
                     // similar for osmir
                     // similar for assassin girl
                 }
