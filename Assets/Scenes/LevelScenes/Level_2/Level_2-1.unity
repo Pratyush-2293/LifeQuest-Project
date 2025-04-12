@@ -186,6 +186,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4f9119ef83c251144b3d4f600a48ab2f,
         type: 3}
+    - target: {fileID: 4498828051602129069, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: m_text
+      value: 2. At the Infirmary
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: levelID
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.size

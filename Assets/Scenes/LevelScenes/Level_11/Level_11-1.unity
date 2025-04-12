@@ -186,6 +186,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: efd95cc7b56990845b5f788760f581a1,
         type: 3}
+    - target: {fileID: 4498828051602129069, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: m_text
+      value: 11. Exploring the Catacombs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616778433878437267, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 735
+      objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: levelID
