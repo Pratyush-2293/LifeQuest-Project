@@ -366,6 +366,56 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -370
       objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attack
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defense
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: critRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: overrideStats
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill1UnlockLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill2UnlockLevel
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill3UnlockLevel
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6175338148382906491, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -395,6 +445,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 176
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: health
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: turnCounter
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296890243797325266, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6893257698216109083, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
@@ -455,6 +550,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -260
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: health
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973561180157501288, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6996578099484819937, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
