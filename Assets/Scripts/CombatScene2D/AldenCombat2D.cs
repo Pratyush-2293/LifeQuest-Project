@@ -121,7 +121,7 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
+            damageToDo_1 += Mathf.CeilToInt(damageToDo_1 * (critDamage * 0.01f));
         }
 
         // Play the attack animation
@@ -193,7 +193,7 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
+            damageToDo_1 += Mathf.CeilToInt(damageToDo_1 * (critDamage * 0.01f));
         }
 
         // Play the attack animation
@@ -268,12 +268,12 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
+            damageToDo_1 += Mathf.CeilToInt(damageToDo_1 * (critDamage * 0.01f));
         }
         if (randomNumber_2 <= critRate)
         {
             isCritical_2 = true;
-            damageToDo_2 += damageToDo_2 * (int)(critDamage * 0.01f);
+            damageToDo_2 += Mathf.CeilToInt(damageToDo_2 * (critDamage * 0.01f));
         }
 
         // Play the attack animation
@@ -359,17 +359,17 @@ public class AldenCombat2D : MonoBehaviour
         if (randomNumber_1 <= critRate)
         {
             isCritical_1 = true;
-            damageToDo_1 += damageToDo_1 * (int)(critDamage * 0.01f);
+            damageToDo_1 += Mathf.CeilToInt(damageToDo_1 * (critDamage * 0.01f));
         }
         if (randomNumber_2 <= critRate)
         {
             isCritical_2 = true;
-            damageToDo_2 += damageToDo_2 * (int)(critDamage * 0.01f);
+            damageToDo_2 += Mathf.CeilToInt(damageToDo_2 * (critDamage * 0.01f));
         }
         if (randomNumber_3 <= critRate)
         {
             isCritical_3 = true;
-            damageToDo_3 += damageToDo_3 * (int)(critDamage * 0.01f);
+            damageToDo_3 += Mathf.CeilToInt(damageToDo_3 * (critDamage * 0.01f));
         }
 
         // Play the attack animation
