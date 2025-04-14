@@ -11,8 +11,8 @@ public class TaskItem : MonoBehaviour
     public enum Difficulty { easy, medium, hard};
     public Difficulty taskDifficulty = Difficulty.easy;
 
-    public Text titleText = null;
-    public Text descriptionText = null;
+    public TMP_Text titleText = null;
+    public TMP_Text descriptionText = null;
     public int taskIndex;
 
     public GameObject diffCounterEasy = null;
@@ -73,29 +73,29 @@ public class TaskItem : MonoBehaviour
         // Handling the EXP Points Reward Button
         if(taskDifficulty == Difficulty.easy)
         {
-            expPointsAmountText.text = TaskListMenu.instance.expRewardEasyTask.ToString();
+            expPointsAmountText.text = "X" + TaskListMenu.instance.expRewardEasyTask.ToString();
         }
         else if(taskDifficulty == Difficulty.medium)
         {
-            expPointsAmountText.text = TaskListMenu.instance.expRewardMediumTask.ToString();
+            expPointsAmountText.text = "X" + TaskListMenu.instance.expRewardMediumTask.ToString();
         }
         else
         {
-            expPointsAmountText.text = TaskListMenu.instance.expRewardHardTask.ToString();
+            expPointsAmountText.text = "X" + TaskListMenu.instance.expRewardHardTask.ToString();
         }
 
         // Handling Gold Coins Reward Button
         if (taskDifficulty == Difficulty.easy)
         {
-            goldCoinsAmountText.text = TaskListMenu.instance.goldRewardEasyTask.ToString();
+            goldCoinsAmountText.text = "X" + TaskListMenu.instance.goldRewardEasyTask.ToString();
         }
         else if (taskDifficulty == Difficulty.medium)
         {
-            goldCoinsAmountText.text = (TaskListMenu.instance.goldRewardEasyTask * 2).ToString();
+            goldCoinsAmountText.text = "X" + (TaskListMenu.instance.goldRewardEasyTask * 2).ToString();
         }
         else
         {
-            goldCoinsAmountText.text = (TaskListMenu.instance.goldRewardEasyTask * 3).ToString();
+            goldCoinsAmountText.text = "X" + (TaskListMenu.instance.goldRewardEasyTask * 3).ToString();
         }
 
         rewardSelectionPanel.gameObject.SetActive(true);
