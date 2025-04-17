@@ -26,3 +26,107 @@ MonoBehaviour:
   mainStatValue: 20
   subStatType: 1
   subStatValue: 4
+  itemPrice: 0
+  unlockLevel: 1
+  sellValue: 0
+  upgradeMaterialsList:
+  - totalMaterialTypes: 1
+    materialName1: Sheet of Metal
+    materialQuantity1: 1
+    materialName2: 
+    materialQuantity2: 0
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 10
+  - totalMaterialTypes: 1
+    materialName1: Sheet of Metal
+    materialQuantity1: 2
+    materialName2: 
+    materialQuantity2: 0
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 20
+  - totalMaterialTypes: 1
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: 
+    materialQuantity2: 0
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 30
+  - totalMaterialTypes: 2
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 1
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 40
+  - totalMaterialTypes: 2
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 2
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 50
+  - totalMaterialTypes: 2
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 60
+  - totalMaterialTypes: 3
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Goblin Fang
+    materialQuantity3: 1
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 70
+  - totalMaterialTypes: 3
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Goblin Fang
+    materialQuantity3: 2
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 80
+  - totalMaterialTypes: 3
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Goblin Fang
+    materialQuantity3: 3
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 90
+  - totalMaterialTypes: 4
+    materialName1: Sheet of Metal
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Goblin Fang
+    materialQuantity3: 3
+    materialName4: Wooden Plank
+    materialQuantity4: 5
+    upgradeCost: 100

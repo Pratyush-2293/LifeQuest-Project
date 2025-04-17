@@ -100,14 +100,20 @@ public class VN_Manager : MonoBehaviour
         {
             if(combatSceneName != "")
             {
-                GameData.instance.levelViewedID = levelID;
+                if(levelID > GameData.instance.levelViewedID)
+                {
+                    GameData.instance.levelViewedID = levelID;
+                }
                 SaveManager.instance.SaveGameData();
                 sceneTransition.LoadSceneWithTransition(combatSceneName);
             }
             else
             {
                 levelCompleteManager.LoadLevelCompletePanel(levelID > GameData.instance.levelViewedID ? true : false);
-                GameData.instance.levelViewedID = levelID;
+                if (levelID > GameData.instance.levelViewedID)
+                {
+                    GameData.instance.levelViewedID = levelID;
+                }
                 SaveManager.instance.SaveGameData();
             }
             yield break;

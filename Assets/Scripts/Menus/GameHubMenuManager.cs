@@ -20,4 +20,9 @@ public class GameHubMenuManager : MonoBehaviour
     {
         sceneTransition.LoadSceneWithTransition("MarketMenu");
     }
+
+    public void OnBackButton()
+    {
+        sceneTransition.LoadSceneWithTransition("MainMenuScene");
+    }
 }

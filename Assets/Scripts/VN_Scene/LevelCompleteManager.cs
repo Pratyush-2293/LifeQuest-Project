@@ -90,6 +90,7 @@ public class LevelCompleteManager : MonoBehaviour
 
             // Increment the completed story level counter in GameData
             GameData.instance.maxCompletedLevel++;
+            GameData.instance.maxAvailableLevel++;
 
             // Save changes made to GameData
             // SaveManager.instance.SaveGameData(); // Uncomment this later

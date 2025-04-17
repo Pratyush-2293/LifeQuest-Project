@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Lever
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2978866645
+    locked: 0
+  - name: Walls
+    uniqueID: 916056991
+    locked: 0
+  - name: Borders
+    uniqueID: 2137859975
+    locked: 0
+  - name: Doors
+    uniqueID: 2257355193
+    locked: 0
+  - name: Utilities
+    uniqueID: 3847057083
+    locked: 0
+  - name: Alden
+    uniqueID: 2621835571
+    locked: 0
+  - name: UI
+    uniqueID: 3209325819
     locked: 0
