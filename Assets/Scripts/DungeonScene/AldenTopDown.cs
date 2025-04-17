@@ -11,6 +11,7 @@ public class AldenTopDown : MonoBehaviour
     [Header("Alden Components")]
     public Animator aldenAnimator;
     public Button interactButton;
+    public AudioSource footstepSource;
 
     // Private Variables
     private Rigidbody2D rigidBody;
@@ -35,6 +36,14 @@ public class AldenTopDown : MonoBehaviour
         {
             rigidBody.velocity = Vector2.zero;
         }
+    }
+
+    void Update()
+    {
+        if (isMoving && !footstepSource.isPlaying)
+            footstepSource.Play();
+        else if (!isMoving && footstepSource.isPlaying)
+            footstepSource.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

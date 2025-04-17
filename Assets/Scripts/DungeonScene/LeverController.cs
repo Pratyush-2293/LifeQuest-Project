@@ -24,5 +24,11 @@ public class LeverController : MonoBehaviour
 
         // Turn off the player's interactability with the lever.
         isInteractible = false;
+
+        // Turn off the interact popup
+        interactPopup.gameObject.SetActive(false);
+
+        // Play lever pull sound
+        DungeonManager.instance.PlaySoundEffect("leverPull");
     }
 }

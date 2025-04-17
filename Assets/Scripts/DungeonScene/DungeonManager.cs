@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,13 +21,24 @@ public class DungeonManager : MonoBehaviour
     [Space(5)]
     public Button aldenInteractButton;
 
-    [Header("Dungeon Components")]
+    [Header("Audio Clips")]
+    [Space(5)]
+    public AudioClip backgroundMusic;
+    public AudioClip[] soundEffects;
+
+    [Header("Scene Components")]
     [Space(5)]
     public GameObject dungeonRootObject;
     public SceneTransition sceneTransition;
+    public AudioSource bgmSource;
+    public AudioSource sfxSource;
+    public AudioSource aldenSFXSource;
 
     // Private Variables
     private int leversTriggered = 0;
+
+    private float sfxVolume;
+    private float bgmVolume;
 
     private void Awake()
     {
@@ -41,6 +53,15 @@ public class DungeonManager : MonoBehaviour
     private void Start()
     {
         // GameManager.instance.dungeonRootObject = dungeonRootObject;
+
+        // Set volume of audio sources
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume_Combat", 1.0f);
+        bgmVolume = PlayerPrefs.GetFloat("bgmVolume_Combat", 1.0f);
+        RefreshVolumeLevels();
+
+        // Start playing background music
+        bgmSource.clip = backgroundMusic;
+        bgmSource.Play();
     }
 
     public void LeverTriggered()
@@ -64,5 +85,26 @@ public class DungeonManager : MonoBehaviour
     {
         // Play the screen transition
         sceneTransition.LoadSceneWithTransitionAdditive(sceneName, dungeonRootObject);
+    }
+
+    private void RefreshVolumeLevels()
+    {
+        bgmSource.volume = bgmVolume;
+        sfxSource.volume = sfxVolume;
+        aldenSFXSource.volume = sfxVolume;
+    }
+
+    public void PlaySoundEffect(string sfxName)
+    {
+        AudioClip sound = Array.Find(soundEffects, x => x.name == sfxName);
+
+        if (sound == null)
+        {
+            Debug.LogWarning("Sound not found !");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(sound);
+        }
     }
 }

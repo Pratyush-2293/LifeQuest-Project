@@ -12,6 +12,7 @@ public class DungeonCombatStarter : MonoBehaviour
         if (collision.CompareTag("Alden"))
         {
             combatStartIndicatorAnimator.SetTrigger("Attack");
+            DungeonManager.instance.PlaySoundEffect("attackIndicator");
             StartCoroutine(TriggerCombatStart());
         }
     }
