@@ -20,6 +20,11 @@ public class DungeonManager : MonoBehaviour
     [Space(5)]
     public Button aldenInteractButton;
 
+    [Header("Dungeon Components")]
+    [Space(5)]
+    public GameObject dungeonRootObject;
+    public SceneTransition sceneTransition;
+
     // Private Variables
     private int leversTriggered = 0;
 
@@ -31,6 +36,11 @@ public class DungeonManager : MonoBehaviour
             Destroy(gameObject);
         }
         instance = this;
+    }
+
+    private void Start()
+    {
+        // GameManager.instance.dungeonRootObject = dungeonRootObject;
     }
 
     public void LeverTriggered()
@@ -48,5 +58,11 @@ public class DungeonManager : MonoBehaviour
         {
             doorController.OpenDoor();
         }
+    }
+
+    public void LoadDungeonCombatScene(string sceneName)
+    {
+        // Play the screen transition
+        sceneTransition.LoadSceneWithTransitionAdditive(sceneName, dungeonRootObject);
     }
 }

@@ -46,6 +46,7 @@ public class AldenTopDown : MonoBehaviour
             if(currentLeverController.isInteractible == true)
             {
                 interactButton.interactable = true;
+                currentLeverController.interactPopup.gameObject.SetActive(true);
             }
         }
     }
@@ -56,6 +57,7 @@ public class AldenTopDown : MonoBehaviour
         {
             if (currentLeverController != null && collision.gameObject == currentLeverController.gameObject)
             {
+                currentLeverController.interactPopup.gameObject.SetActive(false);
                 currentLeverController = null;
                 nearLever = false;
                 interactButton.interactable = false;

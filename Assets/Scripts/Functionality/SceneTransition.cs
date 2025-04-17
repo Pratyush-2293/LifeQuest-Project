@@ -18,13 +18,26 @@ public class SceneTransition : MonoBehaviour
 
     public void LoadSceneWithTransition(string sceneName)
     {
-        StartCoroutine(LoadSceneAfterTransition(sceneName));
+        StartCoroutine(LoadSceneAfterTransition(sceneName, false));
     }
 
-    private IEnumerator LoadSceneAfterTransition(string sceneName)
+    public void LoadSceneWithTransitionAdditive(string sceneName, GameObject rootObject)
+    {
+        StartCoroutine(LoadSceneAfterTransition(sceneName, true, rootObject));
+    }
+
+    private IEnumerator LoadSceneAfterTransition(string sceneName, bool isAdditive, GameObject rootObject = null)
     {
         sceneTransitionAnimator.SetTrigger("SlideIn");
         yield return new WaitForSeconds(0.8f);
-        SceneManager.LoadScene(sceneName);
+        if(isAdditive == true)
+        {
+            rootObject.gameObject.SetActive(false);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

@@ -12,6 +12,7 @@ public class LeverController : MonoBehaviour
 
     [Header("Object Components")]
     public SpriteRenderer leverImage;
+    public GameObject interactPopup;
 
     public void TurnLeverOn()
     {

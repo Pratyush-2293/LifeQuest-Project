@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    [Header("Dungeon Store Data")]
+    public GameObject dungeonRootObject;
+
     [Header("Test Items")]
     public ItemSO aldenWeaponTest;
     public ItemSO aldenOffhandTest;
