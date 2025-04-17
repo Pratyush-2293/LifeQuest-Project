@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Dungeon Store Data")]
     public GameObject dungeonRootObject;
+    public string activeCombatSceneName;
 
     [Header("Test Items")]
     public ItemSO aldenWeaponTest;
@@ -32,6 +34,16 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         Debug.Log("GameManager Created.");
+    }
+
+    public void ResumeDungeon()
+    {
+        if (dungeonRootObject != null)
+        {
+            dungeonRootObject.SetActive(true);
+        }
+
+        SceneManager.UnloadSceneAsync(activeCombatSceneName);
     }
 
     [ContextMenu("Add Test Items")]

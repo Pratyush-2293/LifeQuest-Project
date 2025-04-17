@@ -16,6 +16,7 @@ public class CombatManager : MonoBehaviour
     [Space(10)]
     public string loadNextSceneName;
     public bool isRepeatableScene = false;
+    public bool isDungeonScene = false;
 
     [Header("Player Characters")]
     [Space(5)]
@@ -87,7 +88,9 @@ public class CombatManager : MonoBehaviour
     public GameObject touchBlockerPanel = null;
     public Animator victoryPanelAnimator = null;
     public Animator defeatPanelAnimator = null;
-
+    [Space(5)]
+    public Button retryButton;
+    public Button levelSelectButton;
 
     [Header("Time Sliders")]
     [Space(5)]
@@ -138,8 +141,21 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
+        // Updating the active combat scene in the GameManager
+        if(GameManager.instance != null)
+        {
+            GameManager.instance.activeCombatSceneName = currentSceneName;
+        }
+
+        // Edit the defeat panel if this is dungeon scene
+        if(isDungeonScene == true)
+        {
+            retryButton.gameObject.SetActive(false);
+            levelSelectButton.gameObject.transform.position = retryButton.gameObject.transform.position;
+        }
+
         // Initialising player & enemy controller scripts
-        for(int i=0; i < 4; i++)
+        for (int i=0; i < 4; i++)
         {
             if(playerCharacters[i].gameObject != null)
             {
@@ -1119,7 +1135,14 @@ public class CombatManager : MonoBehaviour
 
     public void OnContinueButton()
     {
-        sceneTransition.LoadSceneWithTransition(loadNextSceneName);
+        if(isDungeonScene == true)
+        {
+            GameManager.instance.ResumeDungeon();
+        }
+        else
+        {
+            sceneTransition.LoadSceneWithTransition(loadNextSceneName);
+        }
     }
 
     public void OnRetryButton()

@@ -21,5 +21,7 @@ public class DungeonCombatStarter : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         DungeonManager.instance.LoadDungeonCombatScene(loadCombatSceneName);
+
+        Destroy(gameObject);
     }
 }
