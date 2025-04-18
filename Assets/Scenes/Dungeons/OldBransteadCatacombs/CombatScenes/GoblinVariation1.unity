@@ -288,6 +288,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
+      propertyPath: level
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attack
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: health
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defense
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: critRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
       propertyPath: overrideStats
       value: 1
       objectReference: {fileID: 0}
@@ -609,8 +639,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
+      propertyPath: health
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: maxHealth
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnCounter
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
       propertyPath: attackDamage
-      value: 56
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -704,8 +774,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
+      propertyPath: health
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: maxHealth
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
       propertyPath: turnCounter
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
@@ -714,8 +799,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
       propertyPath: characterPosition
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
