@@ -20,7 +20,10 @@ public class AldenTopDown : MonoBehaviour
     private bool isFrozen = false;
 
     private LeverController currentLeverController;
+    private PickupItem currentPickupItem;
+
     private bool nearLever = false;
+    private bool nearPickupItem = false;
 
     private void Awake()
     {
@@ -67,6 +70,14 @@ public class AldenTopDown : MonoBehaviour
                 currentLeverController.interactPopup.gameObject.SetActive(true);
             }
         }
+        else if (collision.CompareTag("Pickup"))
+        {
+            currentPickupItem = collision.GetComponent<PickupItem>();
+            nearPickupItem = true;
+
+            interactButton.interactable = true;
+            currentPickupItem.interactPopup.gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -78,6 +89,16 @@ public class AldenTopDown : MonoBehaviour
                 currentLeverController.interactPopup.gameObject.SetActive(false);
                 currentLeverController = null;
                 nearLever = false;
+                interactButton.interactable = false;
+            }
+        }
+        else if (collision.CompareTag("Pickup"))
+        {
+            if(currentPickupItem != null && collision.gameObject == currentPickupItem.gameObject)
+            {
+                currentPickupItem.interactPopup.gameObject.SetActive(false);
+                currentPickupItem = null;
+                nearPickupItem = false;
                 interactButton.interactable = false;
             }
         }
@@ -102,6 +123,11 @@ public class AldenTopDown : MonoBehaviour
         if(nearLever == true)
         {
             currentLeverController.TurnLeverOn();
+            interactButton.interactable = false;
+        }
+        else if(nearPickupItem == true)
+        {
+            currentPickupItem.PickUpItem();
             interactButton.interactable = false;
         }
     }

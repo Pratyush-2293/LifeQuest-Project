@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_5
+      name: BlackStone
       rect:
         serializedVersion: 2
         x: 192
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_6
+      name: BlackRock
       rect:
         serializedVersion: 2
         x: 224
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_11
+      name: BrownRock
       rect:
         serializedVersion: 2
         x: 192
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_12
+      name: Mushrooms
       rect:
         serializedVersion: 2
         x: 224
@@ -475,7 +475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_17
+      name: Crystal
       rect:
         serializedVersion: 2
         x: 160
@@ -496,7 +496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_18
+      name: Moss
       rect:
         serializedVersion: 2
         x: 192
@@ -517,7 +517,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_dungeon_19
+      name: Remains
       rect:
         serializedVersion: 2
         x: 224
@@ -1157,18 +1157,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BlackRock: 326844264
+      BlackStone: -131571794
+      BrownRock: -987586695
+      Crystal: -572787984
+      Moss: 1249322953
+      Mushrooms: 550674117
+      Remains: -559586423
       tileset_dungeon_0: -1781919654
       tileset_dungeon_1: 2080872650
       tileset_dungeon_10: 293324172
-      tileset_dungeon_11: -987586695
-      tileset_dungeon_12: 550674117
       tileset_dungeon_13: 955270937
       tileset_dungeon_14: -1587878310
       tileset_dungeon_15: 902330916
       tileset_dungeon_16: -161692733
-      tileset_dungeon_17: -572787984
-      tileset_dungeon_18: 1249322953
-      tileset_dungeon_19: -559586423
       tileset_dungeon_2: -574667704
       tileset_dungeon_20: -566186386
       tileset_dungeon_21: -676539853
@@ -1201,8 +1203,6 @@ TextureImporter:
       tileset_dungeon_46: 748731162
       tileset_dungeon_47: -1863476641
       tileset_dungeon_48: -1171541549
-      tileset_dungeon_5: -131571794
-      tileset_dungeon_6: 326844264
       tileset_dungeon_7: 559024323
       tileset_dungeon_8: 1502650838
       tileset_dungeon_9: -1333788214

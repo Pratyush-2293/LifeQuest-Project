@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Alden
   - Enemy
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,15 @@ TagManager:
     locked: 0
   - name: Borders
     uniqueID: 2137859975
+    locked: 0
+  - name: Obstacles
+    uniqueID: 82496801
+    locked: 0
+  - name: Decorations
+    uniqueID: 1830158515
+    locked: 0
+  - name: PickupItems
+    uniqueID: 75092269
     locked: 0
   - name: Doors
     uniqueID: 2257355193
