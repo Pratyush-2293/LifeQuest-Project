@@ -1150,6 +1150,18 @@ public class CombatManager : MonoBehaviour
         sceneTransition.LoadSceneWithTransition(currentSceneName);
     }
 
+    public void OnLeaveButton()
+    {
+        if (isDungeonScene)
+        {
+            sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+        }
+        else
+        {
+            sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
+        }
+    }
+
     public void OnLeftButton()
     {
         if(currentSelectedTarget == 0) // Selecting next target when current target is 0

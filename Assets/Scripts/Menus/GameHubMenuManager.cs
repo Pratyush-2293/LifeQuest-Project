@@ -25,4 +25,9 @@ public class GameHubMenuManager : MonoBehaviour
     {
         sceneTransition.LoadSceneWithTransition("MainMenuScene");
     }
+
+    public void OnDungeonsButton()
+    {
+        sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+    }
 }

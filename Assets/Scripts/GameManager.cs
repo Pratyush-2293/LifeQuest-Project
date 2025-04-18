@@ -38,12 +38,25 @@ public class GameManager : MonoBehaviour
 
     public void ResumeDungeon()
     {
+        StartCoroutine(HandleResumeDungeon());
+    }
+
+    public IEnumerator HandleResumeDungeon()
+    {
+        // Begin unloading the scene
+        AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(activeCombatSceneName);
+
+        // Waiting until the scene is fully unloaded
+        while (!unloadOperation.isDone)
+        {
+            yield return null;
+        }
+
+        // After unloading, activate the dungeon scene root
         if (dungeonRootObject != null)
         {
             dungeonRootObject.SetActive(true);
         }
-
-        SceneManager.UnloadSceneAsync(activeCombatSceneName);
     }
 
     [ContextMenu("Add Test Items")]

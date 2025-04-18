@@ -17,6 +17,7 @@ public class AldenTopDown : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Vector2 moveDirection = Vector2.zero;
     private bool isMoving = false;
+    private bool isFrozen = false;
 
     private LeverController currentLeverController;
     private bool nearLever = false;
@@ -28,12 +29,20 @@ public class AldenTopDown : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isMoving)
+        if(isFrozen == false)
         {
-            rigidBody.velocity = moveDirection * moveSpeed;
+            if (isMoving)
+            {
+                rigidBody.velocity = moveDirection * moveSpeed;
+            }
+            else
+            {
+                rigidBody.velocity = Vector2.zero;
+            }
         }
         else
         {
+            isMoving = false;
             rigidBody.velocity = Vector2.zero;
         }
     }
@@ -72,6 +81,18 @@ public class AldenTopDown : MonoBehaviour
                 interactButton.interactable = false;
             }
         }
+    }
+
+    public void FreezePlayer()
+    {
+        isFrozen = true;
+
+        aldenAnimator.SetTrigger("StopRunning");
+    }
+
+    public void UnfreezePlayer()
+    {
+        isFrozen = false;
     }
 
     // ---------------------------- BUTTON FUNCTIONS ----------------------------

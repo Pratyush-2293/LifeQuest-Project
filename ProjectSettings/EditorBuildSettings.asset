@@ -56,6 +56,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScenes/Level_2/Level_2-1.unity
     guid: e759ea8be94863449909e6041a2b1d1c
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/DungeonSelectMenu.unity
+    guid: a10d8ff1ff0c7c74fa01a2d6a5986a6a
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/OldBransteadCatacombs.unity
+    guid: 44849c19ebbbbdf4ab98d2b376eed2ea
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/GoblinVariation2.unity
+    guid: 335274454f48ad34295768774766bb6d
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/GoblinVariation1.unity
+    guid: 5545351c827763a4ea548d317220b0b7
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/GoblinVariation3.unity
+    guid: b9a2bbe9c55046c43b3edcf23665410c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7df75182111f466468092012c194b27d,
       type: 2}

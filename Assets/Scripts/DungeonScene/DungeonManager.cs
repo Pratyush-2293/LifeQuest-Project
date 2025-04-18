@@ -52,7 +52,7 @@ public class DungeonManager : MonoBehaviour
 
     private void Start()
     {
-        // GameManager.instance.dungeonRootObject = dungeonRootObject;
+        GameManager.instance.dungeonRootObject = dungeonRootObject;
 
         // Set volume of audio sources
         sfxVolume = PlayerPrefs.GetFloat("sfxVolume_Combat", 1.0f);

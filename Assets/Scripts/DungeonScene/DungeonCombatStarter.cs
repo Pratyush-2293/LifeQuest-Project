@@ -11,17 +11,21 @@ public class DungeonCombatStarter : MonoBehaviour
     {
         if (collision.CompareTag("Alden"))
         {
+            AldenTopDown aldenController = collision.GetComponent<AldenTopDown>();
+            aldenController.FreezePlayer();
             combatStartIndicatorAnimator.SetTrigger("Attack");
             DungeonManager.instance.PlaySoundEffect("attackIndicator");
-            StartCoroutine(TriggerCombatStart());
+            StartCoroutine(TriggerCombatStart(aldenController));
         }
     }
 
-    private IEnumerator TriggerCombatStart()
+    private IEnumerator TriggerCombatStart(AldenTopDown aldenController)
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.8f);
+        aldenController.UnfreezePlayer();
         DungeonManager.instance.LoadDungeonCombatScene(loadCombatSceneName);
 
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }
