@@ -296,6 +296,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
+      propertyPath: level
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: attack
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: health
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defense
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: critRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
       propertyPath: overrideStats
       value: 1
       objectReference: {fileID: 0}
@@ -584,13 +614,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
         type: 3}
+      propertyPath: health
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: maxHealth
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
       propertyPath: turnCounter
-      value: 60
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: attackDamage
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
         type: 3}
       propertyPath: characterPosition
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8076685185709787981, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
         type: 3}
@@ -711,13 +781,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
         type: 3}
+      propertyPath: health
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: maxHealth
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
       propertyPath: turnCounter
-      value: 40
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: attackDamage
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
         type: 3}
       propertyPath: characterPosition
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949339182520973455, guid: ed812a77f883243418e6bc4f11e30680,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374084594490915410, guid: ed812a77f883243418e6bc4f11e30680,
         type: 3}
@@ -807,6 +917,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: health
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: maxHealth
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: attackDamage
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769422322723685049, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8076685185709787981, guid: 71e60d4fdeffbd144b18f56d3a0d7010,
         type: 3}
