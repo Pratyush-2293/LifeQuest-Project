@@ -5,13 +5,17 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [Header("Door Data")]
+    [Space(5)]
+    public int teleportToLevel = 1;
+    public Transform teleportPosition;
+    [Space(10)]
     public Sprite doorOpenSprite;
-
     public bool isInteractible = false;
 
     [Header("Object Components")]
     [Space(5)]
     public SpriteRenderer doorImage;
+    public GameObject interactPopup;
 
     public void OpenDoor()
     {
@@ -23,6 +27,7 @@ public class DoorController : MonoBehaviour
 
     public void EnterDoor()
     {
-        // Load the next level scene
+        // Move to next level start point
+        DungeonManager.instance.DoorEntered(teleportToLevel, teleportPosition);
     }
 }

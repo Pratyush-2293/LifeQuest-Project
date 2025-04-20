@@ -21,9 +21,11 @@ public class AldenTopDown : MonoBehaviour
 
     private LeverController currentLeverController;
     private PickupItem currentPickupItem;
+    private DoorController currentDoorController;
 
     private bool nearLever = false;
     private bool nearPickupItem = false;
+    private bool nearDoor = false;
 
     private void Awake()
     {
@@ -78,6 +80,17 @@ public class AldenTopDown : MonoBehaviour
             interactButton.interactable = true;
             currentPickupItem.interactPopup.gameObject.SetActive(true);
         }
+        else if (collision.CompareTag("Door"))
+        {
+            currentDoorController = collision.GetComponent<DoorController>();
+            if (currentDoorController.isInteractible)
+            {
+                nearDoor = true;
+
+                interactButton.interactable = true;
+                currentDoorController.interactPopup.gameObject.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -99,6 +112,16 @@ public class AldenTopDown : MonoBehaviour
                 currentPickupItem.interactPopup.gameObject.SetActive(false);
                 currentPickupItem = null;
                 nearPickupItem = false;
+                interactButton.interactable = false;
+            }
+        }
+        else if (collision.CompareTag("Door"))
+        {
+            if(currentDoorController != null && collision.gameObject == currentDoorController.gameObject)
+            {
+                currentDoorController.interactPopup.gameObject.SetActive(false);
+                currentDoorController = null;
+                nearDoor = false;
                 interactButton.interactable = false;
             }
         }
@@ -128,6 +151,11 @@ public class AldenTopDown : MonoBehaviour
         else if(nearPickupItem == true)
         {
             currentPickupItem.PickUpItem();
+            interactButton.interactable = false;
+        }
+        else if(nearDoor == true)
+        {
+            currentDoorController.EnterDoor();
             interactButton.interactable = false;
         }
     }

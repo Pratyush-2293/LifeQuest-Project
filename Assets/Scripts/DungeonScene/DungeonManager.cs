@@ -10,12 +10,17 @@ public class DungeonManager : MonoBehaviour
 
     [Header("Levers In Scene")]
     [Space(5)]
-    public int totalLevers = 0;
-    public LeverController[] leverControllers;
+    public int totalLeversFirstLevel = 0;
+    [Space(10)]
+    public int totalLeversSecondLevel = 0;
+    [Space(10)]
+    public int totalLeversThirdLevel = 0;
 
     [Header("Door In Scene")]
     [Space(5)]
-    public DoorController doorController;
+    public DoorController doorControllerFirstLevel;
+    public DoorController doorControllerSecondLevel;
+    public DoorController doorControllerThirdLevel;
 
     [Header("Alden Controls")]
     [Space(5)]
@@ -28,14 +33,20 @@ public class DungeonManager : MonoBehaviour
 
     [Header("Scene Components")]
     [Space(5)]
+    public AldenTopDown aldenCharacter;
     public GameObject dungeonRootObject;
     public SceneTransition sceneTransition;
+    public Animator doorTransitionAnimator;
     public AudioSource bgmSource;
     public AudioSource sfxSource;
     public AudioSource aldenSFXSource;
 
     // Private Variables
-    private int leversTriggered = 0;
+    private int currentLevel = 1;
+
+    private int leversTriggeredFirstLevel = 0;
+    private int leversTriggeredSecondLevel = 0;
+    private int leversTriggeredThirdLevel = 0;
 
     private float sfxVolume;
     private float bgmVolume;
@@ -67,17 +78,63 @@ public class DungeonManager : MonoBehaviour
     public void LeverTriggered()
     {
         // Increment the levers triggered
-        leversTriggered++;
+        if(currentLevel == 1)
+        {
+            leversTriggeredFirstLevel++;
+        }
+        else if(currentLevel == 2)
+        {
+            leversTriggeredSecondLevel++;
+        }
+        else if(currentLevel == 3)
+        {
+            leversTriggeredThirdLevel++;
+        }
 
         // Check if all levers are triggered to open the door
         CheckDoorOpenCondition();
     }
 
+    public void DoorEntered(int teleportToLevel, Transform teleportPosition)
+    {
+        currentLevel = teleportToLevel;
+
+        StartCoroutine(TeleportAlden(teleportPosition));
+    }
+
+    private IEnumerator TeleportAlden(Transform teleportPosition)
+    {
+        doorTransitionAnimator.SetTrigger("Blackout");
+        yield return new WaitForSeconds(0.5f);
+        aldenCharacter.gameObject.transform.position = teleportPosition.position;
+
+        aldenCharacter.OnDownButton();
+        yield return new WaitForSeconds(0.1f);
+        aldenCharacter.OnReleaseButton();
+    }
+
     private void CheckDoorOpenCondition()
     {
-        if(leversTriggered == totalLevers)
+        if(currentLevel == 1)
         {
-            doorController.OpenDoor();
+            if(leversTriggeredFirstLevel == totalLeversFirstLevel)
+            {
+                doorControllerFirstLevel.OpenDoor();
+            }
+        }
+        else if(currentLevel == 2)
+        {
+            if (leversTriggeredSecondLevel == totalLeversSecondLevel)
+            {
+                doorControllerSecondLevel.OpenDoor();
+            }
+        }
+        else if(currentLevel == 3)
+        {
+            if (leversTriggeredThirdLevel == totalLeversThirdLevel)
+            {
+                doorControllerThirdLevel.OpenDoor();
+            }
         }
     }
 
