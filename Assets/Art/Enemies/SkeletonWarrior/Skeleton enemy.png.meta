@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,36 +110,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 272
-        width: 34
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c10ab8306c65be43bf03d52db3b96ea
-      internalID: -1690953910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_1
+      name: attack_1
       rect:
         serializedVersion: 2
         x: 69
         y: 272
         width: 37
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.68155813, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,15 +131,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_2
+      name: attack_2
       rect:
         serializedVersion: 2
         x: 129
         y: 272
         width: 41
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7182141, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,15 +152,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_3
+      name: attack_3
       rect:
         serializedVersion: 2
         x: 196
         y: 272
         width: 38
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.69358706, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,15 +173,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_4
+      name: attack_4
       rect:
         serializedVersion: 2
         x: 269
         y: 272
         width: 51
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3164918, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,15 +194,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_5
+      name: attack_5
       rect:
         serializedVersion: 2
         x: 335
         y: 272
         width: 31
         height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49215895, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,15 +215,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_6
+      name: attack_6
       rect:
         serializedVersion: 2
         x: 401
         y: 272
         width: 26
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.511781, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,15 +236,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_7
+      name: attack_7
       rect:
         serializedVersion: 2
         x: 466
         y: 272
         width: 25
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48734376, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,15 +257,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_8
+      name: attack_8
       rect:
         serializedVersion: 2
         x: 514
         y: 272
         width: 62
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4328889, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,15 +278,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_9
+      name: attack_9
       rect:
         serializedVersion: 2
         x: 579
         y: 272
         width: 39
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7003862, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,15 +299,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_10
+      name: attack_10
       rect:
         serializedVersion: 2
         x: 646
         y: 272
         width: 36
         height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.67271763, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,15 +320,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_11
+      name: attack_11
       rect:
         serializedVersion: 2
         x: 706
         y: 272
         width: 40
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6812881, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,15 +341,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_12
+      name: attack_12
       rect:
         serializedVersion: 2
         x: 776
         y: 272
         width: 34
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6020041, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,15 +362,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_13
+      name: death_0
       rect:
         serializedVersion: 2
         x: 9
         y: 207
         width: 32
         height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.589, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,15 +383,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_14
+      name: death_1
       rect:
         serializedVersion: 2
         x: 73
         y: 207
         width: 32
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.601, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,15 +404,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_15
+      name: death_2
       rect:
         serializedVersion: 2
         x: 137
         y: 207
         width: 31
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.618, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,15 +425,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_16
+      name: death_3
       rect:
         serializedVersion: 2
         x: 201
         y: 207
         width: 35
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.574, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,15 +446,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_17
+      name: death_4
       rect:
         serializedVersion: 2
-        x: 277
-        y: 208
-        width: 25
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 265
+        y: 207
+        width: 37
+        height: 30
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,15 +467,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_18
+      name: death_5
       rect:
         serializedVersion: 2
         x: 329
         y: 207
         width: 38
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,78 +488,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_19
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 231
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebe577daf51967e49a1c74266a2cb30c
-      internalID: 484141498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_20
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 225
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cebf8c57ff7ccb49bfe2f16263d3617
-      internalID: 458345000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_21
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 228
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab2f600ef7158d34f8b8559a500d525f
-      internalID: -1938822805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_22
+      name: death_8
       rect:
         serializedVersion: 2
         x: 521
         y: 207
         width: 42
         height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,15 +509,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_23
+      name: death_9
       rect:
         serializedVersion: 2
         x: 585
         y: 207
         width: 42
         height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,15 +530,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_24
+      name: death_10
       rect:
         serializedVersion: 2
         x: 649
         y: 207
         width: 42
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,15 +551,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_25
+      name: death_11
       rect:
         serializedVersion: 2
         x: 713
         y: 207
         width: 42
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,36 +572,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_26
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 207
-        width: 18
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88afd029cb215e24ebafe37268c4ee40
-      internalID: 1649989940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_27
+      name: death_6
       rect:
         serializedVersion: 2
         x: 393
         y: 207
         width: 42
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,15 +593,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_28
+      name: death_7
       rect:
         serializedVersion: 2
         x: 457
         y: 207
         width: 42
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 34
+      alignment: 9
+      pivot: {x: 0.54, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,15 +614,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_29
+      name: death_12
       rect:
         serializedVersion: 2
         x: 777
         y: 207
         width: 42
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.548, y: 0.119}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -747,8 +642,8 @@ TextureImporter:
         y: 143
         width: 36
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -768,8 +663,8 @@ TextureImporter:
         y: 143
         width: 35
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -789,8 +684,8 @@ TextureImporter:
         y: 143
         width: 35
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -810,8 +705,8 @@ TextureImporter:
         y: 143
         width: 35
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -831,8 +726,8 @@ TextureImporter:
         y: 143
         width: 36
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -852,8 +747,8 @@ TextureImporter:
         y: 143
         width: 36
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -873,8 +768,8 @@ TextureImporter:
         y: 143
         width: 36
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -894,8 +789,8 @@ TextureImporter:
         y: 143
         width: 38
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -915,8 +810,8 @@ TextureImporter:
         y: 143
         width: 38
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -936,8 +831,8 @@ TextureImporter:
         y: 143
         width: 38
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -957,8 +852,8 @@ TextureImporter:
         y: 143
         width: 37
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -978,8 +873,8 @@ TextureImporter:
         y: 143
         width: 37
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -992,99 +887,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 79
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47b120a25d920ab4b967c80b95130ff5
-      internalID: 1572838263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle2
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 79
-        width: 34
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a097437b2aa5db48867ed9ed1287fba
-      internalID: -1844944091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle3
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 79
-        width: 35
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72de82c6782b9864d8e07ca46c42b6b5
-      internalID: -276802805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle4
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 79
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4da5146be4826245888f3fac66a4c58
-      internalID: -953612512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton enemy_46
+      name: hurt_0
       rect:
         serializedVersion: 2
         x: 9
         y: 15
         width: 32
         height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5920047, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1097,15 +908,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton enemy_47
+      name: hurt_1
       rect:
         serializedVersion: 2
         x: 73
         y: 15
         width: 32
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5920043, y: 0.034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1125,8 +936,8 @@ TextureImporter:
         y: 15
         width: 32
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1134,6 +945,111 @@ TextureImporter:
       bones: []
       spriteID: da74515c363b6be468d680b5d32bc2b5
       internalID: 1150825577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 272
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.62065494, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e29a948a41dc84dac66028930b5a48
+      internalID: -1153016003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 79
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.58994085, y: 0.034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f1c6378012c204b905dd38c5667726
+      internalID: -1435283635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 79
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.57436955, y: 0.034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f05e2ea2a2e1845ae4c8b36d8a8147
+      internalID: -497719131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 79
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.55292314, y: 0.034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f70926b8fc790448fc4e80c69fb9a0
+      internalID: -1051451597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 79
+        width: 34
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5746276, y: 0.034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf46b7e03b9b1a489d7db1a3a7b0c42
+      internalID: 919209824
       vertices: []
       indices: 
       edges: []
@@ -1149,34 +1065,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle: -1690953910
-      Idle1: 1572838263
-      Idle2: -1844944091
-      Idle3: -276802805
-      Idle4: -953612512
-      Skeleton enemy_1: 2108918277
-      Skeleton enemy_10: -1940318848
-      Skeleton enemy_11: 562763129
-      Skeleton enemy_12: -2067504342
-      Skeleton enemy_13: 99638231
-      Skeleton enemy_14: -160402376
-      Skeleton enemy_15: 1048508192
-      Skeleton enemy_16: -685257643
-      Skeleton enemy_17: -864892051
-      Skeleton enemy_18: -1704087022
       Skeleton enemy_19: 484141498
-      Skeleton enemy_2: -1036136878
       Skeleton enemy_20: 458345000
       Skeleton enemy_21: -1938822805
-      Skeleton enemy_22: 2105846072
-      Skeleton enemy_23: 1618630823
-      Skeleton enemy_24: -403643208
-      Skeleton enemy_25: 850847825
       Skeleton enemy_26: 1649989940
-      Skeleton enemy_27: 1968929021
-      Skeleton enemy_28: -904833771
-      Skeleton enemy_29: -1658450671
-      Skeleton enemy_3: 1790071243
       Skeleton enemy_30: 1431143669
       Skeleton enemy_31: 1474425590
       Skeleton enemy_32: 216190994
@@ -1187,17 +1079,41 @@ TextureImporter:
       Skeleton enemy_37: 724425369
       Skeleton enemy_38: 859434086
       Skeleton enemy_39: -775885446
-      Skeleton enemy_4: -1028546728
       Skeleton enemy_40: 521461805
       Skeleton enemy_41: 595008801
-      Skeleton enemy_46: -882655848
-      Skeleton enemy_47: 1563658385
       Skeleton enemy_48: 1150825577
-      Skeleton enemy_5: -1121578731
-      Skeleton enemy_6: 1804472307
-      Skeleton enemy_7: 46578134
-      Skeleton enemy_8: -795623682
-      Skeleton enemy_9: 204810809
+      attack_0: -1153016003
+      attack_1: 2108918277
+      attack_10: -1940318848
+      attack_11: 562763129
+      attack_12: -2067504342
+      attack_2: -1036136878
+      attack_3: 1790071243
+      attack_4: -1028546728
+      attack_5: -1121578731
+      attack_6: 1804472307
+      attack_7: 46578134
+      attack_8: -795623682
+      attack_9: 204810809
+      death_0: 99638231
+      death_1: -160402376
+      death_10: -403643208
+      death_11: 850847825
+      death_12: -1658450671
+      death_2: 1048508192
+      death_3: -685257643
+      death_4: -864892051
+      death_5: -1704087022
+      death_6: 1968929021
+      death_7: -904833771
+      death_8: 2105846072
+      death_9: 1618630823
+      hurt_0: -882655848
+      hurt_1: 1563658385
+      idle_0: -1435283635
+      idle_1: -497719131
+      idle_2: -1051451597
+      idle_3: 919209824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
