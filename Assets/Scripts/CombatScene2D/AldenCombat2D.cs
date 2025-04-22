@@ -449,6 +449,11 @@ public class AldenCombat2D : MonoBehaviour
             shieldAuraAnimator.SetTrigger("ShieldAuraIdle");
         }
 
+        if(incomingDamage <= (int)(maxHealth * 0.05f))
+        {
+            incomingDamage = (int)(maxHealth * 0.05f);
+        }
+
         // play damage number animation
         GameObject normalDamageObject = Instantiate(normalDamageFloater, damageFloaterSpawnpoint);
         normalDamageObject.GetComponent<TMP_Text>().text = incomingDamage.ToString();

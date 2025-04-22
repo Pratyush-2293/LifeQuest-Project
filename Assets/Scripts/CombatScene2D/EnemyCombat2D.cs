@@ -72,6 +72,7 @@ public class EnemyCombat2D : MonoBehaviour
     private void Start()
     {
         healthSlider.maxValue = maxHealth;
+        healthSlider.value = maxHealth;
         defendStartHealth = (int)(maxHealth * defendStartHealthPercent);
 
         hitFXAnimator = hitFXObject.gameObject.GetComponent<Animator>();

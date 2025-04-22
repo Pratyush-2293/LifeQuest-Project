@@ -196,6 +196,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2523393730661981521, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7014a164a8cb9a9418c3b0025f35febe,
+        type: 3}
     - target: {fileID: 2713659500312433787, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -288,13 +294,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
       propertyPath: attack
-      value: 20
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: defense
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: critRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: overrideStats
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill1UnlockLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill2UnlockLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill3UnlockLevel
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6175338148382906491, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
@@ -440,7 +486,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyCharacters.Array.data[0]
       value: 
-      objectReference: {fileID: 1869175472}
+      objectReference: {fileID: 1559586950}
     - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: enemyCharacters.Array.data[1]
@@ -477,11 +523,12 @@ PrefabInstance:
     - {fileID: 7722323579961139742, guid: eb8b131cfbaf7a4428d344197a585b8e, type: 3}
     - {fileID: 3867694011715588065, guid: eb8b131cfbaf7a4428d344197a585b8e, type: 3}
     - {fileID: 5472499018107567370, guid: eb8b131cfbaf7a4428d344197a585b8e, type: 3}
+    - {fileID: 4047426385600317836, guid: eb8b131cfbaf7a4428d344197a585b8e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2794973452790185539, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1869175473}
+      addedObject: {fileID: 1559586951}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb8b131cfbaf7a4428d344197a585b8e, type: 3}
 --- !u!4 &320260564 stripped
@@ -490,19 +537,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 320260563}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1869175472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4522169926414164169, guid: 151b8ef5353c2164fb15f8aa0581a740,
-    type: 3}
-  m_PrefabInstance: {fileID: 7309083916038509511}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1869175473 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3460145225415899987, guid: 151b8ef5353c2164fb15f8aa0581a740,
-    type: 3}
-  m_PrefabInstance: {fileID: 7309083916038509511}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7309083916038509511
+--- !u!1001 &1221225416
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -575,11 +610,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: health
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: maxHealth
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnCounter
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151b8ef5353c2164fb15f8aa0581a740, type: 3}
+--- !u!1 &1559586950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4522169926414164169, guid: 151b8ef5353c2164fb15f8aa0581a740,
+    type: 3}
+  m_PrefabInstance: {fileID: 1221225416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1559586951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3460145225415899987, guid: 151b8ef5353c2164fb15f8aa0581a740,
+    type: 3}
+  m_PrefabInstance: {fileID: 1221225416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

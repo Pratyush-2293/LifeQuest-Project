@@ -198,12 +198,47 @@ PrefabInstance:
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: health
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnCounter
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackDamage
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -298,22 +333,52 @@ PrefabInstance:
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: health
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: turnCounter
-      value: 40
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackDamage
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: characterPosition
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -724,12 +789,17 @@ PrefabInstance:
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: health
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
@@ -738,8 +808,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
+      propertyPath: attackDamage
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
       propertyPath: characterPosition
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -844,22 +939,52 @@ PrefabInstance:
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: health
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: turnCounter
-      value: 60
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackDamage
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: attackTimeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendTimeCost
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: characterPosition
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendChancePercent
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
+        type: 3}
+      propertyPath: defendStartHealthPercent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
