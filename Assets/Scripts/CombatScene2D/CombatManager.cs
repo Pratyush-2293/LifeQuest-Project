@@ -59,9 +59,7 @@ public class CombatManager : MonoBehaviour
     [Header("Selected Enemy Panel")]
     [Space(5)]
     public Animator enemyInfoPanelAnimator = null;
-    public Image enemyProfileImageDisplay = null;
     public TMP_Text enemyNameDisplay = null;
-    public TMP_Text enemyActionsDisplay = null;
     public Slider enemyHealthDisplay = null;
     public TMP_Text enemyHealthValueDisplay = null;
 
@@ -473,12 +471,6 @@ public class CombatManager : MonoBehaviour
     {
         if(enemyCombatControllers[currentSelectedTarget] != null)
         {
-            // Update the profile image
-            if(enemyCombatControllers[currentSelectedTarget].enemyProfileSprite != null)
-            {
-                enemyProfileImageDisplay.sprite = enemyCombatControllers[currentSelectedTarget].enemyProfileSprite;
-            }
-
             // Update the enemy status display if any status exists
             foreach(Transform child in enemyStatusBar.transform)
             {
@@ -539,9 +531,6 @@ public class CombatManager : MonoBehaviour
             
             // Update the enemy name
             enemyNameDisplay.text = enemyCombatControllers[currentSelectedTarget].enemyName;
-
-            // Update the enemy actions
-            enemyActionsDisplay.text = enemyCombatControllers[currentSelectedTarget].enemyActions;
 
             // Update the enemy health slider
             enemyHealthDisplay.maxValue = enemyCombatControllers[currentSelectedTarget].maxHealth;

@@ -15,6 +15,15 @@ public class InventoryManager : MonoBehaviour
     public Image legguardsImage = null;
     public Image bootsImage = null;
 
+    [Header("Empty Item Slot Sprites")]
+    [Space(5)]
+    public Sprite weaponSlot;
+    public Sprite offHandSlot;
+    public Sprite headgearSlot;
+    public Sprite chestpieceSlot;
+    public Sprite legguardsSlot;
+    public Sprite bootsSlot;
+
     public GameObject aldenChar = null;
     public GameObject inventoryPanel = null;
     public GameObject equipButtons = null;
@@ -49,25 +58,54 @@ public class InventoryManager : MonoBehaviour
         {
             weaponImage.sprite = GameData.instance.aldenEquippedWeapon.itemIcon;
         }
+        else
+        {
+            weaponImage.sprite = weaponSlot;
+        }
+
         if (GameData.instance.aldenEquippedOffHand.itemIcon != null)
         {
             offhandImage.sprite = GameData.instance.aldenEquippedOffHand.itemIcon;
         }
+        else
+        {
+            offhandImage.sprite = offHandSlot;
+        }
+
         if (GameData.instance.aldenEquippedHeadgear.itemIcon != null)
         {
             headgearImage.sprite = GameData.instance.aldenEquippedHeadgear.itemIcon;
         }
+        else
+        {
+            headgearImage.sprite = headgearSlot;
+        }
+
         if (GameData.instance.aldenEquippedChestpiece.itemIcon != null)
         {
             chestpieceImage.sprite = GameData.instance.aldenEquippedChestpiece.itemIcon;
         }
+        else
+        {
+            chestpieceImage.sprite = chestpieceSlot;
+        }
+
         if (GameData.instance.aldenEquippedLegguards.itemIcon != null)
         {
             legguardsImage.sprite = GameData.instance.aldenEquippedLegguards.itemIcon;
         }
+        else
+        {
+            legguardsImage.sprite = legguardsSlot;
+        }
+
         if (GameData.instance.aldenEquippedBoots.itemIcon != null)
         {
             bootsImage.sprite = GameData.instance.aldenEquippedBoots.itemIcon;
+        }
+        else
+        {
+            bootsImage.sprite = bootsSlot;
         }
     }
 
@@ -80,6 +118,8 @@ public class InventoryManager : MonoBehaviour
 
     private void HideInventory()
     {
+        FetchAldenEquippedItems();
+
         inventoryPanel.gameObject.SetActive(false);
         aldenChar.gameObject.SetActive(true);
         equipButtons.gameObject.SetActive(true);

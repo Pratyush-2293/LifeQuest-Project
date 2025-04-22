@@ -321,6 +321,11 @@ PrefabInstance:
       propertyPath: sceneTransition
       value: 
       objectReference: {fileID: 921806507}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: sceneTransition
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: levelID

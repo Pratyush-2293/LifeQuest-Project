@@ -15,6 +15,7 @@ public class ItemUI : MonoBehaviour
 
     public Color greaterValueColor;
     public Color lowerValueColor;
+    public Color sameValueColor;
 
     public void Initialise(Item itemData)
     {
@@ -64,7 +65,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if(item.mainStatValue == GameData.instance.aldenEquippedWeapon.mainStatValue)
                 {
-                    mainStat.color = Color.white;
+                    mainStat.color = sameValueColor;
                 }
                 else
                 {
@@ -77,7 +78,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.subStatValue == GameData.instance.aldenEquippedWeapon.subStatValue)
                 {
-                    subStat.color = Color.white;
+                    subStat.color = sameValueColor;
                 }
                 else
                 {
@@ -92,7 +93,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.mainStatValue == GameData.instance.aldenEquippedOffHand.mainStatValue)
                 {
-                    mainStat.color = Color.white;
+                    mainStat.color = sameValueColor;
                 }
                 else
                 {
@@ -105,7 +106,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.subStatValue == GameData.instance.aldenEquippedOffHand.subStatValue)
                 {
-                    subStat.color = Color.white;
+                    subStat.color = sameValueColor;
                 }
                 else
                 {
@@ -120,7 +121,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.mainStatValue == GameData.instance.aldenEquippedHeadgear.mainStatValue)
                 {
-                    mainStat.color = Color.white;
+                    mainStat.color = sameValueColor;
                 }
                 else
                 {
@@ -133,7 +134,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.subStatValue == GameData.instance.aldenEquippedHeadgear.subStatValue)
                 {
-                    subStat.color = Color.white;
+                    subStat.color = sameValueColor;
                 }
                 else
                 {
@@ -148,7 +149,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.mainStatValue == GameData.instance.aldenEquippedChestpiece.mainStatValue)
                 {
-                    mainStat.color = Color.white;
+                    mainStat.color = sameValueColor;
                 }
                 else
                 {
@@ -161,7 +162,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.subStatValue == GameData.instance.aldenEquippedChestpiece.subStatValue)
                 {
-                    subStat.color = Color.white;
+                    subStat.color = sameValueColor;
                 }
                 else
                 {
@@ -176,7 +177,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.mainStatValue == GameData.instance.aldenEquippedLegguards.mainStatValue)
                 {
-                    mainStat.color = Color.white;
+                    mainStat.color = sameValueColor;
                 }
                 else
                 {
@@ -189,7 +190,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.subStatValue == GameData.instance.aldenEquippedLegguards.subStatValue)
                 {
-                    subStat.color = Color.white;
+                    subStat.color = sameValueColor;
                 }
                 else
                 {
@@ -204,7 +205,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.mainStatValue == GameData.instance.aldenEquippedBoots.mainStatValue)
                 {
-                    mainStat.color = Color.white;
+                    mainStat.color = sameValueColor;
                 }
                 else
                 {
@@ -217,7 +218,7 @@ public class ItemUI : MonoBehaviour
                 }
                 else if (item.subStatValue == GameData.instance.aldenEquippedBoots.subStatValue)
                 {
-                    subStat.color = Color.white;
+                    subStat.color = sameValueColor;
                 }
                 else
                 {
