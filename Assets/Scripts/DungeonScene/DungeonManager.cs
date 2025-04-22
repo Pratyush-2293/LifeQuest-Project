@@ -41,6 +41,9 @@ public class DungeonManager : MonoBehaviour
     public AudioSource sfxSource;
     public AudioSource aldenSFXSource;
 
+    [Header("Menu Components")]
+    public GameObject pauseMenuPanel;
+
     // Private Variables
     private int currentLevel = 1;
 
@@ -163,5 +166,20 @@ public class DungeonManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(sound);
         }
+    }
+
+    public void OnPauseButton()
+    {
+        pauseMenuPanel.gameObject.SetActive(true);
+    }
+
+    public void OnCancelButton()
+    {
+        pauseMenuPanel.gameObject.SetActive(false);
+    }
+
+    public void OnExitButton()
+    {
+        sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
     }
 }
