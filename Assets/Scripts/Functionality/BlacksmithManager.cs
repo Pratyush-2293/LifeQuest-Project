@@ -64,6 +64,7 @@ public class BlacksmithManager : MonoBehaviour
     public TMP_Text[] availableQuantityText = new TMP_Text[4];
     public TMP_Text craftingCostText;
     public Color insufficientMaterialsColor;
+    public Color defaultTextColor;
 
     [Header("Craft Success Panel Components")]
     [Space(5)]
@@ -184,7 +185,7 @@ public class BlacksmithManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[0].color = Color.white;
+                availableQuantityText[0].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -221,7 +222,7 @@ public class BlacksmithManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[1].color = Color.white;
+                availableQuantityText[1].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -258,7 +259,7 @@ public class BlacksmithManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[2].color = Color.white;
+                availableQuantityText[2].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -295,7 +296,7 @@ public class BlacksmithManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[3].color = Color.white;
+                availableQuantityText[3].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -310,7 +311,7 @@ public class BlacksmithManager : MonoBehaviour
         }
         else
         {
-            craftingCostText.color = Color.white;
+            craftingCostText.color = defaultTextColor;
             sufficientGoldAvailable = true;
         }
 

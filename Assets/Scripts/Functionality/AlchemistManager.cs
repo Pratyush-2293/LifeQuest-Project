@@ -49,6 +49,7 @@ public class AlchemistManager : MonoBehaviour
     public TMP_Text[] availableQuantityText = new TMP_Text[4];
     public TMP_Text enhancingCostText;
     public Color insufficientMaterialsColor;
+    public Color defaultTextColor;
 
     [Header("Enhancing Success Panel Components")]
     [Space(5)]
@@ -200,7 +201,7 @@ public class AlchemistManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[0].color = Color.white;
+                availableQuantityText[0].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -237,7 +238,7 @@ public class AlchemistManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[1].color = Color.white;
+                availableQuantityText[1].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -274,7 +275,7 @@ public class AlchemistManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[2].color = Color.white;
+                availableQuantityText[2].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -311,7 +312,7 @@ public class AlchemistManager : MonoBehaviour
             }
             else
             {
-                availableQuantityText[3].color = Color.white;
+                availableQuantityText[3].color = defaultTextColor;
                 totalMaterialsAvailable++;
             }
         }
@@ -326,7 +327,7 @@ public class AlchemistManager : MonoBehaviour
         }
         else
         {
-            enhancingCostText.color = Color.white;
+            enhancingCostText.color = defaultTextColor;
             sufficientGoldAvailable = true;
         }
 
