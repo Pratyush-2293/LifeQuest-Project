@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/OpenWorldSceneTest.unity
     guid: c4c4cd9cf7615114b84103de86cfba1f
   - enabled: 1
-    path: Assets/Scenes/MainScenes/CombatScene.unity
-    guid: 6ab517a68910f984ba5600b9a60c5caa
-  - enabled: 1
     path: Assets/Scenes/MainScenes/GameHubMenu.unity
     guid: 5e0dca5e1de431347b4ea7021b0c31d1
   - enabled: 1
