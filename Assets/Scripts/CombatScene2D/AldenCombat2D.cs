@@ -53,9 +53,9 @@ public class AldenCombat2D : MonoBehaviour
     // Skill Unlock Levels
     [Header("Skill Unlock Levels")]
     [Space(5)]
-    public int skill1UnlockLevel = 1;
-    public int skill2UnlockLevel = 2;
-    public int skill3UnlockLevel = 3;
+    public int skill1UnlockLevel = 3;
+    public int skill2UnlockLevel = 5;
+    public int skill3UnlockLevel = 7;
 
     // Alden Components
     [Header("Alden Components")]

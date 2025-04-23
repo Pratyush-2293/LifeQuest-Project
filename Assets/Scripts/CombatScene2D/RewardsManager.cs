@@ -77,11 +77,11 @@ public class RewardsManager : MonoBehaviour
             // - Add the reward items
             AddRewardItems();
 
-            // Increment the completed story level counter in GameData
-            GameData.instance.maxCompletedLevel++;
-
             // Save changes made to GameData
-            // SaveManager.instance.SaveGameData(); // Uncomment this later
+            if(GameData.instance != null)
+            {
+                SaveManager.instance.SaveGameData();
+            }
         }
         else
         {

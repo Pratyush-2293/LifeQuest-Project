@@ -11,6 +11,10 @@ public class LevelSelectMenuManager : MonoBehaviour
     public GameObject unlockLevelPromptPanel = null;
     public GameObject insufficientKeysPromptPanel = null;
 
+    [Header("Level Button Sprites")]
+    public Sprite levelButtonUnlockedSprite = null;
+    public Sprite levelButtonCompletedSprite = null;
+
     public SceneTransition sceneTransition;
 
     public List<Button> levelButtons = new List<Button>();
@@ -20,6 +24,7 @@ public class LevelSelectMenuManager : MonoBehaviour
         levelUnlockKeysDisplay.text = GameData.instance.levelKeys.ToString();
 
         UpdateAvailableLevelButtons();
+        UpdateUnlockedLevelButton();
         UpdateCompletedLevelButtons();
     }
 
@@ -41,7 +46,18 @@ public class LevelSelectMenuManager : MonoBehaviour
         {
             if (i <= GameData.instance.maxCompletedLevel - 1)
             {
-                // change the button sprite here
+                levelButtons[i].image.sprite = levelButtonCompletedSprite;
+            }
+        }
+    }
+
+    private void UpdateUnlockedLevelButton()
+    {
+        for (int i = 0; i < levelButtons.Count; i++)
+        {
+            if (i == GameData.instance.maxUnlockedLevel - 1)
+            {
+                levelButtons[i].image.sprite = levelButtonUnlockedSprite;
             }
         }
     }

@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine.SceneManagement;
 
 public class VN_Manager : MonoBehaviour

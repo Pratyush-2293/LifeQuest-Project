@@ -1142,7 +1142,15 @@ public class CombatManager : MonoBehaviour
     {
         if (isDungeonScene)
         {
-            sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+            if(GameData.instance.maxCompletedLevel >= 11)
+            {
+                sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+            }
+            else
+            {
+                sceneTransition.LoadSceneWithTransition("Level_11-2");
+            }
+            
         }
         else
         {

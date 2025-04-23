@@ -93,7 +93,11 @@ public class LevelCompleteManager : MonoBehaviour
             GameData.instance.maxAvailableLevel++;
 
             // Save changes made to GameData
-            // SaveManager.instance.SaveGameData(); // Uncomment this later
+            if(SaveManager.instance != null)
+            {
+                SaveManager.instance.SaveGameData();
+            }
+            
         }
         else
         {

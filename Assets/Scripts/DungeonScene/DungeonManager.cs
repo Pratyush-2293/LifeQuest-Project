@@ -180,6 +180,13 @@ public class DungeonManager : MonoBehaviour
 
     public void OnExitButton()
     {
-        sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+        if(GameData.instance.maxCompletedLevel >= 11)
+        {
+            sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+        }
+        else
+        {   
+            sceneTransition.LoadSceneWithTransition("Level_11-2");
+        }
     }
 }

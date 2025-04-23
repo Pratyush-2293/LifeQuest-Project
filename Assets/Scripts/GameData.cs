@@ -20,6 +20,9 @@ public class GameData : MonoBehaviour
     public float levelViewedID = 0f;
     public float combatCompletedID = 0f;
 
+    public bool firstTimeEquipmentLoaded = false;
+
+
     [Header("Inventory")]
     public List<Item> inventory = new List<Item>();
 

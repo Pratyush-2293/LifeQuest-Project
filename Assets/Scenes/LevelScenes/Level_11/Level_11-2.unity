@@ -180,6 +180,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: expReward
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: goldReward
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemReward1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemReward2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemReward3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemRewardQuantity1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemRewardQuantity2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemRewardQuantity3
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3730865179536350655, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: m_Sprite
@@ -2921,6 +2961,11 @@ PrefabInstance:
       value: "Alden turns, stepping out of the infirmary, the path ahead of him clear.
         The battle would be hard-fought, but one thing was certain\u2014he would
         not fail."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[77].lastDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}

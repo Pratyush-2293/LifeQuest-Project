@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Dungeon Store Data")]
     public GameObject dungeonRootObject;
+    public bool dungeonLoadedFromLevel = false;
     public string activeCombatSceneName;
 
     [Header("Test Items")]
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameManager Created.");
     }
 
+
     public void ResumeDungeon()
     {
         StartCoroutine(HandleResumeDungeon());
@@ -60,14 +62,9 @@ public class GameManager : MonoBehaviour
     }
 
     [ContextMenu("Add Test Items")]
-    public void AddTestItems()
+    public void AldenItemsInitialise()
     {
         GameData.instance.inventory.Clear();
-
-        foreach(ItemSO itemSO in inventoryTestItems)
-        {
-            GameData.instance.inventory.Add(new Item(itemSO));
-        }
 
         GameData.instance.aldenEquippedWeapon = new Item(aldenWeaponTest);
         GameData.instance.aldenEquippedOffHand = new Item(aldenOffhandTest);
@@ -106,8 +103,6 @@ public class GameManager : MonoBehaviour
         GameData.instance.inventory.RemoveAll(item => item.itemType == Item.ItemType.None);
     }
 
-    // Save Handling for mobile devices:
-    /*
     void OnApplicationPause(bool pauseStatus)
     {
         if (pauseStatus) // App goes to background
@@ -118,7 +113,10 @@ public class GameManager : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        SaveManager.instance.SaveGameData();
+        if(SaveManager.instance != null)
+        {
+            SaveManager.instance.SaveGameData();
+        }
     }
 
     void OnApplicationFocus(bool hasFocus)
@@ -128,5 +126,4 @@ public class GameManager : MonoBehaviour
             SaveManager.instance.SaveGameData();
         }
     }
-    */
 }

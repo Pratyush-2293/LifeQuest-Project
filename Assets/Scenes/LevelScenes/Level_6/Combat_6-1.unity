@@ -526,6 +526,27 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: expReward
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: goldReward
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: itemReward1
+      value: 
+      objectReference: {fileID: 11400000, guid: 1256b640636f99e4a94021179f5cca5d,
+        type: 2}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: itemRewardQuantity1
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: level
@@ -544,7 +565,22 @@ PrefabInstance:
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: overrideStats
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill1UnlockLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill2UnlockLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: skill3UnlockLevel
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6175338148382906491, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
@@ -635,6 +671,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CombatSceneLayout
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: levelID
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: currentSceneName
+      value: Combat_6-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: loadNextSceneName
+      value: Level_6-3
       objectReference: {fileID: 0}
     - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}

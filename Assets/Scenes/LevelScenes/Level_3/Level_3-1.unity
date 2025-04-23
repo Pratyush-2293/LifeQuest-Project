@@ -601,8 +601,48 @@ PrefabInstance:
       objectReference: {fileID: 176931914}
     - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: expReward
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: goldReward
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemReward1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemReward2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemReward3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: sceneTransition
       value: 
+      objectReference: {fileID: 176931914}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemRewardQuantity1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemRewardQuantity2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: itemRewardQuantity3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3730865179536350655, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -3885,6 +3925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[93].dialogueText
       value: His real test starts now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[93].lastDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}

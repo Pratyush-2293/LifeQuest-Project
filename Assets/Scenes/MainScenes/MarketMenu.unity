@@ -1110,7 +1110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &127204613
 Transform:
   m_ObjectHideFlags: 0
@@ -8831,10 +8831,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purchaseItems:
-  - {fileID: 11400000, guid: 73231a4c7de045e48898295d9e5966b8, type: 2}
-  - {fileID: 11400000, guid: 249ef8d52c807874a912e45be07da5d0, type: 2}
-  - {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
-  - {fileID: 11400000, guid: e5036cd6aec96ed419770443b7e7fbde, type: 2}
+  - {fileID: 11400000, guid: 402a0403298085d4e8740ea8b4a541bf, type: 2}
+  - {fileID: 11400000, guid: 1256b640636f99e4a94021179f5cca5d, type: 2}
+  - {fileID: 11400000, guid: 3a88caa10c71a9747a543e14bb6fea0c, type: 2}
+  - {fileID: 11400000, guid: de4207f68f42d1f438d3f415ef536abb, type: 2}
+  - {fileID: 11400000, guid: 2ee742fc5a3816c42b4123f10dd198a3, type: 2}
+  - {fileID: 11400000, guid: 17fa929f0cd97034597256a50eb5a7ca, type: 2}
   purchaseItemUIs: []
   agathaChar: {fileID: 1228491695}
   mainMenuPanel: {fileID: 832897986}
@@ -8885,10 +8887,12 @@ MonoBehaviour:
   enhancingSuccessItemIcon: {fileID: 1355714143}
   enhancingSuccessItemNameText: {fileID: 683461999}
   materialsList:
-  - {fileID: 11400000, guid: 73231a4c7de045e48898295d9e5966b8, type: 2}
-  - {fileID: 11400000, guid: 249ef8d52c807874a912e45be07da5d0, type: 2}
-  - {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
-  - {fileID: 11400000, guid: e5036cd6aec96ed419770443b7e7fbde, type: 2}
+  - {fileID: 11400000, guid: 402a0403298085d4e8740ea8b4a541bf, type: 2}
+  - {fileID: 11400000, guid: 1256b640636f99e4a94021179f5cca5d, type: 2}
+  - {fileID: 11400000, guid: 3a88caa10c71a9747a543e14bb6fea0c, type: 2}
+  - {fileID: 11400000, guid: de4207f68f42d1f438d3f415ef536abb, type: 2}
+  - {fileID: 11400000, guid: 2ee742fc5a3816c42b4123f10dd198a3, type: 2}
+  - {fileID: 11400000, guid: 17fa929f0cd97034597256a50eb5a7ca, type: 2}
 --- !u!4 &1057997306
 Transform:
   m_ObjectHideFlags: 0
@@ -13371,26 +13375,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordsCraftItems:
-  - {fileID: 11400000, guid: d94d682ab2e16604fa6d42d395d200ed, type: 2}
-  - {fileID: 11400000, guid: 46dfab0b16cd93141958b66470059a84, type: 2}
+  - {fileID: 11400000, guid: bd460480280779d4bbdc62bf6e5f21e9, type: 2}
   shieldsCraftItems: []
   mediumHeadgearCraftItems:
-  - {fileID: 11400000, guid: 4addaffb6d68c7741ba94756b6605dff, type: 2}
-  - {fileID: 11400000, guid: 724619fd95bb3b64eb7a2c0c3b4e4ead, type: 2}
+  - {fileID: 11400000, guid: cc16d648ac1008e4a8bba81e10d6136c, type: 2}
   mediumChestpieceCraftItems:
-  - {fileID: 11400000, guid: 31bc1a4ed374f1c408ba22f4bf03eb40, type: 2}
-  - {fileID: 11400000, guid: 8aae5eccf82bece4bae8568e29b1fb62, type: 2}
+  - {fileID: 11400000, guid: a2e3bcd525a6ecf408002db9a9d5c1e6, type: 2}
   mediumLegguardsCraftItems:
-  - {fileID: 11400000, guid: d6618601fa2b8a64c97d65a1dad31064, type: 2}
-  - {fileID: 11400000, guid: 2baa4157865cfce4e94939117e902504, type: 2}
+  - {fileID: 11400000, guid: 8656e6759d7202f43958bab33c5d26e5, type: 2}
   mediumBootsCraftItems:
-  - {fileID: 11400000, guid: 648e0b4dbd48e924eb320e3af0362655, type: 2}
-  - {fileID: 11400000, guid: 17319b91bf17b1943b90c232ecdb3079, type: 2}
+  - {fileID: 11400000, guid: 379f9817b33d5714c977621a3804b401, type: 2}
   purchaseItems:
-  - {fileID: 11400000, guid: 73231a4c7de045e48898295d9e5966b8, type: 2}
-  - {fileID: 11400000, guid: 249ef8d52c807874a912e45be07da5d0, type: 2}
-  - {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342, type: 2}
-  - {fileID: 11400000, guid: e5036cd6aec96ed419770443b7e7fbde, type: 2}
+  - {fileID: 11400000, guid: de4207f68f42d1f438d3f415ef536abb, type: 2}
+  - {fileID: 11400000, guid: 17fa929f0cd97034597256a50eb5a7ca, type: 2}
+  - {fileID: 11400000, guid: 3a88caa10c71a9747a543e14bb6fea0c, type: 2}
+  - {fileID: 11400000, guid: 2ee742fc5a3816c42b4123f10dd198a3, type: 2}
+  - {fileID: 11400000, guid: 1256b640636f99e4a94021179f5cca5d, type: 2}
+  - {fileID: 11400000, guid: 402a0403298085d4e8740ea8b4a541bf, type: 2}
   purchaseItemUIs: []
   bromundChar: {fileID: 127204612}
   mainMenuPanel: {fileID: 2082040824}

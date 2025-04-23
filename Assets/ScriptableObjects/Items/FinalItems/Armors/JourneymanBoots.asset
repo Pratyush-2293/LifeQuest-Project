@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e154f003d8e69544b48ccb33eec32b1, type: 3}
+  m_Name: JourneymanBoots
+  m_EditorClassIdentifier: 
+  itemType: 6
+  weaponType: 0
+  offhandType: 0
+  armorType: 4
+  isStackable: 0
+  itemQuantity: 1
+  itemIcon: {fileID: 21300000, guid: b27434fcebdd2cf48835179a1642a3a6, type: 3}
+  itemName: Journeyman's Boots
+  itemRarity: 1
+  enhancementLevel: 0
+  mainStatType: 1
+  mainStatValue: 2
+  subStatType: 2
+  subStatValue: 5
+  itemPrice: 80
+  unlockLevel: 1
+  sellValue: 50
+  upgradeMaterialsList:
+  - totalMaterialTypes: 1
+    materialName1: Piece of Cloth
+    materialQuantity1: 1
+    materialName2: 
+    materialQuantity2: 0
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 20
+  - totalMaterialTypes: 1
+    materialName1: Piece of Cloth
+    materialQuantity1: 2
+    materialName2: 
+    materialQuantity2: 0
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 40
+  - totalMaterialTypes: 1
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: 
+    materialQuantity2: 0
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 60
+  - totalMaterialTypes: 2
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 1
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 80
+  - totalMaterialTypes: 2
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 2
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 100
+  - totalMaterialTypes: 2
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: 
+    materialQuantity3: 0
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 120
+  - totalMaterialTypes: 3
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Metal Scrap
+    materialQuantity3: 1
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 140
+  - totalMaterialTypes: 3
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Metal Scrap
+    materialQuantity3: 2
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 160
+  - totalMaterialTypes: 3
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Metal Scrap
+    materialQuantity3: 3
+    materialName4: 
+    materialQuantity4: 0
+    upgradeCost: 180
+  - totalMaterialTypes: 4
+    materialName1: Piece of Cloth
+    materialQuantity1: 3
+    materialName2: Leather Scrap
+    materialQuantity2: 3
+    materialName3: Metal Scrap
+    materialQuantity3: 3
+    materialName4: Goblin Fang
+    materialQuantity4: 1
+    upgradeCost: 200

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ae66d86bed88a4eba4ddf560704118, type: 3}
+  m_Name: LioranLongswordCraft
+  m_EditorClassIdentifier: 
+  unlockLevel: 1
+  itemName: Lioran Longsword
+  itemIcon: {fileID: 21300000, guid: f44b40ffb31a65d488f72b75e32818bb, type: 3}
+  mainStatType: 0
+  mainStatValue: 10
+  subStatType: 1
+  subStatValue: 5
+  totalMaterialTypes: 3
+  craftingMaterial1: {fileID: 11400000, guid: de4207f68f42d1f438d3f415ef536abb, type: 2}
+  materialQuantity1: 5
+  craftingMaterial2: {fileID: 11400000, guid: 17fa929f0cd97034597256a50eb5a7ca, type: 2}
+  materialQuantity2: 2
+  craftingMaterial3: {fileID: 11400000, guid: 3a88caa10c71a9747a543e14bb6fea0c, type: 2}
+  materialQuantity3: 1
+  craftingMaterial4: {fileID: 0}
+  materialQuantity4: 1
+  craftingCost: 100
+  craftingReward: {fileID: 11400000, guid: dd604e14b62bab5499e21d5c80fbbddb, type: 2}

@@ -22,6 +22,14 @@ public class MainMenu : Menu
 
     public void OnStartGameButton()
     {
+        if(GameData.instance != null)
+        {
+            if(GameData.instance.firstTimeEquipmentLoaded == false)
+            {
+                GameManager.instance.AldenItemsInitialise();
+            }
+        }
+
         sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 
