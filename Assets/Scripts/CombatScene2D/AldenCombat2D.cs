@@ -424,8 +424,7 @@ public class AldenCombat2D : MonoBehaviour
         hitFXObject.transform.Rotate(0f, 0f, randomRotation);
         hitFXAnimator.SetTrigger("HitEffect");
 
-        // calculate def reductions
-        incomingDamage -= defense;
+        // calculate def reductions - already done by enemy
 
         // calculate incoming damage by status modifiers
 

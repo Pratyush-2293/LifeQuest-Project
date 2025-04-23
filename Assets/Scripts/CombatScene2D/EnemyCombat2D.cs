@@ -141,7 +141,10 @@ public class EnemyCombat2D : MonoBehaviour
     {
         // CALCULATE DAMAGE TO DO
         // Can implement attack patterns here later, right now we only have 1 basic attack.
-        damageToDo = attackDamage;
+
+        //First reading alden's defense and subtracting it from the attack damaage to get the flat damage to do.
+        int aldenDef = CombatManager.instance.playerCombatControllers[0].aldenCombatController.defense;
+        damageToDo = attackDamage - aldenDef;
 
         // Reduce damage output based on active afflictions (conditions)
         if(activeStatuses.Any(status => status.statusName == Status.StatusName.Frailty)) // Reduce outgoing damage by 25% if affected by frailty

@@ -1545,6 +1545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1efcb2837906249a2ad5d4d052e3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dungeonsButton: {fileID: 1634778134}
+  marketButton: {fileID: 531968623}
   sceneTransition: {fileID: 1581468289}
 --- !u!1 &1634778132
 GameObject:

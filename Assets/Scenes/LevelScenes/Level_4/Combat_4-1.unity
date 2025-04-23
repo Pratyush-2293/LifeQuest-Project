@@ -633,7 +633,7 @@ PrefabInstance:
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: attackDamage
-      value: 30
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
@@ -643,12 +643,12 @@ PrefabInstance:
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: defendChancePercent
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6308495128891672711, guid: 151b8ef5353c2164fb15f8aa0581a740,
         type: 3}
       propertyPath: defendStartHealthPercent
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
