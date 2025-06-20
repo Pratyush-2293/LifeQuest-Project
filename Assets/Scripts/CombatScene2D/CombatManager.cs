@@ -19,12 +19,12 @@ public class CombatManager : MonoBehaviour
 
     [Header("Player Characters")]
     [Space(5)]
-    public GameObject[] playerCharacters = new GameObject[4];
+    [SerializeField] private GameObject[] playerCharacters = new GameObject[4];
 
 
     [Header("Enemy Characters")]
     [Space(5)]
-    public GameObject[] enemyCharacters = new GameObject[4];
+    [SerializeField] private GameObject[] enemyCharacters = new GameObject[4];
 
 
     [Header("Action Panel")]
@@ -86,8 +86,8 @@ public class CombatManager : MonoBehaviour
     public Animator victoryPanelAnimator = null;
     public Animator defeatPanelAnimator = null;
     [Space(5)]
-    public Button retryButton;
-    public Button levelSelectButton;
+    [SerializeField] private Button retryButton;
+    [SerializeField] private Button levelSelectButton;
 
     [Header("Time Sliders")]
     [Space(5)]
@@ -154,12 +154,12 @@ public class CombatManager : MonoBehaviour
         // Initialising player & enemy controller scripts
         for (int i=0; i < 4; i++)
         {
-            if(playerCharacters[i].gameObject != null)
+            if(playerCharacters[i] != null)  // Removed .gameObject check
             {
                 playerCombatControllers[i] = playerCharacters[i].gameObject.GetComponent<PlayerCombat2D>();
             }
 
-            if (enemyCharacters[i].gameObject != null)
+            if (enemyCharacters[i] != null)
             {
                 enemyCombatControllers[i] = enemyCharacters[i].gameObject.GetComponent<EnemyCombat2D>();
             }

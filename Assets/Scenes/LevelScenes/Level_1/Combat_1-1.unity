@@ -616,6 +616,11 @@ PrefabInstance:
       objectReference: {fileID: 55299200}
     - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
+      propertyPath: currentSceneName
+      value: Combat_1-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659950774794739432, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
       propertyPath: valricTimeSlider
       value: 
       objectReference: {fileID: 55299201}
