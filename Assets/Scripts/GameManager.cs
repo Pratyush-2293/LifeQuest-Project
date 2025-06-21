@@ -35,6 +35,12 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         Debug.Log("GameManager Created.");
+
+        // Disabling Vsync
+        QualitySettings.vSyncCount = 0;
+
+        // Capping framerate to 90 
+        Application.targetFrameRate = 90;
     }
 
 
