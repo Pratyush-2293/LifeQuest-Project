@@ -98,7 +98,9 @@ public class GameData : MonoBehaviour
             aldenEquippedHeadgear = aldenEquippedHeadgear,
             aldenEquippedChestpiece = aldenEquippedChestpiece,
             aldenEquippedLegguards = aldenEquippedLegguards,
-            aldenEquippedBoots = aldenEquippedBoots
+            aldenEquippedBoots = aldenEquippedBoots,
+
+            firstTimeEquipmentLoaded = firstTimeEquipmentLoaded
         };
     }
 
@@ -132,6 +134,8 @@ public class GameData : MonoBehaviour
         aldenEquippedChestpiece = data.aldenEquippedChestpiece;
         aldenEquippedLegguards = data.aldenEquippedLegguards;
         aldenEquippedBoots = data.aldenEquippedBoots;
+
+        firstTimeEquipmentLoaded = data.firstTimeEquipmentLoaded;
     }
 }
 
@@ -167,5 +171,7 @@ public class GameDataSave
     public Item aldenEquippedChestpiece;
     public Item aldenEquippedLegguards;
     public Item aldenEquippedBoots;
+
+    public bool firstTimeEquipmentLoaded;
 }
 

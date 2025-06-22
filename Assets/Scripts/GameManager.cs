@@ -77,6 +77,9 @@ public class GameManager : MonoBehaviour
         GameData.instance.aldenEquippedHeadgear = new Item(aldenHeadgearTest);
         GameData.instance.aldenEquippedChestpiece = new Item(aldenChestpieceTest);
         GameData.instance.aldenEquippedLegguards = new Item(aldenLegguardsTest);
+
+        GameData.instance.firstTimeEquipmentLoaded = true;
+        SaveManager.instance.SaveGameData();
     }
 
     [ContextMenu("Add Test Item")]

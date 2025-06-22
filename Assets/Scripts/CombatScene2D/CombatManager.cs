@@ -230,7 +230,10 @@ public class CombatManager : MonoBehaviour
                 rewardsManager.LoadLevelCompletePanel(levelID > GameData.instance.combatCompletedID ? true : false);
                 if (isRepeatableScene == false)
                 {
-                    GameData.instance.combatCompletedID = levelID;
+                    if(levelID > GameData.instance.combatCompletedID)
+                    {
+                        GameData.instance.combatCompletedID = levelID;
+                    }
                 }
                 StartCoroutine(DisplayVictoryPanel());
             }
