@@ -14,6 +14,8 @@ public class SceneTransition : MonoBehaviour
         {
             sceneTransitionAnimator.SetTrigger("Idle");
         }
+
+        dontShowOnWake = false;
     }
 
     public void LoadSceneWithTransition(string sceneName)

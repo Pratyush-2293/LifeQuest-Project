@@ -1188,6 +1188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 5048219665955868379, guid: d224f3bc935005a49aad0d1a5d80125d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171260233195639110, guid: d224f3bc935005a49aad0d1a5d80125d,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1291,7 +1296,7 @@ PrefabInstance:
     - target: {fileID: 7956520731624122173, guid: d224f3bc935005a49aad0d1a5d80125d,
         type: 3}
       propertyPath: dontShowOnWake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

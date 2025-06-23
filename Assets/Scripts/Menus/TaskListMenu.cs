@@ -154,6 +154,7 @@ public class TaskListMenu : Menu
 
     public void OnBackButton()
     {
+        MainMenu.instance.sceneTransition.gameObject.SetActive(false);
         TurnOff(true);
     }
 

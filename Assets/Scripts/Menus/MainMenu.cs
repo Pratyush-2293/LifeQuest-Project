@@ -22,6 +22,8 @@ public class MainMenu : Menu
 
     public void OnStartGameButton()
     {
+        sceneTransition.gameObject.SetActive(true);
+
         if(GameData.instance != null)
         {
             if(GameData.instance.firstTimeEquipmentLoaded == false)
