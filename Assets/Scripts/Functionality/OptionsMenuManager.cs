@@ -15,6 +15,7 @@ public class OptionsMenuManager : MonoBehaviour
     [Header("Sound Menu Components")]
     [SerializeField] private Slider bgmVolumeSlider = null;
     [SerializeField] private Slider sfxVolumeSlider = null;
+    [SerializeField] private Slider uiVolumeSlider = null;
 
     [Header("Other Components")]
     [SerializeField] private SceneTransition sceneTransition;
@@ -27,15 +28,6 @@ public class OptionsMenuManager : MonoBehaviour
     [SerializeField] private Sprite mutedIcon = null;
     */
 
-    private float bgmVolume;
-    private float sfxVolume;
-
-    private bool bgmIsMuted = false;
-    private bool sfxIsMuted = false;
-
-    private float bgmMutedSave;
-    private float sfxMutedSave;
-
     private void Awake()
     {
         if (instance)
@@ -44,19 +36,6 @@ public class OptionsMenuManager : MonoBehaviour
             Destroy(gameObject);
         }
         instance = this;
-    }
-
-    private void Start()
-    {
-        bgmVolume = PlayerPrefs.GetFloat("bgmVolume_Combat", 1.0f);
-        sfxVolume = PlayerPrefs.GetFloat("sfxVolume_Combat", 1.0f);
-
-        bgmMutedSave = PlayerPrefs.GetFloat("bgmMutedSave_Combat", 1f);
-        sfxMutedSave = PlayerPrefs.GetFloat("sfxMutedSave_Combat", 1f);
-
-        // Load mute states
-        bgmIsMuted = PlayerPrefs.GetInt("bgmIsMuted_Combat", 0) == 1;
-        sfxIsMuted = PlayerPrefs.GetInt("sfxIsMuted_Combat", 0) == 1;
     }
 
     public void OnOptionsButton()
@@ -89,8 +68,9 @@ public class OptionsMenuManager : MonoBehaviour
         optionsMenu.gameObject.SetActive(false);
 
         // Load sound data into the sliders
-        bgmVolumeSlider.value = bgmVolume;
-        sfxVolumeSlider.value = sfxVolume;
+        bgmVolumeSlider.value = AudioManager.instance.bgmVolume;
+        sfxVolumeSlider.value = AudioManager.instance.sfxVolume;
+        uiVolumeSlider.value = AudioManager.instance.uiVolume;
 
         // show the sound menu
         soundMenu.gameObject.SetActive(true);
@@ -98,58 +78,49 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OnBGMMuteButton()
     {
-        if(bgmIsMuted == false)
+        if (AudioManager.instance.bgmIsMuted == false)
         {
-            AudioManager.instance.ChangeVolumeLevels(0, sfxVolume);
             bgmVolumeSlider.value = 0;
-            bgmMutedSave = bgmVolume;
-            PlayerPrefs.SetFloat("bgmMutedSave_Combat", bgmMutedSave);
-            bgmIsMuted = true;
         }
         else
         {
-            AudioManager.instance.ChangeVolumeLevels(bgmMutedSave, sfxVolume);
-            bgmVolumeSlider.value = bgmMutedSave;
-            bgmIsMuted = false;
+            bgmVolumeSlider.value = AudioManager.instance.bgmMutedSave;
         }
 
-        PlayerPrefs.SetInt("bgmIsMuted_Combat", bgmIsMuted ? 1 : 0);  // Save the mute state
-        PlayerPrefs.Save();
+        AudioManager.instance.MuteBGM();
     }
 
     public void OnSFXMuteButton()
     {
-        if (sfxIsMuted == false)
+        if (AudioManager.instance.sfxIsMuted == false)
         {
-            AudioManager.instance.ChangeVolumeLevels(bgmVolume, 0);
             sfxVolumeSlider.value = 0;
-            sfxMutedSave = sfxVolume;
-            PlayerPrefs.SetFloat("sfxMutedSave_Combat", sfxMutedSave);
-            sfxIsMuted = true;
         }
         else
         {
-            AudioManager.instance.ChangeVolumeLevels(bgmVolume, sfxMutedSave);
-            sfxVolumeSlider.value = sfxMutedSave;
-            sfxIsMuted = false;
+            sfxVolumeSlider.value = AudioManager.instance.sfxMutedSave;
         }
 
-        PlayerPrefs.SetInt("sfxIsMuted_Combat", sfxIsMuted ? 1 : 0);  // Save the mute state
-        PlayerPrefs.Save();
+        AudioManager.instance.MuteSFX();
+    }
+
+    public void OnUIMuteButton()
+    {
+        if (AudioManager.instance.uiIsMuted == false)
+        {
+            uiVolumeSlider.value = 0;
+        }
+        else
+        {
+            uiVolumeSlider.value = AudioManager.instance.uiMutedSave;
+        }
+
+        AudioManager.instance.MuteUI();
     }
 
     public void OnApplyButton()
     {
-        // Update internal variables with new values
-        bgmVolume = bgmVolumeSlider.value;
-        sfxVolume = sfxVolumeSlider.value;
-
-        // Notify Audiomanager about volume change
-        AudioManager.instance.ChangeVolumeLevels(bgmVolume, sfxVolume);
-
-        // Save new volume values to PlayerPrefs
-        PlayerPrefs.SetFloat("bgmVolume_Combat", bgmVolume);
-        PlayerPrefs.SetFloat("sfxVolume_Combat", sfxVolume);
+        AudioManager.instance.RefreshVolumeLevels(bgmVolumeSlider.value, sfxVolumeSlider.value, uiVolumeSlider.value);
 
         // Return to options menu
         soundMenu.gameObject.SetActive(false);

@@ -23,13 +23,13 @@ public class VN_Manager : MonoBehaviour
 
     [Header("SFX Audioclips")]
     [Space(5)]
-    public AudioClip buttonClickSound = null;
+    public string buttonClickSound = "uiClick";
     public List<AudioClip> soundEffects = new List<AudioClip>();
 
     [Header("Background Musics")]
     [Space(5)]
     public AudioClip initialBackgroundMusic = null;
-    public List<AudioClip> backgroundMusic = new List<AudioClip>();
+    public List<AudioClip> backgroundMusics = new List<AudioClip>();
 
     [Header("Create Dialogues:")]
     [Space(5)]
@@ -52,9 +52,6 @@ public class VN_Manager : MonoBehaviour
     public Image background = null;
     public GameObject backgroundTransition = null;
     public GameObject nextButton = null;
-    public AudioSource BGM_Source = null;
-    public AudioSource SFX_Source = null;
-    public AudioSource textSoundSource = null;
     public GameObject nameTab = null;
     public TMP_Text nameTabText;
     public TMP_Text dialogueBoxText = null;
@@ -85,8 +82,7 @@ public class VN_Manager : MonoBehaviour
         characters[activeCharacter].gameObject.GetComponent<Animator>().SetTrigger("SlideInstant");  // using a faster version of animation to spawn character sooner
 
         // Playing the initial background music
-        BGM_Source.clip = initialBackgroundMusic;
-        BGM_Source.Play();
+        AudioManager.instance.PlayMusicClip(initialBackgroundMusic);
 
         nameTabAnimator = nameTab.gameObject.GetComponent<Animator>();
     }
@@ -118,8 +114,7 @@ public class VN_Manager : MonoBehaviour
         }
 
         // Play button clicked SFX
-        SFX_Source.clip = buttonClickSound;
-        SFX_Source.Play();
+        AudioManager.instance.PlayUISound(buttonClickSound);
 
         // Fetching the appropriate dialogue data for next step
         if (calledFromOptions == false)
@@ -238,8 +233,7 @@ public class VN_Manager : MonoBehaviour
         // Playing dialogue SFX if it exists
         if (currentDialogue.SFX != -1)
         {
-            SFX_Source.clip = soundEffects[currentDialogue.SFX];
-            SFX_Source.Play();
+            AudioManager.instance.PlaySoundClip(soundEffects[currentDialogue.SFX]);
         }
 
         // Starting Screenshake if needed
@@ -251,7 +245,7 @@ public class VN_Manager : MonoBehaviour
         // Changing BGM if needed
         if (currentDialogue.BGM != -1)
         {
-            StartCoroutine(BGMFadeTransition(currentDialogue.BGM));
+            AudioManager.instance.PlayMusicClip(backgroundMusics[currentDialogue.BGM]);
         }
 
         // Moving to next dialogue
@@ -262,30 +256,6 @@ public class VN_Manager : MonoBehaviour
         {
             dialoguesFinished = true;
             combatSceneName = currentDialogue.loadCombat;
-        }
-    }
-
-    public IEnumerator BGMFadeTransition(int BGM_Index)
-    {
-        // Storing the initial volume level of BGM
-        float setVolume = BGM_Source.volume;
-
-        // Reducing volume of current track
-        while(BGM_Source.volume > 0)
-        {
-            BGM_Source.volume -= 0.05f;
-            yield return new WaitForSeconds(0.1f);
-        }
-
-        // Changing tracks
-        BGM_Source.clip = backgroundMusic[BGM_Index];
-        BGM_Source.Play();
-
-        // Restoring volume of new track
-        while(BGM_Source.volume < setVolume)
-        {
-            BGM_Source.volume += 0.05f;
-            yield return new WaitForSeconds(0.1f);
         }
     }
 
@@ -300,12 +270,12 @@ public class VN_Manager : MonoBehaviour
             // Play typing sound
             if (i > 0 && (i % soundInterval == 0))
             {
-                if (textSoundSource != null && textSounds != null && textSounds.Length > 0)
+                if (AudioManager.instance.textSoundSource != null && textSounds != null && textSounds.Length > 0)
                 {
                     int soundIndex = UnityEngine.Random.Range(0, textSounds.Length);
-                    textSoundSource.clip = textSounds[soundIndex];
-                    textSoundSource.pitch = UnityEngine.Random.Range(soundPitchMin, soundPitchMax);
-                    textSoundSource.Play();
+                    AudioManager.instance.textSoundSource.clip = textSounds[soundIndex];
+                    AudioManager.instance.textSoundSource.pitch = UnityEngine.Random.Range(soundPitchMin, soundPitchMax);
+                    AudioManager.instance.textSoundSource.Play();
 
                     yield return null; //enable or disable this incase tweaking text sound frequency, could probably save some performance
                 }
@@ -347,8 +317,7 @@ public class VN_Manager : MonoBehaviour
     private void HandleOptionButtonAction(int buttonID)
     {
         // Play button click sound
-        SFX_Source.clip = buttonClickSound;
-        SFX_Source.Play();
+        AudioManager.instance.PlaySound(buttonClickSound);
 
         // Turn on the dialogue box
         dialogueBoxText.gameObject.SetActive(true);

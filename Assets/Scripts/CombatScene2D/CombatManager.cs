@@ -16,6 +16,10 @@ public class CombatManager : MonoBehaviour
     public string loadNextSceneName;
     public bool isRepeatableScene = false;
     public bool isDungeonScene = false;
+    [Space(10)]
+    public string backgroundMusicName = "tacticalEncounter";
+    public string victoryMusicName = "holyTemple";
+    public string defeatMusicName = "sadnessGine";
 
     [Header("Player Characters")]
     [Space(5)]
@@ -206,6 +210,9 @@ public class CombatManager : MonoBehaviour
         // Updating enemy markers on the time sliders
         UpdateEnemySliderMarkers();
 
+        // Starting the background music
+        AudioManager.instance.PlayMusic(backgroundMusicName);
+
         // Start a function that ticks turn count for all characters
         StartCoroutine(TickTime());
     }
@@ -356,7 +363,7 @@ public class CombatManager : MonoBehaviour
     public IEnumerator DisplayVictoryPanel()
     {
         touchBlockerPanel.gameObject.SetActive(true);
-        AudioManager.instance.PlayVictoryMusic();
+        AudioManager.instance.PlayMusic(victoryMusicName);
         yield return new WaitForSeconds(0.8f);
         victoryPanelAnimator.SetTrigger("Enter");
     }
@@ -364,7 +371,7 @@ public class CombatManager : MonoBehaviour
     public IEnumerator DisplayDefeatPanel()
     {
         touchBlockerPanel.gameObject.SetActive(true);
-        AudioManager.instance.PlayDefeatMusic();
+        AudioManager.instance.PlayMusic(defeatMusicName);
         yield return new WaitForSeconds(0.8f);
         defeatPanelAnimator.SetTrigger("Enter");
     }
