@@ -245,23 +245,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusics:
-  - {fileID: 8300000, guid: eb6f45f1328f0074c9c0962b173695cc, type: 3}
-  - {fileID: 8300000, guid: 5a5b34743180a394ba636ad2bbbc598e, type: 3}
-  - {fileID: 8300000, guid: 81f5b96870bbfeb47b52f232101bb5c5, type: 3}
-  - {fileID: 8300000, guid: 71eddb1ee0f7809479946497f755c1a2, type: 3}
-  soundEffects:
-  - {fileID: 8300000, guid: 44768edc537294048a3468eff46d087a, type: 3}
-  - {fileID: 8300000, guid: da0a6f750fbb5e24abf25fdd3270b322, type: 3}
-  - {fileID: 8300000, guid: 41809401e96aa224993c856605f30529, type: 3}
-  - {fileID: 8300000, guid: 315a54ceabddbbd44a647ebba81d41e9, type: 3}
-  - {fileID: 8300000, guid: c2d9e88f6d0eb984889534a5447cbbad, type: 3}
-  - {fileID: 8300000, guid: 252370133eac073459df2cc841bc88b6, type: 3}
-  - {fileID: 8300000, guid: 76047586bc2e99749b6762fbeb11c173, type: 3}
-  - {fileID: 8300000, guid: 9516c7f84aef42c47beab66e35fe2771, type: 3}
-  - {fileID: 8300000, guid: c62af6ce8f7f9814fa51ac7764432b90, type: 3}
-  - {fileID: 8300000, guid: a43d3ed4b33495d42b5cdddbcd3a2694, type: 3}
+  - {fileID: 8300000, guid: 72847e3419cf8424d9ddffe2adfc99a0, type: 3}
+  soundEffects: []
   uiSoundEffects:
-  - {fileID: 8300000, guid: e82af079d1886da4f8fa7cc7fc89a7c4, type: 3}
+  - {fileID: 8300000, guid: a8e3b79bb2073fb4d965ae7b211adcc4, type: 3}
+  - {fileID: 8300000, guid: 13a35dfea2d4a1244bb2ca828950f361, type: 3}
+  - {fileID: 8300000, guid: 8118ff59cfb116140b5988005eea24a5, type: 3}
+  - {fileID: 8300000, guid: 686d02bc9e168664e8045e38ed469548, type: 3}
+  - {fileID: 8300000, guid: 44a2101afabaf2e45b90a0a8d8c5e550, type: 3}
+  - {fileID: 8300000, guid: 84388b7742947f043ac40277a479a6bd, type: 3}
+  - {fileID: 8300000, guid: a97d0a60c53ec9e48b07fe238f457328, type: 3}
+  - {fileID: 8300000, guid: 70e417038de3742478a437d81d62fe24, type: 3}
+  - {fileID: 8300000, guid: 5676c8a4a80303b409081f15494048ed, type: 3}
+  - {fileID: 8300000, guid: d72fb39dd45de94479bfc413eebeb5df, type: 3}
+  - {fileID: 8300000, guid: f39d0b5431bef294a90dd16dc710676a, type: 3}
+  - {fileID: 8300000, guid: 7dbbb3ca4015440448071d5c6b5596ee, type: 3}
+  - {fileID: 8300000, guid: 390bf43563bf6fd4d86cbede28882782, type: 3}
   bgmSource: {fileID: -4318992323417657690}
   sfxSources:
   - {fileID: -6680101814189530864}

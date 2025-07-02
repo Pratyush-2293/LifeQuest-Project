@@ -53,6 +53,8 @@ public class TaskItem : MonoBehaviour
 
     public void OnCompleteButton()
     {
+        AudioManager.instance.PlayUISound("taskDoneTing1");
+
         // Add complete functionality
         Debug.Log("Task Completed!");
 
@@ -103,6 +105,8 @@ public class TaskItem : MonoBehaviour
 
     public void OnAbandonButton()
     {
+        AudioManager.instance.PlayUISound("paperTaskAbandon");
+
         // Maybe give a warning before ?
         Debug.Log("Task Abandoned!");
         TaskListMenu.instance.RemoveTaskItemData(taskTitle);
@@ -118,6 +122,8 @@ public class TaskItem : MonoBehaviour
 
     public void OnQuestKeyButton()
     {
+        AudioManager.instance.PlayUISound("keysReward");
+
         GameData.instance.levelKeys++;
         TaskListMenu.instance.questKeyClaimCount++;
         PlayerPrefs.SetInt("QuestKeyClaimCount", TaskListMenu.instance.questKeyClaimCount);
@@ -128,12 +134,16 @@ public class TaskItem : MonoBehaviour
 
     public void OnDungeonKeyButton()
     {
+        AudioManager.instance.PlayUISound("keysReward");
+
         GameData.instance.dungeonKeys++;
         AfterButtonHandler();
     }
 
     public void OnExpPointsButton()
     {
+        AudioManager.instance.PlayUISound("taskDoneTing2");
+
         if (taskDifficulty == Difficulty.easy)
         {
             GameData.instance.expPoints += TaskListMenu.instance.expRewardEasyTask;
@@ -152,6 +162,8 @@ public class TaskItem : MonoBehaviour
 
     public void OnGoldCoinsRewardButton()
     {
+        AudioManager.instance.PlayUISound("coinsReward");
+
         if (taskDifficulty == Difficulty.easy)
         {
             GameData.instance.goldCoins += TaskListMenu.instance.goldRewardEasyTask;

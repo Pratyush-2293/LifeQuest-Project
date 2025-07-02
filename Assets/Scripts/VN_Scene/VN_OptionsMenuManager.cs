@@ -40,6 +40,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnOptionsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // activate touch blocker to prevent interference into the game
         touchBlockerPanel.SetActive(true);
 
@@ -49,6 +51,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnResumeGameButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // remove touch blocker panel
         touchBlockerPanel.SetActive(false);
 
@@ -58,6 +62,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnSoundOptionsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // hide options menu
         optionsMenu.SetActive(false);
 
@@ -72,7 +78,9 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnBGMMuteButton()
     {
-        if(AudioManager.instance.bgmIsMuted == false)
+        AudioManager.instance.PlayUISound("uiClick");
+
+        if (AudioManager.instance.bgmIsMuted == false)
         {
             bgmVolumeSlider.value = 0;
         }
@@ -86,7 +94,9 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnSFXMuteButton()
     {
-        if(AudioManager.instance.sfxIsMuted == false)
+        AudioManager.instance.PlayUISound("uiClick");
+
+        if (AudioManager.instance.sfxIsMuted == false)
         {
             sfxVolumeSlider.value = 0;
         }
@@ -100,6 +110,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnUIMuteButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         if (AudioManager.instance.uiIsMuted == false)
         {
             uiVolumeSlider.value = 0;
@@ -114,6 +126,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnApplyButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         AudioManager.instance.RefreshVolumeLevels(bgmVolumeSlider.value, sfxVolumeSlider.value, uiVolumeSlider.value);
 
         // Return to options menu
@@ -123,6 +137,9 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
     public void OnLeaveButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+        AudioManager.instance.PlayMusic("hometownVillage");
+
         // add functionality here
         sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
     }

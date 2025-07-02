@@ -236,6 +236,19 @@ public class AudioManager : MonoBehaviour
         SaveVolumeLevels();
     }
 
+    public bool isPlayingBGMTrack(string bgmName)
+    {
+        if(bgmSource.clip != null)
+        {
+            if (bgmSource.clip.name == bgmName)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void RefreshVolumeLevels()
     {
         bgmSource.volume = bgmVolume;

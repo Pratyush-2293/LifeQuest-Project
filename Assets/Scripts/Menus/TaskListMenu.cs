@@ -104,11 +104,15 @@ public class TaskListMenu : Menu
 
     public void OnCreateNewTaskButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         createTaskMenu.gameObject.SetActive(true);
     }
 
     public void OnCreateTaskButton()
     {
+        AudioManager.instance.PlayUISound("paperTaskCreate");
+
         // Instantiating and Adding to layout
         taskItem = Instantiate(taskItemPrefab);
         taskItem.transform.SetParent(taskListTransform, false);
@@ -149,11 +153,15 @@ public class TaskListMenu : Menu
 
     public void OnCreateTaskCancelButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         createTaskMenu.gameObject.SetActive(false);
     }
 
     public void OnBackButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         MainMenu.instance.sceneTransition.gameObject.SetActive(false);
         TurnOff(true);
     }
@@ -195,6 +203,8 @@ public class TaskListMenu : Menu
 
     public void OnEditConfirmButton()
     {
+        AudioManager.instance.PlayUISound("writingTaskEdit");
+
         // Delete the old task using it's reference
         editingTaskItem.AfterButtonHandler();
 
@@ -208,6 +218,8 @@ public class TaskListMenu : Menu
 
     public void OnEditCancelButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // On cancel, we do not delete the old task & just refresh the edit/create panel
         ResetTaskCreationPanel();
 

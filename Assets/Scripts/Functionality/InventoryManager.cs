@@ -127,6 +127,8 @@ public class InventoryManager : MonoBehaviour
 
     public void UnequipItem(Item item)
     {
+        AudioManager.instance.PlayUISound("equip");
+
         if(HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden) // Handle unequipping for Alden
         {
             if(item.itemType == Item.ItemType.Weapon) // If the unequipped item is a weapon
@@ -193,6 +195,8 @@ public class InventoryManager : MonoBehaviour
 
     public void EquipItem(Item item)
     {
+        AudioManager.instance.PlayUISound("equip");
+
         // we first remove the currently equipped item's stats from active character before adding stats of new equipped item
 
         if(HeroesMenuManager.instance.activeCharacter == HeroesMenuManager.ActiveCharacter.Alden)  // Handling for Alden
@@ -394,6 +398,8 @@ public class InventoryManager : MonoBehaviour
     // ------------------------ Button Functions -----------------------------
     public void OnWeaponButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Clear all old instantiated items
         ClearInventoryPanel();
 
@@ -442,6 +448,8 @@ public class InventoryManager : MonoBehaviour
 
     public void OnOffhandButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Clear all old instantiated items
         ClearInventoryPanel();
 
@@ -489,6 +497,8 @@ public class InventoryManager : MonoBehaviour
 
     public void OnHeadgearButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Clear all old instantiated items
         ClearInventoryPanel();
 
@@ -537,6 +547,8 @@ public class InventoryManager : MonoBehaviour
 
     public void OnChestPieceButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Clear all old instantiated items
         ClearInventoryPanel();
 
@@ -585,6 +597,8 @@ public class InventoryManager : MonoBehaviour
 
     public void OnLegguardsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Clear all old instantiated items
         ClearInventoryPanel();
 
@@ -633,6 +647,8 @@ public class InventoryManager : MonoBehaviour
 
     public void OnBootsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Clear all old instantiated items
         ClearInventoryPanel();
 
@@ -681,6 +697,8 @@ public class InventoryManager : MonoBehaviour
 
     public void OnCloseInventoryButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         HideInventory();
     }
 

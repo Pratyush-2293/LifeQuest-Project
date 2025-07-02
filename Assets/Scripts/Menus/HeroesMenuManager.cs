@@ -106,11 +106,15 @@ public class HeroesMenuManager : MonoBehaviour
 
     public void OnBackButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 
     public void OnAddEXPButton()  //NOTE: Also need to update xp bar and xp text upon adding xp
     {
+        AudioManager.instance.PlayUISound("addXpTing");
+
         if(activeCharacter == ActiveCharacter.Alden) // Handling for Alden
         {
             if (GameData.instance.expPoints <= expToAdd) // Check if there is enough xp in the xp pool to add to char, if not then add what is remaining in the pool
@@ -162,6 +166,8 @@ public class HeroesMenuManager : MonoBehaviour
 
     private void AldenLevelUp()
     {
+        AudioManager.instance.PlayUISound("sweepingVictory");
+
         // Set alden current xp to zero
         GameData.instance.aldenEXP = 0;
 

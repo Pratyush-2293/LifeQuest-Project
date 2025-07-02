@@ -20,8 +20,18 @@ public class MainMenu : Menu
         instance = this;
     }
 
+    private void Start()
+    {
+        if (!AudioManager.instance.isPlayingBGMTrack("hometownVillage"))
+        {
+            AudioManager.instance.PlayMusic("hometownVillage");
+        }
+    }
+
     public void OnStartGameButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         sceneTransition.gameObject.SetActive(true);
 
         if(GameData.instance != null)
@@ -37,6 +47,8 @@ public class MainMenu : Menu
 
     public void OnTaskListButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         TurnOff(false);
         TaskListMenu.instance.TurnOn(this);
         TaskListMenu.instance.LoadPlayerTasks();
@@ -44,6 +56,8 @@ public class MainMenu : Menu
 
     public void OnSettingsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         TurnOff(false);
         SettingsMenu.instance.TurnOn(this);
     }

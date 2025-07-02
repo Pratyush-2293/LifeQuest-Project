@@ -64,6 +64,8 @@ public class LevelSelectMenuManager : MonoBehaviour
 
     public void OnLevelButton(int levelID)
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         if (levelID > GameData.instance.maxUnlockedLevel)
         {
             // open the unlock level prompt
@@ -87,6 +89,8 @@ public class LevelSelectMenuManager : MonoBehaviour
 
     public void OnUnlockButton()
     {
+        AudioManager.instance.PlayUISound("keyUnlock");
+
         // Increment the unlocked levels, decrement the level keys and save changes.
         GameData.instance.maxUnlockedLevel++;
         GameData.instance.levelKeys--;
@@ -102,6 +106,8 @@ public class LevelSelectMenuManager : MonoBehaviour
 
     public void OnCancelButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // close the panel
         unlockLevelPromptPanel.gameObject.SetActive(false);
         touchBlockerPanel.gameObject.SetActive(false);
@@ -109,6 +115,8 @@ public class LevelSelectMenuManager : MonoBehaviour
 
     public void OnOKButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // close the panel
         insufficientKeysPromptPanel.gameObject.SetActive(false);
         touchBlockerPanel.gameObject.SetActive(false);
@@ -116,6 +124,8 @@ public class LevelSelectMenuManager : MonoBehaviour
 
     public void OnBackButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 }
