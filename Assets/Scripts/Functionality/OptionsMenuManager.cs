@@ -17,16 +17,17 @@ public class OptionsMenuManager : MonoBehaviour
     [SerializeField] private Slider sfxVolumeSlider = null;
     [SerializeField] private Slider uiVolumeSlider = null;
 
-    [Header("Other Components")]
-    [SerializeField] private SceneTransition sceneTransition;
-
-    // Use when you have muted and unmuted images
-    /*
+    [Header("Mute Button Icons")]
+    [Space(5)]
     [SerializeField] private Image bgmMuteButtonImage = null;
     [SerializeField] private Image sfxMuteButtonImage = null;
+    [SerializeField] private Image uiMuteButtonImage = null;
+    [Space(10)]
     [SerializeField] private Sprite unmutedIcon = null;
     [SerializeField] private Sprite mutedIcon = null;
-    */
+
+    [Header("Other Components")]
+    [SerializeField] private SceneTransition sceneTransition;
 
     private void Awake()
     {
@@ -40,6 +41,8 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OnOptionsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // activate touch blocker to prevent interference into the game
         touchBlockerPanel.gameObject.SetActive(true);
 
@@ -52,6 +55,8 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OnResumeGameButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // resume time to unpause the game
         Time.timeScale = 1;
 
@@ -64,6 +69,8 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OnSoundOptionsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // hide options menu
         optionsMenu.gameObject.SetActive(false);
 
@@ -72,12 +79,17 @@ public class OptionsMenuManager : MonoBehaviour
         sfxVolumeSlider.value = AudioManager.instance.sfxVolume;
         uiVolumeSlider.value = AudioManager.instance.uiVolume;
 
+        // Load mute icon data into mute buttons
+        UpdateMuteButtonIcons();
+
         // show the sound menu
         soundMenu.gameObject.SetActive(true);
     }
 
     public void OnBGMMuteButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         if (AudioManager.instance.bgmIsMuted == false)
         {
             bgmVolumeSlider.value = 0;
@@ -88,10 +100,14 @@ public class OptionsMenuManager : MonoBehaviour
         }
 
         AudioManager.instance.MuteBGM();
+
+        UpdateMuteButtonIcons();
     }
 
     public void OnSFXMuteButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         if (AudioManager.instance.sfxIsMuted == false)
         {
             sfxVolumeSlider.value = 0;
@@ -102,10 +118,14 @@ public class OptionsMenuManager : MonoBehaviour
         }
 
         AudioManager.instance.MuteSFX();
+
+        UpdateMuteButtonIcons();
     }
 
     public void OnUIMuteButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         if (AudioManager.instance.uiIsMuted == false)
         {
             uiVolumeSlider.value = 0;
@@ -116,11 +136,15 @@ public class OptionsMenuManager : MonoBehaviour
         }
 
         AudioManager.instance.MuteUI();
+
+        UpdateMuteButtonIcons();
     }
 
     public void OnApplyButton()
     {
         AudioManager.instance.RefreshVolumeLevels(bgmVolumeSlider.value, sfxVolumeSlider.value, uiVolumeSlider.value);
+
+        AudioManager.instance.PlayUISound("uiClick2");
 
         // Return to options menu
         soundMenu.gameObject.SetActive(false);
@@ -129,7 +153,40 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OnLeaveButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+        AudioManager.instance.PlayMusic("hometownVillage");
+
         // add functionality here
         sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
+    }
+
+    private void UpdateMuteButtonIcons()
+    {
+        if (AudioManager.instance.bgmIsMuted == true)
+        {
+            bgmMuteButtonImage.sprite = mutedIcon;
+        }
+        else
+        {
+            bgmMuteButtonImage.sprite = unmutedIcon;
+        }
+
+        if (AudioManager.instance.sfxIsMuted == true)
+        {
+            sfxMuteButtonImage.sprite = mutedIcon;
+        }
+        else
+        {
+            sfxMuteButtonImage.sprite = unmutedIcon;
+        }
+
+        if (AudioManager.instance.uiIsMuted == true)
+        {
+            uiMuteButtonImage.sprite = mutedIcon;
+        }
+        else
+        {
+            uiMuteButtonImage.sprite = unmutedIcon;
+        }
     }
 }

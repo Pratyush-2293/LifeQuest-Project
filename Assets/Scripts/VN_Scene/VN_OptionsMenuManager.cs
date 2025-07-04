@@ -17,16 +17,17 @@ public class VN_OptionsMenuManager : MonoBehaviour
     [SerializeField] private Slider sfxVolumeSlider = null;
     [SerializeField] private Slider uiVolumeSlider = null;
 
-    [Header("Other Components")]
-    [SerializeField] private SceneTransition sceneTransition;
-
-    // Use when you have muted and unmuted images
-    /*
+    [Header("Mute Button Icons")]
+    [Space(5)]
     [SerializeField] private Image bgmMuteButtonImage = null;
     [SerializeField] private Image sfxMuteButtonImage = null;
+    [SerializeField] private Image uiMuteButtonImage = null;
+    [Space(10)]
     [SerializeField] private Sprite unmutedIcon = null;
     [SerializeField] private Sprite mutedIcon = null;
-    */
+
+    [Header("Other Components")]
+    [SerializeField] private SceneTransition sceneTransition;
 
     private void Awake()
     {
@@ -72,6 +73,9 @@ public class VN_OptionsMenuManager : MonoBehaviour
         sfxVolumeSlider.value = AudioManager.instance.sfxVolume;
         uiVolumeSlider.value = AudioManager.instance.uiVolume;
 
+        // Load mute icon data into mute buttons
+        UpdateMuteButtonIcons();
+
         // show the sound menu
         soundMenu.SetActive(true);
     }
@@ -90,6 +94,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
         }
         
         AudioManager.instance.MuteBGM();
+
+        UpdateMuteButtonIcons();
     }
 
     public void OnSFXMuteButton()
@@ -106,6 +112,8 @@ public class VN_OptionsMenuManager : MonoBehaviour
         }
 
         AudioManager.instance.MuteSFX();
+
+        UpdateMuteButtonIcons();
     }
 
     public void OnUIMuteButton()
@@ -122,11 +130,13 @@ public class VN_OptionsMenuManager : MonoBehaviour
         }
 
         AudioManager.instance.MuteUI();
+
+        UpdateMuteButtonIcons();
     }
 
     public void OnApplyButton()
     {
-        AudioManager.instance.PlayUISound("uiClick");
+        AudioManager.instance.PlayUISound("uiClick2");
 
         AudioManager.instance.RefreshVolumeLevels(bgmVolumeSlider.value, sfxVolumeSlider.value, uiVolumeSlider.value);
 
@@ -142,5 +152,35 @@ public class VN_OptionsMenuManager : MonoBehaviour
 
         // add functionality here
         sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
+    }
+
+    private void UpdateMuteButtonIcons()
+    {
+        if (AudioManager.instance.bgmIsMuted == true)
+        {
+            bgmMuteButtonImage.sprite = mutedIcon;
+        }
+        else
+        {
+            bgmMuteButtonImage.sprite = unmutedIcon;
+        }
+
+        if (AudioManager.instance.sfxIsMuted == true)
+        {
+            sfxMuteButtonImage.sprite = mutedIcon;
+        }
+        else
+        {
+            sfxMuteButtonImage.sprite = unmutedIcon;
+        }
+
+        if (AudioManager.instance.uiIsMuted == true)
+        {
+            uiMuteButtonImage.sprite = mutedIcon;
+        }
+        else
+        {
+            uiMuteButtonImage.sprite = unmutedIcon;
+        }
     }
 }
