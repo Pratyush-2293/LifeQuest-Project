@@ -13,7 +13,6 @@ public class TaskListMenu : Menu
     public Transform taskListTransform = null;
 
     // Task Creation Menu
-    public Text taskCreationPanelTitle = null;
     public InputField titleInput = null;
     public InputField descriptionInput = null;
     public Toggle easyToggle = null;
@@ -169,7 +168,6 @@ public class TaskListMenu : Menu
     public void OnTaskEditButton(TaskItem task)
     {
         // Load the task data into the editing panel
-        taskCreationPanelTitle.text = "Edit Task";
         titleInput.text = task.taskTitle;
         descriptionInput.text = task.taskDescription;
 
@@ -228,7 +226,6 @@ public class TaskListMenu : Menu
 
     private void ResetTaskCreationPanel()
     {
-        taskCreationPanelTitle.text = "Create New Task";
         titleInput.text = "";
         descriptionInput.text = "";
 
