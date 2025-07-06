@@ -316,9 +316,6 @@ public class VN_Manager : MonoBehaviour
 
     private void HandleOptionButtonAction(int buttonID)
     {
-        // Play button click sound
-        AudioManager.instance.PlaySound(buttonClickSound);
-
         // Turn on the dialogue box
         dialogueBoxText.gameObject.SetActive(true);
 

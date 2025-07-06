@@ -150,6 +150,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void StopMusicPlayback()
+    {
+        bgmSource.Stop();
+    }
+
     public void MuteBGM()
     {
         if (bgmIsMuted == false)
@@ -290,7 +295,7 @@ public class AudioManager : MonoBehaviour
     {
         while (bgmSource.volume > 0)
         {
-            bgmSource.volume -= 0.05f;
+            bgmSource.volume -= 0.1f;
             yield return new WaitForSeconds(0.1f);
         }
 
@@ -299,7 +304,7 @@ public class AudioManager : MonoBehaviour
 
         while (bgmSource.volume < bgmVolume)
         {
-            bgmSource.volume += 0.05f;
+            bgmSource.volume += 0.1f;
             yield return new WaitForSeconds(0.1f);
         }
     }

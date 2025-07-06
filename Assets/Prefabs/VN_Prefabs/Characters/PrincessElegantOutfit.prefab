@@ -10,14 +10,44 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
+      propertyPath: sadFace
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: angryFace
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: happyFace
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
       propertyPath: neutralFace
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: seriousFace
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: laughingFace
       value: 
       objectReference: {fileID: 21300000, guid: b3d11b249904f8e4abf52efb538544fd,
         type: 3}
     - target: {fileID: 2832056460269354902, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
       propertyPath: m_Name
-      value: PrincessElegantOutfit 1
+      value: PrincessElegantOutfit
       objectReference: {fileID: 0}
     - target: {fileID: 5504610586347625120, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}

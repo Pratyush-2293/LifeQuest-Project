@@ -246,7 +246,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundMusics:
   - {fileID: 8300000, guid: 72847e3419cf8424d9ddffe2adfc99a0, type: 3}
-  soundEffects: []
+  - {fileID: 8300000, guid: 4a11aeb2d2124e44184f11a0adb3e597, type: 3}
+  - {fileID: 8300000, guid: 0c6daf6ac9e4181449602a44c21e245a, type: 3}
+  - {fileID: 8300000, guid: b0fc51a2018d67a488194bcd65e27c2c, type: 3}
+  - {fileID: 8300000, guid: 2cc48201383ab224cb3e2f6f4f96533c, type: 3}
+  - {fileID: 8300000, guid: 4fb9d743b9206bd4c90cf2b1a62ba378, type: 3}
+  soundEffects:
+  - {fileID: 8300000, guid: b43e32a8ea4905346ae967ba85c8cdab, type: 3}
+  - {fileID: 8300000, guid: 27d2fb064ec9b38419c61048383d91f3, type: 3}
+  - {fileID: 8300000, guid: 5a6e7d8e939894d41be4e6ca04d49a1c, type: 3}
+  - {fileID: 8300000, guid: 13cc67896d2beef4bb870024220fc3aa, type: 3}
+  - {fileID: 8300000, guid: aa3f33b667e93554ca225b5394df8cb1, type: 3}
+  - {fileID: 8300000, guid: a345546265b974445b0162f88cc75396, type: 3}
+  - {fileID: 8300000, guid: f897d0175c2f6cd41927c25bddbc4c49, type: 3}
+  - {fileID: 8300000, guid: 045831940666fb249aaba3b6bedd9353, type: 3}
   uiSoundEffects:
   - {fileID: 8300000, guid: a8e3b79bb2073fb4d965ae7b211adcc4, type: 3}
   - {fileID: 8300000, guid: 13a35dfea2d4a1244bb2ca828950f361, type: 3}

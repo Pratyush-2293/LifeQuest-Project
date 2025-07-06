@@ -10,14 +10,44 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
+      propertyPath: sadFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: angryFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: happyFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
       propertyPath: neutralFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: seriousFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: laughingFace
       value: 
       objectReference: {fileID: 21300000, guid: 7e8bebc00f126f74086ec74c1e9b6fcb,
         type: 3}
     - target: {fileID: 2832056460269354902, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
       propertyPath: m_Name
-      value: Garran Variant
+      value: Garran
       objectReference: {fileID: 0}
     - target: {fileID: 5504610586347625120, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}

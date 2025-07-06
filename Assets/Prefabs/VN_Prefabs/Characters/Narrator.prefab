@@ -10,7 +10,37 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
+      propertyPath: sadFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: angryFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: happyFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
       propertyPath: neutralFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: seriousFace
+      value: 
+      objectReference: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
+      propertyPath: laughingFace
       value: 
       objectReference: {fileID: 21300000, guid: 92867b6162e7dc146ad0be7434f65819,
         type: 3}
@@ -22,7 +52,7 @@ PrefabInstance:
     - target: {fileID: 2832056460269354902, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
       propertyPath: m_Name
-      value: Narrator Variant
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 5504610586347625120, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
