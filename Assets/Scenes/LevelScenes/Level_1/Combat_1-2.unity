@@ -646,6 +646,11 @@ PrefabInstance:
       propertyPath: defendStartHealthPercent
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7054314048671995337, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: m_text
+      value: Knight
+      objectReference: {fileID: 0}
     - target: {fileID: 7243781463832759253, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: m_IsActive

@@ -1133,8 +1133,6 @@ public class CombatManager : MonoBehaviour
 
     public void OnContinueButton()
     {
-        AudioManager.instance.StopMusicPlayback();
-
         if(isDungeonScene == true)
         {
             GameManager.instance.ResumeDungeon();

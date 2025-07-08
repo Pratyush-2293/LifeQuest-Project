@@ -334,25 +334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1639653853889267754, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: sceneTransition
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2720679139624830152, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: sceneTransition
-      value: 
-      objectReference: {fileID: 2017248452}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: levelID
       value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
-        type: 3}
-      propertyPath: sceneTransition
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1461,18 +1446,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2942bc58ee0664c8967ec49d5eef4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2017248452 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3917224975647272068, guid: bdf508855721f344084d1748dc58c2aa,
-    type: 3}
-  m_PrefabInstance: {fileID: 2017248449}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4190ae102872541916beaaa330c3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1926979614631189157
