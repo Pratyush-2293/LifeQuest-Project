@@ -73,7 +73,7 @@ public class VN_Manager : MonoBehaviour
     private string combatSceneName = "";
     private bool typingDialogue = false;
     private Coroutine typingCoroutine;
-    public enum Expression { Neutral, Happy, Laughing, Serious, Angry, Sad };
+    public enum Expression { Neutral, Happy, Laughing, Serious, Surprised, Angry, Sad };
 
     public void Start()
     {

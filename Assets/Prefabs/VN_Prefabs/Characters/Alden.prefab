@@ -46,6 +46,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
         type: 3}
+      propertyPath: surprisedFace
+      value: 
+      objectReference: {fileID: 21300000, guid: fde402133d01c0449885dd3028675c5a,
+        type: 3}
+    - target: {fileID: 1743699348049540454, guid: ec4321bf73b629049b1f44af70a23893,
+        type: 3}
       propertyPath: isLeftCharacter
       value: 1
       objectReference: {fileID: 0}

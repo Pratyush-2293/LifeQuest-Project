@@ -195,6 +195,10 @@ public class LevelCompleteManager : MonoBehaviour
 
     public void OnContinueButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
+        AudioManager.instance.PlayMusic("hometownVillage");
+
         // Load the level select scene
         sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
     }

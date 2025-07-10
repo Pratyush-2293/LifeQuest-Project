@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
     public Sprite happyFace;
     public Sprite laughingFace;
     public Sprite seriousFace;
+    public Sprite surprisedFace;
     public Sprite angryFace;
     public Sprite sadFace;
 
@@ -37,6 +38,10 @@ public class Character : MonoBehaviour
         else if (expression == VN_Manager.Expression.Serious)
         {
             characterImage.sprite = seriousFace;
+        }
+        else if (expression == VN_Manager.Expression.Surprised)
+        {
+            characterImage.sprite = surprisedFace;
         }
         else if (expression == VN_Manager.Expression.Angry)
         {

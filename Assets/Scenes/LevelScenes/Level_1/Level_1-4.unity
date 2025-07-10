@@ -277,7 +277,7 @@ PrefabInstance:
         type: 3}
       propertyPath: initialBackgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: cd1a1494b1c6a6b4eba549dc8cf943f4, type: 3}
+      objectReference: {fileID: 8300000, guid: 4fb9d743b9206bd4c90cf2b1a62ba378, type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: characters.Array.data[2]
@@ -1515,6 +1515,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[9].numberOfOptions
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[3].characterExpression
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: dialogues.Array.data[4].characterExpression
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
