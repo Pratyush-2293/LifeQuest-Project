@@ -1154,6 +1154,7 @@ public class CombatManager : MonoBehaviour
         {
             if(GameData.instance.maxCompletedLevel >= 11)
             {
+                AudioManager.instance.PlayMusic("hometownVillage");
                 sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
             }
             else
@@ -1164,6 +1165,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlayMusic("hometownVillage");
             sceneTransition.LoadSceneWithTransition("LevelSelectMenu");
         }
     }

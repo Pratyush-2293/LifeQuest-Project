@@ -5347,6 +5347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
+      propertyPath: dialogues.Array.data[29].numberOfOptions
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
       propertyPath: dialogues.Array.data[10].characterExpression
       value: 4
       objectReference: {fileID: 0}
@@ -6754,6 +6759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogues.Array.data[29].optionPointers.Array.data[1]
       value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150226021648242570, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8189854151348296812, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
