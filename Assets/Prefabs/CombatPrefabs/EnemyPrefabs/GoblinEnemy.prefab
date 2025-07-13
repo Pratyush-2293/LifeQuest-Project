@@ -659,7 +659,7 @@ MonoBehaviour:
   turnSpeed: 2
   isPlayerCharacter: 0
   healthSlider: {fileID: 1672055901774403346}
-  defendingIcon: {fileID: 8342364201094073678}
+  defendingIcon: {fileID: 2644916413509015232}
   selectMarker: {fileID: 7678369295773003706}
   enemyAnimator: {fileID: 341637057826748927}
   isDefeated: 0
