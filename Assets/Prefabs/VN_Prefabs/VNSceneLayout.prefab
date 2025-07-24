@@ -3853,6 +3853,7 @@ GameObject:
   - component: {fileID: 1411224090648798134}
   - component: {fileID: 1132246983799282572}
   - component: {fileID: 4400276553201331697}
+  - component: {fileID: 4768363780033412395}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: MainCamera
@@ -3934,6 +3935,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4142573057512978857}
   m_Enabled: 1
+--- !u!114 &4768363780033412395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142573057512978857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a56d4384e716d9468257fad10b9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiShakeTarget: {fileID: 0}
+  lightDuration: 0
+  lightMagnitude: 0
+  mediumDuration: 0
+  mediumMagnitude: 0
+  strongDuration: 0.1
+  strongMagnitude: 1
 --- !u!1 &4323590866764363825
 GameObject:
   m_ObjectHideFlags: 0
