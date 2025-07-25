@@ -261,6 +261,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a345546265b974445b0162f88cc75396, type: 3}
   - {fileID: 8300000, guid: f897d0175c2f6cd41927c25bddbc4c49, type: 3}
   - {fileID: 8300000, guid: 045831940666fb249aaba3b6bedd9353, type: 3}
+  - {fileID: 8300000, guid: 156ca51d9e2cc3640a763fb38a4b5dca, type: 3}
   uiSoundEffects:
   - {fileID: 8300000, guid: a8e3b79bb2073fb4d965ae7b211adcc4, type: 3}
   - {fileID: 8300000, guid: 13a35dfea2d4a1244bb2ca828950f361, type: 3}

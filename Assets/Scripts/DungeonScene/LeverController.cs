@@ -29,6 +29,6 @@ public class LeverController : MonoBehaviour
         interactPopup.gameObject.SetActive(false);
 
         // Play lever pull sound
-        DungeonManager.instance.PlaySoundEffect("leverPull");
+        AudioManager.instance.PlaySound("leverPull");
     }
 }

@@ -24752,16 +24752,10 @@ MonoBehaviour:
   doorControllerThirdLevel: {fileID: 0}
   aldenInteractButton: {fileID: 431870245}
   backgroundMusic: {fileID: 8300000, guid: b6f5927853de2294b979ca91f2b4da4f, type: 3}
-  soundEffects:
-  - {fileID: 8300000, guid: 156ca51d9e2cc3640a763fb38a4b5dca, type: 3}
-  - {fileID: 8300000, guid: f897d0175c2f6cd41927c25bddbc4c49, type: 3}
   aldenCharacter: {fileID: 1690093711}
   dungeonRootObject: {fileID: 1147466263}
   sceneTransition: {fileID: 1548419993}
   doorTransitionAnimator: {fileID: 661104029}
-  bgmSource: {fileID: 1053081684}
-  sfxSource: {fileID: 1053081683}
-  aldenSFXSource: {fileID: 8382514773820206215}
   pauseMenuPanel: {fileID: 311863559}
 --- !u!4 &1053081682
 Transform:
@@ -33247,11 +33241,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AldenTopDown
       objectReference: {fileID: 0}
-    - target: {fileID: 4326096135820307976, guid: 717f896a0f7eeaf49ba24723edd413ab,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3f83575c1d65ae142b6f630efc50b2ad, type: 3}
     - target: {fileID: 8898988875674643349, guid: 717f896a0f7eeaf49ba24723edd413ab,
         type: 3}
       propertyPath: interactButton
@@ -33262,12 +33251,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 717f896a0f7eeaf49ba24723edd413ab, type: 3}
---- !u!82 &8382514773820206215 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4326096135820307976, guid: 717f896a0f7eeaf49ba24723edd413ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 8382514773820206213}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8561543847334458820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412606897144117001, guid: 04ef3b8c74e2d754294f9b62029a38f9,

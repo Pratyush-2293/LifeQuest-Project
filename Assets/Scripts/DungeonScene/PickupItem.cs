@@ -43,7 +43,7 @@ public class PickupItem : MonoBehaviour
         // Play item pickup sound
         if(itemPickupSoundName != "")
         {
-            DungeonManager.instance.PlaySoundEffect(itemPickupSoundName);
+            AudioManager.instance.PlaySound(itemPickupSoundName);
         }
 
         // Start self destroy sequence

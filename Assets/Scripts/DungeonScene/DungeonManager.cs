@@ -29,7 +29,6 @@ public class DungeonManager : MonoBehaviour
     [Header("Audio Clips")]
     [Space(5)]
     public AudioClip backgroundMusic;
-    public AudioClip[] soundEffects;
 
     [Header("Scene Components")]
     [Space(5)]
@@ -37,9 +36,6 @@ public class DungeonManager : MonoBehaviour
     public GameObject dungeonRootObject;
     public SceneTransition sceneTransition;
     public Animator doorTransitionAnimator;
-    public AudioSource bgmSource;
-    public AudioSource sfxSource;
-    public AudioSource aldenSFXSource;
 
     [Header("Menu Components")]
     public GameObject pauseMenuPanel;
@@ -50,9 +46,6 @@ public class DungeonManager : MonoBehaviour
     private int leversTriggeredFirstLevel = 0;
     private int leversTriggeredSecondLevel = 0;
     private int leversTriggeredThirdLevel = 0;
-
-    private float sfxVolume;
-    private float bgmVolume;
 
     private void Awake()
     {
@@ -68,14 +61,8 @@ public class DungeonManager : MonoBehaviour
     {
         GameManager.instance.dungeonRootObject = dungeonRootObject;
 
-        // Set volume of audio sources
-        sfxVolume = PlayerPrefs.GetFloat("sfxVolume_Combat", 1.0f);
-        bgmVolume = PlayerPrefs.GetFloat("bgmVolume_Combat", 1.0f);
-        RefreshVolumeLevels();
-
         // Start playing background music
-        bgmSource.clip = backgroundMusic;
-        bgmSource.Play();
+        AudioManager.instance.PlayMusicClip(backgroundMusic);
     }
 
     public void LeverTriggered()
@@ -145,27 +132,6 @@ public class DungeonManager : MonoBehaviour
     {
         // Play the screen transition
         sceneTransition.LoadSceneWithTransitionAdditive(sceneName, dungeonRootObject);
-    }
-
-    private void RefreshVolumeLevels()
-    {
-        bgmSource.volume = bgmVolume;
-        sfxSource.volume = sfxVolume;
-        aldenSFXSource.volume = sfxVolume;
-    }
-
-    public void PlaySoundEffect(string sfxName)
-    {
-        AudioClip sound = Array.Find(soundEffects, x => x.name == sfxName);
-
-        if (sound == null)
-        {
-            Debug.LogWarning("Sound not found !");
-        }
-        else
-        {
-            sfxSource.PlayOneShot(sound);
-        }
     }
 
     public void OnPauseButton()

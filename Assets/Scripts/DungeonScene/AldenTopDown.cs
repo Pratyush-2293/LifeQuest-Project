@@ -139,6 +139,11 @@ public class AldenTopDown : MonoBehaviour
         isFrozen = false;
     }
 
+    private void UpdateFootstepVolume()
+    {
+        footstepSource.volume = AudioManager.instance.sfxVolume;
+    }
+
     // ---------------------------- BUTTON FUNCTIONS ----------------------------
 
     public void OnInteractButton()
@@ -162,6 +167,8 @@ public class AldenTopDown : MonoBehaviour
 
     public void OnDownButton()
     {
+        UpdateFootstepVolume();
+
         isMoving = true;
         moveDirection = Vector2.down;
         aldenAnimator.SetTrigger("RunDown");
@@ -169,6 +176,8 @@ public class AldenTopDown : MonoBehaviour
 
     public void OnUpButton()
     {
+        UpdateFootstepVolume();
+
         isMoving = true;
         moveDirection = Vector2.up;
         aldenAnimator.SetTrigger("RunUp");
@@ -176,6 +185,8 @@ public class AldenTopDown : MonoBehaviour
 
     public void OnLeftButton()
     {
+        UpdateFootstepVolume();
+
         isMoving = true;
         moveDirection = Vector2.left;
         aldenAnimator.SetTrigger("RunLeft");
@@ -183,6 +194,8 @@ public class AldenTopDown : MonoBehaviour
 
     public void OnRightButton()
     {
+        UpdateFootstepVolume();
+
         isMoving = true;
         moveDirection = Vector2.right;
         aldenAnimator.SetTrigger("RunRight");

@@ -14,7 +14,7 @@ public class DungeonCombatStarter : MonoBehaviour
             AldenTopDown aldenController = collision.GetComponent<AldenTopDown>();
             aldenController.FreezePlayer();
             combatStartIndicatorAnimator.SetTrigger("Attack");
-            DungeonManager.instance.PlaySoundEffect("attackIndicator");
+            AudioManager.instance.PlaySound("attackIndicator");
             StartCoroutine(TriggerCombatStart(aldenController));
         }
     }
