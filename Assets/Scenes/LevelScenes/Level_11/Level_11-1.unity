@@ -220,7 +220,7 @@ PrefabInstance:
         type: 3}
       propertyPath: initialBackgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 72220501be6d52643bbee4d910a2c8ff, type: 3}
+      objectReference: {fileID: 8300000, guid: 62cb0f54f7ecf9b4c8473c31621a02e1, type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: characters.Array.data[2]
@@ -1120,8 +1120,8 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[4].dialogueText
-      value: Alden dismounts, stepping forward, the weight of the imbued key in his
-        grasp. He takes a breath and thrusts the key into the rock.
+      value: Alden dismounts, stepping forward. He takes a deep breath and thrusts
+        the key into the rock.
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
