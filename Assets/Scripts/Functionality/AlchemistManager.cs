@@ -353,6 +353,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnEnhanceButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         mainMenuPanel.gameObject.SetActive(false);
         enhanceOptionsPanel.gameObject.SetActive(true);
 
@@ -362,6 +364,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnPurchaseButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         agathaChar.gameObject.SetActive(false);
 
@@ -389,6 +393,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnSellButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         agathaChar.gameObject.SetActive(false);
 
@@ -411,6 +417,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnWeaponsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Need to load all the available weapons in the players inventory, as well as weapons that are equipped by characters
 
         // First we turn off agatha's sprite
@@ -460,6 +468,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnEnhancingDetailsEnhanceButton()
     {
+        AudioManager.instance.PlayUISound("enhanceComplete");
+
         // Changing the equipment's stats to the new, enhanced stats:
 
         // We keep a copy of the base values for reference
@@ -591,6 +601,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnEnhancingDetailsCancelButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         enhancingDetailsPanelParent.gameObject.SetActive(false);
 
         for (int i = 0; i < 4; i++)
@@ -601,6 +613,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnEnhancingSuccessConfirmButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         enhancingSuccessPanel.gameObject.SetActive(false);
         enhancingDetailsPanel.gameObject.SetActive(true);
         enhancingDetailsPanelParent.gameObject.SetActive(false);
@@ -608,6 +622,8 @@ public class AlchemistManager : MonoBehaviour
 
     public void OnBackButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         if (currentMenuID == 2)
         {
             enhanceOptionsPanel.gameObject.SetActive(false);

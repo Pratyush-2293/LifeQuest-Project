@@ -20,7 +20,14 @@ public class MarketMenuManager : MonoBehaviour
     public TMP_Text merchantNameText;
     public Sprite blacksmithShopBG;
     public Sprite alchemistShopBG;
-    public Image backgroundImage;
+    public SpriteRenderer backgroundImage;
+
+    [Header("Navigation Components")]
+    public Image navDot1;
+    public Image navDot2;
+    public Image navDot3;
+    public Color navDotActiveColor;
+    public Color navDotInactiveColor;
 
     [Header("Blacksmith Menus")]
     public GameObject blacksmithMainMenu;
@@ -31,6 +38,9 @@ public class MarketMenuManager : MonoBehaviour
     [Header("Alchemist Menus")]
     public GameObject alchemistMainMenu;
     public GameObject alchemistEnhanceMenu;
+
+    [Header("Misc Components")]
+    public SceneTransition sceneTransition;
 
     private int merchantPageNumber = 1;
 
@@ -104,15 +114,41 @@ public class MarketMenuManager : MonoBehaviour
         }
     }
 
+    private void HandleNavbarDots()
+    {
+        if(merchantPageNumber == 1)
+        {
+            navDot1.color = navDotActiveColor;
+            navDot2.color = navDotInactiveColor;
+            navDot3.color = navDotInactiveColor;
+        }
+        else if(merchantPageNumber == 2)
+        {
+            navDot1.color = navDotInactiveColor;
+            navDot2.color = navDotActiveColor;
+            navDot3.color = navDotInactiveColor;
+        }
+        else if(merchantPageNumber == 3)
+        {
+            navDot1.color = navDotInactiveColor;
+            navDot2.color = navDotInactiveColor;
+            navDot3.color = navDotActiveColor;
+        }
+    }
+
     // -------------------------- BUTTON FUNCTIONS --------------------------
 
     public void OnBackButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameHubMenu");
+        AudioManager.instance.PlayUISound("uiClick2");
+
+        sceneTransition.LoadSceneWithTransition("GameHubMenu");
     }
 
     public void OnMerchantPanelCloseButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         merchantListPanel.gameObject.SetActive(false);
         if(merchantPageNumber == 1)
         {
@@ -126,6 +162,8 @@ public class MarketMenuManager : MonoBehaviour
 
     public void OnRightMerchantButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // provide the switch menu function with current and next merchant's page numbers
         SwitchMenus(merchantPageNumber, merchantPageNumber + 1);
 
@@ -141,10 +179,14 @@ public class MarketMenuManager : MonoBehaviour
         {
             rightMerchantButton.interactable = false;
         }
+
+        HandleNavbarDots();
     }
 
     public void OnLeftMerchantButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // provide the switch menu function with current and next merchant's page numbers
         SwitchMenus(merchantPageNumber, merchantPageNumber - 1);
 
@@ -160,5 +202,7 @@ public class MarketMenuManager : MonoBehaviour
         {
             leftMerchantButton.interactable = false;
         }
+
+        HandleNavbarDots();
     }
 }

@@ -111,6 +111,7 @@ MonoBehaviour:
   maxCompletedLevel: 0
   maxUnlockedLevel: 1
   maxAvailableLevel: 1
+  maxCompletedBossFightID: 0
   levelViewedID: 0
   combatCompletedID: 0
   firstTimeEquipmentLoaded: 0
@@ -276,6 +277,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f39d0b5431bef294a90dd16dc710676a, type: 3}
   - {fileID: 8300000, guid: 7dbbb3ca4015440448071d5c6b5596ee, type: 3}
   - {fileID: 8300000, guid: 390bf43563bf6fd4d86cbede28882782, type: 3}
+  - {fileID: 8300000, guid: 3299f6cd6d594594aa2fafb1b24d12a8, type: 3}
+  - {fileID: 8300000, guid: d2d8276645f18f44dab62feefee308d5, type: 3}
   bgmSource: {fileID: -4318992323417657690}
   sfxSources:
   - {fileID: -6680101814189530864}

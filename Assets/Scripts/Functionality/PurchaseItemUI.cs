@@ -87,6 +87,8 @@ public class PurchaseItemUI : MonoBehaviour
 
     public void OnMinusButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // Update the quantity display
         itemQuantityValue--;
         itemQuantity.text = itemQuantityValue.ToString();
@@ -110,6 +112,8 @@ public class PurchaseItemUI : MonoBehaviour
 
     public void OnPlusButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // Update the quantity display
         itemQuantityValue++;
         itemQuantity.text = itemQuantityValue.ToString();
@@ -130,6 +134,8 @@ public class PurchaseItemUI : MonoBehaviour
 
     public void OnBuyButton()
     {
+        AudioManager.instance.PlayUISound("coinsPurchase");
+
         // instantiate an item of the itemSO type
         Item purchasedItem = new Item(item);
 

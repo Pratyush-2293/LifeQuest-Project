@@ -16,6 +16,7 @@ public class CombatManager : MonoBehaviour
     public string loadNextSceneName;
     public bool isRepeatableScene = false;
     public bool isDungeonScene = false;
+    public int bossFightID = 0;  // let id be 0 in case of non-bossfights
     [Space(10)]
     public string backgroundMusicName = "tacticalEncounter";
     public string victoryMusicName = "holyTemple";
@@ -242,6 +243,15 @@ public class CombatManager : MonoBehaviour
                         GameData.instance.combatCompletedID = levelID;
                     }
                 }
+
+                if(bossFightID != 0)
+                {
+                    if(GameData.instance.maxCompletedBossFightID < bossFightID)
+                    {
+                        GameData.instance.maxCompletedBossFightID = bossFightID;
+                    }
+                }
+
                 StartCoroutine(DisplayVictoryPanel());
             }
 

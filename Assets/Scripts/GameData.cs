@@ -17,6 +17,7 @@ public class GameData : MonoBehaviour
     public int maxCompletedLevel = 1;
     public int maxUnlockedLevel = 1;
     public int maxAvailableLevel = 2;
+    public int maxCompletedBossFightID = 0;
     public float levelViewedID = 0f;
     public float combatCompletedID = 0f;
 
@@ -79,6 +80,7 @@ public class GameData : MonoBehaviour
             maxCompletedLevel = maxCompletedLevel,
             maxUnlockedLevel = maxUnlockedLevel,
             maxAvailableLevel = maxAvailableLevel,
+            maxCompletedBossFightID = maxCompletedBossFightID,
             levelViewedID = levelViewedID,
             combatCompletedID = combatCompletedID,
             inventory = inventory,
@@ -114,6 +116,7 @@ public class GameData : MonoBehaviour
         maxCompletedLevel = data.maxCompletedLevel;
         maxUnlockedLevel = data.maxUnlockedLevel;
         maxAvailableLevel = data.maxAvailableLevel;
+        maxCompletedBossFightID = data.maxCompletedBossFightID;
         levelViewedID = data.levelViewedID;
         combatCompletedID = data.combatCompletedID;
         inventory = data.inventory;
@@ -150,6 +153,7 @@ public class GameDataSave
     public int maxCompletedLevel;
     public int maxUnlockedLevel;
     public int maxAvailableLevel;
+    public int maxCompletedBossFightID;
     public float levelViewedID;
     public float combatCompletedID;
     public List<Item> inventory;

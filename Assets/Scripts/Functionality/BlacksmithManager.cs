@@ -337,6 +337,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnBackButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         if(currentMenuID == 2)
         {
             craftOptionsPanel.gameObject.SetActive(false);
@@ -361,6 +363,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnCraftButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         mainMenuPanel.gameObject.SetActive(false);
         craftOptionsPanel.gameObject.SetActive(true);
 
@@ -370,6 +374,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnPurchaseButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 
@@ -397,6 +403,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnSellButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 
@@ -419,6 +427,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnSwordsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 
@@ -444,6 +454,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnCraftDetailsCraftButton()
     {
+        AudioManager.instance.PlayUISound("enhanceComplete");
+
         // Adding the crafted item into the player's inventory
         Item craftedItem = new Item(activeCraftItem.craftingReward);
         GameData.instance.inventory.Add(craftedItem);
@@ -502,6 +514,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnCraftSuccessConfirmButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         craftSuccessPanel.gameObject.SetActive(false);
         craftDetailsPanel.gameObject.SetActive(true);
         craftDetailsPanelParent.gameObject.SetActive(false);
@@ -509,6 +523,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnCraftDetailsCancelButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         craftDetailsPanelParent.gameObject.SetActive(false);
 
         for(int i = 0; i < 4; i++)
@@ -519,6 +535,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnArmorsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         craftOptionsPanel.gameObject.SetActive(false);
         armorWeightOptionsPanel.gameObject.SetActive(true);
 
@@ -527,6 +545,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnMediumArmorButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         selectedWeightType = SelectedWeightType.Medium;
 
         armorWeightOptionsPanel.gameObject.SetActive(false);
@@ -537,6 +557,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnHeadgearButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 
@@ -567,6 +589,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnChestpieceButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 
@@ -597,6 +621,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnLegguardsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 
@@ -627,6 +653,8 @@ public class BlacksmithManager : MonoBehaviour
 
     public void OnBootsButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // First we turn off bromund's sprite
         bromundChar.gameObject.SetActive(false);
 

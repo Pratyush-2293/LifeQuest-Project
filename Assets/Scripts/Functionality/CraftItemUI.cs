@@ -38,6 +38,8 @@ public class CraftItemUI : MonoBehaviour
 
     public void OnCraftButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         BlacksmithManager.instance.OpenCraftingDetails(item);
     }
 

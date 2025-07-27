@@ -78,6 +78,8 @@ public class SellItemUI : MonoBehaviour
 
     public void OnMinusButton()
     {
+        AudioManager.instance.PlayUISound("uiClick2");
+
         // Update the quantity display
         itemSellQuantityValue--;
         itemSellQuantity.text = itemSellQuantityValue.ToString();
@@ -98,6 +100,8 @@ public class SellItemUI : MonoBehaviour
 
     public void OnPlusButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         // Update the quantity display
         itemSellQuantityValue++;
         itemSellQuantity.text = itemSellQuantityValue.ToString();
@@ -118,6 +122,8 @@ public class SellItemUI : MonoBehaviour
 
     public void OnSellButton()
     {
+        AudioManager.instance.PlayUISound("coinsReward");
+
         // check player's inventory to find the item
         foreach (Item itemInInventory in GameData.instance.inventory)
         {

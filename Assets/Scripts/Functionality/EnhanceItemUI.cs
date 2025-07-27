@@ -120,6 +120,8 @@ public class EnhanceItemUI : MonoBehaviour
 
     public void OnEnhanceButton()
     {
+        AudioManager.instance.PlayUISound("uiClick");
+
         AlchemistManager.instance.OpenEnhancingDetails(item, isCurrentlyEquipped, currentEquippedCharName, this);
     }
 
