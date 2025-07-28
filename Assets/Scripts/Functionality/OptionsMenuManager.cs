@@ -153,6 +153,7 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OnLeaveButton()
     {
+        Time.timeScale = 1;
         AudioManager.instance.PlayUISound("uiClick2");
         AudioManager.instance.PlayMusic("hometownVillage");
 

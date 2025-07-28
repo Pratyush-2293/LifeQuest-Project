@@ -21,6 +21,7 @@ public class ItemSO : ScriptableObject
     [Header("Item Identity Config")]
     [Space(5)]
     public Sprite itemIcon = null;
+    public string itemIconName = null;
     public string itemName = null;
 
     [Header("Item Stats Config")]

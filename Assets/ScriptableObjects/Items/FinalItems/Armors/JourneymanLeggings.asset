@@ -18,7 +18,8 @@ MonoBehaviour:
   armorType: 3
   isStackable: 0
   itemQuantity: 1
-  itemIcon: {fileID: 21300000, guid: b798c38b9c4aedc419ff97fe094de61c, type: 3}
+  itemIcon: {fileID: 21300000, guid: aa48c1ab8e72e224ab0736c90a83210a, type: 3}
+  itemIconName: journeymansLeggingsIcon
   itemName: Journeyman's Leggings
   itemRarity: 1
   enhancementLevel: 0

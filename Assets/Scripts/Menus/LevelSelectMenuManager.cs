@@ -81,6 +81,17 @@ public class LevelSelectMenuManager : MonoBehaviour
                 insufficientKeysPromptPanel.gameObject.SetActive(true);
             }
         }
+        else if(levelID == 12)
+        {
+            if(GameData.instance.maxCompletedBossFightID > 0)
+            {
+                sceneTransition.LoadSceneWithTransition("Level_12-2");
+            }
+            else
+            {
+                sceneTransition.LoadSceneWithTransition("Level_12-1");
+            }
+        }
         else
         {
             sceneTransition.LoadSceneWithTransition("Level_" + levelID.ToString() + "-1");

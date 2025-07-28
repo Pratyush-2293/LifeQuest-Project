@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 0
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: b27434fcebdd2cf48835179a1642a3a6, type: 3}
+  itemIconName: journeymansBootsIcon
   itemName: Journeyman's Boots
   itemRarity: 1
   enhancementLevel: 0

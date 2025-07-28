@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 0
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: f44b40ffb31a65d488f72b75e32818bb, type: 3}
+  itemIconName: lioranLongswordIcon
   itemName: Lioran Longsword
   itemRarity: 1
   enhancementLevel: 0

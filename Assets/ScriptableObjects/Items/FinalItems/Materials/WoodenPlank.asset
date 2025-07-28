@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: 2f72f53fb25e7fd419ae3932e0973e61, type: 3}
+  itemIconName: woodenPlankIcon
   itemName: Wooden Plank
   itemRarity: 0
   enhancementLevel: 0

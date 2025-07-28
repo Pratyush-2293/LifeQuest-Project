@@ -15,6 +15,7 @@ public class Item
     public int itemQuantity = 1;
 
     public Sprite itemIcon = null;
+    public string itemIconName = null;
     public string itemName = null;
 
     public ItemRarity itemRarity;
@@ -57,6 +58,7 @@ public class Item
         itemQuantity = itemData.itemQuantity;
 
         itemIcon = itemData.itemIcon;
+        itemIconName = itemData.itemIconName;
         itemName = itemData.itemName;
 
         itemRarity = (ItemRarity)itemData.itemRarity;

@@ -308,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: backgroundMusics.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -593,7 +593,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[37].BGM
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -703,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[48].BGM
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1233,7 +1233,7 @@ PrefabInstance:
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[100].BGM
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
@@ -1705,6 +1705,11 @@ PrefabInstance:
       propertyPath: backgroundMusics.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 1e59c35e1f1b54544ae30e76edd3b874, type: 3}
+    - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
+        type: 3}
+      propertyPath: backgroundMusics.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 905f08628eb275948883f5643d06ecea, type: 3}
     - target: {fileID: 5316584005327087012, guid: bdf508855721f344084d1748dc58c2aa,
         type: 3}
       propertyPath: dialogues.Array.data[1].character

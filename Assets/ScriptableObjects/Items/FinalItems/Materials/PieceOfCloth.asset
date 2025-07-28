@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: a311179d093d4d5459629b8402bd8dc0, type: 3}
+  itemIconName: pieceOfClothIcon
   itemName: Piece of Cloth
   itemRarity: 0
   enhancementLevel: 0

@@ -133,6 +133,7 @@ MonoBehaviour:
     isStackable: 0
     itemQuantity: 0
     itemIcon: {fileID: 0}
+    itemIconName: 
     itemName: 
     itemRarity: 0
     enhancementLevel: 0
@@ -151,6 +152,7 @@ MonoBehaviour:
     isStackable: 0
     itemQuantity: 0
     itemIcon: {fileID: 0}
+    itemIconName: 
     itemName: 
     itemRarity: 0
     enhancementLevel: 0
@@ -169,6 +171,7 @@ MonoBehaviour:
     isStackable: 0
     itemQuantity: 0
     itemIcon: {fileID: 0}
+    itemIconName: 
     itemName: 
     itemRarity: 0
     enhancementLevel: 0
@@ -187,6 +190,7 @@ MonoBehaviour:
     isStackable: 0
     itemQuantity: 0
     itemIcon: {fileID: 0}
+    itemIconName: 
     itemName: 
     itemRarity: 0
     enhancementLevel: 0
@@ -205,6 +209,7 @@ MonoBehaviour:
     isStackable: 0
     itemQuantity: 0
     itemIcon: {fileID: 0}
+    itemIconName: 
     itemName: 
     itemRarity: 0
     enhancementLevel: 0
@@ -223,6 +228,7 @@ MonoBehaviour:
     isStackable: 0
     itemQuantity: 0
     itemIcon: {fileID: 0}
+    itemIconName: 
     itemName: 
     itemRarity: 0
     enhancementLevel: 0
@@ -267,6 +273,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 045831940666fb249aaba3b6bedd9353, type: 3}
   - {fileID: 8300000, guid: 156ca51d9e2cc3640a763fb38a4b5dca, type: 3}
   - {fileID: 8300000, guid: 390bf43563bf6fd4d86cbede28882782, type: 3}
+  - {fileID: 8300000, guid: 6d1ec10eb80bc0e48a43779d4a4190ab, type: 3}
+  - {fileID: 8300000, guid: 20b2cfa8929a8e54f876b282b4b44432, type: 3}
   uiSoundEffects:
   - {fileID: 8300000, guid: a8e3b79bb2073fb4d965ae7b211adcc4, type: 3}
   - {fileID: 8300000, guid: 13a35dfea2d4a1244bb2ca828950f361, type: 3}

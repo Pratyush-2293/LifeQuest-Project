@@ -60,12 +60,54 @@ public class GameData : MonoBehaviour
     private void Start()
     {
         SaveManager.instance.LoadGameData();
+        LoadSprites();
     }
 
     [ContextMenu("Save Test Data")]
     private void SaveDataForTesting()
     {
         SaveManager.instance.SaveGameData();
+    }
+
+    [ContextMenu("Load Sprites")]
+    public void LoadSprites()
+    {
+        // Loading sprites for Alden's equipped items
+        if (aldenEquippedWeapon != null)  // Loading weapon sprite
+        {
+            aldenEquippedWeapon.itemIcon = Resources.Load<Sprite>("ItemIcons/" + aldenEquippedWeapon.itemIconName);
+        }
+
+        if (aldenEquippedOffHand != null) // Loading offhand sprite
+        {
+            aldenEquippedOffHand.itemIcon = Resources.Load<Sprite>("ItemIcons/" + aldenEquippedOffHand.itemIconName);
+        }
+
+        if (aldenEquippedHeadgear != null) // Loading headgear sprite
+        {
+            aldenEquippedHeadgear.itemIcon = Resources.Load<Sprite>("ItemIcons/" + aldenEquippedHeadgear.itemIconName);
+        }
+
+        if (aldenEquippedChestpiece != null) // Loading chestpiece sprite
+        {
+            aldenEquippedChestpiece.itemIcon = Resources.Load<Sprite>("ItemIcons/" + aldenEquippedChestpiece.itemIconName);
+        }
+
+        if (aldenEquippedLegguards != null) // Loading legguards sprite
+        {
+            aldenEquippedLegguards.itemIcon = Resources.Load<Sprite>("ItemIcons/" + aldenEquippedLegguards.itemIconName);
+        }
+
+        if (aldenEquippedBoots != null) // Loading boots sprite
+        {
+            aldenEquippedBoots.itemIcon = Resources.Load<Sprite>("ItemIcons/" + aldenEquippedBoots.itemIconName);
+        }
+
+        // Loading sprites for inventory items
+        foreach (Item item in inventory)
+        {
+            item.itemIcon = Resources.Load<Sprite>("ItemIcons/" + item.itemIconName);
+        }
     }
 
     // Converts GameData to GameDataSave for serialization

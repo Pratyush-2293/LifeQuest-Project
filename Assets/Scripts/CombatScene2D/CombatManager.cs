@@ -1145,7 +1145,15 @@ public class CombatManager : MonoBehaviour
     {
         if(isDungeonScene == true)
         {
-            GameManager.instance.ResumeDungeon();
+            if(bossFightID != 0)
+            {
+                AudioManager.instance.PlayMusic("hometownVillage");
+                sceneTransition.LoadSceneWithTransition("DungeonSelectMenu");
+            }
+            else
+            {
+                GameManager.instance.ResumeDungeon();
+            }
         }
         else
         {

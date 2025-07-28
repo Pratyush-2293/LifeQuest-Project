@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 0
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: 88045fa4f965cfa418bb124cc9a0088a, type: 3}
+  itemIconName: dullSwordIcon
   itemName: Dull Sword
   itemRarity: 0
   enhancementLevel: 0

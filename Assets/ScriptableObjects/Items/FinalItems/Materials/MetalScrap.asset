@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: 70c9036e96d8fb946881c789e441f1c9, type: 3}
+  itemIconName: metalScrapIcon
   itemName: Metal Scrap
   itemRarity: 0
   enhancementLevel: 0

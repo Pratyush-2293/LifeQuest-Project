@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: 46f5cf131a7c69f4b86e911e06774a09, type: 3}
+  itemIconName: ashenBoneIcon
   itemName: Ashen Bone
   itemRarity: 1
   enhancementLevel: 0

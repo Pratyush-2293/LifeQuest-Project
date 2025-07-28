@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 0
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: c446a9f916eacee44867d3137a7d604f, type: 3}
+  itemIconName: militiaHelmIcon
   itemName: Militia Helm
   itemRarity: 1
   enhancementLevel: 0

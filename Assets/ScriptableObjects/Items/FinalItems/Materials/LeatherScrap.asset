@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: 9734a5de1d4a8894298f2004e9d03be9, type: 3}
+  itemIconName: leatherScrapIcon
   itemName: Leather Scrap
   itemRarity: 0
   enhancementLevel: 0

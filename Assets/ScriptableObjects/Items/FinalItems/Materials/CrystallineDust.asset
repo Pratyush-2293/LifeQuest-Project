@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: d8eaf1151c03c3d4c9fa447943154f2b, type: 3}
+  itemIconName: crystallineDustIcon
   itemName: Crystalline Dust
   itemRarity: 1
   enhancementLevel: 0

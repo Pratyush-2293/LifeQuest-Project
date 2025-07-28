@@ -19,6 +19,7 @@ MonoBehaviour:
   isStackable: 1
   itemQuantity: 1
   itemIcon: {fileID: 21300000, guid: 27db7a8525fc56648a56305aa14c8025, type: 3}
+  itemIconName: goblinFangIcon
   itemName: Goblin Fang
   itemRarity: 1
   enhancementLevel: 0

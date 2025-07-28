@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 90;
     }
 
-
     public void ResumeDungeon()
     {
         StartCoroutine(HandleResumeDungeon());
