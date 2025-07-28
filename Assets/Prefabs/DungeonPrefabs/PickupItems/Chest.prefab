@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupItemReward: {fileID: 11400000, guid: 975f1ffe579225b4e88e4059359edd07, type: 2}
   itemQuantity: 1
-  itemPickupSoundName: 
+  itemPickupSoundName: equip
   pickupItemAnimator: {fileID: 340764878568962276}
   interactPopup: {fileID: 4491297018548205759}
 --- !u!95 &340764878568962276

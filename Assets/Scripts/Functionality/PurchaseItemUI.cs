@@ -17,6 +17,7 @@ public class PurchaseItemUI : MonoBehaviour
     public Button buyButton;
 
     public Color tooExpensiveColor;
+    public Color defaultColor;
 
     private int itemPriceValue = 0;
     private int itemQuantityValue = 1;
@@ -55,7 +56,7 @@ public class PurchaseItemUI : MonoBehaviour
         }
         else
         {
-            itemPrice.color = Color.white;
+            itemPrice.color = defaultColor;
         }
     }
 

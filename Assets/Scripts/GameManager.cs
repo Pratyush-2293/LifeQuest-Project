@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
         // After unloading, activate the dungeon scene root
         if (dungeonRootObject != null)
         {
+            // AudioManager.instance.PlayMusic("devilsCastle");  // !!! THIS IS A TEMPORARY FIX, PATCH THIS LATER WITH PROPER SOLUTION !!! 
             dungeonRootObject.SetActive(true);
         }
     }

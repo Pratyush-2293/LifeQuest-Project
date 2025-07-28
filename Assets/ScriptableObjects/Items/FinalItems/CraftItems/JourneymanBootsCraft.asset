@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockLevel: 1
   itemName: Journeyman's Boots
-  itemIcon: {fileID: 21300000, guid: 26062ebc2f97d114982699bb51e73a7b, type: 3}
+  itemIcon: {fileID: 21300000, guid: b27434fcebdd2cf48835179a1642a3a6, type: 3}
   mainStatType: 1
   mainStatValue: 2
   subStatType: 2
@@ -28,5 +28,5 @@ MonoBehaviour:
   materialQuantity3: 1
   craftingMaterial4: {fileID: 0}
   materialQuantity4: 1
-  craftingCost: 1
+  craftingCost: 50
   craftingReward: {fileID: 11400000, guid: 4a87924980839d647bf8c172b9c1440c, type: 2}

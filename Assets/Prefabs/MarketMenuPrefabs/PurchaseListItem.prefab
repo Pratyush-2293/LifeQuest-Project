@@ -374,6 +374,7 @@ MonoBehaviour:
   minusButton: {fileID: 7962871862742055185}
   buyButton: {fileID: 5014404487024465738}
   tooExpensiveColor: {r: 1, g: 0.38431373, b: 0.38431373, a: 1}
+  defaultColor: {r: 0.5647059, g: 0.33333334, b: 0.2509804, a: 1}
 --- !u!1 &2254696800816188664
 GameObject:
   m_ObjectHideFlags: 0

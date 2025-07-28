@@ -450,7 +450,7 @@ public class AlchemistManager : MonoBehaviour
         }
 
         // Sort the list to show the weapon with the highest unlock level at the top
-        weaponItemsList.Sort((a, b) => b.mainStatValue.CompareTo(a.unlockLevel));
+        weaponItemsList.Sort((a, b) => b.unlockLevel.CompareTo(a.unlockLevel));
 
         foreach (Item enhanceItem in weaponItemsList) // Instantiate all items from the sorted weaponItemsList onto the merchant panel
         {
@@ -460,6 +460,75 @@ public class AlchemistManager : MonoBehaviour
 
         // Next we update the item type label of the merchant panel
         itemTypeLabelText.text = "Weapon Enhancement";
+
+        // Next we display the list with all craftable swords
+        merchantListPanel.gameObject.SetActive(true);
+    }
+
+    public void OnArmorsButton()
+    {
+        AudioManager.instance.PlayUISound("uiClick");
+
+        // Need to load all the available armors in the players inventory, as well as armors that are equipped by characters
+
+        // First we turn off agatha's sprite
+        agathaChar.gameObject.SetActive(false);
+
+        // Clear all old objects in the items list panel if they exist
+        ClearMerchantListPanel();
+
+        // Next we instantiate all armor items in the inventory and also those equipped by player characters
+
+        // Adding Alden's equipped armors to the list
+        // Adding the equipped headgear
+        if (GameData.instance.aldenEquippedHeadgear.itemType != Item.ItemType.None) // checking if the equipped item isn't empty
+        {
+            EnhanceItemUI aldenEnhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
+            aldenEnhanceItemUIObject.Initialise(GameData.instance.aldenEquippedHeadgear, true, EnhanceItemUI.EquippedCharName.Alden);
+        }
+        // Adding equipped chestpiece
+        if (GameData.instance.aldenEquippedChestpiece.itemType != Item.ItemType.None) // checking if the equipped item isn't empty
+        {
+            EnhanceItemUI aldenEnhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
+            aldenEnhanceItemUIObject.Initialise(GameData.instance.aldenEquippedChestpiece, true, EnhanceItemUI.EquippedCharName.Alden);
+        }
+        // Adding equipped legguards
+        if (GameData.instance.aldenEquippedLegguards.itemType != Item.ItemType.None) // checking if the equipped item isn't empty
+        {
+            EnhanceItemUI aldenEnhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
+            aldenEnhanceItemUIObject.Initialise(GameData.instance.aldenEquippedLegguards, true, EnhanceItemUI.EquippedCharName.Alden);
+        }
+        // Addings equipped boots
+        if (GameData.instance.aldenEquippedBoots.itemType != Item.ItemType.None) // checking if the equipped item isn't empty
+        {
+            EnhanceItemUI aldenEnhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
+            aldenEnhanceItemUIObject.Initialise(GameData.instance.aldenEquippedBoots, true, EnhanceItemUI.EquippedCharName.Alden);
+        }
+        // ADD HANDLING FOR OTHER CHARACTERS HERE
+
+        // Adding all armor items from inventory
+
+        // We sort the inventory list into a new list so that we can display the items with highest level at the top
+        List<Item> armorItemsList = new List<Item>();
+        foreach (Item item in GameData.instance.inventory)
+        {
+            if (item.itemType == Item.ItemType.MediumArmor || item.itemType == Item.ItemType.HeavyArmor || item.itemType == Item.ItemType.LightArmor)
+            {
+                armorItemsList.Add(item);
+            }
+        }
+
+        // Sort the list to show the weapon with the highest unlock level at the top
+        armorItemsList.Sort((a, b) => b.unlockLevel.CompareTo(a.unlockLevel));
+
+        foreach (Item enhanceItem in armorItemsList) // Instantiate all items from the sorted armorItemsList onto the merchant panel
+        {
+            EnhanceItemUI enhanceItemUIObject = Instantiate(enhanceListItemUI, merchantListContainer).GetComponent<EnhanceItemUI>();
+            enhanceItemUIObject.Initialise(enhanceItem, false, EnhanceItemUI.EquippedCharName.None);
+        }
+
+        // Next we update the item type label of the merchant panel
+        itemTypeLabelText.text = "Armor Enhancement";
 
         // Next we display the list with all craftable swords
         merchantListPanel.gameObject.SetActive(true);

@@ -224,6 +224,11 @@ public class TaskListMenu : Menu
         createTaskMenu.gameObject.SetActive(false);
     }
 
+    public void OnResetQuestKeyLimitButton()  // !! ONLY FOR TESTING, REMOVE IN FINAL BUILD !!
+    {
+        questKeyClaimCount = 0;
+    }
+
     private void ResetTaskCreationPanel()
     {
         titleInput.text = "";

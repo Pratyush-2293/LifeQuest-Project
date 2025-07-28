@@ -28,5 +28,5 @@ MonoBehaviour:
   materialQuantity3: 1
   craftingMaterial4: {fileID: 0}
   materialQuantity4: 1
-  craftingCost: 1
+  craftingCost: 80
   craftingReward: {fileID: 11400000, guid: e3e35b4ea93ca874f94b42723b737684, type: 2}

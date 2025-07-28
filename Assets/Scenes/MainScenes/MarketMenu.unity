@@ -6925,7 +6925,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.60784316, g: 0.60784316, b: 0.60784316, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6939,7 +6939,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 747398495}
   m_OnClick:
     m_PersistentCalls:
@@ -10406,8 +10406,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1636188391}
-        m_TargetAssemblyTypeName: BlacksmithManager, Assembly-CSharp
+      - m_Target: {fileID: 1057997305}
+        m_TargetAssemblyTypeName: AlchemistManager, Assembly-CSharp
         m_MethodName: OnArmorsButton
         m_Mode: 1
         m_Arguments:

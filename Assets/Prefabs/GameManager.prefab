@@ -253,6 +253,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7f5650899dfd90347b4cdd0962cb3cd6, type: 3}
   - {fileID: 8300000, guid: 2cc48201383ab224cb3e2f6f4f96533c, type: 3}
   - {fileID: 8300000, guid: 4fb9d743b9206bd4c90cf2b1a62ba378, type: 3}
+  - {fileID: 8300000, guid: 557b80ca9a22fc543b5a6e4480e7fa8a, type: 3}
+  - {fileID: 8300000, guid: 392a598153babf244b647a801ac4af99, type: 3}
+  - {fileID: 8300000, guid: b6f5927853de2294b979ca91f2b4da4f, type: 3}
   soundEffects:
   - {fileID: 8300000, guid: b43e32a8ea4905346ae967ba85c8cdab, type: 3}
   - {fileID: 8300000, guid: 27d2fb064ec9b38419c61048383d91f3, type: 3}
@@ -263,6 +266,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f897d0175c2f6cd41927c25bddbc4c49, type: 3}
   - {fileID: 8300000, guid: 045831940666fb249aaba3b6bedd9353, type: 3}
   - {fileID: 8300000, guid: 156ca51d9e2cc3640a763fb38a4b5dca, type: 3}
+  - {fileID: 8300000, guid: 390bf43563bf6fd4d86cbede28882782, type: 3}
   uiSoundEffects:
   - {fileID: 8300000, guid: a8e3b79bb2073fb4d965ae7b211adcc4, type: 3}
   - {fileID: 8300000, guid: 13a35dfea2d4a1244bb2ca828950f361, type: 3}

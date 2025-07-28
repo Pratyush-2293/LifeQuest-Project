@@ -23134,7 +23134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickupItemReward
       value: 
-      objectReference: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342,
+      objectReference: {fileID: 11400000, guid: 3a88caa10c71a9747a543e14bb6fea0c,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23786,7 +23786,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickupItemReward
       value: 
-      objectReference: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342,
+      objectReference: {fileID: 11400000, guid: 2ee742fc5a3816c42b4123f10dd198a3,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24044,7 +24044,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickupItemReward
       value: 
-      objectReference: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342,
+      objectReference: {fileID: 11400000, guid: 17fa929f0cd97034597256a50eb5a7ca,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26087,7 +26087,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickupItemReward
       value: 
-      objectReference: {fileID: 11400000, guid: f93eb184cfaadb14699d1ffab6174342,
+      objectReference: {fileID: 11400000, guid: 17fa929f0cd97034597256a50eb5a7ca,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

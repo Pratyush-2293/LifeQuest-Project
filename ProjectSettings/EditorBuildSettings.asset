@@ -125,6 +125,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScenes/Level_12/Level_12-2.unity
     guid: de926a75f3f5a544b874e11fb0428896
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/SkeletonVariation1.unity
+    guid: fedcc809bfd5f5e4692d008aaef81c3b
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/SkeletonVariation2.unity
+    guid: 3b3efa1513d8ff64c805a389bcbe3aff
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/SkeletonVariation3.unity
+    guid: afd8c0ca01deb0842a0826813b3bb7a0
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/SkeletonVariation4.unity
+    guid: d95b38f75f29d8e489f51a98f02ff5b1
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/OldBransteadCatacombs/CombatScenes/BossFight.unity
+    guid: 411589f6e1a3ee04d98c54c7a976300f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7df75182111f466468092012c194b27d,
       type: 2}
