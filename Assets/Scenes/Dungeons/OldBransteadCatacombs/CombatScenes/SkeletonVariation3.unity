@@ -432,6 +432,27 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: expReward
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: goldReward
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: itemReward1
+      value: 
+      objectReference: {fileID: 11400000, guid: 402a0403298085d4e8740ea8b4a541bf,
+        type: 2}
+    - target: {fileID: 5383650719140626223, guid: eb8b131cfbaf7a4428d344197a585b8e,
+        type: 3}
+      propertyPath: itemRewardQuantity1
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5910045396174863877, guid: eb8b131cfbaf7a4428d344197a585b8e,
         type: 3}
       propertyPath: level
